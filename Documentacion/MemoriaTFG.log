@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.14)  16 APR 2025 17:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.14)  9 JUN 2025 11:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -880,7 +880,7 @@ LaTeX Info: Redefining \. on input line 14.
 LaTeX Info: Redefining \% on input line 14.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
 (babel)             Reported  on input line 14.
- (Acronims.aux) (Resum.aux) (Introduccio.aux) (Instruccions.aux) (Proposta.aux) (Memoria.aux) (Presentacio.aux) (Conclusions.aux) (Annexos.aux))
+ (Acronims.aux) (Resum.aux) (Introducción.aux) (MarcoTeórico.aux) (Analisis.aux) (Metodologia.aux) (Diseño.aux) (Implementación.aux) (Pruebas.aux) (Conclusión.aux) (Annexos.aux))
 \openout1 = `MemoriaTFG.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 163.
@@ -989,7 +989,7 @@ Package hyperref Info: Link coloring ON on input line 163.
 
 
 
-<./537341_escudoUIB_horizontal.png, id=243, 665.48625pt x 213.79875pt>
+<./537341_escudoUIB_horizontal.png, id=335, 665.48625pt x 213.79875pt>
 File: ./537341_escudoUIB_horizontal.png Graphic file (type png)
 <use ./537341_escudoUIB_horizontal.png>
 Package pdftex.def Info: ./537341_escudoUIB_horizontal.png  used on input line 168.
@@ -1059,87 +1059,91 @@ LaTeX Info: Redefining \% on input line 2.
 
 [3
 
-])
+]
+
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported  on input line 79.
+[4])
 
 LaTeX Info: Redefining \. on input line 192.
 LaTeX Info: Redefining \% on input line 192.
-Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported  on input line 192.
-[4]
+[5]
 \openout2 = `Acronims.aux'.
 
- (Acronims.tex)
-
-[5
-
-
-]
-\openout2 = `Resum.aux'.
-
- (Resum.tex
+ (Acronims.tex
 
 [6
 
 
-
-
-]
-Package acronym Info: Label `acro:TFG' newly defined as it shall be overridden
-although it is yet undefined on input line 7.
-Package acronym Info: Label `acro:EPS' newly defined as it shall be overridden
-although it is yet undefined on input line 9.
-)
+])
 
 [7]
+\openout2 = `Resum.aux'.
+
+ (Resum.tex
 
 [8
 
 
 
+
 ]
-\openout2 = `Introduccio.aux'.
+Underfull \hbox (badness 10000) in paragraph at lines 5--10
 
- (Introduccio.tex
-LaTeX Font Info:    Trying to load font information for TS1+futs on input line 9.
- (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/latex/fourier\ts1futs.fd
-File: ts1futs.fd 2003/09/14 Fontinst v1.801 font definitions for TS1/futs.
+ []
+
 )
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `futs' (encoding: TS1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-Package acronym Info: Label `acro:RDI' newly defined as it shall be overridden
-although it is yet undefined on input line 10.
 
+[9]
+
+[10
+
+
+
+]
+\openout2 = `Introducción.aux'.
+
+ (Introducción.tex)
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15 
-      [1
+l.213 \include{Introducción}
+                              [1
 
 
-])
+]
+\openout2 = `MarcoTeórico.aux'.
 
-LaTeX Info: Redefining \. on input line 213.
-LaTeX Info: Redefining \% on input line 213.
+ (MarcoTeórico.tex
+
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.213 \include{Introduccio}
-                            [2]
-\openout2 = `Instruccions.aux'.
+l.3 \chapter
+            {Marco Teórico}\label{MarcoTeórico} [2
 
- (Instruccions.tex
-<Itinerari_TFG.pdf, id=418, 523.59616pt x 176.45926pt>
-File: Itinerari_TFG.pdf Graphic file (type pdf)
-<use Itinerari_TFG.pdf>
-Package pdftex.def Info: Itinerari_TFG.pdf  used on input line 6.
-(pdftex.def)             Requested size: 387.0pt x 130.42432pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 4--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--21
+
+ []
 
 
 
@@ -1147,264 +1151,240 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.17 
-      [3
+l.21 
+      [3]
+Underfull \hbox (badness 10000) in paragraph at lines 28--31
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--44
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--48
+
+ []
 
 
 
-
- <./Itinerari_TFG.pdf>]
-Underfull \vbox (badness 2582) has occurred while \output is active []
-
-
-
-LaTeX Info: Redefining \. on input line 33.
-LaTeX Info: Redefining \% on input line 33.
+LaTeX Info: Redefining \. on input line 48.
+LaTeX Info: Redefining \% on input line 48.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.33 
-      [4])
+l.48 
+      [4]
+LaTeX Font Info:    Trying to load font information for TS1+futs on input line 51.
+ (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/latex/fourier\ts1futs.fd
+File: ts1futs.fd 2003/09/14 Fontinst v1.801 font definitions for TS1/futs.
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `futs' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+
+LaTeX Info: Redefining \. on input line 75.
+LaTeX Info: Redefining \% on input line 75.
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 79--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--87
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--97
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--100
+
+ []
+
+)
 
 LaTeX Info: Redefining \. on input line 214.
 LaTeX Info: Redefining \% on input line 214.
-[5]
-\openout2 = `Proposta.aux'.
+[6]
 
- (Proposta.tex
-
-[6
-
-
-
-
-]
-
+LaTeX Info: Redefining \. on input line 214.
+LaTeX Info: Redefining \% on input line 214.
 [7]
+\openout2 = `Analisis.aux'.
 
-LaTeX Info: Redefining \. on input line 36.
-LaTeX Info: Redefining \% on input line 36.
-[8]
+ (Analisis.tex
 
-LaTeX Info: Redefining \. on input line 53.
-LaTeX Info: Redefining \% on input line 53.
-[9])
-
-LaTeX Info: Redefining \. on input line 215.
-LaTeX Info: Redefining \% on input line 215.
-[10]
-\openout2 = `Memoria.aux'.
-
- (Memoria.tex
-
-[11
-
-
-
-
-]
-
-LaTeX Info: Redefining \. on input line 41.
-LaTeX Info: Redefining \% on input line 41.
-[12]
-Overfull \hbox (2.98343pt too wide) in paragraph at lines 42--44
-[]\T1/futs/m/n/10.95 (-20) A par-tir de la llis-ta de te-mes i de la in-for-ma-ci� dis-po-ni-ble so-bre ca-das-cun d'aquests,
- []
-
-
-
-LaTeX Info: Redefining \. on input line 57.
-LaTeX Info: Redefining \% on input line 57.
-[13]
-
-LaTeX Info: Redefining \. on input line 68.
-LaTeX Info: Redefining \% on input line 68.
-[14]
-Overfull \hbox (10.43405pt too wide) in paragraph at lines 70--71
-\T1/futs/m/n/10.95 (-20) Tal com ens re-cor-da el pro-fes-sor Va-lien-te [[]][], or-ga-nis-mes in-ter-na-cio-nals d'estandarditzaci�
- []
-
-
-
-LaTeX Info: Redefining \. on input line 90.
-LaTeX Info: Redefining \% on input line 90.
-[15]
-
-LaTeX Info: Redefining \. on input line 120.
-LaTeX Info: Redefining \% on input line 120.
-[16]
-Package acronym Info: Label `acro:MIMO' newly defined as it shall be overridden
-although it is yet undefined on input line 122.
-Package acronym Info: Label `acro:AMC' newly defined as it shall be overridden
-although it is yet undefined on input line 122.
-Package acronym Info: Label `acro:OFDMA' newly defined as it shall be overridden
-although it is yet undefined on input line 122.
-Package acronym Info: Label `acro:OFDM' newly defined as it shall be overridden
-although it is yet undefined on input line 122.
-
-
-LaTeX Info: Redefining \. on input line 131.
-LaTeX Info: Redefining \% on input line 131.
-[17]
-
-LaTeX Info: Redefining \. on input line 152.
-LaTeX Info: Redefining \% on input line 152.
-[18]
-
-LaTeX Info: Redefining \. on input line 177.
-LaTeX Info: Redefining \% on input line 177.
-[19])
-
-LaTeX Info: Redefining \. on input line 216.
-LaTeX Info: Redefining \% on input line 216.
-[20]
-\openout2 = `Presentacio.aux'.
-
- (Presentacio.tex
-
-[21
-
-
-
-
-]
-
-LaTeX Info: Redefining \. on input line 41.
-LaTeX Info: Redefining \% on input line 41.
-[22]
-
-LaTeX Info: Redefining \. on input line 53.
-LaTeX Info: Redefining \% on input line 53.
-[23])
-
-LaTeX Info: Redefining \. on input line 217.
-LaTeX Info: Redefining \% on input line 217.
-[24]
-
-LaTeX Info: Redefining \. on input line 217.
-LaTeX Info: Redefining \% on input line 217.
-[25]
-\openout2 = `Conclusions.aux'.
-
- (Conclusions.tex
-
-[26
+[8
 
 
 
 
 ])
 
-[27]
-\openout2 = `Annexos.aux'.
+[9]
+\openout2 = `Metodologia.aux'.
 
- (Annexos.tex
+ (Metodologia.tex
 
-[28
+[10
 
 
 
 
 ]
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 13.24796pt on input line 22.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 22.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 22.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 13.24796pt on input line 22.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 22.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 22.
+Underfull \hbox (badness 10000) in paragraph at lines 7--10
+
+ []
 
 
-[29]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 31.
- (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 30--34
+
+ []
 
 
-LaTeX Info: Redefining \. on input line 77.
-LaTeX Info: Redefining \% on input line 77.
-[30]
-<./LogoUIB.jpg, id=715, 224.84pt x 225.84375pt>
-File: ./LogoUIB.jpg Graphic file (type jpg)
-<use ./LogoUIB.jpg>
-Package pdftex.def Info: ./LogoUIB.jpg  used on input line 84.
-(pdftex.def)             Requested size: 77.39882pt x 77.74387pt.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 141.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 141.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 141.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 141.
+
+LaTeX Info: Redefining \. on input line 58.
+LaTeX Info: Redefining \% on input line 58.
+[12])
+
+LaTeX Info: Redefining \. on input line 216.
+LaTeX Info: Redefining \% on input line 216.
+[13]
+\openout2 = `Diseño.aux'.
+
+ (Diseño.tex
+
+[14
 
 
-LaTeX Info: Redefining \. on input line 144.
-LaTeX Info: Redefining \% on input line 144.
-[31 <./LogoUIB.jpg>]
-Package acronym Info: Label `acro:IP' newly defined as it shall be overridden
-although it is yet undefined on input line 161.
-)
 
-LaTeX Info: Redefining \. on input line 225.
-LaTeX Info: Redefining \% on input line 225.
-[32] (MemoriaTFG.bbl (MemoriaTFG.brf)
+
+])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[15]
+Overfull \vbox (208.24818pt too high) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 217.
+LaTeX Info: Redefining \% on input line 217.
+[16]
+\openout2 = `Implementación.aux'.
+
+ (Implementación.tex)
+
+[17
+
+
+
+
+]
+\openout2 = `Pruebas.aux'.
+
+ (Pruebas.tex
+
+[18
+
+
+
+
+])
+
+[19]
+\openout2 = `Conclusión.aux'.
+
+ (Conclusión.tex
+
+[20
+
+
+
+
+])
+
+[21]
+\openout2 = `Annexos.aux'.
+
+ (Annexos.tex
+
+[22
+
+
+
+
+])
+
+[23]
+
+[24
+
+
+
+] (MemoriaTFG.bbl (MemoriaTFG.brf)
 \tf@brf=\write5
 \openout5 = `MemoriaTFG.brf'.
 
 
 bibitemlist
 
+LaTeX Warning: Empty `thebibliography' environment on input line 24.
 
-[33
+)
 
+[25
 
-
-
-])
-
-LaTeX Info: Redefining \. on input line 243.
-LaTeX Info: Redefining \% on input line 243.
-[34]
+]
 \tf@toc=\write6
 \openout6 = `MemoriaTFG.toc'.
 
  (MemoriaTFG.aux
 LaTeX Info: Redefining \. on input line 14.
 LaTeX Info: Redefining \% on input line 14.
- (Acronims.aux) (Resum.aux) (Introduccio.aux) (Instruccions.aux) (Proposta.aux) (Memoria.aux) (Presentacio.aux) (Conclusions.aux) (Annexos.aux))
+ (Acronims.aux) (Resum.aux) (Introducción.aux) (MarcoTeórico.aux) (Analisis.aux) (Metodologia.aux) (Diseño.aux) (Implementación.aux) (Pruebas.aux) (Conclusión.aux) (Annexos.aux))
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `MemoriaTFG.out' has not changed.
-(rerunfilecheck)             Checksum: E3AE9417F109D75C70DA59E7A3E4478E;9676.
+(rerunfilecheck)             Checksum: 5D4BBB53993AB2CBCD002F1A9A285641;15869.
 Package rerunfilecheck Info: File `MemoriaTFG.brf' has not changed.
-(rerunfilecheck)             Checksum: 122B94AE2879B425EE70FCADD14CC1C9;768.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 24501 strings out of 473523
- 468130 string characters out of 5714146
- 879712 words of memory out of 5000000
- 46669 multiletter control sequences out of 15000+600000
- 765434 words of font info for 480 fonts, out of 8000000 for 9000
+ 24115 strings out of 473523
+ 463945 string characters out of 5714146
+ 886387 words of memory out of 5000000
+ 46428 multiletter control sequences out of 15000+600000
+ 705948 words of font info for 354 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,23n,107p,1403b,1513s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/public/fourier/fourier-mex.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/public/fourier/fourier-mlit.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/public/fourier/fourier-ms.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso12.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putb8a.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on MemoriaTFG.pdf (46 pages, 562756 bytes).
+ 99i,23n,107p,1093b,1513s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso12.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putb8a.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putr8a.pfb>
+Output written on MemoriaTFG.pdf (39 pages, 291403 bytes).
 PDF statistics:
- 869 PDF objects out of 1000 (max. 8388607)
- 149 named destinations out of 1000 (max. 500000)
- 132592 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 657 PDF objects out of 1000 (max. 8388607)
+ 124 named destinations out of 1000 (max. 500000)
+ 92830 words of extra memory for PDF output out of 106986 (max. 10000000)
 

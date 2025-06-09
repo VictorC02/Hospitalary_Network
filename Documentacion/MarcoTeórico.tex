@@ -1,0 +1,103 @@
+% !TEX root=ManualTFG.tex
+
+\chapter{Marco Teórico}\label{MarcoTeórico}
+Para comprender en profundidad el desarrollo de este proyecto y justificar las decisiones adoptadas durante su diseño e implementación, resulta imprescindible establecer 
+una base teórica que aborde los conceptos, tecnologías y normativas implicadas. Este marco teórico tiene como finalidad proporcionar una visión general sobre las 
+infraestructuras de red en entornos hospitalarios, su organización, los criterios de seguridad aplicables y las particularidades derivadas de la incorporación de tecnologías 
+emergentes como el Internet of Medical Things (IoMT).\\
+
+A lo largo de este capítulo se describirán los fundamentos de las redes LAN y VLAN, las características específicas de las redes hospitalarias, los requisitos de seguridad y 
+segmentación, así como los retos que supone la gestión de dispositivos médicos conectados.
+
+\section{Redes de Computadores en Entornos Hospitalarios}
+El uso de redes de computadores en entornos hospitalarios constituye un pilar fundamental para el funcionamiento eficiente y seguro de los servicios sanitarios modernos. 
+Los hospitales dependen en gran medida de infraestructuras de red que permitan la transmisión de información clínica, administrativa y de soporte, garantizando la 
+disponibilidad, integridad y confidencialidad de los datos en todo momento. La correcta gestión de estas redes resulta esencial, ya que cualquier interrupción o fallo 
+de seguridad puede afectar de forma directa a la calidad asistencial y, en casos críticos, incluso a la vida de los pacientes.\\
+
+Dado el carácter crítico de estos entornos, una red hospitalaria debe ser diseñada y planificada cuidadosamente, considerando desde el inicio las necesidades presentes y 
+futuras del centro, los riesgos potenciales y las medidas de seguridad necesarias. Una infraestructura bien segmentada y protegida no solo garantiza el correcto 
+funcionamiento de los servicios asistenciales, sino que también contribuye a la confidencialidad de los datos clínicos y a la seguridad de los pacientes.\\
+
+Además, la irrupción de tecnologías emergentes como el Internet of Medical Things (IoMT) ha supuesto un nuevo desafío para estas redes, aumentando la cantidad de dispositivos 
+conectados y ampliando la superficie de exposición a posibles ciberamenazas, lo que ha obligado a reforzar las políticas de seguridad y segmentación en las infraestructuras 
+hospitalarias modernas.
+
+\section{Redes LAN y VLAN}
+\subsection{Redes LAN en Entornos Hospitalarios}
+Una Local Area Network (LAN) es una red de área local que permite la interconexión de dispositivos dentro de un ámbito geográfico limitado, como puede ser un edificio, 
+planta hospitalaria o campus sanitario. Su finalidad es compartir recursos de red, dispositivos y servicios de manera rápida y segura, permitiendo la comunicación entre 
+estaciones de trabajo, servidores, dispositivos médicos y sistemas de almacenamiento centralizados.\\
+
+En entornos hospitalarios, las redes LAN constituyen la infraestructura básica sobre la que se sustentan tanto los sistemas administrativos como los servicios asistenciales. 
+Gracias a la conectividad que proporcionan, se facilita el acceso a sistemas de información hospitalaria, historiales médicos electrónicos, servicios de radiología digital y 
+monitorización médica en tiempo real. Además, la llegada de nuevas tecnologías como el Internet of Medical Things (IoMT) ha incrementado notablemente la densidad de 
+dispositivos conectados a las redes LAN hospitalarias, exigiendo una mayor capacidad de gestión, segmentación y seguridad en estas infraestructuras.
+
+\subsection{VLANs en Entornos Hospitalarios}
+Para mejorar la eficiencia, la seguridad y la organización de las redes LAN, se recurre a la creación de Virtual LANs (VLANs). Una VLAN permite agrupar lógicamente 
+dispositivos dentro de una misma red física, segmentando el tráfico de datos aunque se encuentren conectados al mismo switch o infraestructura física.\\
+
+Esta segmentación se basa en criterios funcionales, organizativos o de seguridad, de manera que cada grupo de usuarios o dispositivos que comparte necesidades similares de 
+comunicación se integra en una VLAN específica. Esto evita el tráfico innecesario entre áreas que no requieren comunicación directa, mejora la seguridad al aislar departamentos 
+sensibles y optimiza el rendimiento de la red al reducir las colisiones y la congestión de tráfico.\\
+
+En entornos hospitalarios, las VLAN se utilizan habitualmente para separar el tráfico de los distintos departamentos (Urgencias, Administración, Laboratorio, Consultas 
+Externas, etc.) y también para aislar segmentos críticos como la red de dispositivos médicos o la subred específica de IoMT. Esta segmentación lógica permite, 
+además, aplicar políticas de seguridad específicas mediante listas de control de acceso (ACLs), limitando la visibilidad y comunicación entre VLANs cuando sea necesario.\\
+
+El uso de VLANs en entornos sanitarios aporta numerosos beneficios:
+\begin{itemize}
+    \item \textbf{Mejora de la seguridad:} al separar físicamente el tráfico sensible, como datos clínicos o monitorización de pacientes, del resto de la red.
+    \item \textbf{Optimización del rendimiento:} al reducir la cantidad de tráfico broadcast y minimizar las colisiones de red.
+    \item \textbf{Flexibilidad en la gestión:} al permitir reasignar dispositivos o usuarios a diferentes VLANs sin necesidad de modificar la infraestructura física.
+    \item \textbf{Facilidad de escalado:} favoreciendo la incorporación de nuevos servicios o dispositivos, como los IoMT, sin comprometer la seguridad ni el rendimiento 
+    de la red existente.
+    \item \textbf{Aplicación de políticas de control de acceso más específicas y eficientes.}
+\end{itemize}
+Gracias a esta capacidad de segmentación y control, las VLAN se han convertido en un componente imprescindible para garantizar la seguridad, el buen funcionamiento y la 
+disponibilidad de los servicios hospitalarios.
+
+\section{Seguridad en Redes Hospitalarias}
+La seguridad en redes hospitalarias se ha convertido en un aspecto esencial dentro de la gestión tecnológica sanitaria, dado que en estos entornos no solo se maneja información 
+crítica de carácter personal y médico, sino que además se conectan dispositivos clínicos cuyo correcto funcionamiento puede incidir directamente en la seguridad y salud de 
+los pacientes. La evolución hacia infraestructuras digitales más complejas y la incorporación masiva de dispositivos médicos conectados (IoMT) ha incrementado notablemente 
+la superficie de exposición a posibles ciberataques, lo que obliga a diseñar políticas de seguridad específicas, adaptadas a las necesidades de este tipo de entornos.
+
+\subsection{Principales Amenazas en Redes Hospitalarias}
+Las redes hospitalarias, por su naturaleza, presentan una serie de vulnerabilidades que pueden ser explotadas si no se implementan las medidas adecuadas. Entre las amenazas 
+más frecuentes se encuentran:
+\begin{itemize}
+    \item \textbf{Intercepción de datos sensibles:} accesos no autorizados a historiales médicos y datos clínicos personales.
+    \item \textbf{Intrusiones externas e internas:} ataques desde el exterior o desde dentro de la propia red, aprovechando errores de configuración o dispositivos desprotegidos.
+    \item \textbf{Ataques de denegación de servicio (DoS/DDoS):} que pueden dejar inoperativos servicios críticos.
+    \item \textbf{Malware y ransomware:} capaces de bloquear el acceso a sistemas de información hospitalaria o alterar el funcionamiento de dispositivos clínicos.
+    \item \textbf{Vulnerabilidades en dispositivos IoMT:} por sus recursos limitados y configuraciones menos robustas.
+\end{itemize}
+
+\section{Introducción a IoMT (Internet of Medical Things)}
+Internet of Medical Things (IoMT) es una evolución natural de Internet of Things (IoT) aplicada al ámbito sanitario, que permite la interconexión de dispositivos médicos, 
+sensores y sistemas de información clínica a través de redes seguras. Esta tecnología posibilita la monitorización remota de pacientes, el control en tiempo real de 
+parámetros fisiológicos y la gestión eficiente de recursos hospitalarios, contribuyendo a mejorar la calidad asistencial y la toma de decisiones clínicas basadas en datos 
+fiables y actualizados. \\
+
+En la práctica hospitalaria, el IoMT se ha consolidado como una herramienta fundamental para optimizar los procesos sanitarios, incrementando la capacidad de respuesta ante situaciones
+críticas y reduciendo la carga de trabajo del personal clínico. Gracias a la integración de sensores biomédicos, dispsoitivos portátiles y plataformas de gestión de datos, 
+los profesionales sanitarios pueden disponer de información vital en tiempo real, lo que favorece diagnósticos más precisos y tratamientos personalizados. \\ 
+
+Además, el IoMT desempeña un papel esencial en la mejora de la eficiencia operativa hospitalaria. Como se recoge en la literatura, su implementación permite localizar y gestionar
+equipamiento médico, optimizar la trazabilidad de pacientes y activos, y mejorar la monitorización de entornos hospitalarios críticos, como quirófanos y unidades de cuidados intensivos.
+Este ecosistema conectado se apoya en tecnologías de comunicación de baja potencia y alrgo alcance (LPWAN) como Sigfox, LoRa y NB-IoT, que proporcionan conectividad eficiente para
+dispositivos médicos que requieren bajo consumo energético y cobertura extendida dentro y fuera de los centros sanitarios. \\
+
+Desde el punto de vista arquitectónico, las soluciones IoMT han evolucionado hacia modelos distribuidos basados en edge/fog computing, donde los datos se procesan parcialemnte
+en pasarelas inteligentes cercanas a los dispositivos, antes de enviarse a plataformas en la nube para su almacenamiento y análisis avanzado. Este enfoque permite reducir la 
+latencia, mejorar la seguridad de los datos sensibles y aliviar la carga de tráfico hacia los servidores centrales, favoreciendo la continuidad asistencial en entornos hospitalarios
+con elevada demanda de recursos. \\
+
+El auge del IoMT también plantea desafíos en materia de seguridad, privacidad e interoperabilidad, dado que la cantidad de información médica gestionada por estos sistemas es altamente 
+sensible y está sujeta a estrictos marcos normativos. \\
+
+En definitiva, la implantación del IoMT en entronos hospitalrios representa una oportunidad estratégica para transformar la asistencia sanitaria, dotándola de mayor flexibilidad, 
+capacidad predictiva y resiliencia frente a sistuaciones de crisis como la vivida durante la pandemia de COVID-19, donde estas tecnologías demostraron su potencial para mejorar la 
+monitorización, la toma de decisiones y la gestión de recursos clínicos en tiempo real.
