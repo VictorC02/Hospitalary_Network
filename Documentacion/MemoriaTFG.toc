@@ -1,85 +1,115 @@
 \changetocdepth {2}
 \babel@toc {spanish}{}\relax 
-\contentsline {chapter}{\'{I}ndice general}{iii}{section*.1}%
-\contentsline {chapter}{Acrónimos}{vii}{chapter*.2}%
-\contentsline {chapter}{Resumen}{ix}{chapter*.3}%
+\contentsline {chapter}{\'{I}ndice general}{\es@scroman {iii}}{section*.1}%
+\contentsline {chapter}{Índice de Figuras}{\es@scroman {vii}}{section*.2}%
+\contentsline {chapter}{Índice de Tablas}{\es@scroman {ix}}{section*.3}%
+\contentsline {chapter}{Acrónimos}{\es@scroman {xi}}{chapter*.4}%
+\contentsline {chapter}{Resumen}{\es@scroman {xiii}}{chapter*.5}%
 \contentsline {chapter}{\chapternumberline {1}Introducción}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Contexto y Motivación}{1}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Objetivos del Proyecto}{1}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Alcance del Proyecto}{1}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Estructura del Documento}{1}{section.1.4}%
-\contentsline {chapter}{\chapternumberline {2}Marco Teórico}{3}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Redes de Computadores en Entornos Hospitalarios}{3}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Redes LAN y VLAN}{4}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Redes LAN en Entornos Hospitalarios}{4}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}VLANs en Entornos Hospitalarios}{4}{subsection.2.2.2}%
-\contentsline {section}{\numberline {2.3}Seguridad en Redes Hospitalarias}{5}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Principales Amenazas en Redes Hospitalarias}{5}{subsection.2.3.1}%
-\contentsline {section}{\numberline {2.4}Introducción a IoMT (Internet of Medical Things)}{6}{section.2.4}%
-\contentsline {chapter}{\chapternumberline {3}Análisis }{9}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Requisitos del Sistema}{9}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Requisitos Funcionales}{9}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Requisitos No Funcionales}{9}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Requisitos de Seguridad}{9}{subsection.3.1.3}%
-\contentsline {subsection}{\numberline {3.1.4}Requisitos de Conectividad}{9}{subsection.3.1.4}%
-\contentsline {section}{\numberline {3.2}Interesados}{9}{section.3.2}%
-\contentsline {chapter}{\chapternumberline {4}Metodología de Trabajo}{11}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Enfoque y Planificación del Proyecto}{11}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Enfoque de Trabajo Adoptado}{11}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Planificación y Seguimiento}{12}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Herramientas y Tecnologías Utilizadas}{12}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Cisco Packet Tracer}{12}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Git y GitHub}{13}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Google Calendar}{13}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}SketchUp}{13}{subsection.4.2.4}%
-\contentsline {chapter}{\chapternumberline {5}Diseño}{16}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Criterios de Diseño}{16}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Segmentación por Departamentos y Servicios}{16}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Consideraciones Específicas para Dispositivos IoMT}{16}{subsection.5.1.2}%
-\contentsline {section}{\numberline {5.2}Topología de Red Propuesta}{16}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Topología Física}{16}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Topología Lógica}{16}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Descripción de Dispositivos Utilizados}{16}{subsection.5.2.3}%
-\contentsline {section}{\numberline {5.3}Direccionamiento IP y Subnetting}{16}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Planificación de Subredes}{16}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Asignación de Direcciones IP}{16}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Asignación de Direcciones IP Estáticas}{16}{subsection.5.3.3}%
-\contentsline {section}{\numberline {5.4}Configuración de VLANs y Segmentación de Red}{16}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Definición de VLANs por Departamento}{16}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Asignación de Puertos a VLANs}{16}{subsection.5.4.2}%
-\contentsline {subsection}{\numberline {5.4.3}Configuración de Troncales y Acceso a VLANs}{16}{subsection.5.4.3}%
-\contentsline {section}{\numberline {5.5}Seguridad de la Red}{16}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Seguridad a Nivel Físico}{16}{subsection.5.5.1}%
-\contentsline {subsection}{\numberline {5.5.2}Seguridad a Nivel Lógico}{16}{subsection.5.5.2}%
-\contentsline {section}{\numberline {5.6}Subred IoMT: Diseño y Seguridad}{16}{section.5.6}%
-\contentsline {subsection}{\numberline {5.6.1}Justificación de la Subred IoMT}{16}{subsection.5.6.1}%
-\contentsline {subsection}{\numberline {5.6.2}Diseño y Direccionamiento de la Subred IoMT}{16}{subsection.5.6.2}%
-\contentsline {subsection}{\numberline {5.6.3}Políticas de Seguridad para la Subred IoMT}{16}{subsection.5.6.3}%
-\contentsline {subsection}{\numberline {5.6.4}COntrol de Accesos y Monitorización}{16}{subsection.5.6.4}%
-\contentsline {section}{\numberline {5.7}Protocolos y Servicios de Red}{16}{section.5.7}%
-\contentsline {subsection}{\numberline {5.7.1}Configuración de DHCP}{16}{subsection.5.7.1}%
-\contentsline {subsection}{\numberline {5.7.2}Configuración de DNS}{16}{subsection.5.7.2}%
-\contentsline {subsection}{\numberline {5.7.3}Configuración de NAT y Acceso a Internet}{16}{subsection.5.7.3}%
-\contentsline {subsection}{\numberline {5.7.4}Configuración de Protocolos de Enrutamiento}{16}{subsection.5.7.4}%
-\contentsline {subsection}{\numberline {5.7.5}Configuración de HSRP}{16}{subsection.5.7.5}%
-\contentsline {subsection}{\numberline {5.7.6}Gestión Remota}{16}{subsection.5.7.6}%
-\contentsline {section}{\numberline {5.8}Diagrama de Red Final}{16}{section.5.8}%
-\contentsline {subsection}{\numberline {5.8.1}Diagrama Físico}{16}{subsection.5.8.1}%
-\contentsline {subsection}{\numberline {5.8.2}Diagrama Lógico}{16}{subsection.5.8.2}%
-\contentsline {subsection}{\numberline {5.8.3}Leyenda}{16}{subsection.5.8.3}%
-\contentsline {chapter}{\chapternumberline {6}Implementación}{17}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Configuración de Dispositivos}{17}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Creación de VLANs y Asignación de Puertos}{17}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Configuración de Direccionamiento IP}{17}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Configuración de Seguridad}{17}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Configuración de la Subred IoMT}{17}{section.6.5}%
-\contentsline {chapter}{\chapternumberline {7}Pruebas y Validación}{19}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Pruebas de Conectividad}{19}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Pruebas de Seguridad}{19}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Resultados y Análisis}{19}{section.7.3}%
-\contentsline {chapter}{\chapternumberline {8}Conclusión}{21}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Logros Alcanzados}{21}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Dificultades Encontradas}{21}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Mejoras y Ampliaciones Futuras}{21}{section.8.3}%
-\contentsline {appendix}{\chapternumberline {A}Anexo}{23}{appendix.A}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{25}{appendix*.4}%
+\contentsline {subsection}{\numberline {1.1.1}Contexto}{1}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Motivación}{2}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}Objetivos del Proyecto}{2}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Objetivo General}{2}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Objetivos Específicos}{2}{subsection.1.2.2}%
+\contentsline {section}{\numberline {1.3}Alcance del Proyecto}{3}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Alcance Funcional}{3}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Límites y Exclusiones}{4}{subsection.1.3.2}%
+\contentsline {section}{\numberline {1.4}Estructura del Documento}{5}{section.1.4}%
+\contentsline {chapter}{\chapternumberline {2}Marco Teórico}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Arquitectura de Redes Hospitalarias}{7}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Modelo Jerárquico de Red}{7}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Segmentación de la Red}{8}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Protocolos de Enrutamiento Dinámico}{8}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}OSPF (Open Shortest Path First)}{8}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Algoritmo de Dijkstra}{9}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Protocolos de Redundancia y Alta Disponibilidad}{9}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}HSRP (Hot Standby Router Protocol)}{9}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}EtherChannel y Agregación de Enlaces}{10}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Servicios de Red Fundamentales}{10}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}DHCP (Dynamic Host Configuration Protocol)}{10}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}NAT (Network Address Translation)}{11}{subsection.2.4.2}%
+\contentsline {section}{\numberline {2.5}Seguridad de Red y Control de Acceso}{11}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Listas de Control de Acceso (ACLs)}{11}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}SSH (Secure Shell)}{12}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Zonas Desmilitarizadas (DMZ)}{13}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}DHCP Snooping}{13}{subsection.2.5.4}%
+\contentsline {subsection}{\numberline {2.5.5}IPSec (Internet Protocol Security)}{13}{subsection.2.5.5}%
+\contentsline {section}{\numberline {2.6}Introducción a IoMT (Internet of Medical Things)}{14}{section.2.6}%
+\contentsline {chapter}{\chapternumberline {3}Análisis }{17}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Interesados}{17}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Requisitos del Sistema}{18}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Requisitos Funcionales}{18}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Requisitos No Funcionales}{19}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Requisitos de Disponibilidad y Redundancia}{19}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Requisitos de Seguridad}{19}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Requisitos de Conectividad}{21}{subsection.3.2.5}%
+\contentsline {chapter}{\chapternumberline {4}Metodología de Trabajo}{23}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Enfoque y Planificación del Proyecto}{23}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Enfoque de Trabajo Adoptado}{23}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Planificación y Seguimiento}{24}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Herramientas y Tecnologías Utilizadas}{24}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Cisco Packet Tracer}{24}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Git y GitHub}{25}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Google Calendar}{25}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}SketchUp}{25}{subsection.4.2.4}%
+\contentsline {chapter}{\chapternumberline {5}Diseño}{27}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Criterios de Diseño}{28}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Topología de Red Propuesta}{28}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Topología Física Son Espases}{28}{subsection.5.2.1}%
+\contentsline {subsubsection}{Routers}{28}{section*.45}%
+\contentsline {subsubsection}{Red de Invitados}{29}{section*.46}%
+\contentsline {subsubsection}{DMZ Invitados}{29}{section*.47}%
+\contentsline {subsubsection}{DMZ IoMT}{30}{section*.48}%
+\contentsline {subsubsection}{DMZ Interna}{30}{section*.49}%
+\contentsline {subsubsection}{Red Interna}{31}{section*.50}%
+\contentsline {subsubsection}{Red IoMT}{32}{section*.51}%
+\contentsline {subsubsection}{Disposición Física}{33}{section*.52}%
+\contentsline {subsection}{\numberline {5.2.2}Topología Lógica Son Espases}{33}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Topología Física de la Red de Interconexión entre Hospitales}{34}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Topología Lógica de la Red de Interconexión entre Hospitales}{36}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Descripción de Dispositivos Utilizados}{37}{subsection.5.2.5}%
+\contentsline {section}{\numberline {5.3}VLANs y Segmentación de Red}{37}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Definición de VLANs por Departamento}{37}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Configuración de Troncales y Acceso a VLANs}{41}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}Direccionamiento IP y Subnetting}{41}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Criterios de Diseño de Direccionamiento}{42}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Planificación de Subredes}{42}{subsection.5.4.2}%
+\contentsline {subsubsection}{Subnetting Son Espases}{43}{section*.53}%
+\contentsline {subsubsection}{Subnetting IoMT}{45}{section*.54}%
+\contentsline {subsubsection}{Subnetting Invitados}{45}{section*.55}%
+\contentsline {subsection}{\numberline {5.4.3}Asignación de Direcciones IP Estáticas}{46}{subsection.5.4.3}%
+\contentsline {subsubsection}{Puertas de Enlace}{46}{section*.56}%
+\contentsline {subsubsection}{Servidores}{47}{section*.57}%
+\contentsline {subsubsection}{Dispositivos Finales}{48}{section*.58}%
+\contentsline {section}{\numberline {5.5}Protocolos y Servicios de Red}{48}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}DHCP (Dynamic Host Configuration Protocol)}{48}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}NAT (Network Address Translation)}{49}{subsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.5.3}HSRP (Hot Standby Router Protocol)}{49}{subsection.5.5.3}%
+\contentsline {subsection}{\numberline {5.5.4}OSPF (Open Shortest Path First)}{50}{subsection.5.5.4}%
+\contentsline {subsection}{\numberline {5.5.5}EtherChannel}{50}{subsection.5.5.5}%
+\contentsline {subsection}{\numberline {5.5.6}RSTP (Rapid Spanning-Tree Protocol)}{51}{subsection.5.5.6}%
+\contentsline {section}{\numberline {5.6}Seguridad de la Red}{51}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}ACLs}{51}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}DHCP Snooping}{52}{subsection.5.6.2}%
+\contentsline {subsection}{\numberline {5.6.3}IPSec}{53}{subsection.5.6.3}%
+\contentsline {subsection}{\numberline {5.6.4}SSH}{53}{subsection.5.6.4}%
+\contentsline {subsection}{\numberline {5.6.5}Configuración DMZ}{53}{subsection.5.6.5}%
+\contentsline {section}{\numberline {5.7}Redes Completas}{55}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Leyenda}{57}{subsection.5.7.1}%
+\contentsline {chapter}{\chapternumberline {6}Implementación}{59}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Configuración de Dispositivos}{59}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Creación de VLANs y Asignación de Puertos}{59}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Configuración de Direccionamiento IP}{59}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Configuración de Seguridad}{59}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Configuración de la Subred IoMT}{59}{section.6.5}%
+\contentsline {chapter}{\chapternumberline {7}Pruebas y Validación}{61}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Pruebas de Conectividad}{61}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Pruebas de Seguridad}{61}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Resultados y Análisis}{61}{section.7.3}%
+\contentsline {chapter}{\chapternumberline {8}Conclusión}{63}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Logros Alcanzados}{63}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Dificultades Encontradas}{63}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Mejoras y Ampliaciones Futuras}{63}{section.8.3}%
+\contentsline {appendix}{\chapternumberline {A}Anexo}{65}{appendix.Alph1}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{67}{appendix*.59}%

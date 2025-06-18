@@ -2,101 +2,229 @@
 
 \chapter{Marco Teórico}\label{MarcoTeórico}
 Para comprender en profundidad el desarrollo de este proyecto y justificar las decisiones adoptadas durante su diseño e implementación, resulta imprescindible establecer 
-una base teórica que aborde los conceptos, tecnologías y normativas implicadas. Este marco teórico tiene como finalidad proporcionar una visión general sobre las 
-infraestructuras de red en entornos hospitalarios, su organización, los criterios de seguridad aplicables y las particularidades derivadas de la incorporación de tecnologías 
-emergentes como el Internet of Medical Things (IoMT).\\
+una base teórica que aborde los conceptos y tecnologías implicadas. Este marco teórico tiene como finalidad proporcionar una visión general sobre las 
+infraestructuras de red en entornos hospitalarios, protocolos de comunicación, seguridad y tecnologías específicas para entornos sanitarios.\\ \\
 
-A lo largo de este capítulo se describirán los fundamentos de las redes LAN y VLAN, las características específicas de las redes hospitalarias, los requisitos de seguridad y 
-segmentación, así como los retos que supone la gestión de dispositivos médicos conectados.
+Este capítulo establece las bases conceptuales necesarias para comprender el diseño e implementación de una infraestructura de red hospitalaria que garantice conectividad
+, redundancia y seguridad.
 
-\section{Redes de Computadores en Entornos Hospitalarios}
-El uso de redes de computadores en entornos hospitalarios constituye un pilar fundamental para el funcionamiento eficiente y seguro de los servicios sanitarios modernos. 
-Los hospitales dependen en gran medida de infraestructuras de red que permitan la transmisión de información clínica, administrativa y de soporte, garantizando la 
-disponibilidad, integridad y confidencialidad de los datos en todo momento. La correcta gestión de estas redes resulta esencial, ya que cualquier interrupción o fallo 
-de seguridad puede afectar de forma directa a la calidad asistencial y, en casos críticos, incluso a la vida de los pacientes.\\
+\section{Arquitectura de Redes Hospitalarias}
 
-Dado el carácter crítico de estos entornos, una red hospitalaria debe ser diseñada y planificada cuidadosamente, considerando desde el inicio las necesidades presentes y 
-futuras del centro, los riesgos potenciales y las medidas de seguridad necesarias. Una infraestructura bien segmentada y protegida no solo garantiza el correcto 
-funcionamiento de los servicios asistenciales, sino que también contribuye a la confidencialidad de los datos clínicos y a la seguridad de los pacientes.\\
-
-Además, la irrupción de tecnologías emergentes como el Internet of Medical Things (IoMT) ha supuesto un nuevo desafío para estas redes, aumentando la cantidad de dispositivos 
-conectados y ampliando la superficie de exposición a posibles ciberamenazas, lo que ha obligado a reforzar las políticas de seguridad y segmentación en las infraestructuras 
-hospitalarias modernas.
-
-\section{Redes LAN y VLAN}
-\subsection{Redes LAN en Entornos Hospitalarios}
-Una Local Area Network (LAN) es una red de área local que permite la interconexión de dispositivos dentro de un ámbito geográfico limitado, como puede ser un edificio, 
-planta hospitalaria o campus sanitario. Su finalidad es compartir recursos de red, dispositivos y servicios de manera rápida y segura, permitiendo la comunicación entre 
-estaciones de trabajo, servidores, dispositivos médicos y sistemas de almacenamiento centralizados.\\
-
-En entornos hospitalarios, las redes LAN constituyen la infraestructura básica sobre la que se sustentan tanto los sistemas administrativos como los servicios asistenciales. 
-Gracias a la conectividad que proporcionan, se facilita el acceso a sistemas de información hospitalaria, historiales médicos electrónicos, servicios de radiología digital y 
-monitorización médica en tiempo real. Además, la llegada de nuevas tecnologías como el Internet of Medical Things (IoMT) ha incrementado notablemente la densidad de 
-dispositivos conectados a las redes LAN hospitalarias, exigiendo una mayor capacidad de gestión, segmentación y seguridad en estas infraestructuras.
-
-\subsection{VLANs en Entornos Hospitalarios}
-Para mejorar la eficiencia, la seguridad y la organización de las redes LAN, se recurre a la creación de Virtual LANs (VLANs). Una VLAN permite agrupar lógicamente 
-dispositivos dentro de una misma red física, segmentando el tráfico de datos aunque se encuentren conectados al mismo switch o infraestructura física.\\
-
-Esta segmentación se basa en criterios funcionales, organizativos o de seguridad, de manera que cada grupo de usuarios o dispositivos que comparte necesidades similares de 
-comunicación se integra en una VLAN específica. Esto evita el tráfico innecesario entre áreas que no requieren comunicación directa, mejora la seguridad al aislar departamentos 
-sensibles y optimiza el rendimiento de la red al reducir las colisiones y la congestión de tráfico.\\
-
-En entornos hospitalarios, las VLAN se utilizan habitualmente para separar el tráfico de los distintos departamentos (Urgencias, Administración, Laboratorio, Consultas 
-Externas, etc.) y también para aislar segmentos críticos como la red de dispositivos médicos o la subred específica de IoMT. Esta segmentación lógica permite, 
-además, aplicar políticas de seguridad específicas mediante listas de control de acceso (ACLs), limitando la visibilidad y comunicación entre VLANs cuando sea necesario.\\
-
-El uso de VLANs en entornos sanitarios aporta numerosos beneficios:
+\subsection{Modelo Jerárquico de Red}
+Las redes hospitalarias adoptan un modelo jerárquico de tres capas que optimiza el rendimiento, escalabilidad y mantenimiento. Esta arquitectura se compone de:
 \begin{itemize}
-    \item \textbf{Mejora de la seguridad:} al separar físicamente el tráfico sensible, como datos clínicos o monitorización de pacientes, del resto de la red.
-    \item \textbf{Optimización del rendimiento:} al reducir la cantidad de tráfico broadcast y minimizar las colisiones de red.
-    \item \textbf{Flexibilidad en la gestión:} al permitir reasignar dispositivos o usuarios a diferentes VLANs sin necesidad de modificar la infraestructura física.
-    \item \textbf{Facilidad de escalado:} favoreciendo la incorporación de nuevos servicios o dispositivos, como los IoMT, sin comprometer la seguridad ni el rendimiento 
-    de la red existente.
-    \item \textbf{Aplicación de políticas de control de acceso más específicas y eficientes.}
+    \item \textbf{Capa de Núcleo (Core):} Proporciona conectividad de alta velocidad entre diferentes áreas internas del hospital y acceso a servicios externos. Se encarga de 
+    interconectar los switches de distribución con los routers principales y gestionar el tráfico entre las distintas subredes.
+    \item \textbf{Capa de Distribución:} Actúa como intermediaria entre la capa de acceso y la capa de núcleo, gestionando el tráfico local y balanceando la carga
+    entre los distintos switches core. También implementa políticas de seguridad, segmentación de tráfico y control de acceso, permitiendo la comunicación entre las distintas 
+    VLANs y subredes del hospital.
+    \item \textbf{Capa de Acceso:} Conecta los dispositivos finales, como estaciones de trabajo, impresoras y dispositivos médicos. Esta capa se encarga de proporcionar
+    conectividad a los usuarios y dispositivos, permitiendo el acceso a los recursos de red y servicios compartidos. 
 \end{itemize}
-Gracias a esta capacidad de segmentación y control, las VLAN se han convertido en un componente imprescindible para garantizar la seguridad, el buen funcionamiento y la 
-disponibilidad de los servicios hospitalarios.
+\subsection{Segmentación de la Red}
+La segmentación mediante VLANs (Virtual Local Area Networks) es fundamental en entornos hospitalarios para separar diferentes tipos de tráfico y mejorar la seguridad. 
+Una VLAN permite agrupar lógicamente dispositivos dentro de una misma red física, segmentando el tráfico de datos aunque se encuentren conectados al mismo switch o 
+infraestructura física. Los beneficios principales incluyen:
+\begin{itemize}
+    \item \textbf{Aislamiento de tráfico:} Cada VLAN mantiene su propio dominio de broadcast, reduciendo la propagación de tráfico innecesario.
+    \item \textbf{Seguridad:} Permite aplicar políticas de seguridad específicas a cada VLAN, restringiendo el acceso a recursos críticos y protegiendo datos sensibles.
+    \item \textbf{Optimización del rendimiento:} Minimiza los cuellos de botella y mejora la eficiencia de la comunicación.
+\end{itemize}
 
-\section{Seguridad en Redes Hospitalarias}
+\section{Protocolos de Enrutamiento Dinámico}
+\subsection{OSPF (Open Shortest Path First)}
+\label{subsec:ospf}
+OSPF es un protocolo de enrutamiento de estado de enlace (link-state) que utiliza el algoritmo de Dijkstra para calcular las rutas más cortas. Sus características principales son:
+\\ \\
+\textbf{Funcionamiento Básico:}
+\begin{itemize}
+    \item Cada router mantiene una Base de Datos de Estado de Enlace (LSDB) con información topológica completa de la red.
+    \item Utiliza LSAs (Link State Advertisements) para intercambiar información entre routers.
+    \item Calcula rutas óptimas mediante el algoritmo SPF (Shortest Path First) de Dijkstra.
+\end{itemize}
+\textbf{Ventajas en Entornos Hospitalarios:}
+\begin{itemize}
+    \item Convergencia rápida ante cambios en la topología de la red, lo que es crítico en entornos donde la disponibilidad es esencial.
+    \item Soporta redes de gran tamaño y complejidad, permitiendo una escalabilidad adecuada para hospitales con múltiples departamentos y servicios.
+    \item Uso eficiente del ancho de banda al enviar actualizaciones solo cuando hay cambios en la red, reduciendo el tráfico innecesario.
+\end{itemize}
+
+\subsection{Algoritmo de Dijkstra}
+El algoritmo de Dijkstra es fundamental para el funcionamiento de OSPF, ya que permite calcular la ruta más corta entre nodos en una red. Su funcionamiento se basa en:
+\begin{enumerate}
+    \item \textbf{Descubrimiento de topología local:} Cada router identifica sus enlaces directos y sus costos asociados.
+    \item \textbf{Inundación con LSAs:} Los routers envían información sobre sus enlaces a todos los demás routers de la red, actualizando la LSDB.
+    \item \textbf{Construcción del grafo:} A partir de la LSDB, cada router construye un grafo que representa la topología de la red.
+    \item \textbf{Cálculo de rutas:} Utilizando el algoritmo de Dijkstra, cada router determina la ruta más corta a cada destino basado en los costos de los enlaces.
+\end{enumerate}
+
+\section{Protocolos de Redundancia y Alta Disponibilidad}
+\subsection{HSRP (Hot Standby Router Protocol)}
+\label{subsec:hsrp}
+HSRP es un protocolo propietario de Cisco que proporciona redundancia a nivel de gateway mediante la creación de un router virtual que actúa como puerta de enlace 
+predeterminada para los dispositivos conectados directamente. Sus características principales son: \\ \\
+
+\textbf{Arquitectura HSRP:}
+\begin{itemize}
+    \item \textbf{Router Activo:} Un router se designa como activo y gestiona el tráfico hacia el gateway virtual.
+    \item \textbf{Router Pasivo (Standby):} Otro router se configura como pasivo, listo para asumir el rol de activo en caso de fallo del router activo.
+    \item \textbf{Router Pasivo (Listen):} El tercer router se configura como pasivo en modo listen, listo para asumir el rol de router pasivo en modo Standby en caso de fallo del router activo.
+    \item \textbf{Gateway Virtual:} Se asigna una dirección IP virtual que actúa como puerta de enlace para los dispositivos de la red.
+\end{itemize}
+\textbf{Mecanismos de Detección de Fallos:}
+\begin{itemize}
+    \item Paquetes Hello enviados cada 10 segundos a la dirección multicast 224.0.0.2 para detectar la disponibilidad del router activo.
+    \item Dead interval para detectar routers no funcionales, que se establece en 30 segundos.
+    \item Configuración de prioridades para determinar el router activo, donde el router con mayor prioridad se convierte en activo.
+\end{itemize}
+
+\subsection{EtherChannel y Agregación de Enlaces}
+\label{subsec:etherchannel}
+EtherChannel es una tecnología que permite agregar múltiples enlaces físicos para actuar como un único enlace lógico. Los beneficios incluyen:
+
+\begin{itemize}
+    \item \textbf{Mayor ancho de banda:} Combina el ancho de banda de varios enlaces físicos, mejorando la capacidad de la red.
+    \item \textbf{Redundancia:} Si un enlace falla, el tráfico se redistribuye automáticamente entre los enlaces restantes, garantizando la continuidad del servicio.
+    \item \textbf{Balanceo de carga:} Distribuye el tráfico entre los enlaces agregados, optimizando el uso de recursos y evitando cuellos de botella.
+\end{itemize}
+
+\section{Servicios de Red Fundamentales}
+\subsection{DHCP (Dynamic Host Configuration Protocol)}
+\label{subsec:dhcp}
+DHCP es un protocolo de red que permite la asignación dinámica de direcciones IP a dispositivos conectados a la red. Sus características principales son:
+\\ \\
+\textbf{Funcionamiento:}
+\begin{enumerate}
+    \item \textbf{Descubrimiento:} El cliente envía un mensaje DHCP Discover para localizar servidores DHCP disponibles.
+    \item \textbf{Oferta:} Los servidores DHCP responden con un mensaje DHCP Offer que incluye una dirección IP y otros parámetros de configuración.
+    \item \textbf{Solicitud:} El cliente selecciona una oferta y envía un mensaje DHCP Request al servidor elegido.
+    \item \textbf{Confirmación:} El servidor responde con un mensaje DHCP Acknowledgment, confirmando la asignación de la dirección IP.
+    \item \textbf{Renovación:} Antes de que expire el tiempo de concesión, el cliente solicita una renovación de la dirección IP para continuar utilizándola.
+    \item \textbf{Liberación:} Cuando el cliente ya no necesita la dirección IP, envía un mensaje DHCP Release al servidor para liberar la dirección.
+\end{enumerate}
+
+\textbf{Beneficios en Entornos Hospitalarios:}
+\begin{itemize}
+    \item \textbf{Facilidad de gestión:} Permite la asignación automática de direcciones IP, simplificando la administración de dispositivos conectados.
+    \item \textbf{Reducción de errores:} Minimiza la posibilidad de conflictos de direcciones IP al asignar dinámicamente direcciones únicas a cada dispositivo.
+    \item \textbf{Flexibilidad:} Facilita la incorporación de nuevos dispositivos a la red sin necesidad de configuraciones manuales, lo que es esencial en entornos 
+    hospitalarios con alta rotación de equipos.
+\end{itemize}
+
+\subsection{NAT (Network Address Translation)}
+\label{subsec:nat}
+NAT permite que múltiples dispositivos compartan una única dirección IP pública, siendo esencial para la conectividad a Internet en redes hospitalarias. Los tipos principales son:
+\begin{itemize}
+    \item \textbf{NAT Estático:} Asocia una dirección IP privada a una dirección IP pública específica, permitiendo el acceso externo a un dispositivo concreto.
+    \item \textbf{NAT Dinámico:} Asigna direcciones IP públicas de un grupo a dispositivos privados según sea necesario, optimizando el uso de direcciones IP.
+    \item \textbf{PAT (Port Address Translation):} Permite que múltiples dispositivos compartan una única dirección IP pública utilizando diferentes números de puerto para distinguir las conexiones.
+\end{itemize}
+
+\textbf{Ventajas de NAT en Entornos Hospitalarios:}
+\begin{itemize}
+    \item \textbf{Conservación de direcciones IP:} Permite que múltiples dispositivos utilicen una única dirección IP pública, lo que es crucial en entornos con recursos limitados.
+    \item \textbf{Seguridad:} Oculta las direcciones IP internas de la red, dificultando el acceso no autorizado desde el exterior.
+    \item \textbf{Flexibilidad:} Facilita la conexión a Internet de dispositivos que no requieren acceso directo desde el exterior, como impresoras o dispositivos IoMT.
+\end{itemize}
+
+\section{Seguridad de Red y Control de Acceso}
 La seguridad en redes hospitalarias se ha convertido en un aspecto esencial dentro de la gestión tecnológica sanitaria, dado que en estos entornos no solo se maneja información 
 crítica de carácter personal y médico, sino que además se conectan dispositivos clínicos cuyo correcto funcionamiento puede incidir directamente en la seguridad y salud de 
 los pacientes. La evolución hacia infraestructuras digitales más complejas y la incorporación masiva de dispositivos médicos conectados (IoMT) ha incrementado notablemente 
 la superficie de exposición a posibles ciberataques, lo que obliga a diseñar políticas de seguridad específicas, adaptadas a las necesidades de este tipo de entornos.
+\\ \\
+Para garantizar la seguridad de la infraestructura de red hospitalaria, se pueden usar mecanismos de control de tráfico como las Listas de Control de Acceso (ACLs) o las zonas demitilarizadas. 
 
-\subsection{Principales Amenazas en Redes Hospitalarias}
-Las redes hospitalarias, por su naturaleza, presentan una serie de vulnerabilidades que pueden ser explotadas si no se implementan las medidas adecuadas. Entre las amenazas 
-más frecuentes se encuentran:
+\subsection{Listas de Control de Acceso (ACLs)}
+\label{subsec:acl}
+Las ACLs permiten filtrar el tráfico de red según criterios específicos, como direcciones IP, protocolos o puertos. Las ACLs se configuran en los dispositivos de red (switches y routers). Estas se 
+clasifican en dos tipos principales:
+
 \begin{itemize}
-    \item \textbf{Intercepción de datos sensibles:} accesos no autorizados a historiales médicos y datos clínicos personales.
-    \item \textbf{Intrusiones externas e internas:} ataques desde el exterior o desde dentro de la propia red, aprovechando errores de configuración o dispositivos desprotegidos.
-    \item \textbf{Ataques de denegación de servicio (DoS/DDoS):} que pueden dejar inoperativos servicios críticos.
-    \item \textbf{Malware y ransomware:} capaces de bloquear el acceso a sistemas de información hospitalaria o alterar el funcionamiento de dispositivos clínicos.
-    \item \textbf{Vulnerabilidades en dispositivos IoMT:} por sus recursos limitados y configuraciones menos robustas.
+    \item \textbf{ACLs estándar:} Filtran el tráfico únicamente por dirección IP de origen, permitiendo o denegando el acceso a toda la red o a subredes específicas.
+    \item \textbf{ACLs extendidas:} Permiten un filtrado más granular, considerando tanto la dirección IP de origen como la de destino, protocolos y puertos específicos.
+\end{itemize}
+
+Los componenetes de una ACL incluyen:
+\begin{itemize}
+    \item \textbf{Sujeto:} Entidad que solicita acceso a un recurso, como un usuario o dispositivo.
+    \item \textbf{Acción:} Permite o deniega el acceso al recurso solicitado.
+    \item \textbf{Objeto:} Recurso al que se solicita acceso, como un servidor, base de datos o dispositivo de red.
+    \item \textbf{Condición:} Criterios que determinan si se permite o deniega el acceso, como direcciones IP, protocolos o puertos.
+\end{itemize}
+
+\subsection{SSH (Secure Shell)}
+\label{subsec:ssh}
+SSH es un protocolo de red que permite la administración segura de dispositivos a través de una conexión cifrada. Sus características principales son:
+\begin{itemize}
+    \item \textbf{Cifrado de datos:} Protege la confidencialidad e integridad de la información transmitida, evitando que sea interceptada por terceros.
+    \item \textbf{Autenticación segura:} Utiliza claves públicas y privadas para autenticar a los usuarios, garantizando que solo personal autorizado pueda acceder a los dispositivos.
+    \item \textbf{Túneles seguros:} Permite crear túneles cifrados para transmitir datos sensibles, como credenciales o información médica, entre dispositivos.
+\end{itemize}
+\textbf{Beneficios de SSH en Entornos Hospitalarios:}
+\begin{itemize}
+    \item \textbf{Seguridad en la administración remota:} Facilita la gestión de dispositivos de red sin comprometer la seguridad de la información.
+    \item \textbf{Protección contra ataques:} Reduce el riesgo de ataques de intermediarios (MITM) y suplantación de identidad, asegurando que las comunicaciones sean auténticas.
+    \item \textbf{Auditoría y seguimiento:} Permite registrar las actividades realizadas durante las sesiones SSH, facilitando la auditoría y el seguimiento de acciones administrativas.
+\end{itemize}
+
+\subsection{Zonas Desmilitarizadas (DMZ)}
+Las zonas desmilitarizadas (DMZ) son una técnica de seguridad que permite aislar servicios accesibles desde Internet de la red interna del hospital, proporcionando una capa adicional de protección.
+En entornos hospitalarios, las DMZ se utilizan para alojar servicios como servidores web, servidores de correo electrónico o aplicaciones accesibles desde el exterior.
+
+\textbf{Beneficios de las DMZ en Entornos Hospitalarios:}
+\begin{itemize}
+    \item \textbf{Aislamiento de servicios:} Permite que los servicios accesibles desde Internet estén separados de la red interna, reduciendo el riesgo de comprometer sistemas críticos.
+    \item \textbf{Control de acceso:} Facilita la implementación de políticas de seguridad más estrictas para los servicios expuestos, limitando el acceso a recursos internos.
+    \item \textbf{Monitoreo y detección de intrusiones:} Las DMZ permiten una mejor supervisión del tráfico entrante y saliente, facilitando la detección de actividades sospechosas.
+\end{itemize}
+
+\subsection{DHCP Snooping}
+\label{subsec:dhcpsnooping}
+DHCP Snooping es una característica de seguridad que protege la red contra ataques de suplantación de servidor DHCP (DHCP Spoofing). Funciona filtrando las solicitudes DHCP y
+permitiendo solo aquellas provenientes de servidores DHCP autorizados. Sus características principales son:
+\begin{itemize}
+    \item \textbf{Filtrado de mensajes DHCP:} Permite que solo los mensajes DHCP provenientes de servidores autorizados sean aceptados, bloqueando solicitudes maliciosas.
+    \item \textbf{Prevención de ataques:} Protege contra ataques de suplantación de servidor DHCP, donde un atacante intenta responder a solicitudes DHCP con información falsa.
+    \item \textbf{Registro de asignaciones:} Mantiene un registro de las asignaciones de direcciones IP realizadas por los servidores DHCP autorizados, facilitando la auditoría y el seguimiento.
+\end{itemize}
+
+\subsection{IPSec (Internet Protocol Security)}
+\label{subsec:ipsec}
+IPsec es un conjunto de protocolos que proporciona seguridad a nivel de red mediante la autenticación y cifrado de paquetes IP. Sus características principales son:
+\begin{itemize}
+    \item \textbf{Autenticación de origen:} Verifica la identidad del remitente de los paquetes IP, asegurando que provienen de una fuente confiable.
+    \item \textbf{Cifrado de datos:} Protege la confidencialidad de los datos transmitidos mediante el cifrado de los paquetes IP, evitando que sean interceptados por terceros.
+    \item \textbf{Integridad de datos:} Garantiza que los datos no han sido alterados durante la transmisión, utilizando funciones hash para verificar la integridad.
+\end{itemize}
+\textbf{Beneficios de IPsec en Entornos Hospitalarios:}
+\begin{itemize}
+    \item \textbf{Protección de datos sensibles:} Asegura que la información médica y personal transmitida a través de la red esté protegida contra accesos no autorizados.
+    \item \textbf{Seguridad en comunicaciones remotas:} Facilita la creación de túneles seguros para la comunicación entre dispositivos médicos y sistemas de otros hospitales.
 \end{itemize}
 
 \section{Introducción a IoMT (Internet of Medical Things)}
 Internet of Medical Things (IoMT) es una evolución natural de Internet of Things (IoT) aplicada al ámbito sanitario, que permite la interconexión de dispositivos médicos, 
 sensores y sistemas de información clínica a través de redes seguras. Esta tecnología posibilita la monitorización remota de pacientes, el control en tiempo real de 
 parámetros fisiológicos y la gestión eficiente de recursos hospitalarios, contribuyendo a mejorar la calidad asistencial y la toma de decisiones clínicas basadas en datos 
-fiables y actualizados. \\
+fiables y actualizados. \\ \\
 
 En la práctica hospitalaria, el IoMT se ha consolidado como una herramienta fundamental para optimizar los procesos sanitarios, incrementando la capacidad de respuesta ante situaciones
 críticas y reduciendo la carga de trabajo del personal clínico. Gracias a la integración de sensores biomédicos, dispsoitivos portátiles y plataformas de gestión de datos, 
-los profesionales sanitarios pueden disponer de información vital en tiempo real, lo que favorece diagnósticos más precisos y tratamientos personalizados. \\ 
+los profesionales sanitarios pueden disponer de información vital en tiempo real, lo que favorece diagnósticos más precisos y tratamientos personalizados. \\ \\
 
 Además, el IoMT desempeña un papel esencial en la mejora de la eficiencia operativa hospitalaria. Como se recoge en la literatura, su implementación permite localizar y gestionar
 equipamiento médico, optimizar la trazabilidad de pacientes y activos, y mejorar la monitorización de entornos hospitalarios críticos, como quirófanos y unidades de cuidados intensivos.
-Este ecosistema conectado se apoya en tecnologías de comunicación de baja potencia y alrgo alcance (LPWAN) como Sigfox, LoRa y NB-IoT, que proporcionan conectividad eficiente para
-dispositivos médicos que requieren bajo consumo energético y cobertura extendida dentro y fuera de los centros sanitarios. \\
+Este ecosistema conectado se apoya en tecnologías de comunicación de baja potencia y largo alcance (LPWAN) como Sigfox, LoRa y NB-IoT, que proporcionan conectividad eficiente para
+dispositivos médicos que requieren bajo consumo energético y cobertura extendida dentro y fuera de los centros sanitarios. \\ \\
 
 Desde el punto de vista arquitectónico, las soluciones IoMT han evolucionado hacia modelos distribuidos basados en edge/fog computing, donde los datos se procesan parcialemnte
 en pasarelas inteligentes cercanas a los dispositivos, antes de enviarse a plataformas en la nube para su almacenamiento y análisis avanzado. Este enfoque permite reducir la 
 latencia, mejorar la seguridad de los datos sensibles y aliviar la carga de tráfico hacia los servidores centrales, favoreciendo la continuidad asistencial en entornos hospitalarios
-con elevada demanda de recursos. \\
+con elevada demanda de recursos. \\ \\
 
 El auge del IoMT también plantea desafíos en materia de seguridad, privacidad e interoperabilidad, dado que la cantidad de información médica gestionada por estos sistemas es altamente 
-sensible y está sujeta a estrictos marcos normativos. \\
+sensible y está sujeta a estrictos marcos normativos. \\ \\
 
 En definitiva, la implantación del IoMT en entronos hospitalrios representa una oportunidad estratégica para transformar la asistencia sanitaria, dotándola de mayor flexibilidad, 
 capacidad predictiva y resiliencia frente a sistuaciones de crisis como la vivida durante la pandemia de COVID-19, donde estas tecnologías demostraron su potencial para mejorar la 

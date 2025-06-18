@@ -121,7 +121,7 @@
 }}
 
 %---Opcions per defecte:
-\ExecuteOptions{GTEL,catalan}
+\ExecuteOptions{GINF,spanish}
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{memoir}}
 \ProcessOptions*
@@ -161,7 +161,7 @@
 \RequirePackage{multirow}
 
 % Per defecte suposarem que l'idioma és el català
-\RequirePackage[english,spanish,main=catalan]{babel}
+\RequirePackage[english,main=spanish,catalan]{babel}
 
 %----------------------- daleif1 style ----------------------------------------
 \makeatletter
@@ -277,7 +277,7 @@
     \AtPageUpperLeft{%
 %    	\grid
 		\put(24,-14){\makebox(0,0)[lt]{%
-			\includegraphics[height=21mm]{./537341_escudoUIB_horizontal.png}%
+			\includegraphics[height=21mm]{Imágenes/537341_escudoUIB_horizontal.png}%
 			}% Fi de makebox
 		}% Fi de put
        	\put(33,-60){\makebox(0,0)[lt]{\LARGE\sffamily\bfseries\textcolor{colorTFG}{\MakeUppercase{\nomprojecte}}}}
@@ -359,12 +359,12 @@
 		}% Fi de put
 		\put(35,-170){%
 			\makebox(0,0)[lb]{%
-					\sffamily{Paraules clau del treball: \@paraulesclau}
+					\sffamily{Palabras clave del trabajo: \@paraulesclau}
 			}% Fi de makebox
 		}% Fi de put
 		\put(35,-208){%
 			\makebox(0,0)[lb]{%
-					\large\sffamily\emph{Tutor: \@tutor}
+					\large\sffamily\emph{Tutores: \@tutor}
 			}% Fi de makebox
 		}% Fi de put
 		\put(35,-235){%

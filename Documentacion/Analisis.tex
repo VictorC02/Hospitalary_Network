@@ -2,17 +2,107 @@
 
 \chapter{Análisis }\label{análisis}
 
+\section{Interesados}
+Los interesados son aquellas personas o entidades que tienen un interés en el proyecto y pueden influir en su desarrollo o verse afectadas por él. En este caso, 
+los interesados son los siguientes:
+
+\begin{itemize}
+    \item \textbf{Personal médico y sanitario:} Son los usuarios principales de los sistemas clínicos conectados a la red. Utilizan aplicaciones para la gestión de 
+    historiales médicos, diagnósticos, prescripciones y monitorización en tiempo real de los pacientes. Para este colectivo, la red debe garantizar alta disponibilidad, 
+    bajo retardo y confidencialidad de los datos clínicos, ya que cualquier interrupción puede afectar directamente a la atención sanitaria.
+    \item \textbf{Personal administrativo:} Encargados de la gestión de citas, facturación, expedientes, inventario y coordinación interna del hospital. Aunque sus tareas 
+    no están directamente relacionadas con la atención clínica, requieren acceso constante a sistemas de información conectados a la red. Su trabajo depende de la fiabilidad 
+    de los servicios internos como bases de datos y aplicaciones de gestión.
+    \item \textbf{Departamento de \acs{IT}:} Responsables del mantenimiento, configuración y supervisión de la infraestructura de red. Este grupo necesita una red segura, escalable 
+    y fácilmente monitorizable, así como herramientas para la detección de fallos, gestión de dispositivos IoMT y control de accesos.
+    \item \textbf{Dirección del hospital:} Interesada en que la red contribuya a mejorar la eficiencia operativa del centro, optimice los recursos y garantice el cumplimiento 
+    de la legislación vigente, especialmente en lo relativo a la protección de datos (\acs{LOPDGDD} y \acs{RGPD}). También se preocupan por el coste y la sostenibilidad del sistema a 
+    largo plazo.
+    \item \textbf{Pacientes:} Interesados en que la red de invitados funcione correctamente y no tenga fallos de seguridad. Su experiencia asistencial mejora cuando los 
+    procesos internos son ágiles, seguros y eficientes. La red hospitalaria debe garantizar que su información médica esté protegida, que los dispositivos de monitorización 
+    funcionen en tiempo real y que la atención sea fluida y sin errores derivados de caídas de red.
+\end{itemize}
+
 \section{Requisitos del Sistema}
+Para garantizar el correcto diseño, funcionamiento y seguridad de la infraestructura de red hospitalaria simulada en este proyecto, se han definido una serie de requisitos 
+que determinan las condiciones que debe cumplir el sistema. Estos requisitos se clasifican en funcionales, no funcionales, de conectividad y de seguridad, abarcando tanto 
+los aspectos técnicos como los operativos de la red.
 
 \subsection{Requisitos Funcionales}
-
+Son aquellos requisitos que definen las funciones y servicios que debe ofrecer la infraestructura de red para satisfacer las necesidades del entorno hospitalario y los 
+dispositivos conectados.
+\begin{itemize}
+    \item El sistema debe permitir la interconexión entre los cuatro hospitales.
+    \item Cada hospital debe disponer de tres subredes diferenciadas: una para invitados, una para dispositivos IoMT y otra para la red interna hospitalaria.
+    \item Cada hospital debe estar dividido en VLANs por departamentos, asegurando la separación lógica de las áreas clínicas, administrativas, de investigación y de servicios generales.
+    \item La red debe permitir la asignación dinámica de direcciones IP mediante servidores DHCP en cada subred.
+    \item Debe garantizar la resolución de nombres internos mediante DNS.
+    \item Los dispositivos autorizados deben poder acceder a servidores de datos y dispositivos médicos críticos entre hospitales.
+    \item Los dispositivos médicos IoMT deben disponer de una subred propia con dos servidores DHCP, uno de ellos de respaldo.
+    \item Deben implementarse servicios de NAT para acceso a Internet desde las subredes autorizadas.
+    \item Se debe permitir gestión remota segura de los dispositivos de red mediante SSH.
+    \item La red debe contar con redundancia de enlaces y gateways mediante EtherChannel y HSRP.
+    \item Tanto la red intrahospitalaria como la interhospitalaria debe estar configurada de tal forma que haya configuraciones dinámicas de enrutamiento utilizando OSPF.
+\end{itemize}
 \subsection{Requisitos No Funcionales}
+Son aquellos que definen condiciones de calidad, operativas o de gestión que debe cumplir el sistema, sin especificar funciones concretas.
+\begin{itemize}
+    \item La infraestructura debe garantizar una alta disponibilidad, con redundancia en enlaces y puntos críticos.
+    \item La red debe estar diseñada de forma modular y escalable, permitiendo incorporar nuevos departamentos o dispositivos sin afectar al rendimiento.
+\end{itemize}
+\subsection{Requisitos de Disponibilidad y Redundancia}
+Establecen las condiciones que debe cumplir la red para garantizar su funcionamiento continuo y la disponibilidad de los servicios críticos. En términos generales se establecen los siguientes requisitos:
+\begin{itemize}
+    \item Los enlaces entre switches L2 y L3 deben contar con redundancia física para evitar puntos únicos de fallo.
+    \item Los routers principales deben estar configurados en alta disponibilidad para tolerar fallos de hardware o enlaces.
+    \item Los servidores DHCP deben contar con un servidor de respaldo para garantizar la asignación continua de direcciones IP, únicamente para los dispositivos IoMT.
+    \item La infraestructura debe permitir la monitorización continua del estado de los dispositivos y enlaces para detectar fallos proactivamente.
+\end{itemize}
 
 \subsection{Requisitos de Seguridad}
+\label{subsec: TiposIoMT}
+Establecen las condiciones que debe cumplir la red para proteger su infraestructura, los datos transmitidos y los servicios prestados. En términos generales se establecen los siguientes requisitos:
+\begin{itemize}
+    \item Se debe implementar una segmentación lógica mediante VLANs para aislar departamentos, subredes y servicios críticos.
+    \item Deben configurarse listas de control de acceso (ACLs) para:
+    \begin{itemize}
+        \item Bloquear el tráfico desde la red de invitados hacia la red interna y la red de dispositivos IoMT.
+        \item Restringir el acceso a la base de datos de cada hospital, permitiendo únicamente a los dispositivos autorizados de cada hospital acceder a ella.
+        \item Restringir el acceso a los dispositivos IoMT según su clasificación y función, limitando la conectividad entre ellos.
+        \item Permitir el acceso a los dispositivos de la red interna únicamente a los dispositivos autorizados de las áreas de servicios quirúrgicos, médicos, centrales y UCI.
+    \end{itemize}
+    \item La gestión de dispositivos de red debe realizarse mediante conexiones seguras (SSH).
+    \item Todos los dispositivos de red deben contar con una configuración de autenticación, con contraseñas seguras, para evitar accesos no autorizados.
+    \item La interconexión entre hospitales debe realizarse a través de enlaces seguros, utilizando VPNs o túneles cifrados para proteger la información transmitida.
+\end{itemize}
 
-En terminos generales y requisitos especficos de la subred IoMT.
+Para establecer los requisitos de seguridad específicos para los dispositivos IoMT, se deben considerar las sigueintes clasificaciones de dispositivos:
+\begin{itemize}
+    \item \textbf{Dispositivos IoMT Comunes (Tipo 1):} Son aquellos dispositivos comunes para la atención médica que pueden ser utilizados por el personal 
+    médico. Estos dispositivos pueden incluir sistemas de monitoreo remoto de pacientes, sensores de localización, dispositivos implantables, etc.
+    \item \textbf{Dispositivos IoMT Importantes UCI (Tipo 2):} Son aquellos dispositivos que no son críticos dentro de la UCI, es decir, que su función princiapl no es vital de forma 
+    inmediata. Estos dispositivos inluyen bobmas de vacío para heridas, lámparas de fototerapia, dispositivos de rehabilitación, etc \cite{IoMT-UCI}.
+    \item \textbf{Dispositivos IoMT Críticos UCI (Tipo 3):} Son aquellos dispositivos que son críticos dentro de la UCI, es decir, son aquellos que permiten el monitoreo y soporte
+    vital de pacietnes en estado grave, donde la vigilancia constante y la intervención inmediata pueden marcar la diferencia entre la vida y la muerte, y que por tanto necesitan medidas
+    de seguridad extras. Estos dispositivos incluyen monitores cardíacos y de signos vitales, ventiladores mecánicos, bombas de infusión, sistemas de hemodiálisis, etc\cite{IoMT-UCI}.
+\end{itemize}
+A continuación se detallan los requisitos de seguridad específicos para los dispositivos IoMT:
+\begin{itemize}
+    \item Los dispositivos IoMT deben estar aislados en una subred propia para evitar interferencias con la red interna y de invitados.
+    \item Los dispositivos IoMT deben contar con un servidor propio de DHCP para asignación de direcciones IP, con un servidor de respaldo para garantizar la continuidad del servicio.
+    \item Los dispositivos IoMT Tipo 1 solo deben tener conectividad con los dispositivos de las areas médicas de servicios quirúrgicos, médicos y centrales, 
+    además de por los dispositivos del departamento de la UCI.
+    \item Los dispositivos IoMT Tipo 2 deben tener conectividad únicamente con los dispositivos del departamento de la UCI.
+    \item Los dispositivos IoMT Tipo 3 solo pueden tener conectividad con un único dispositivo autorizado del departamento de la UCI.
+\end{itemize}
 
 \subsection{Requisitos de Conectividad}
+Definen las condiciones relacionadas con la transmisión de datos y la comunicación entre dispositivos y servicios dentro de la red, en términos generales.
+\begin{itemize}
+    \item Solo los dispositivos autorizados de cada hospital pueden acceder a la base de datos de otros hospitales.
+    \item Cualquier dispositivo de la red de invitados no puede tener conectividad con la red interna o con la red de dispositivos IoMT.
+    \item Dentro de la red interna, los dispositivos del area de administración, de enfermeria (exceptuando la UCI) y de apoyo, no pueden tener conectividad 
+    con las areas de servicios quirúrgicos, médicos, centrales y UCI.
+    \item Cualquier dispositivo de las areas de servicios quirúrgicos, médicos, centrales y UCI puede tener conectividad con cualquier otro dispositivo de la red interna.
+\end{itemize}
 
-\section{Interesados}
-xxx
