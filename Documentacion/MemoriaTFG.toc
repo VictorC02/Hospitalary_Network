@@ -57,14 +57,14 @@
 \contentsline {section}{\numberline {5.1}Criterios de Diseño}{28}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Topología de Red Propuesta}{28}{section.5.2}%
 \contentsline {subsection}{\numberline {5.2.1}Topología Física Son Espases}{28}{subsection.5.2.1}%
-\contentsline {subsubsection}{Routers}{28}{section*.45}%
-\contentsline {subsubsection}{Red de Invitados}{29}{section*.46}%
-\contentsline {subsubsection}{DMZ Invitados}{29}{section*.47}%
-\contentsline {subsubsection}{DMZ IoMT}{30}{section*.48}%
-\contentsline {subsubsection}{DMZ Interna}{30}{section*.49}%
-\contentsline {subsubsection}{Red Interna}{31}{section*.50}%
-\contentsline {subsubsection}{Red IoMT}{32}{section*.51}%
-\contentsline {subsubsection}{Disposición Física}{33}{section*.52}%
+\contentsline {subsubsection}{Routers}{28}{section*.41}%
+\contentsline {subsubsection}{Red de Invitados}{29}{section*.42}%
+\contentsline {subsubsection}{DMZ Invitados}{29}{section*.43}%
+\contentsline {subsubsection}{DMZ IoMT}{30}{section*.44}%
+\contentsline {subsubsection}{DMZ Interna}{30}{section*.45}%
+\contentsline {subsubsection}{Red Interna}{31}{section*.46}%
+\contentsline {subsubsection}{Red IoMT}{32}{section*.47}%
+\contentsline {subsubsection}{Disposición Física}{33}{section*.48}%
 \contentsline {subsection}{\numberline {5.2.2}Topología Lógica Son Espases}{33}{subsection.5.2.2}%
 \contentsline {subsection}{\numberline {5.2.3}Topología Física de la Red de Interconexión entre Hospitales}{34}{subsection.5.2.3}%
 \contentsline {subsection}{\numberline {5.2.4}Topología Lógica de la Red de Interconexión entre Hospitales}{36}{subsection.5.2.4}%
@@ -75,13 +75,13 @@
 \contentsline {section}{\numberline {5.4}Direccionamiento IP y Subnetting}{41}{section.5.4}%
 \contentsline {subsection}{\numberline {5.4.1}Criterios de Diseño de Direccionamiento}{42}{subsection.5.4.1}%
 \contentsline {subsection}{\numberline {5.4.2}Planificación de Subredes}{42}{subsection.5.4.2}%
-\contentsline {subsubsection}{Subnetting Son Espases}{43}{section*.53}%
-\contentsline {subsubsection}{Subnetting IoMT}{45}{section*.54}%
-\contentsline {subsubsection}{Subnetting Invitados}{45}{section*.55}%
+\contentsline {subsubsection}{Subnetting Son Espases}{43}{section*.49}%
+\contentsline {subsubsection}{Subnetting IoMT}{45}{section*.50}%
+\contentsline {subsubsection}{Subnetting Invitados}{45}{section*.51}%
 \contentsline {subsection}{\numberline {5.4.3}Asignación de Direcciones IP Estáticas}{46}{subsection.5.4.3}%
-\contentsline {subsubsection}{Puertas de Enlace}{46}{section*.56}%
-\contentsline {subsubsection}{Servidores}{47}{section*.57}%
-\contentsline {subsubsection}{Dispositivos Finales}{48}{section*.58}%
+\contentsline {subsubsection}{Puertas de Enlace}{46}{section*.52}%
+\contentsline {subsubsection}{Servidores}{47}{section*.53}%
+\contentsline {subsubsection}{Dispositivos Finales}{48}{section*.54}%
 \contentsline {section}{\numberline {5.5}Protocolos y Servicios de Red}{48}{section.5.5}%
 \contentsline {subsection}{\numberline {5.5.1}DHCP (Dynamic Host Configuration Protocol)}{48}{subsection.5.5.1}%
 \contentsline {subsection}{\numberline {5.5.2}NAT (Network Address Translation)}{49}{subsection.5.5.2}%
@@ -92,24 +92,57 @@
 \contentsline {section}{\numberline {5.6}Seguridad de la Red}{51}{section.5.6}%
 \contentsline {subsection}{\numberline {5.6.1}ACLs}{51}{subsection.5.6.1}%
 \contentsline {subsection}{\numberline {5.6.2}DHCP Snooping}{52}{subsection.5.6.2}%
-\contentsline {subsection}{\numberline {5.6.3}IPSec}{53}{subsection.5.6.3}%
+\contentsline {subsection}{\numberline {5.6.3}VPN IPSec}{53}{subsection.5.6.3}%
 \contentsline {subsection}{\numberline {5.6.4}SSH}{53}{subsection.5.6.4}%
 \contentsline {subsection}{\numberline {5.6.5}Configuración DMZ}{53}{subsection.5.6.5}%
 \contentsline {section}{\numberline {5.7}Redes Completas}{55}{section.5.7}%
 \contentsline {subsection}{\numberline {5.7.1}Leyenda}{57}{subsection.5.7.1}%
 \contentsline {chapter}{\chapternumberline {6}Implementación}{59}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Configuración de Dispositivos}{59}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Creación de VLANs y Asignación de Puertos}{59}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Configuración de Direccionamiento IP}{59}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Configuración de Seguridad}{59}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Configuración de la Subred IoMT}{59}{section.6.5}%
-\contentsline {chapter}{\chapternumberline {7}Pruebas y Validación}{61}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Pruebas de Conectividad}{61}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Pruebas de Seguridad}{61}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Resultados y Análisis}{61}{section.7.3}%
-\contentsline {chapter}{\chapternumberline {8}Conclusión}{63}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Logros Alcanzados}{63}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Dificultades Encontradas}{63}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Mejoras y Ampliaciones Futuras}{63}{section.8.3}%
-\contentsline {appendix}{\chapternumberline {A}Anexo}{65}{appendix.Alph1}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{67}{appendix*.59}%
+\contentsline {section}{\numberline {6.1}Configuración Básica de Dispositivos}{59}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Creación de VLANs y Asignación de Puertos}{60}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}VLANs en Switches de Acceso}{60}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}VLANs en Switches de Distribución}{60}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}VLANs en Switches Core}{61}{subsection.6.2.3}%
+\contentsline {section}{\numberline {6.3}Implementación EtherChannel}{61}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Seguridad en DMZ}{61}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Implementación de Direccionamiento IP}{61}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Implementación HSRP}{62}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Direccionamiento Estático}{62}{subsection.6.5.2}%
+\contentsline {subsection}{\numberline {6.5.3}DHCP Relay}{62}{subsection.6.5.3}%
+\contentsline {section}{\numberline {6.6}Implementación OSPF}{62}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Implementación RSTP}{62}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Implementación NAT}{63}{section.6.8}%
+\contentsline {section}{\numberline {6.9}Implementación DHCP Snooping}{63}{section.6.9}%
+\contentsline {section}{\numberline {6.10}Implementación ACLs}{64}{section.6.10}%
+\contentsline {section}{\numberline {6.11}Implementación VPN}{64}{section.6.11}%
+\contentsline {chapter}{\chapternumberline {7}Pruebas y Validación}{65}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Pruebas de Conectividad}{65}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Pruebas de Seguridad}{66}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Pruebas de Disponibilidad}{66}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Pruebas de Protocolos de Red}{67}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Resultados y Análisis}{67}{section.7.5}%
+\contentsline {chapter}{\chapternumberline {8}Conclusión}{69}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Logros Alcanzados}{69}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Mejoras y Ampliaciones Futuras}{70}{section.8.2}%
+\contentsline {appendix}{\chapternumberline {A}Anexos}{71}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Configuración Básica Dispositivos de Red}{71}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}Configuración VLANs en Switches de Acceso}{72}{section.Alph1.2}%
+\contentsline {section}{\numberline {A.3}Configuración VLANs en Switches de Distribución}{72}{section.Alph1.3}%
+\contentsline {section}{\numberline {A.4}Configuración VLANs en Switches Core}{73}{section.Alph1.4}%
+\contentsline {section}{\numberline {A.5}Configuración EtherChannel}{74}{section.Alph1.5}%
+\contentsline {section}{\numberline {A.6}Configuración Medidas Seguridad DMZ}{74}{section.Alph1.6}%
+\contentsline {section}{\numberline {A.7}Configuración HSRP en Switches L3}{74}{section.Alph1.7}%
+\contentsline {section}{\numberline {A.8}Configuración HSRP en Routers}{75}{section.Alph1.8}%
+\contentsline {section}{\numberline {A.9}Configuración Direccionamiento IP Estático}{75}{section.Alph1.9}%
+\contentsline {section}{\numberline {A.10}Configuración DHCP Relay}{75}{section.Alph1.10}%
+\contentsline {section}{\numberline {A.11}Configuración OSPF}{75}{section.Alph1.11}%
+\contentsline {section}{\numberline {A.12}Configuración RSTP}{76}{section.Alph1.12}%
+\contentsline {section}{\numberline {A.13}Configuración NAT}{76}{section.Alph1.13}%
+\contentsline {section}{\numberline {A.14}Configuración DHCP Snooping}{76}{section.Alph1.14}%
+\contentsline {section}{\numberline {A.15}Configuración ACLs Switch IoMt Planta 3}{77}{section.Alph1.15}%
+\contentsline {section}{\numberline {A.16}Configuración ACLs Switch IoMt Plantas 0, 1 y 2}{77}{section.Alph1.16}%
+\contentsline {section}{\numberline {A.17}Configuración ACLs Routers}{78}{section.Alph1.17}%
+\contentsline {section}{\numberline {A.18}Configuración ACLs Switches Distribución}{79}{section.Alph1.18}%
+\contentsline {section}{\numberline {A.19}Configuración ACLs Routers Interconexión}{80}{section.Alph1.19}%
+\contentsline {section}{\numberline {A.20}Configuración VPN entre Son Espases y Manacor}{82}{section.Alph1.20}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{85}{appendix*.55}%

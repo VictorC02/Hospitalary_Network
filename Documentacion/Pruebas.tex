@@ -1,9 +1,63 @@
 %!TeX root=MemoriaTFG.tex
 
 \chapter{Pruebas y Validación}\label{pruebas}
+Una vez completada la implementación de la infraestructura de red hospitalaria simulada, resulta imprescindible realizar un proceso de pruebas y validación que permita 
+verificar que la red funciona correctamente, cumple con los requisitos establecidos y garantiza los niveles de seguridad, segmentación y disponibilidad previstos en el diseño.
+\\ \\
+El propósito de este capítulo es detallar el conjunto de pruebas funcionales, de conectividad, de seguridad y de tolerancia a fallos realizadas sobre la red implementada en 
+Cisco Packet Tracer. Estas pruebas permiten detectar posibles errores de configuración, comprobar la eficacia de las políticas de acceso y confirmar la correcta comunicación 
+entre los diferentes dispositivos, subredes y hospitales.
+\\ \\
+Las pruebas se han clasificado según su naturaleza:
+\begin{itemize}
+    \item Pruebas de Conectividad.
+    \item Pruebas de Seguridad.
+    \item Pruebas de Disponibilidad.
+    \item Pruebas de Protocolos de red.
+\end{itemize}
+
+Este capítulo documenta los resultados obtenidos en cada prueba, analizando su comportamiento frente a los objetivos planteados y proponiendo, en su caso, mejoras o ajustes sobre 
+la configuración para optimizar la fiabilidad y seguridad de la red hospitalaria diseñada.
 
 \section{Pruebas de Conectividad}
+A continuación se muestran las pruebas de conectividad realizadas:
+\begin{itemize}
+    \item Conectividad entre dispositivos de áreas médicas con dispositivos de la UCI.
+    \item Conectividad entre dispositivos de áreas médicas con dispositivos IoMT tipo 1.
+    \item Bloqueo de tráfico entre dispositivos de áreas administrativas con dispositivos de áreas médicas.
+    \item Bloqueo de tráfico entre dispositivos de áreas administrativas con dispositivos IoMT.
+    \item Conectividad entre dispositivos de la UCI con dispositivos IoMT tipo 2.
+    \item Conectividad entre el dispositivo autorizado de la UCI con dispositivos IoMT tipo 3.
+    \item Bloqueo de tráfico entre dispositivos de la red de invitados con dispositivos de la red interna o IoMT.
+    \item Conectividad entre dispositivos autorizados con servidores de archivos de otros hospitales.
+    \item Conectividad entre dispositivos de la red interna con Internet.
+    \item Conectividad entre dispositivos de la red de invitados con Internet.
+\end{itemize}
 
 \section{Pruebas de Seguridad}
+A continuación se muestran las pruebas de seguridad realizadas:
+\begin{itemize}
+    \item Encriptación del tráfico entre hospitales.
+    \item Correcto funcionamiento de DHCP Snooping.
+    \item Correcto funcionamiento de la gestión remota mediante SSH.
+    \item Configuración de autenticación en los dispositivos de red.
+\end{itemize}
+
+\section{Pruebas de Disponibilidad}
+A continuación se muestran las pruebas de disponibilidad realizadas:
+\begin{itemize}
+    \item Tolerancia a fallos de HSRP en los routers.
+    \item Tolerancia a fallos de HSRP en los switches L3.
+    \item Tolerancia a fallos de EtherChannel.
+    \item Tolerancia a fallos en la red de interconexión.
+\end{itemize}
+
+\section{Pruebas de Protocolos de Red}
+A continuación se muestran las pruebas de protocolos de red realizadas:
+\begin{itemize}
+    \item Correcto funcionamiento de OSPF.
+    \item Correcto funcionamiento de DHCP.
+    \item Correcto funcionamiento de NAT.
+\end{itemize}
 
 \section{Resultados y Análisis}

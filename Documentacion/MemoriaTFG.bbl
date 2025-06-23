@@ -56,4 +56,32 @@ XEROX. Asignar o cambiar dirección ip de la impresora (dirección ip
   \url{https://www.support.xerox.com/es-mx/article/KB0343702}
 \BIBentrySTDinterwordspacing
 
+\bibitem{cisco_dhcp_snooping}
+\BIBentryALTinterwordspacing
+C.~Systems, \emph{Configuring DHCP Snooping}, 2019, accedido: xxxx-xx-xx.
+  [Online]. Available:
+  \url{https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus5000/sw/security/502_n2_1m/b_Cisco_n5k_security_config_gd_rel_502_n2_1/Cisco_n5k_security_config_gd_rel_502_n2_1_chapter8.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{cisco_trunk_access}
+\BIBentryALTinterwordspacing
+------. (2011) Configuring access and trunk interfaces. Accedido: xxxx-xx-xx.
+  [Online]. Available:
+  \url{https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus5000/sw/layer2/503_n1_1/Cisco_n5k_layer2_config_gd_rel_503_N1_1_chapter6.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{cisco_dhcp_relay}
+\BIBentryALTinterwordspacing
+------, \emph{Configuring the Cisco IOS DHCP Relay Agent}, 2014, accedido:
+  xxxx-xx-xx. [Online]. Available:
+  \url{http://www.cisco.com/en/US/docs/ios/12_4t/ip_addr/configuration/guide/htdhcpre.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{cisco_rstp_8021w}
+\BIBentryALTinterwordspacing
+------. (2023) Understand rapid spanning tree protocol (802.1w). Accedido:
+  xxxx-xx-xx. [Online]. Available:
+  \url{https://www.cisco.com/c/en/us/support/docs/lan-switching/spanning-tree-protocol/24062-146.html}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

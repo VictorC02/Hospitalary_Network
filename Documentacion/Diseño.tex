@@ -418,11 +418,11 @@ Para garantizar el correcto funcionamiento de las VLANs y la segmentación del t
         \item \textbf{GigabitEthernet:} Son los puertos que conectan con los switches de distribución o routers (en el caso de los switches del DMZ), se configuran en modo troncal, permitiendo el tráfico de la VLAN definida en ese departamento o servicio.
     \end{itemize}
     \item \textbf{Switches de Distribución (L3):} Todos los puertos deben estar configurados en modo troncal, permitiendo el tráfico de todas las VLANs necesarias.
-    \item \textbf{Switches Core (L3):} Todos los puertos conectados a los switches de distribución deben estar configurados en modo troncal, permitiendo el tráfico de todas las VLANs necesarias. Los puertos que coenctan con los routers 
+    \item \textbf{Switches Core (L3):} Todos los puertos conectados a los switches de distribución deben estar configurados en modo troncal, permitiendo el tráfico de todas las VLANs necesarias. Los puertos que conectan con los routers 
     tienen dirección IP estática y por lo tanto no se configura el switchport en modo troncal.
 \end{itemize}
 
-\section{Direccionamiento IP y Subnetting}
+\section{Direccionamiento IP y Subnetting}\label{sec:direccionamiento}
 Un correcto esquema de direccionamiento IP es esencial para garantizar la organización, la escalabilidad y la seguridad de cualquier infraestructura de red. En entornos 
 hospitalarios, donde coexisten diferentes tipos de dispositivos y servicios con requisitos de conectividad y seguridad distintos, la planificación del direccionamiento 
 cobra especial relevancia.
@@ -719,7 +719,7 @@ En la Tabla \ref{tab:subnettingIntInvitados} se muestra el subnetting realizado 
     \label{tab:subnettingIntInvitados}
 \end{table}
 
-\subsection{Asignación de Direcciones IP Estáticas}
+\subsection{Asignación de Direcciones IP Estáticas}\label{subsec:estaticas}
 Para el correcto funcionamiento de la red, es necesaria la definición de direcciones IP estáticas como por ejemplo las de las puertas de enlace o 
 la de los servidores que dan servicios esenciales a la red interna, como el servidor DHCP.
 
@@ -911,7 +911,7 @@ gestionan y la criticidad de los servicios asistenciales que dependen de ella. A
 acceso mas robustos.
 \\ \\
 En esta sección, se detallan las medidas de seguridad adopatadas en ambos diseños de red.
-\subsection{ACLs}
+\subsection{ACLs}\label{subsec:acls}
 Las ACLs permiten tener un control del tráfico que pasa por ciertos tramos, es por eso que, siguiendo con los requisitos establecidos en la sección \ref{subsec: TiposIoMT}, se han implementado las siguientes ACLs:
 \begin{itemize}
     \item \textbf{En los routers:} 
@@ -950,14 +950,14 @@ Las ACLs permiten tener un control del tráfico que pasa por ciertos tramos, es 
 \subsection{DHCP Snooping}
 Para evitar ataques de DHCP Spoofing, se ha configurado DHCP Snooping en todos los switches de acceso que no tengan enlaces redundantes (EtherChannel), ya que la herramienta Cisco Packet Tracer no permite 
 configurar DHCP Spoofing en enlaces redundantes. Con la configuración de este mecanismo de seguridad, conseguimos que los dispositivos finales solo acepten las direcciones IP dadas por los servidores DHCP autorizados, 
-ya que el switch de acceso descarta cualquier oferta de dirección IP proveniente de un servidor DHCP no autorizado.
+ya que el switch de acceso descarta cualquier oferta de dirección IP proveniente de un servidor DHCP no autorizado \cite{cisco_dhcp_snooping}.
 \\ \\
 También se ha configurado la opción de limitar la cantidad de paquetes DHCP enviados al servidor DHCP para evitar saturaciones.
 \\ \\
 Este mecanismo de seguridad solo esta configurado en la red del Hospital de Son Espases.
 
-\subsection{IPSec}
-Para proprocionar seguridad a las interconexiones entre los routers de cada hospital, se ha configurado una IPsec (Internet Protocol Security), detallado en la sección \ref{subsec:ipsec}, en el que se encriptan y autentican todos los paquetes IP que se transmiten a través de esa conexión.
+\subsection{VPN IPSec}
+Para proprocionar seguridad a las interconexiones entre los routers de cada hospital, se ha configurado una VPN IPsec, detallada en la sección \ref{subsec:ipsec}, en la que se encriptan y autentican todos los paquetes IP que se transmiten a través de esa conexión.
 De esta forma conseguimos una gran capa de seguridad que nos garantiza la confidencialidad, integridad y autenticidad de los datos que viajan por esa red IP.
 \\ \\
 Este mecansimo de seguridad solo esta implementado en la red de interconexión entre hospitales, ya que la red del Hospital Son Espases no tiene conexiones entre routers de otros hospitales.
@@ -966,7 +966,7 @@ Este mecansimo de seguridad solo esta implementado en la red de interconexión e
 Para la administración remota segura de los dispositivos de red (routers y switches), se ha habilitado SSH como protocolo seguro de gestión, en sustitución de protocolos inseguros como Telnet. 
 Esta configuración se ha implementado en todos los dispositivos de red (switches L2, switches L3 y routers). 
 
-\subsection{Configuración DMZ}
+\subsection{Configuración DMZ}\label{subsec:dmz}
 Para que la DMZ sea una zona segura para los servidores, se han implementado una serie de mecanismos de seguridad:
 \begin{itemize}
     \item \textbf{"switchport port-security maximum 1":} Limita el número máximo de direcciones MAC permitidas en el puerto a 1.

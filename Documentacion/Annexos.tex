@@ -1,4 +1,594 @@
 %!TeX root=MemoriaTFG.tex
+\chapter{Anexos}\label{Anexo}
 
-\chapter{Anexo}\label{Anexo}
+\section{Configuración Básica Dispositivos de Red}\label{anexo:confBas}
+A continuación se muestra el fragmento de código bash utilizado para la configuración básica de los dispositivos de red:
 
+\begin{lstlisting}[language=Bash, caption={Configuración Básica de los Dispositivos de Red}]
+%Passwords
+enable  
+config t  
+hostname  nombre_dispositivo 
+enable password cisco  
+no ip domain lookup  
+banner motd #Solo Acceso Autorizado!!#  
+line console 0  
+password cisco  
+login  
+exit  
+service password-encryption 
+
+%SSH 
+ip domain name cisco.net  
+username admin password cisco  
+crypto key generate rsa  
+1024 
+line vty 0 15  
+login local  
+transport input ssh
+\end{lstlisting}
+
+\section{Configuración VLANs en Switches de Acceso}\label{anexo:VLANSwAcc}
+A continuación se muestra el fragmento de código bash utilizado para la configuración de las VLANs en los switches de acceso:
+
+\begin{lstlisting}[language=Bash, caption={Configuración VLANs en Switches de Acceso}]
+%Create VLAN
+vlan xx 
+name nombre_VLAN 
+exit 
+
+%Ports Configuration
+interface range Fa0/1-2 
+switchport mode trunk 
+switchport trunk allowed vlan xx
+exit 
+
+interface range Fa0/3-24 
+switchport mode access 
+switchport access vlan xx
+exit 
+\end{lstlisting}
+
+\section{Configuración VLANs en Switches de Distribución}\label{anexo:VLANSwDis}
+A continuación se muestra el fragmento de código bash utilizado para la configuración de las VLANs en los switches de distribución:
+
+\begin{lstlisting}[language=Bash, caption={Configuración VLANs en Switches de Distribución}]
+%Create VLANs
+vlan xx 
+name nombre_VLAN1
+exit 
+
+vlan yy 
+name nombre_VLAN2
+exit 
+
+vlan zz 
+name nombre_VLAN_interconexion_Core
+exit 
+
+vlan nn 
+name nombre_VLAN_interconexion_Distribuidores
+exit 
+
+%Ports Configuration
+interface GigabitEthernet1/0/3 %Enlace con Switch Acceso 1
+switchport mode trunk 
+switchport trunk allowed vlan xx 
+exit 
+
+interface GigabitEthernet1/0/4 %Enlace con Switch Acceso 2
+switchport mode trunk 
+switchport trunk allowed vlan yy 
+exit 
+
+interface GigabitEthernet1/0/1 %Enlace con Switch Core 1
+switchport mode trunk 
+switchport trunk allowed vlan xx,yy,zz
+exit 
+
+interface GigabitEthernet1/0/6 %Enlace con Switch Core 2
+switchport mode trunk 
+switchport trunk allowed vlan xx,yy,zz
+exit 
+
+interface GigabitEthernet1/0/2 %Enlace con Switch Distribucion 1
+switchport mode trunk 
+switchport trunk allowed vlan xx,yy,nn
+exit 
+
+interface GigabitEthernet1/0/7 %Enlace con Switch Distribucion 2
+switchport mode trunk 
+switchport trunk allowed vlan xx,yy,nn
+exit 
+\end{lstlisting}
+
+\section{Configuración VLANs en Switches Core}\label{anexo:VLANSwCo}
+A continuación se muestra el fragmento de código bash utilizado para la configuración de las VLANs en los switches core:
+
+\begin{lstlisting}[language=Bash, caption={Configuración VLANs en Switches Core}]
+%Create VLANs
+vlan xx 
+name nombre_VLAN1
+exit 
+
+vlan yy 
+name nombre_VLAN2
+exit 
+
+vlan nn
+name nombre_VLAN3
+exit 
+
+vlan zz 
+name nombre_VLAN_interconexion_Core
+exit 
+
+%Ports Configuration
+interface GigabitEthernet1/0/3 %Enlace con Switch Distribucion 1
+switchport mode trunk 
+switchport trunk allowed vlan xx,zz 
+exit 
+
+interface GigabitEthernet1/0/4 %Enlace con Switch Distribucion 2
+switchport mode trunk 
+switchport trunk allowed vlan yy,zz
+exit 
+
+interface GigabitEthernet1/0/1 %Enlace con Switch Core
+switchport mode trunk 
+switchport trunk allowed vlan xx,yy,nn,zz
+exit 
+\end{lstlisting}
+
+\section{Configuración EtherChannel}\label{anexo:etherchannel}
+A continuación se muestra el fragmento de código bash utilizado para la configuración del EtherChannel.
+
+\begin{lstlisting}[language=Bash, caption={Configuración EtherChannel}]
+interface range fa0/1-2 %Enlaces al switch de acceso/distribucion
+switchport mode trunk 
+switchport trunk allowed vlan xx 
+channel-group 1 mode active 
+no shutdown 
+exit
+
+interface port-channel 1 
+switchport mode trunk 
+switchport trunk allowed vlan xx
+no shutdown 
+\end{lstlisting}
+
+\section{Configuración Medidas Seguridad DMZ}\label{anexo:dmz}
+A continuación se muestra el fragmento de código bash utilizado para la configuración de las medidas de seguridad básicas en las DMZ.
+
+\begin{lstlisting}[language=Bash, caption={Configuración Medidas Seguridad DMZ}]
+int range fa0/2-24 %Enlaces a dispositivos finales
+switchport port-security maximum 1 
+switchport port-security mac-address sticky 
+switchport port-security violation shutdown 
+\end{lstlisting}
+
+\section{Configuración HSRP en Switches L3}\label{anexo:hsrpL3}
+A continuación se muestra el fragmento de código bash utilizado para la configuración de la configuración de HSRP en los switches L3.
+
+\begin{lstlisting}[language=Bash, caption={Configuración HSRP en Switches L3}]
+interface vlan xx 
+ip address 192.168.10.2 255.255.255.0 
+standby xx ip 192.168.10.1 
+standby xx priority 120 
+standby xx preempt %Permite recuperar el control del servicio
+no shutdown 
+\end{lstlisting}
+
+\section{Configuración HSRP en Routers}\label{anexo:hsrpRou}
+A continuación se muestra el fragmento de código bash utilizado para la configuración de la configuración de HSRP en los routers.
+
+\begin{lstlisting}[language=Bash, caption={Configuración HSRP en Routers}]
+int range fa0/2-24 %Enlaces a dispositivos finales
+switchport port-security maximum 1 
+switchport port-security mac-address sticky 
+switchport port-security violation shutdown 
+\end{lstlisting}
+
+\section{Configuración Direccionamiento IP Estático}\label{anexo:estatico}
+A continuación se muestra el fragmento de código bash utilizado para el direccionamiento IP estático.
+
+\begin{lstlisting}[language=Bash, caption={Configuración Direccionamiento IP Estático}]
+int gig1/0/1
+ip address 192.168.0.1 255.255.255.0
+\end{lstlisting}
+
+\section{Configuración DHCP Relay}\label{anexo:relay}
+A continuación se muestra el fragmento de código bash utilizado para la configuración de DHCP Relay en switches L3.
+
+\begin{lstlisting}[language=Bash, caption={Configuración Direccionamiento IP Estático}]
+int vlan xx
+ip helper-address 10.0.3.6 
+\end{lstlisting}
+
+\section{Configuración OSPF}\label{anexo:ospf}
+A continuación se muestra el fragmento de código bash utilizado para la configuración de OSPF.
+
+\begin{lstlisting}[language=Bash, caption={Configuración OSPF}]
+ip routing 
+router ospf 10  
+#Poner todas las redes a las que esta conectado cada switch/router
+network 10.2.1.0 0.0.0.7 area 0 
+network 10.1.0.0 0.0.0.31 area 0
+\end{lstlisting}
+
+\section{Configuración RSTP}\label{anexo:rstp}
+A continuación se muestra el fragmento de código bash utilizado para la configuración de RSTP.
+
+\begin{lstlisting}[language=Bash, caption={Configuración RSTP}]
+spanning-tree mode rapid-pvst 
+\end{lstlisting}
+
+\section{Configuración NAT}\label{anexo:nat}
+A continuación se muestra el fragmento de código bash utilizado para la configuración de NAT.
+
+\begin{lstlisting}[language=Bash, caption={Configuración NAT}]
+%Outside Interfaces
+interface serial1/0 
+ip nat outside 
+
+%Inside Interfaces
+interface gig1/0.150
+ip nat inside 
+
+%Define ACLs
+access-list 1 permit subred1 mascara_de_red1
+access-list 1 permit subred2 mascara_de_red2
+access-list 1 permit subred3 mascara_de_red3
+
+access-list 2 permit subred1 mascara_de_red1
+access-list 2 permit subred2 mascara_de_red2
+access-list 2 permit subred3 mascara_de_red3
+
+%Apply ACLs on Interfaces
+ip nat inside source list 1 interface se0/0 overload 
+ip nat inside source list 2 interface se1/0 overload 
+\end{lstlisting}
+
+\section{Configuración DHCP Snooping}\label{anexo:snooping}
+A continuación se muestra el fragmento de código bash utilizado para la configuración de DHCP Snooping en los switches de acceso.
+
+\begin{lstlisting}[language=Bash, caption={Configuración DHCP Snooping}]
+%Active DHCP Snooping
+ip dhcp snooping 
+ip dhcp snooping vlan xx
+
+%Packets Rate Limitation
+int range fa0/1-24 
+ip dhcp snooping limit rate 5 
+
+%Trust Interfaces
+int range fa0/1-2 
+ip dhcp snooping trust 
+\end{lstlisting}
+
+\section{Configuración ACLs Switch IoMt Planta 3}\label{anexo:aclIoMTP3}
+A continuación se muestra el fragmento de código bash utilizado para la configuración de ACLs en el switch IoMT de la planta 3.
+
+\begin{lstlisting}[language=Bash, caption={Configuración ACLs Switch IoMt Planta 3}]
+%Declare ACL
+access-list 101 permit udp any any eq 67            
+access-list 101 permit udp any any eq 68
+access-list 101 permit ip 10.0.2.64 0.0.0.63 172.16.64.0 0.0.15.255
+access-list 101 deny ip any any
+
+access-list 102 permit udp any any eq 67            
+access-list 102 permit udp any any eq 68
+access-list 102 permit ip 172.16.64.0 0.0.15.255 10.0.2.64 0.0.0.63
+access-list 102 deny ip any any
+
+%Apply ACL on Interface
+int vlan220
+ip access-group 101 out
+ip access-group 102 in
+
+%Declare ACL
+access-list 103 permit udp any any eq 67            
+access-list 103 permit udp any any eq 68
+access-list 103 permit ip host 10.0.2.70 172.16.128.0 0.0.15.255
+access-list 103 deny ip any any
+     
+access-list 104 permit udp any any eq 67            
+access-list 104 permit udp any any eq 68        
+access-list 104 permit ip 172.16.128.0 0.0.15.255 host 10.0.2.70
+access-list 104 deny ip any any
+
+%Apply ACL on Interface
+int vlan230
+ip access-group 104 in
+ip access-group 103 out
+\end{lstlisting}
+
+\section{Configuración ACLs Switch IoMt Plantas 0, 1 y 2}\label{anexo:aclIoMTP012}
+A continuación se muestra el fragmento de código bash utilizado para la configuración de ACLs en el switch IoMT de las plantas 0, 1 y 2.
+
+\begin{lstlisting}[language=Bash, caption={Configuración ACLs Switch IoMt Plantas 0, 1 y 2}]
+%Declare ACL
+access-list 120 permit udp any any eq 67            
+access-list 120 permit udp any any eq 68
+access-list 120 permit ospf any any
+access-list 120 permit ip 10.0.2.64 0.0.0.63 172.16.48.0 0.0.15.255
+access-list 120 permit ip 10.0.0.128 0.0.0.63 172.16.48.0 0.0.15.255
+access-list 120 permit ip 10.0.0.192 0.0.0.63 172.16.48.0 0.0.15.255
+access-list 120 permit ip 10.0.1.0 0.0.0.63 172.16.48.0 0.0.15.255
+access-list 120 permit ip 10.0.1.64 0.0.0.63 172.16.48.0 0.0.15.255
+access-list 120 permit ip 10.0.1.128 0.0.0.63 172.16.48.0 0.0.15.255
+access-list 120 permit ip 10.0.1.192 0.0.0.63 172.16.48.0 0.0.15.255
+access-list 120 deny ip any any
+
+
+access-list 121 permit udp any any eq 67            
+access-list 121 permit udp any any eq 68
+access-list 121 permit ospf any any
+access-list 121 permit ip 172.16.48.0 0.0.15.255 10.0.2.64 0.0.0.63 
+access-list 121 permit ip 172.16.48.0 0.0.15.255 10.0.0.128 0.0.0.63 
+access-list 121 permit ip 172.16.48.0 0.0.15.255 10.0.0.192 0.0.0.63 
+access-list 121 permit ip 172.16.48.0 0.0.15.255 10.0.1.0 0.0.0.63 
+access-list 121 permit ip 172.16.48.0 0.0.15.255 10.0.1.64 0.0.0.63 
+access-list 121 permit ip 172.16.48.0 0.0.15.255 10.0.1.128 0.0.0.63 
+access-list 121 permit ip 172.16.48.0 0.0.15.255 10.0.1.192 0.0.0.63
+access-list 121 deny ip any any
+
+%Apply ACL on Interface
+int vlan 210
+ip access-group 120 out
+ip access-group 121 in
+\end{lstlisting}
+
+\section{Configuración ACLs Routers}\label{anexo:aclRout}
+A continuación se muestra el fragmento de código bash utilizado para la configuración de ACLs en los routers.
+
+\begin{lstlisting}[language=Bash, caption={Configuración ACLs Routers}]
+%Declare ACL
+access-list 110 permit udp any any eq 67            
+access-list 110 permit udp any any eq 68
+access-list 110 permit ospf any any
+access-list 110 permit ip 192.168.0.0 0.0.127.255 195.136.17.0 0.0.0.3
+access-list 110 permit ip 192.168.0.0 0.0.127.255 195.136.17.8 0.0.0.3
+access-list 110 permit ip 192.168.0.0 0.0.127.255 195.136.17.16 0.0.0.3
+access-list 110 permit ip 192.168.0.0 0.0.127.255 195.136.17.4 0.0.0.3
+access-list 110 permit ip 192.168.0.0 0.0.127.255 195.136.17.12 0.0.0.3
+access-list 110 permit ip 192.168.0.0 0.0.127.255 195.136.17.20 0.0.0.3
+access-list 110 deny ip any any
+
+access-list 111 permit udp any any eq 67            
+access-list 111 permit udp any any eq 68
+access-list 111 permit ospf any any
+access-list 111 permit ip 195.136.17.0 0.0.0.3 192.168.0.0 0.0.127.255 
+access-list 111 permit ip 195.136.17.8 0.0.0.3 192.168.0.0 0.0.127.255 
+access-list 111 permit ip 195.136.17.16 0.0.0.3 192.168.0.0 0.0.127.255 
+access-list 111 permit ip 195.136.17.4 0.0.0.3 192.168.0.0 0.0.127.255 
+access-list 111 permit ip 195.136.17.12 0.0.0.3 192.168.0.0 0.0.127.255 
+access-list 111 permit ip 195.136.17.20 0.0.0.3 192.168.0.0 0.0.127.255 
+access-list 111 deny ip any any
+
+%Apply ACL on Interface
+int g4/0.190
+ip access-group 110 in
+ip access-group 111 out
+\end{lstlisting}
+
+\section{Configuración ACLs Switches Distribución}\label{anexo:acldistr}
+A continuación se muestra el fragmento de código bash utilizado para la configuración de ACLs en los switches de distribución.
+
+\begin{lstlisting}[language=Bash, caption={Configuración ACLs Switches Distribución}]
+%Declare ACL
+access-list 130 deny ip 10.0.0.0 0.0.0.63 10.0.0.128 0.0.0.63
+access-list 130 deny ip 10.0.0.0 0.0.0.63 10.0.0.192 0.0.0.63
+access-list 130 deny ip 10.0.0.0 0.0.0.63 10.0.1.0 0.0.0.63
+access-list 130 deny ip 10.0.0.0 0.0.0.63 10.0.1.64 0.0.0.63
+access-list 130 deny ip 10.0.0.0 0.0.0.63 10.0.1.128 0.0.0.63
+access-list 130 deny ip 10.0.0.0 0.0.0.63 10.0.1.192 0.0.0.63
+access-list 130 permit ip any any
+
+%Apply ACL on Interface
+int vlan10
+ip access-group 130 in
+
+%Declare ACL
+access-list 131 deny ip 10.0.0.64 0.0.0.63 10.0.0.128 0.0.0.63
+access-list 131 deny ip 10.0.0.64 0.0.0.63 10.0.0.192 0.0.0.63
+access-list 131 deny ip 10.0.0.64 0.0.0.63 10.0.1.0 0.0.0.63
+access-list 131 deny ip 10.0.0.64 0.0.0.63 10.0.1.64 0.0.0.63
+access-list 131 deny ip 10.0.0.64 0.0.0.63 10.0.1.128 0.0.0.63
+access-list 131 deny ip 10.0.0.64 0.0.0.63 10.0.1.192 0.0.0.63
+access-list 131 permit ip any any
+
+%Apply ACL on Interface
+int vlan20
+ip access-group 131 in
+
+%Declare ACL
+access-list 132 deny ip 10.0.2.0 0.0.0.63 10.0.0.128 0.0.0.63
+access-list 132 deny ip 10.0.2.0 0.0.0.63 10.0.0.192 0.0.0.63
+access-list 132 deny ip 10.0.2.0 0.0.0.63 10.0.1.0 0.0.0.63
+access-list 132 deny ip 10.0.2.0 0.0.0.63 10.0.1.64 0.0.0.63
+access-list 132 deny ip 10.0.2.0 0.0.0.63 10.0.1.128 0.0.0.63
+access-list 132 deny ip 10.0.2.0 0.0.0.63 10.0.1.192 0.0.0.63
+access-list 132 permit ip any any
+
+%Apply ACL on Interface
+int vlan90
+ip access-group 132 in
+
+%Declare ACL
+access-list 133 deny ip 10.0.2.64 0.0.0.63 10.0.0.128 0.0.0.63
+access-list 133 deny ip 10.0.2.64 0.0.0.63 10.0.0.192 0.0.0.63
+access-list 133 deny ip 10.0.2.64 0.0.0.63 10.0.1.0 0.0.0.63
+access-list 133 deny ip 10.0.2.64 0.0.0.63 10.0.1.64 0.0.0.63
+access-list 133 deny ip 10.0.2.64 0.0.0.63 10.0.1.128 0.0.0.63
+access-list 133 deny ip 10.0.2.64 0.0.0.63 10.0.1.192 0.0.0.63
+access-list 133 permit ip any any
+
+%Apply ACL on Interface
+int vlan100
+ip access-group 133 in
+
+%Declare ACL
+access-list 134 deny ip 10.0.2.128 0.0.0.63 10.0.0.128 0.0.0.63
+access-list 134 deny ip 10.0.2.128 0.0.0.63 10.0.0.192 0.0.0.63
+access-list 134 deny ip 10.0.2.128 0.0.0.63 10.0.1.0 0.0.0.63
+access-list 134 deny ip 10.0.2.128 0.0.0.63 10.0.1.64 0.0.0.63
+access-list 134 deny ip 10.0.2.128 0.0.0.63 10.0.1.128 0.0.0.63
+access-list 134 deny ip 10.0.2.128 0.0.0.63 10.0.1.192 0.0.0.63
+access-list 134 permit ip any any
+
+%Apply ACL on Interface
+int vlan110
+ip access-group 134 in
+
+%Declare ACL
+access-list 135 deny ip 10.0.2.192 0.0.0.63 10.0.0.128 0.0.0.63
+access-list 135 deny ip 10.0.2.192 0.0.0.63 10.0.0.192 0.0.0.63
+access-list 135 deny ip 10.0.2.192 0.0.0.63 10.0.1.0 0.0.0.63
+access-list 135 deny ip 10.0.2.192 0.0.0.63 10.0.1.64 0.0.0.63
+access-list 135 deny ip 10.0.2.192 0.0.0.63 10.0.1.128 0.0.0.63
+access-list 135 deny ip 10.0.2.192 0.0.0.63 10.0.1.192 0.0.0.63
+access-list 135 permit ip any any
+
+%Apply ACL on Interface
+int vlan120
+ip access-group 135 in
+\end{lstlisting}
+
+\section{Configuración ACLs Routers Interconexión}\label{anexo:aclint}
+A continuación se muestra el fragmento de código bash utilizado para la configuración de ACLs en los routers de interconexión.
+
+\begin{lstlisting}[language=Bash, caption={Configuración ACLs Routers Interconexión}]
+%R-SonEspases-Man
+access-list 110 permit ip 192.168.100.0 0.0.3.255 192.168.104.0 0.0.1.255
+access-list 110 permit ip 192.168.100.0 0.0.3.255 192.168.106.0 0.0.0.127
+access-list 110 permit ip 192.168.100.0 0.0.3.255 192.168.106.128 0.0.0.63
+
+%SE-Inca
+access-list 120 permit ip 192.168.100.0 0.0.3.255 192.168.108.0 0.0.1.255
+access-list 120 permit ip 192.168.100.0 0.0.3.255 192.168.110.0 0.0.0.255
+access-list 120 permit ip 192.168.100.0 0.0.3.255 192.168.111.0 0.0.0.63
+
+%Inca-SE
+access-list 120 permit ip 192.168.108.0 0.0.1.255 192.168.100.0 0.0.3.255 
+access-list 120 permit ip 192.168.110.0 0.0.0.255 192.168.100.0 0.0.3.255 
+access-list 120 permit ip 192.168.111.0 0.0.0.63 192.168.100.0 0.0.3.255 
+
+%SE-SL
+access-list 130 permit ip 192.168.100.0 0.0.3.255 192.168.112.0 0.0.1.255
+access-list 130 permit ip 192.168.100.0 0.0.3.255 192.168.114.0 0.0.0.255
+access-list 130 permit ip 192.168.100.0 0.0.3.255 192.168.115.0 0.0.0.127
+
+%SL-SE
+access-list 130 permit ip 192.168.112.0 0.0.1.255 192.168.100.0 0.0.3.255 
+access-list 130 permit ip 192.168.114.0 0.0.0.255 192.168.100.0 0.0.3.255 
+access-list 130 permit ip 192.168.115.0 0.0.0.127 192.168.100.0 0.0.3.255 
+
+%Man-Inca
+access-list 140 permit ip 192.168.104.0 0.0.1.255 192.168.108.0 0.0.1.255
+access-list 140 permit ip 192.168.104.0 0.0.1.255 192.168.110.0 0.0.0.255
+access-list 140 permit ip 192.168.104.0 0.0.1.255 192.168.111.0 0.0.0.63
+access-list 140 permit ip 192.168.106.0 0.0.0.127 192.168.108.0 0.0.1.255
+access-list 140 permit ip 192.168.106.0 0.0.0.127 192.168.110.0 0.0.0.255
+access-list 140 permit ip 192.168.106.0 0.0.0.127 192.168.111.0 0.0.0.63
+access-list 140 permit ip 192.168.106.128 0.0.0.63 192.168.108.0 0.0.1.255
+access-list 140 permit ip 192.168.106.128 0.0.0.63 192.168.110.0 0.0.0.255
+access-list 140 permit ip 192.168.106.128 0.0.0.63 192.168.111.0 0.0.0.63
+
+%Inca-Man
+access-list 140 permit ip 192.168.108.0 0.0.1.255 192.168.104.0 0.0.1.255 
+access-list 140 permit ip 192.168.110.0 0.0.0.255 192.168.104.0 0.0.1.255 
+access-list 140 permit ip 192.168.111.0 0.0.0.63 192.168.104.0 0.0.1.255 
+access-list 140 permit ip 192.168.108.0 0.0.1.255 192.168.106.0 0.0.0.127 
+access-list 140 permit ip 192.168.110.0 0.0.0.255 192.168.106.0 0.0.0.127 
+access-list 140 permit ip 192.168.111.0 0.0.0.63 192.168.106.0 0.0.0.127 
+access-list 140 permit ip 192.168.108.0 0.0.1.255 192.168.106.128 0.0.0.63 
+access-list 140 permit ip 192.168.110.0 0.0.0.255 192.168.106.128 0.0.0.63 
+access-list 140 permit ip 192.168.111.0 0.0.0.63 192.168.106.128 0.0.0.63 
+
+%Inca-SL
+access-list 150 permit ip 192.168.108.0 0.0.1.255 192.168.112.0 0.0.1.255 
+access-list 150 permit ip 192.168.108.0 0.0.1.255 192.168.114.0 0.0.0.255 
+access-list 150 permit ip 192.168.108.0 0.0.1.255 192.168.115.0 0.0.0.127 
+access-list 150 permit ip 192.168.110.0 0.0.0.255 192.168.112.0 0.0.1.255 
+access-list 150 permit ip 192.168.110.0 0.0.0.255 192.168.114.0 0.0.0.255 
+access-list 150 permit ip 192.168.110.0 0.0.0.255 192.168.115.0 0.0.0.127 
+access-list 150 permit ip 192.168.111.0 0.0.0.63 192.168.112.0 0.0.1.255 
+access-list 150 permit ip 192.168.111.0 0.0.0.63 192.168.114.0 0.0.0.255 
+access-list 150 permit ip 192.168.111.0 0.0.0.63 192.168.115.0 0.0.0.127
+
+%SL-Inca
+access-list 150 permit ip 192.168.112.0 0.0.1.255 192.168.108.0 0.0.1.255  
+access-list 150 permit ip 192.168.114.0 0.0.0.255 192.168.108.0 0.0.1.255  
+access-list 150 permit ip 192.168.115.0 0.0.0.127 192.168.108.0 0.0.1.255  
+access-list 150 permit ip 192.168.112.0 0.0.1.255 192.168.110.0 0.0.0.255  
+access-list 150 permit ip 192.168.114.0 0.0.0.255 192.168.110.0 0.0.0.255  
+access-list 150 permit ip 192.168.115.0 0.0.0.127 192.168.110.0 0.0.0.255  
+access-list 150 permit ip 192.168.112.0 0.0.1.255 192.168.111.0 0.0.0.63  
+access-list 150 permit ip 192.168.114.0 0.0.0.255 192.168.111.0 0.0.0.63  
+access-list 150 permit ip 192.168.115.0 0.0.0.127 192.168.111.0 0.0.0.63 
+
+%Man-SL
+access-list 160 permit ip 192.168.104.0 0.0.1.255 192.168.112.0 0.0.1.255
+access-list 160 permit ip 192.168.104.0 0.0.1.255 192.168.114.0 0.0.0.255
+access-list 160 permit ip 192.168.104.0 0.0.1.255 192.168.115.0 0.0.0.127
+access-list 160 permit ip 192.168.106.0 0.0.0.127 192.168.112.0 0.0.1.255
+access-list 160 permit ip 192.168.106.0 0.0.0.127 192.168.114.0 0.0.0.255
+access-list 160 permit ip 192.168.106.0 0.0.0.127 192.168.115.0 0.0.0.127
+access-list 160 permit ip 192.168.106.128 0.0.0.63 192.168.112.0 0.0.1.255
+access-list 160 permit ip 192.168.106.128 0.0.0.63 192.168.114.0 0.0.0.255
+access-list 160 permit ip 192.168.106.128 0.0.0.63 192.168.115.0 0.0.0.127
+
+%SL-Man
+access-list 160 permit ip 192.168.112.0 0.0.1.255 192.168.104.0 0.0.1.255 
+access-list 160 permit ip 192.168.114.0 0.0.0.255 192.168.104.0 0.0.1.255 
+access-list 160 permit ip 192.168.115.0 0.0.0.127 192.168.104.0 0.0.1.255 
+access-list 160 permit ip 192.168.112.0 0.0.1.255 192.168.106.0 0.0.0.127 
+access-list 160 permit ip 192.168.114.0 0.0.0.255 192.168.106.0 0.0.0.127 
+access-list 160 permit ip 192.168.115.0 0.0.0.127 192.168.106.0 0.0.0.127 
+access-list 160 permit ip 192.168.112.0 0.0.1.255 192.168.106.128 0.0.0.63 
+access-list 160 permit ip 192.168.114.0 0.0.0.255 192.168.106.128 0.0.0.63 
+access-list 160 permit ip 192.168.115.0 0.0.0.127 192.168.106.128 0.0.0.63 
+\end{lstlisting}
+
+\section{Configuración VPN entre Son Espases y Manacor}\label{anexo:vpn}
+A continuación se muestra el fragmento de código bash utilizado para la configuración de la VPN entre Son Espases y Manacor.
+
+\begin{lstlisting}[language=Bash, caption={Configuración VPN entre Son Espases y Manacor}]
+%R-Son_Espases
+crypto isakmp policy 60
+encryption aes 256
+authentication pre-share
+group 5
+exit
+crypto isakmp key vpnpa55 address 192.168.103.178
+crypto ipsec transform-set VPN-SET6 esp-aes esp-sha-hmac
+crypto map VPN-MAP6 60 ipsec-isakmp
+description VPN connection to Son Llatzer.
+set peer 192.168.103.178
+set transform-set VPN-SET6
+match address 160
+
+%Apply VPN Config on Interface
+interface S0/3/1
+crypto map VPN-MAP6
+
+%R-Manacor
+crypto isakmp policy 60
+encryption aes 256
+authentication pre-share
+group 5
+exit
+crypto isakmp key vpnpa55 address 192.168.103.177
+crypto ipsec transform-set VPN-SET6 esp-aes esp-sha-hmac
+crypto map VPN-MAP6 60 ipsec-isakmp
+description VPN connection to Manacor.
+set peer 192.168.103.177
+set transform-set VPN-SET6
+match address 160
+exit
+
+%Apply VPN Config on Interface
+interface S0/3/0
+crypto map VPN-MAP6
+\end{lstlisting}

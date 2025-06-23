@@ -1,7 +1,11 @@
 \backcite {IoMT-UCI}{{20}{3.2.4}{subsection.3.2.4}}
 \backcite {IoMT-UCI}{{20}{3.2.4}{subsection.3.2.4}}
-\backcite {SonEspases}{{33}{5.2.1}{section*.52}}
+\backcite {SonEspases}{{33}{5.2.1}{section*.48}}
 \backcite {GerenciaSonEspases}{{33}{5.2.1}{figure.5.10}}
 \backcite {PlantillaSonEspases}{{33}{5.2.1}{figure.5.10}}
 \backcite {GerenciaSonEspases}{{41}{5.3.1}{subsection.5.3.1}}
-\backcite {Impresoras}{{48}{5.4.3}{section*.58}}
+\backcite {Impresoras}{{48}{5.4.3}{section*.54}}
+\backcite {cisco_dhcp_snooping}{{52}{5.6.2}{subsection.5.6.2}}
+\backcite {cisco_trunk_access}{{60}{6.2.1}{subsection.6.2.1}}
+\backcite {cisco_dhcp_relay}{{62}{6.5.3}{subsection.6.5.3}}
+\backcite {cisco_rstp_8021w}{{62}{6.7}{section.6.7}}

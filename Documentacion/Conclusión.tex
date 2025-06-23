@@ -1,9 +1,42 @@
 %!TeX root=MemoriaTFG.tex
 
 \chapter{Conclusión}\label{conclusion}
+Tras completar el proceso de análisis, diseño, implementación y validación de la infraestructura de red hospitalaria simulada, resulta necesario realizar una reflexión final 
+sobre los resultados obtenidos, las dificultades encontradas y las oportunidades de mejora detectadas a lo largo del proyecto.
+\\ \\
+Este capítulo recoge las conclusiones generales derivadas del desarrollo del trabajo, valorando el grado de cumplimiento de los objetivos planteados inicialmente y la 
+efectividad de las soluciones implementadas. Se analiza además el impacto de las decisiones técnicas adoptadas en términos de seguridad, disponibilidad, segmentación y gestión 
+de la red hospitalaria simulada.
+\\ \\
+Asimismo, se identifican posibles líneas de mejora y ampliación futura del proyecto, considerando aspectos que no se han abordado debido a las limitaciones del entorno de 
+simulación o del alcance definido, y que podrían implementarse en un entorno real o en futuras versiones de esta infraestructura.
+\\ \\
+El objetivo de este capítulo es, por tanto, evaluar de forma crítica el trabajo realizado y sentar las bases para futuras evoluciones del diseño planteado, consolidando los 
+conocimientos adquiridos durante el desarrollo del proyecto.
 
 \section{Logros Alcanzados}
-
-\section{Dificultades Encontradas}
-
+A lo largo del desarrollo de este proyecto se han obtenido una serie de logros relevantes, tanto en términos técnicos como académicos, que permiten valorar de forma positiva 
+los resultados alcanzados. A continuación, se enumeran los principales hitos conseguidos:
+\begin{itemize}
+    \item \textbf{Diseño completo de una infraestructura de red hospitalaria segmentada} mediante VLANs y subredes diferenciadas para invitados, dispositivos IoMT y servicios hospitalarios, adaptada a los requisitos de seguridad propios de un entorno sanitario.
+    \item \textbf{Implementación de una red simulada de interconexión entre cuatro hospitales}, garantizando la comunicación segura entre ellos, mediante la implementación de VPN IPSec, y asegurando la continuidad de servicio mediante mecanismos de redundancia de enlaces y gateways.
+    \item \textbf{Integración de dispositivos médicos conectados (IoMT)} en una subred específica, aplicando restricciones de seguridad reforzadas, gestión independiente de direcciones IP y control de accesos selectivo.
+    \item \textbf{Configuración eficaz de servicios de red críticos}, como DHCP, DNS, NAT y SSH, que permiten gestionar de forma automatizada y segura las comunicaciones internas y externas de la red.
+\end{itemize}
 \section{Mejoras y Ampliaciones Futuras}
+Si bien los resultados han sido satisfactorios, se identifican algunas líneas de mejora y ampliación para desarrollos futuros:
+
+\begin{itemize}
+    \item Añadir servicios de monitorización de red en tiempo real y sistemas IDS/IPS para detección proactiva de amenazas.
+    \item Añadir mecanismos de seguridad extras para la subred dedicada a los invitados.
+    \item Simular escenarios de ataque más avanzados para evaluar la robustez de la infraestructura ante ciberamenazas complejas.
+    \item Implementación en una herramienta de virtualización profesional (como GNS3 o Cisco VIRL) que permita un mayor realismo y 
+    compatibilidad con tecnologías actuales no disponibles en Cisco Packet Tracer.
+
+\end{itemize}
+\small{\textbf{Nota:}\textit{ Cabe recordar que las limitaciones y alcance del proyecto fueron definidos previamente en la fase de análisis (sección \ref{subsec:limites}), de manera que las conclusiones aquí presentadas se extraen dentro del marco establecido en aquel apartado.}}
+
+
+
+
+

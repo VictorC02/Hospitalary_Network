@@ -34,12 +34,12 @@ dispositivos conectados.
 \begin{itemize}
     \item El sistema debe permitir la interconexión entre los cuatro hospitales.
     \item Cada hospital debe disponer de tres subredes diferenciadas: una para invitados, una para dispositivos IoMT y otra para la red interna hospitalaria.
-    \item Cada hospital debe estar dividido en VLANs por departamentos, asegurando la separación lógica de las áreas clínicas, administrativas, de investigación y de servicios generales.
+    \item Cada hospital debe estar dividido en VLANs por departamentos, asegurando la separación lógica de las áreas médicas, administrativas, de investigación y de enfermería.
     \item La red debe permitir la asignación dinámica de direcciones IP mediante servidores DHCP en cada subred.
     \item Debe garantizar la resolución de nombres internos mediante DNS.
     \item Los dispositivos autorizados deben poder acceder a servidores de datos y dispositivos médicos críticos entre hospitales.
     \item Los dispositivos médicos IoMT deben disponer de una subred propia con dos servidores DHCP, uno de ellos de respaldo.
-    \item Deben implementarse servicios de NAT para acceso a Internet desde las subredes autorizadas.
+    \item Deben implementarse servicios de NAT para acceso a Internet desde las subredes del hospital.
     \item Se debe permitir gestión remota segura de los dispositivos de red mediante SSH.
     \item La red debe contar con redundancia de enlaces y gateways mediante EtherChannel y HSRP.
     \item Tanto la red intrahospitalaria como la interhospitalaria debe estar configurada de tal forma que haya configuraciones dinámicas de enrutamiento utilizando OSPF.
@@ -55,7 +55,7 @@ Establecen las condiciones que debe cumplir la red para garantizar su funcionami
 \begin{itemize}
     \item Los enlaces entre switches L2 y L3 deben contar con redundancia física para evitar puntos únicos de fallo.
     \item Los routers principales deben estar configurados en alta disponibilidad para tolerar fallos de hardware o enlaces.
-    \item Los servidores DHCP deben contar con un servidor de respaldo para garantizar la asignación continua de direcciones IP, únicamente para los dispositivos IoMT.
+    \item Los servidores DHCP, de la red IoMT, deben contar con un servidor de respaldo para garantizar la asignación continua de direcciones IP.
     \item La infraestructura debe permitir la monitorización continua del estado de los dispositivos y enlaces para detectar fallos proactivamente.
 \end{itemize}
 

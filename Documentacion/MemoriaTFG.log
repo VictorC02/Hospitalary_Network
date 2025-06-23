@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.14)  18 JUN 2025 14:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.14)  23 JUN 2025 15:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -734,33 +734,57 @@ Package microtype Info: Loading configuration file microtype.cfg.
 File: microtype.cfg 2025/02/11 v3.2a microtype main configuration file (RS)
 )
 LaTeX Info: Redefining \microtypesetup on input line 3065.
-) (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/latex/acronym\acronym.sty
+) (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count336
+\lst@gtempboxa=\box60
+\lst@token=\toks38
+\lst@length=\count337
+\lst@currlwidth=\dimen263
+\lst@column=\count338
+\lst@pos=\count339
+\lst@lostspace=\dimen264
+\lst@width=\dimen265
+\lst@newlines=\count340
+\lst@lineno=\count341
+\lst@maxwidth=\dimen266
+ (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
+File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
+) (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
+\c@lstnumber=\count342
+\lst@skipnumbers=\count343
+\lst@framebox=\box61
+) (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2024/09/23 1.10c listings configuration
+))
+Package: listings 2024/09/23 1.10c (Carsten Heinz)
+ (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/latex/acronym\acronym.sty
 Package: acronym 2025/01/17 v1.50 Support for acronyms (Tobias Oetiker)
  (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/latex/bigfoot\suffix.sty
 Package: suffix 2006/07/15 1.5a Variant command support
 ) (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.sty (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring.tex
-\xs_counta=\count336
-\xs_countb=\count337
+\xs_counta=\count344
+\xs_countb=\count345
 )
 Package: xstring 2023/08/22 v1.86 String manipulations (CT)
 )
-\AC@clearlist=\toks38
+\AC@clearlist=\toks39
 ) (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
 Package: siunitx 2025-03-26 v3.4.8 A comprehensive (SI) units package
-\l__siunitx_number_uncert_offset_int=\count338
-\l__siunitx_number_exponent_fixed_int=\count339
-\l__siunitx_number_min_decimal_int=\count340
-\l__siunitx_number_min_integer_int=\count341
-\l__siunitx_number_round_precision_int=\count342
-\l__siunitx_number_lower_threshold_int=\count343
-\l__siunitx_number_upper_threshold_int=\count344
-\l__siunitx_number_group_first_int=\count345
-\l__siunitx_number_group_size_int=\count346
-\l__siunitx_number_group_minimum_int=\count347
-\l__siunitx_angle_tmp_dim=\dimen263
-\l__siunitx_angle_marker_box=\box60
-\l__siunitx_angle_unit_box=\box61
-\l__siunitx_compound_count_int=\count348
+\l__siunitx_number_uncert_offset_int=\count346
+\l__siunitx_number_exponent_fixed_int=\count347
+\l__siunitx_number_min_decimal_int=\count348
+\l__siunitx_number_min_integer_int=\count349
+\l__siunitx_number_round_precision_int=\count350
+\l__siunitx_number_lower_threshold_int=\count351
+\l__siunitx_number_upper_threshold_int=\count352
+\l__siunitx_number_group_first_int=\count353
+\l__siunitx_number_group_size_int=\count354
+\l__siunitx_number_group_minimum_int=\count355
+\l__siunitx_angle_tmp_dim=\dimen267
+\l__siunitx_angle_marker_box=\box62
+\l__siunitx_angle_unit_box=\box63
+\l__siunitx_compound_count_int=\count356
  (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/latex/translations\translations.sty
 Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages (CN)
  (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
@@ -772,47 +796,47 @@ Package pdftexcmds Info: \pdfdraftmode found.
 Package: amstext 2021/08/26 v2.01 AMS text
  (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks39
-\ex@=\dimen264
+\@emptytoks=\toks40
+\ex@=\dimen268
 ))
-\l__siunitx_table_tmp_box=\box62
-\l__siunitx_table_tmp_dim=\dimen265
-\l__siunitx_table_column_width_dim=\dimen266
-\l__siunitx_table_integer_box=\box63
-\l__siunitx_table_decimal_box=\box64
-\l__siunitx_table_uncert_box=\box65
-\l__siunitx_table_before_box=\box66
-\l__siunitx_table_after_box=\box67
-\l__siunitx_table_before_dim=\dimen267
-\l__siunitx_table_carry_dim=\dimen268
-\l__siunitx_unit_tmp_int=\count349
-\l__siunitx_unit_position_int=\count350
-\l__siunitx_unit_total_int=\count351
+\l__siunitx_table_tmp_box=\box64
+\l__siunitx_table_tmp_dim=\dimen269
+\l__siunitx_table_column_width_dim=\dimen270
+\l__siunitx_table_integer_box=\box65
+\l__siunitx_table_decimal_box=\box66
+\l__siunitx_table_uncert_box=\box67
+\l__siunitx_table_before_box=\box68
+\l__siunitx_table_after_box=\box69
+\l__siunitx_table_before_dim=\dimen271
+\l__siunitx_table_carry_dim=\dimen272
+\l__siunitx_unit_tmp_int=\count357
+\l__siunitx_unit_position_int=\count358
+\l__siunitx_unit_total_int=\count359
 ) (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
 Package: longtable 2024-10-27 v4.22 Multi-page Table package (DPC)
 \LTleft=\skip256
 \LTright=\skip257
 \LTpre=\skip258
 \LTpost=\skip259
-\LTchunksize=\count352
-\LTcapwidth=\dimen269
-\LT@head=\box68
-\LT@firsthead=\box69
-\LT@foot=\box70
-\LT@lastfoot=\box71
-\LT@gbox=\box72
-\LT@cols=\count353
-\LT@rows=\count354
-\c@LT@tables=\count355
-\c@LT@chunks=\count356
-\LT@p@ftn=\toks40
+\LTchunksize=\count360
+\LTcapwidth=\dimen273
+\LT@head=\box70
+\LT@firsthead=\box71
+\LT@foot=\box72
+\LT@lastfoot=\box73
+\LT@gbox=\box74
+\LT@cols=\count361
+\LT@rows=\count362
+\c@LT@tables=\count363
+\c@LT@chunks=\count364
+\LT@p@ftn=\toks41
 ) (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count357
-\float@exts=\toks41
-\float@box=\box73
-\@float@everytoks=\toks42
-\@floatcapt=\box74
+\c@float@type=\count365
+\float@exts=\toks42
+\float@box=\box75
+\@float@everytoks=\toks43
+\@floatcapt=\box76
 ) (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
  (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
@@ -824,9 +848,9 @@ Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 ) (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-\@linkdim=\dimen270
-\Hy@linkcounter=\count358
-\Hy@pagecounter=\count359
+\@linkdim=\dimen274
+\Hy@linkcounter=\count366
+\Hy@pagecounter=\count367
  (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -834,7 +858,7 @@ Now handling font encoding PD1 ...
 ) (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count360
+\Hy@SavedSpaceFactor=\count368
  (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -862,19 +886,19 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 ))
-\c@Hy@tempcnt=\count361
+\c@Hy@tempcnt=\count369
  (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4763.
-\XeTeXLinkMargin=\dimen271
+\XeTeXLinkMargin=\dimen275
  (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 )
-\Fld@menulength=\count362
-\Field@Width=\dimen272
-\Fld@charsize=\dimen273
+\Fld@menulength=\count370
+\Field@Width=\dimen276
+\Fld@charsize=\dimen277
 Package hyperref Info: Hyper figures OFF on input line 6042.
 Package hyperref Info: Link nesting OFF on input line 6047.
 Package hyperref Info: Hyper index ON on input line 6050.
@@ -886,20 +910,20 @@ Package hyperref Info: PDF/A mode OFF on input line 6072.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count363
-\c@Item=\count364
-\c@Hfootnote=\count365
+\Hy@abspage=\count371
+\c@Item=\count372
+\c@Hfootnote=\count373
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
 File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
-\Fld@listcount=\count366
-\c@bookmark@seq@number=\count367
+\Fld@listcount=\count374
+\c@bookmark@seq@number=\count375
 \Hy@SectionHShift=\skip260
 ) (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/latex/memoir\memhfixc.sty
 Package: memhfixc 2025/03/06 v1.23 hyperref package fixes for memoir class
-\c@memhycontfloat=\count368
-\c@mem@Hpagenote=\count369
+\c@memhycontfloat=\count376
+\c@mem@Hpagenote=\count377
 ) (MemoriaTFG.aux
 LaTeX Info: Redefining \. on input line 14.
 LaTeX Info: Redefining \% on input line 14.
@@ -946,17 +970,17 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 170.
 LaTeX Font Info:    ... okay on input line 170.
  (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count370
-\scratchdimen=\dimen274
-\scratchbox=\box75
-\nofMPsegments=\count371
-\nofMParguments=\count372
-\everyMPshowfont=\toks43
-\MPscratchCnt=\count373
-\MPscratchDim=\dimen275
-\MPnumerator=\count374
-\makeMPintoPDFobject=\count375
-\everyMPtoPDFconversion=\toks44
+\scratchcounter=\count378
+\scratchdimen=\dimen278
+\scratchbox=\box77
+\nofMPsegments=\count379
+\nofMParguments=\count380
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count381
+\MPscratchDim=\dimen279
+\MPnumerator=\count382
+\makeMPintoPDFobject=\count383
+\everyMPtoPDFconversion=\toks45
 ) (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -993,6 +1017,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `futs' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+\c@lstlisting=\count384
  (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-spanish.trsl
 File: translations-basic-dictionary-spanish.trsl (spanish translation file `translations-basic-dictionary')
 )
@@ -1014,7 +1039,7 @@ Package hyperref Info: Link coloring ON on input line 170.
 
 
 
-<Imágenes/537341_escudoUIB_horizontal.png, id=399, 665.48625pt x 213.79875pt>
+<Imágenes/537341_escudoUIB_horizontal.png, id=531, 665.48625pt x 213.79875pt>
 File: Imágenes/537341_escudoUIB_horizontal.png Graphic file (type png)
 <use Imágenes/537341_escudoUIB_horizontal.png>
 Package pdftex.def Info: Imágenes/537341_escudoUIB_horizontal.png  used on input line 175.
@@ -1095,20 +1120,22 @@ LaTeX Info: Redefining \. on input line 93.
 LaTeX Info: Redefining \% on input line 93.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
 (babel)             Reported  on input line 93.
-[4])
+[4]
+
+LaTeX Info: Redefining \. on input line 136.
+LaTeX Info: Redefining \% on input line 136.
+[5])
 
 LaTeX Info: Redefining \. on input line 192.
 LaTeX Info: Redefining \% on input line 192.
-[5]
-
-[6
-
-] (MemoriaTFG.lof
+[6] (MemoriaTFG.lof
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
 
-[7]
+[7
+
+]
 
 [8
 
@@ -1126,6 +1153,12 @@ LaTeX Info: Redefining \% on input line 1.
 
 
 ]
+
+LaTeX Warning: Hyper reference `acro:LAN' on page \es@scroman {xi} undefined on input line 19.
+
+
+LaTeX Warning: Hyper reference `acro:LAN' on page \es@scroman {xi} undefined on input line 19.
+
 
 LaTeX Warning: Hyper reference `acro:TCP' on page \es@scroman {xi} undefined on input line 31.
 
@@ -1347,20 +1380,15 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has b
                    \relax 
 l.120 \end{itemize}
                     [4]
-Package acronym Info: Label `acro:LAN' newly defined as it shall be overridden
-although it is yet undefined on input line 134.
-Package acronym Info: Label `acro:VLAN' overridden on input line 134.
 Package acronym Info: Label `acro:IP' overridden on input line 140.
 Package acronym Info: Label `acro:VLAN' overridden on input line 140.
-Package acronym Info: Label `acro:VLAN' overridden on input line 142.
-Package acronym Info: Label `acro:ACL' overridden on input line 142.
 
 
-LaTeX Info: Redefining \. on input line 146.
-LaTeX Info: Redefining \% on input line 146.
+LaTeX Info: Redefining \. on input line 147.
+LaTeX Info: Redefining \% on input line 147.
 [5]
 Package acronym Info: Label `acro:IEEE' newly defined as it shall be overridden
-although it is yet undefined on input line 149.
+although it is yet undefined on input line 148.
 )
 
 LaTeX Info: Redefining \. on input line 220.
@@ -1603,7 +1631,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [27]
-<Imágenes/Routers.png, id=927, 271.76532pt x 173.14688pt>
+<Imágenes/Routers.png, id=1080, 271.76532pt x 173.14688pt>
 File: Imágenes/Routers.png Graphic file (type png)
 <use Imágenes/Routers.png>
 Package pdftex.def Info: Imágenes/Routers.png  used on input line 52.
@@ -1613,12 +1641,12 @@ Package pdftex.def Info: Imágenes/Routers.png  used on input line 52.
 LaTeX Info: Redefining \. on input line 56.
 LaTeX Info: Redefining \% on input line 56.
 [28]
-<Imágenes/RedInvitados.png, id=935, 391.4625pt x 113.67468pt>
+<Imágenes/RedInvitados.png, id=1088, 391.4625pt x 113.67468pt>
 File: Imágenes/RedInvitados.png Graphic file (type png)
 <use Imágenes/RedInvitados.png>
 Package pdftex.def Info: Imágenes/RedInvitados.png  used on input line 67.
 (pdftex.def)             Requested size: 193.5pt x 56.1902pt.
-<Imágenes/DMZInvitados.png, id=937, 295.85532pt x 132.495pt>
+<Imágenes/DMZInvitados.png, id=1090, 295.85532pt x 132.495pt>
 File: Imágenes/DMZInvitados.png Graphic file (type png)
 <use Imágenes/DMZInvitados.png>
 Package pdftex.def Info: Imágenes/DMZInvitados.png  used on input line 82.
@@ -1628,7 +1656,7 @@ Package pdftex.def Info: Imágenes/DMZInvitados.png  used on input line 82.
 LaTeX Info: Redefining \. on input line 86.
 LaTeX Info: Redefining \% on input line 86.
 [29 <./Imágenes/Routers.png> <./Imágenes/RedInvitados.png>]
-<Imágenes/DMZIOMT.png, id=948, 183.68625pt x 155.83218pt>
+<Imágenes/DMZIOMT.png, id=1101, 183.68625pt x 155.83218pt>
 File: Imágenes/DMZIOMT.png Graphic file (type png)
 <use Imágenes/DMZIOMT.png>
 Package pdftex.def Info: Imágenes/DMZIOMT.png  used on input line 97.
@@ -1638,17 +1666,17 @@ Package pdftex.def Info: Imágenes/DMZIOMT.png  used on input line 97.
 LaTeX Info: Redefining \. on input line 109.
 LaTeX Info: Redefining \% on input line 109.
 [30 <./Imágenes/DMZInvitados.png> <./Imágenes/DMZIOMT.png>]
-<Imágenes/DMZInterna.png, id=959, 322.20375pt x 140.02313pt>
+<Imágenes/DMZInterna.png, id=1112, 322.20375pt x 140.02313pt>
 File: Imágenes/DMZInterna.png Graphic file (type png)
 <use Imágenes/DMZInterna.png>
 Package pdftex.def Info: Imágenes/DMZInterna.png  used on input line 112.
 (pdftex.def)             Requested size: 193.5pt x 84.09357pt.
-<Imágenes/SwitchesCore.png, id=961, 270.25969pt x 188.95593pt>
+<Imágenes/SwitchesCore.png, id=1114, 270.25969pt x 188.95593pt>
 File: Imágenes/SwitchesCore.png Graphic file (type png)
 <use Imágenes/SwitchesCore.png>
 Package pdftex.def Info: Imágenes/SwitchesCore.png  used on input line 126.
 (pdftex.def)             Requested size: 193.5pt x 135.29274pt.
-<Imágenes/SwitchesDistribucion.png, id=963, 903.375pt x 267.24844pt>
+<Imágenes/SwitchesDistribucion.png, id=1116, 903.375pt x 267.24844pt>
 File: Imágenes/SwitchesDistribucion.png Graphic file (type png)
 <use Imágenes/SwitchesDistribucion.png>
 Package pdftex.def Info: Imágenes/SwitchesDistribucion.png  used on input line 137.
@@ -1658,12 +1686,12 @@ Package pdftex.def Info: Imágenes/SwitchesDistribucion.png  used on input line 
 LaTeX Info: Redefining \. on input line 141.
 LaTeX Info: Redefining \% on input line 141.
 [31 <./Imágenes/DMZInterna.png> <./Imágenes/SwitchesCore.png>]
-<Imágenes/SwitchesAcceso.png, id=973, 512.66531pt x 359.84438pt>
+<Imágenes/SwitchesAcceso.png, id=1126, 512.66531pt x 359.84438pt>
 File: Imágenes/SwitchesAcceso.png Graphic file (type png)
 <use Imágenes/SwitchesAcceso.png>
 Package pdftex.def Info: Imágenes/SwitchesAcceso.png  used on input line 147.
 (pdftex.def)             Requested size: 193.5pt x 135.81982pt.
-<Imágenes/IoMT.png, id=976, 735.49782pt x 274.02374pt>
+<Imágenes/IoMT.png, id=1129, 735.49782pt x 274.02374pt>
 File: Imágenes/IoMT.png Graphic file (type png)
 <use Imágenes/IoMT.png>
 Package pdftex.def Info: Imágenes/IoMT.png  used on input line 162.
@@ -1673,7 +1701,7 @@ Package pdftex.def Info: Imágenes/IoMT.png  used on input line 162.
 LaTeX Info: Redefining \. on input line 166.
 LaTeX Info: Redefining \% on input line 166.
 [32 <./Imágenes/SwitchesDistribucion.png> <./Imágenes/SwitchesAcceso.png>]
-<Imágenes/Plano Son Espases.png, id=986, 1919.17pt x 957.5775pt>
+<Imágenes/Plano Son Espases.png, id=1139, 1919.17pt x 957.5775pt>
 File: Imágenes/Plano Son Espases.png Graphic file (type png)
 <use Imágenes/Plano Son Espases.png>
 Package pdftex.def Info: Imágenes/Plano Son Espases.png  used on input line 173.
@@ -1697,7 +1725,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 191--197
 
  []
 
-<Imágenes/InterconexionHospitales.png, id=1000, 1395.71437pt x 231.86626pt>
+<Imágenes/InterconexionHospitales.png, id=1153, 1395.71437pt x 231.86626pt>
 File: Imágenes/InterconexionHospitales.png Graphic file (type png)
 <use Imágenes/InterconexionHospitales.png>
 Package pdftex.def Info: Imágenes/InterconexionHospitales.png  used on input line 206.
@@ -1707,7 +1735,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 211--216
 
  []
 
-<Imágenes/Router-Sw.Core.png, id=1003, 162.6075pt x 155.83218pt>
+<Imágenes/Router-Sw.Core.png, id=1156, 162.6075pt x 155.83218pt>
 File: Imágenes/Router-Sw.Core.png Graphic file (type png)
 <use Imágenes/Router-Sw.Core.png>
 Package pdftex.def Info: Imágenes/Router-Sw.Core.png  used on input line 219.
@@ -1720,12 +1748,12 @@ Underfull \vbox (badness 6445) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 223.
 LaTeX Info: Redefining \% on input line 223.
 [34 <./Imágenes/InterconexionHospitales.png>]
-<Imágenes/Switches.png, id=1011, 338.01282pt x 219.82124pt>
+<Imágenes/Switches.png, id=1164, 338.01282pt x 219.82124pt>
 File: Imágenes/Switches.png Graphic file (type png)
 <use Imágenes/Switches.png>
 Package pdftex.def Info: Imágenes/Switches.png  used on input line 229.
 (pdftex.def)             Requested size: 193.5pt x 125.84277pt.
-<Imágenes/Clusters.png, id=1013, 363.60844pt x 125.71968pt>
+<Imágenes/Clusters.png, id=1166, 363.60844pt x 125.71968pt>
 File: Imágenes/Clusters.png Graphic file (type png)
 <use Imágenes/Clusters.png>
 Package pdftex.def Info: Imágenes/Clusters.png  used on input line 240.
@@ -1738,7 +1766,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 244.
 LaTeX Info: Redefining \% on input line 244.
 [35 <./Imágenes/Router-Sw.Core.png> <./Imágenes/Switches.png>]
-<Imágenes/CLusterdentro.png, id=1021, 645.16031pt x 191.21437pt>
+<Imágenes/CLusterdentro.png, id=1174, 645.16031pt x 191.21437pt>
 File: Imágenes/CLusterdentro.png Graphic file (type png)
 <use Imágenes/CLusterdentro.png>
 Package pdftex.def Info: Imágenes/CLusterdentro.png  used on input line 248.
@@ -1865,12 +1893,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 852--857
 
  []
 
-<Imágenes/hsrpSW.png, id=1111, 906.38625pt x 191.9672pt>
+<Imágenes/hsrpSW.png, id=1264, 906.38625pt x 191.9672pt>
 File: Imágenes/hsrpSW.png Graphic file (type png)
 <use Imágenes/hsrpSW.png>
 Package pdftex.def Info: Imágenes/hsrpSW.png  used on input line 864.
 (pdftex.def)             Requested size: 193.5pt x 40.98215pt.
-<Imágenes/HSRProut.png, id=1113, 253.69781pt x 289.83281pt>
+<Imágenes/HSRProut.png, id=1266, 253.69781pt x 289.83281pt>
 File: Imágenes/HSRProut.png Graphic file (type png)
 <use Imágenes/HSRProut.png>
 Package pdftex.def Info: Imágenes/HSRProut.png  used on input line 874.
@@ -1907,7 +1935,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 891--897
 LaTeX Info: Redefining \. on input line 897.
 LaTeX Info: Redefining \% on input line 897.
 [50 <./Imágenes/HSRProut.png>]
-<Imágenes/Etherchannel.png, id=1130, 238.64156pt x 195.73125pt>
+<Imágenes/Etherchannel.png, id=1283, 238.64156pt x 195.73125pt>
 File: Imágenes/Etherchannel.png Graphic file (type png)
 <use Imágenes/Etherchannel.png>
 Package pdftex.def Info: Imágenes/Etherchannel.png  used on input line 900.
@@ -1941,7 +1969,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 960--964
 LaTeX Info: Redefining \. on input line 964.
 LaTeX Info: Redefining \% on input line 964.
 [52]
-<Imágenes/RedSonEspases.png, id=1142, 758.08218pt x 473.51906pt>
+<Imágenes/RedSonEspases.png, id=1297, 758.08218pt x 473.51906pt>
 File: Imágenes/RedSonEspases.png Graphic file (type png)
 <use Imágenes/RedSonEspases.png>
 Package pdftex.def Info: Imágenes/RedSonEspases.png  used on input line 981.
@@ -1968,7 +1996,7 @@ Overfull \vbox (21.3221pt too high) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 985.
 LaTeX Info: Redefining \% on input line 985.
 [55 <./Imágenes/RedSonEspases.png>]
-<Imágenes/redInterocnexion.png, id=1157, 662.475pt x 424.58624pt>
+<Imágenes/redInterocnexion.png, id=1312, 662.475pt x 424.58624pt>
 File: Imágenes/redInterocnexion.png Graphic file (type png)
 <use Imágenes/redInterocnexion.png>
 Package pdftex.def Info: Imágenes/redInterocnexion.png  used on input line 988.
@@ -1994,47 +2022,296 @@ LaTeX Info: Redefining \% on input line 224.
 
 
 
-])
+]
+Underfull \hbox (badness 10000) in paragraph at lines 4--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--11
+
+ []
+
+
+Underfull \vbox (badness 1102) has occurred while \output is active []
+
+
 
 [59]
+Underfull \hbox (badness 10000) in paragraph at lines 20--23
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--31
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 37.
+LaTeX Info: Redefining \% on input line 37.
+[60]
+Underfull \hbox (badness 10000) in paragraph at lines 40--44
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--51
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--56
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--68
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--68
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--68
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 68.
+LaTeX Info: Redefining \% on input line 68.
+[61]
+Underfull \hbox (badness 10000) in paragraph at lines 71--74
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--78
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--82
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 82.
+LaTeX Info: Redefining \% on input line 82.
+[62]
+
+LaTeX Info: Redefining \. on input line 105.
+LaTeX Info: Redefining \% on input line 105.
+[63])
+
+LaTeX Info: Redefining \. on input line 225.
+LaTeX Info: Redefining \% on input line 225.
+[64]
 \openout2 = `Pruebas.aux'.
 
  (Pruebas.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--13
 
-[60
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--13
+
+ []
+
+
+
+[65
 
 
 
 
-])
+]
 
-[61]
+LaTeX Info: Redefining \. on input line 61.
+LaTeX Info: Redefining \% on input line 61.
+[66])
+
+LaTeX Info: Redefining \. on input line 226.
+LaTeX Info: Redefining \% on input line 226.
+[67]
 \openout2 = `Conclusión.aux'.
 
  (Conclusión.tex
 
-[62
+[68
 
 
 
 
-])
+]
+Underfull \hbox (badness 10000) in paragraph at lines 4--16
 
-[63]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--16
+
+ []
+
+
+
+[69])
+
+LaTeX Info: Redefining \. on input line 227.
+LaTeX Info: Redefining \% on input line 227.
+[70]
 \openout2 = `Annexos.aux'.
 
- (Annexos.tex
+ (Annexos.tex (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2024/09/23 1.10c listings language file
+) (C:\Users\Victor\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2024/09/23 1.10c listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 7.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 8.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 6.99199pt on input line 8.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 8.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 6.99199pt on input line 8.
 
-[64
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[71
 
 
 
 
-])
+]
 
-[65]
+LaTeX Info: Redefining \. on input line 81.
+LaTeX Info: Redefining \% on input line 81.
+[72]
 
-[66
+LaTeX Info: Redefining \. on input line 132.
+LaTeX Info: Redefining \% on input line 132.
+[73]
+
+LaTeX Info: Redefining \. on input line 179.
+LaTeX Info: Redefining \% on input line 179.
+[74]
+
+LaTeX Info: Redefining \. on input line 222.
+LaTeX Info: Redefining \% on input line 222.
+[75]
+
+LaTeX Info: Redefining \. on input line 267.
+LaTeX Info: Redefining \% on input line 267.
+[76]
+
+LaTeX Info: Redefining \. on input line 315.
+LaTeX Info: Redefining \% on input line 315.
+[77]
+
+LaTeX Info: Redefining \. on input line 365.
+LaTeX Info: Redefining \% on input line 365.
+[78]
+
+LaTeX Info: Redefining \. on input line 416.
+LaTeX Info: Redefining \% on input line 416.
+[79]
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 465--467
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 467.
+LaTeX Info: Redefining \% on input line 467.
+[80]
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 494--495
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 495--496
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 505--506
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 506--507
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 520.
+LaTeX Info: Redefining \% on input line 520.
+[81]
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 538--539
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 539--540
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 540--542
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 549--550
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 550--551
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 551--552
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 572.
+LaTeX Info: Redefining \% on input line 572.
+[82])
+
+LaTeX Info: Redefining \. on input line 235.
+LaTeX Info: Redefining \% on input line 235.
+[83]
+
+[84
 
 
 
@@ -2045,33 +2322,23 @@ LaTeX Info: Redefining \% on input line 224.
 
 bibitemlist
 
-Underfull \hbox (badness 1142) in paragraph at lines 30--30
-\T1/futs/m/n/10.95 (+20) dad de cui-da-dos in-ten-si-vos de un hos-pi-tal? Ac-ce-di-do: xxxx-
+Underfull \hbox (badness 4353) in paragraph at lines 30--30
+[]\T1/futs/m/n/10 (+20) E. HOS-PI-TAL. (2023) �qu� equi-pos son esen-cia-les en la
  []
 
 
-Underfull \hbox (badness 4181) in paragraph at lines 30--30
-\T1/futs/m/n/10.95 (+20) xx-xx. [On-li-ne]. Avai-la-ble: [][]$https : / / www . elhospital . com / es / noticias /
+Underfull \hbox (badness 6910) in paragraph at lines 30--30
+\T1/futs/m/n/10 (+20) uni-dad de cui-da-dos in-ten-si-vos de un hos-pi-tal? Ac-ce-di-
  []
 
 
-Overfull \hbox (5.01997pt too wide) in paragraph at lines 30--30
-\T1/futs/m/n/10.95 (-20) que-[]equipos-[]son-[]esenciales-[]en-[]la-[]unidad-[]de-[]cuidados-[]intensivos-[]de-[]un-[]hospital$[][]
- []
-
-
-Underfull \hbox (badness 1226) in paragraph at lines 44--44
-\T1/futs/m/n/10.95 (+20) xx-xx. [On-li-ne]. Avai-la-ble: [][]$https : / / www . ibsalut . es / es / servicio-[]de-[]salud /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 44--44
-\T1/futs/m/n/10.95 (+20) organizacion / gerencias-[]ibsalut / gerencia-[]hospital-[]universitario-[]son-[]espases /
+Underfull \hbox (badness 1360) in paragraph at lines 30--30
+\T1/futs/m/n/10 (+20) do: xxxx-xx-xx. [On-li-ne]. Avai-la-ble: [][]$https : / / www . elhospital . com / es / noticias /
  []
 
 )
 
-[67
+[85
 
 ]
 \tf@toc=\write6
@@ -2096,22 +2363,22 @@ L3 programming layer <2020/03/25>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `MemoriaTFG.out' has not changed.
-(rerunfilecheck)             Checksum: BADB00B43DD796C4B89591F232CEDA17;18665.
+(rerunfilecheck)             Checksum: FE293E6671D21505098259A9AECD49AD;25898.
 Package rerunfilecheck Info: File `MemoriaTFG.brf' has not changed.
-(rerunfilecheck)             Checksum: CFBE45A9ADF97AB1FBCFACC59F7CE113;379.
+(rerunfilecheck)             Checksum: 9ECAAEB6AE0D38C69ADE598D957A7771;617.
  ) 
 Here is how much of TeX's memory you used:
- 25101 strings out of 473523
- 479679 string characters out of 5714146
- 896246 words of memory out of 5000000
- 47012 multiletter control sequences out of 15000+600000
- 762185 words of font info for 503 fonts, out of 8000000 for 9000
+ 27763 strings out of 473523
+ 518706 string characters out of 5714146
+ 1171234 words of memory out of 5000000
+ 49025 multiletter control sequences out of 15000+600000
+ 788615 words of font info for 583 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,23n,107p,1093b,1515s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,23n,107p,1093b,2584s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso12.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putb8a.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on MemoriaTFG.pdf (85 pages, 1440638 bytes).
+Output written on MemoriaTFG.pdf (103 pages, 1593635 bytes).
 PDF statistics:
- 1334 PDF objects out of 1440 (max. 8388607)
- 321 named destinations out of 1000 (max. 500000)
- 134018 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 2207 PDF objects out of 2487 (max. 8388607)
+ 864 named destinations out of 1000 (max. 500000)
+ 148618 words of extra memory for PDF output out of 154059 (max. 10000000)
 
