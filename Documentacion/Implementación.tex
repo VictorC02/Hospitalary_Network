@@ -85,10 +85,10 @@ Para implementar el servicio NAT en los routers de los hospitales, hay que hacer
     \item Definir como nat outside las interfaces de los routers que dirijen tráfico hacia fuera de la red.
     \item Definir como nat inside las interfaces de los routers que dirijen tráfico hacía el interior de la red.
     \item Crear listas de control de acceso que permitan saber que subredes se van a beneficiar de este servicio.
-    \item Asignar a las interfaces físicas las lisas de control de acceso.
+    \item Crear las NATs asignandoles las listas de control de acceso a las interfaces pertinentes.
 \end{itemize}
-En el caso de los routers que conecten con dos ISPs, como es el caso de Son Espases, es necasrio declarar dos ACLs iguales, ya que solo se puede asignar una ACL a una interfaz en concreto.
-Para ver una plantilla de los comandos utilizados para configurar NAT en los routers, ver el anexo \ref{anexo:nat}.
+Para ver las NAT configuradas en los routers principales, siguiendo el diseño propuesto en la sección \ref{subsec:nat}, ver el anexo \ref{anexo:nat1}, para la configuración para el NAT en 
+la interfaz que conecta con el ISP 1 y ver el anexo \ref{anexo:nat2}, para la configuración para el NAT en la interfaz que conecta con el ISP 2.
 \section{Implementación DHCP Snooping}
 DHCP Snooping es una función de seguridad de Capa 2 en switches que protege la red contra diversos ataques, ver la seción \ref{subsec:dhcpsnooping} para mas detalles. Para implementar la configuración de seguridad de DHCP Snooping, hay que seguir los siguientes pasos:
 \begin{itemize}
@@ -109,13 +109,17 @@ Teniendo en cuenta las ACLs que se deben implementar, detalladas en la sección 
 \end{itemize}
 
 \section{Implementación VPN}
-Para la implementación de la VPN, hay que seguir los siguietnes pasos:
+Para la implementación de la VPN, hay que seguir los siguientes pasos:
 \begin{itemize}
     \item Cargar un modulo de lanzamiento en los routers, que posibilita la configuración de las VPN.
     \item Configurar las claves de autenticación.
     \item Configurar el tunel ipsec.
     \item Configurar el mapa de la VPN.
     \item Asignar el mapa de la VPN a la interfaz que conecta con los demas routers.
+    \item Crear ACLs que permitan el tráfico entre los dispositivos autorizados para la comunicación.
 \end{itemize}
 
 Para ver el ejemplo de los comandos utilizados para implementar la VPN entre los hospitales de Son Espases y de Manacor, ver el anexo \ref{anexo:vpn}.
+
+\section{Configuraciones Completas}
+Para ver las configuraciones específicas de cada dispositivo de red, ir al anexo \ref{anexo:conf}.

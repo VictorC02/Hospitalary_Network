@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.14)  23 JUN 2025 15:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.14)  28 JUN 2025 21:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1039,7 +1039,7 @@ Package hyperref Info: Link coloring ON on input line 170.
 
 
 
-<Imágenes/537341_escudoUIB_horizontal.png, id=531, 665.48625pt x 213.79875pt>
+<Imágenes/537341_escudoUIB_horizontal.png, id=891, 665.48625pt x 213.79875pt>
 File: Imágenes/537341_escudoUIB_horizontal.png Graphic file (type png)
 <use Imágenes/537341_escudoUIB_horizontal.png>
 Package pdftex.def Info: Imágenes/537341_escudoUIB_horizontal.png  used on input line 175.
@@ -1106,7 +1106,7 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
 
-Overfull \hbox (1.62013pt too wide) detected at line 7
+Overfull \hbox (1.62013pt too wide) detected at line 6
  []
  []
 
@@ -1116,134 +1116,817 @@ Overfull \hbox (1.62013pt too wide) detected at line 7
 
 ]
 
-LaTeX Info: Redefining \. on input line 93.
-LaTeX Info: Redefining \% on input line 93.
+LaTeX Info: Redefining \. on input line 97.
+LaTeX Info: Redefining \% on input line 97.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported  on input line 93.
+(babel)             Reported  on input line 97.
 [4]
 
-LaTeX Info: Redefining \. on input line 136.
-LaTeX Info: Redefining \% on input line 136.
-[5])
+LaTeX Info: Redefining \. on input line 144.
+LaTeX Info: Redefining \% on input line 144.
+[5]
+Overfull \hbox (1.09499pt too wide) detected at line 175
+ \T1/futs/m/n/10.95 101
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 176
+ \T1/futs/m/n/10.95 105
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 177
+ \T1/futs/m/n/10.95 108
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 178
+ \T1/futs/m/n/10.95 112
+ []
+
+
+Overfull \hbox (0.74452pt too wide) detected at line 179
+\T1/futs/m/n/10.95 A.22.10. 
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 179
+ \T1/futs/m/n/10.95 115
+ []
+
+
+Overfull \hbox (0.74452pt too wide) detected at line 180
+\T1/futs/m/n/10.95 A.22.11. 
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 180
+ \T1/futs/m/n/10.95 118
+ []
+
+
+Overfull \hbox (0.74452pt too wide) detected at line 181
+\T1/futs/m/n/10.95 A.22.12. 
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 181
+ \T1/futs/m/n/10.95 122
+ []
+
+
+Overfull \hbox (0.74452pt too wide) detected at line 182
+\T1/futs/m/n/10.95 A.22.13. 
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 182
+ \T1/futs/m/n/10.95 125
+ []
+
+
+Overfull \hbox (0.74452pt too wide) detected at line 183
+\T1/futs/m/n/10.95 A.22.14. 
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 183
+ \T1/futs/m/n/10.95 130
+ []
+
+
+Overfull \hbox (0.74452pt too wide) detected at line 184
+\T1/futs/m/n/10.95 A.22.15. 
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 184
+ \T1/futs/m/n/10.95 134
+ []
+
+
+Overfull \hbox (0.74452pt too wide) detected at line 185
+\T1/futs/m/n/10.95 A.22.16. 
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 185
+ \T1/futs/m/n/10.95 138
+ []
+
+
+Overfull \hbox (0.74452pt too wide) detected at line 186
+\T1/futs/m/n/10.95 A.22.17. 
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 186
+ \T1/futs/m/n/10.95 143
+ []
+
+
+Overfull \hbox (0.74452pt too wide) detected at line 187
+\T1/futs/m/n/10.95 A.22.18. 
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 187
+ \T1/futs/m/n/10.95 147
+ []
+
+
+Overfull \hbox (0.74452pt too wide) detected at line 188
+\T1/futs/m/n/10.95 A.22.19. 
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 188
+ \T1/futs/m/n/10.95 152
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 189.
+LaTeX Info: Redefining \% on input line 189.
+[6]
+Overfull \hbox (0.74452pt too wide) detected at line 189
+\T1/futs/m/n/10.95 A.22.20. 
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 189
+ \T1/futs/m/n/10.95 156
+ []
+
+
+Overfull \hbox (0.74452pt too wide) detected at line 190
+\T1/futs/m/n/10.95 A.22.21. 
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 190
+ \T1/futs/m/n/10.95 160
+ []
+
+
+Overfull \hbox (0.74452pt too wide) detected at line 191
+\T1/futs/m/n/10.95 A.22.22. 
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 191
+ \T1/futs/m/n/10.95 163
+ []
+
+
+Overfull \hbox (0.74452pt too wide) detected at line 192
+\T1/futs/m/n/10.95 A.22.23. 
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 192
+ \T1/futs/m/n/10.95 167
+ []
+
+
+Overfull \hbox (0.74452pt too wide) detected at line 193
+\T1/futs/m/n/10.95 A.22.24. 
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 193
+ \T1/futs/m/n/10.95 170
+ []
+
+
+Overfull \hbox (0.74452pt too wide) detected at line 194
+\T1/futs/m/n/10.95 A.22.25. 
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 194
+ \T1/futs/m/n/10.95 174
+ []
+
+
+Overfull \hbox (0.74452pt too wide) detected at line 195
+\T1/futs/m/n/10.95 A.22.26. 
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 195
+ \T1/futs/m/n/10.95 177
+ []
+
+
+Overfull \hbox (0.74452pt too wide) detected at line 196
+\T1/futs/m/n/10.95 A.22.27. 
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 196
+ \T1/futs/m/n/10.95 179
+ []
+
+
+Overfull \hbox (0.74452pt too wide) detected at line 197
+\T1/futs/m/n/10.95 A.22.28. 
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 197
+ \T1/futs/m/n/10.95 181
+ []
+
+
+Overfull \hbox (0.74452pt too wide) detected at line 198
+\T1/futs/m/n/10.95 A.22.29. 
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 198
+ \T1/futs/m/n/10.95 184
+ []
+
+
+Overfull \hbox (0.74452pt too wide) detected at line 199
+\T1/futs/m/n/10.95 A.22.30. 
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 199
+ \T1/futs/m/n/10.95 188
+ []
+
+
+Overfull \hbox (0.74452pt too wide) detected at line 200
+\T1/futs/m/n/10.95 A.22.31. 
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 200
+ \T1/futs/m/n/10.95 191
+ []
+
+
+Overfull \hbox (0.74452pt too wide) detected at line 201
+\T1/futs/m/n/10.95 A.22.32. 
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 201
+ \T1/futs/m/n/10.95 196
+ []
+
+
+Overfull \hbox (0.74452pt too wide) detected at line 202
+\T1/futs/m/n/10.95 A.22.33. 
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 202
+ \T1/futs/m/n/10.95 200
+ []
+
+
+Overfull \hbox (0.74452pt too wide) detected at line 203
+\T1/futs/m/n/10.95 A.22.34. 
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 203
+ \T1/futs/m/n/10.95 204
+ []
+
+
+Overfull \hbox (0.74452pt too wide) detected at line 204
+\T1/futs/m/n/10.95 A.22.35. 
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 204
+ \T1/futs/m/n/10.95 208
+ []
+
+
+Overfull \hbox (0.74452pt too wide) detected at line 205
+\T1/futs/m/n/10.95 A.22.36. 
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 205
+ \T1/futs/m/n/10.95 213
+ []
+
+
+Overfull \hbox (0.74452pt too wide) detected at line 206
+\T1/futs/m/n/10.95 A.22.37. 
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 206
+ \T1/futs/m/n/10.95 217
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 207
+ \T1/futs/m/n/10.95 221
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 208
+ \T1/futs/m/n/10.95 222
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 209
+ \T1/futs/m/n/10.95 222
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 210
+ \T1/futs/m/n/10.95 222
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 211
+ \T1/futs/m/n/10.95 222
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 212
+ \T1/futs/m/n/10.95 222
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 213
+ \T1/futs/m/n/10.95 222
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 214
+ \T1/futs/m/n/10.95 223
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 215
+ \T1/futs/m/n/10.95 223
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 216
+ \T1/futs/m/n/10.95 223
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 217
+ \T1/futs/m/n/10.95 224
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 218
+ \T1/futs/m/n/10.95 224
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 219
+ \T1/futs/m/n/10.95 224
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 220
+ \T1/futs/m/n/10.95 224
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 221
+ \T1/futs/m/n/10.95 224
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 222
+ \T1/futs/m/n/10.95 225
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 223
+ \T1/futs/m/n/10.95 225
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 224
+ \T1/futs/m/n/10.95 225
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 225
+ \T1/futs/m/n/10.95 225
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 226
+ \T1/futs/m/n/10.95 226
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 227
+ \T1/futs/m/n/10.95 226
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 228
+ \T1/futs/m/n/10.95 226
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 229
+ \T1/futs/m/n/10.95 227
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 230
+ \T1/futs/m/n/10.95 227
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 231
+ \T1/futs/m/n/10.95 227
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 232
+ \T1/futs/m/n/10.95 227
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 233
+ \T1/futs/m/n/10.95 227
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 234.
+LaTeX Info: Redefining \% on input line 234.
+[7]
+Overfull \hbox (1.09499pt too wide) detected at line 234
+ \T1/futs/m/n/10.95 228
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 235
+ \T1/futs/m/n/10.95 228
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 236
+ \T1/futs/m/n/10.95 228
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 237
+ \T1/futs/m/n/10.95 229
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 238
+ \T1/futs/m/n/10.95 229
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 239
+ \T1/futs/m/n/10.95 230
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 240
+ \T1/futs/m/n/10.95 230
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 241
+ \T1/futs/m/n/10.95 233
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 242
+ \T1/futs/m/n/10.95 233
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 243
+ \T1/futs/m/n/10.95 235
+ []
+
+
+Overfull \hbox (1.98195pt too wide) detected at line 244
+ \T1/futs/b/n/10.95 237
+ []
+
+)
 
 LaTeX Info: Redefining \. on input line 192.
 LaTeX Info: Redefining \% on input line 192.
-[6] (MemoriaTFG.lof
+[8] (MemoriaTFG.lof
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-)
 
-[7
+Overfull \hbox (1.09499pt too wide) detected at line 31
+ \T1/futs/m/n/10.95 221
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 32
+ \T1/futs/m/n/10.95 222
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 33
+ \T1/futs/m/n/10.95 222
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 34
+ \T1/futs/m/n/10.95 222
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 35
+ \T1/futs/m/n/10.95 222
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 36
+ \T1/futs/m/n/10.95 223
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 37
+ \T1/futs/m/n/10.95 223
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 38
+ \T1/futs/m/n/10.95 223
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 39
+ \T1/futs/m/n/10.95 224
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 40
+ \T1/futs/m/n/10.95 224
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 41
+ \T1/futs/m/n/10.95 225
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 42
+ \T1/futs/m/n/10.95 225
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 43
+ \T1/futs/m/n/10.95 225
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 44
+ \T1/futs/m/n/10.95 226
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 45
+ \T1/futs/m/n/10.95 226
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 46
+ \T1/futs/m/n/10.95 226
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 47
+ \T1/futs/m/n/10.95 226
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 48
+ \T1/futs/m/n/10.95 227
+ []
+
+
+
+[9
 
 ]
+Overfull \hbox (1.09499pt too wide) detected at line 49
+ \T1/futs/m/n/10.95 227
+ []
 
-[8
 
-] (MemoriaTFG.lot
+Overfull \hbox (1.09499pt too wide) detected at line 50
+ \T1/futs/m/n/10.95 227
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 51
+ \T1/futs/m/n/10.95 228
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 52
+ \T1/futs/m/n/10.95 228
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 53
+ \T1/futs/m/n/10.95 228
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 54
+ \T1/futs/m/n/10.95 229
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 55
+ \T1/futs/m/n/10.95 229
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 56
+ \T1/futs/m/n/10.95 229
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 57
+ \T1/futs/m/n/10.95 229
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 58
+ \T1/futs/m/n/10.95 229
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 59
+ \T1/futs/m/n/10.95 230
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 60
+ \T1/futs/m/n/10.95 230
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 61
+ \T1/futs/m/n/10.95 230
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 62
+ \T1/futs/m/n/10.95 230
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 63
+ \T1/futs/m/n/10.95 230
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 64
+ \T1/futs/m/n/10.95 231
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 65
+ \T1/futs/m/n/10.95 231
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 66
+ \T1/futs/m/n/10.95 231
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 67
+ \T1/futs/m/n/10.95 233
+ []
+
+
+Overfull \hbox (1.09499pt too wide) detected at line 68
+ \T1/futs/m/n/10.95 235
+ []
+
+)
+
+LaTeX Info: Redefining \. on input line 193.
+LaTeX Info: Redefining \% on input line 193.
+[10] (MemoriaTFG.lot
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
 
-[9]
+[11
+
+]
 \openout2 = `Acrónimos.aux'.
 
  (Acrónimos.tex
 
-[10
+[12
 
 
 ]
 
-LaTeX Warning: Hyper reference `acro:LAN' on page \es@scroman {xi} undefined on input line 19.
+LaTeX Warning: Hyper reference `acro:LAN' on page \es@scroman {xiii} undefined on input line 19.
 
 
-LaTeX Warning: Hyper reference `acro:LAN' on page \es@scroman {xi} undefined on input line 19.
+LaTeX Warning: Hyper reference `acro:LAN' on page \es@scroman {xiii} undefined on input line 19.
 
 
-LaTeX Warning: Hyper reference `acro:TCP' on page \es@scroman {xi} undefined on input line 31.
+LaTeX Warning: Hyper reference `acro:TCP' on page \es@scroman {xiii} undefined on input line 31.
 
 
-LaTeX Warning: Hyper reference `acro:TCP' on page \es@scroman {xi} undefined on input line 31.
+LaTeX Warning: Hyper reference `acro:TCP' on page \es@scroman {xiii} undefined on input line 31.
 
 
-LaTeX Warning: Hyper reference `acro:UDP' on page \es@scroman {xi} undefined on input line 33.
+LaTeX Warning: Hyper reference `acro:UDP' on page \es@scroman {xiii} undefined on input line 33.
 
 
-LaTeX Warning: Hyper reference `acro:UDP' on page \es@scroman {xi} undefined on input line 33.
+LaTeX Warning: Hyper reference `acro:UDP' on page \es@scroman {xiii} undefined on input line 33.
 
 
-LaTeX Warning: Hyper reference `acro:HTTP' on page \es@scroman {xi} undefined on input line 35.
+LaTeX Warning: Hyper reference `acro:HTTP' on page \es@scroman {xiii} undefined on input line 35.
 
 
-LaTeX Warning: Hyper reference `acro:HTTP' on page \es@scroman {xi} undefined on input line 35.
+LaTeX Warning: Hyper reference `acro:HTTP' on page \es@scroman {xiii} undefined on input line 35.
 
 
-LaTeX Warning: Hyper reference `acro:HTTPS' on page \es@scroman {xi} undefined on input line 37.
+LaTeX Warning: Hyper reference `acro:HTTPS' on page \es@scroman {xiii} undefined on input line 37.
 
 
-LaTeX Warning: Hyper reference `acro:HTTPS' on page \es@scroman {xi} undefined on input line 37.
+LaTeX Warning: Hyper reference `acro:HTTPS' on page \es@scroman {xiii} undefined on input line 37.
 
 
-LaTeX Warning: Hyper reference `acro:FTP' on page \es@scroman {xi} undefined on input line 39.
+LaTeX Warning: Hyper reference `acro:FTP' on page \es@scroman {xiii} undefined on input line 39.
 
 
-LaTeX Warning: Hyper reference `acro:FTP' on page \es@scroman {xi} undefined on input line 39.
+LaTeX Warning: Hyper reference `acro:FTP' on page \es@scroman {xiii} undefined on input line 39.
 
 
-LaTeX Warning: Hyper reference `acro:SNMP' on page \es@scroman {xi} undefined on input line 43.
+LaTeX Warning: Hyper reference `acro:SNMP' on page \es@scroman {xiii} undefined on input line 43.
 
 
-LaTeX Warning: Hyper reference `acro:SNMP' on page \es@scroman {xi} undefined on input line 43.
+LaTeX Warning: Hyper reference `acro:SNMP' on page \es@scroman {xiii} undefined on input line 43.
 
 
-LaTeX Warning: Hyper reference `acro:ICMP' on page \es@scroman {xi} undefined on input line 45.
+LaTeX Warning: Hyper reference `acro:ICMP' on page \es@scroman {xiii} undefined on input line 45.
 
 
-LaTeX Warning: Hyper reference `acro:ICMP' on page \es@scroman {xi} undefined on input line 45.
+LaTeX Warning: Hyper reference `acro:ICMP' on page \es@scroman {xiii} undefined on input line 45.
 
 
-LaTeX Warning: Hyper reference `acro:OSI' on page \es@scroman {xi} undefined on input line 47.
+LaTeX Warning: Hyper reference `acro:OSI' on page \es@scroman {xiii} undefined on input line 47.
 
 
-LaTeX Warning: Hyper reference `acro:OSI' on page \es@scroman {xi} undefined on input line 47.
+LaTeX Warning: Hyper reference `acro:OSI' on page \es@scroman {xiii} undefined on input line 47.
 
 
-LaTeX Warning: Hyper reference `acro:MAC' on page \es@scroman {xi} undefined on input line 49.
+LaTeX Warning: Hyper reference `acro:MAC' on page \es@scroman {xiii} undefined on input line 49.
 
 
-LaTeX Warning: Hyper reference `acro:MAC' on page \es@scroman {xi} undefined on input line 49.
+LaTeX Warning: Hyper reference `acro:MAC' on page \es@scroman {xiii} undefined on input line 49.
 
 
-LaTeX Warning: Hyper reference `acro:DoS' on page \es@scroman {xi} undefined on input line 53.
+LaTeX Warning: Hyper reference `acro:DoS' on page \es@scroman {xiii} undefined on input line 53.
 
 
-LaTeX Warning: Hyper reference `acro:DoS' on page \es@scroman {xi} undefined on input line 53.
+LaTeX Warning: Hyper reference `acro:DoS' on page \es@scroman {xiii} undefined on input line 53.
 
 
-LaTeX Warning: Hyper reference `acro:DDoS' on page \es@scroman {xi} undefined on input line 55.
+LaTeX Warning: Hyper reference `acro:DDoS' on page \es@scroman {xiii} undefined on input line 55.
 
 
-LaTeX Warning: Hyper reference `acro:DDoS' on page \es@scroman {xi} undefined on input line 55.
-
-
-LaTeX Warning: Hyper reference `acro:LPWAN' on page \es@scroman {xi} undefined on input line 57.
-
-
-LaTeX Warning: Hyper reference `acro:LPWAN' on page \es@scroman {xi} undefined on input line 57.
-
-
-LaTeX Warning: Hyper reference `acro:VPN' on page \es@scroman {xi} undefined on input line 63.
-
-
-LaTeX Warning: Hyper reference `acro:VPN' on page \es@scroman {xi} undefined on input line 63.
+LaTeX Warning: Hyper reference `acro:DDoS' on page \es@scroman {xiii} undefined on input line 55.
 
 
 
-[11])
+[13]
+pdfTeX warning (ext4): destination with the same identifier (name{LPWAN}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.91     \acro{LPWAN}{Low Power Wide Area Network}
+                                                  )
 
 LaTeX Info: Redefining \. on input line 199.
 LaTeX Info: Redefining \% on input line 199.
-[12]
+[14]
 \openout2 = `Resum.aux'.
 
  (Resum.tex
@@ -1253,14 +1936,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--10
 
 )
 
-[13
+[15
 
 
 
 
 ]
 
-[14
+[16
 
 
 
@@ -1380,15 +2063,15 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has b
                    \relax 
 l.120 \end{itemize}
                     [4]
-Package acronym Info: Label `acro:IP' overridden on input line 140.
-Package acronym Info: Label `acro:VLAN' overridden on input line 140.
+Package acronym Info: Label `acro:IP' overridden on input line 141.
+Package acronym Info: Label `acro:VLAN' overridden on input line 141.
 
 
-LaTeX Info: Redefining \. on input line 147.
-LaTeX Info: Redefining \% on input line 147.
+LaTeX Info: Redefining \. on input line 146.
+LaTeX Info: Redefining \% on input line 146.
 [5]
 Package acronym Info: Label `acro:IEEE' newly defined as it shall be overridden
-although it is yet undefined on input line 148.
+although it is yet undefined on input line 149.
 )
 
 LaTeX Info: Redefining \. on input line 220.
@@ -1397,15 +2080,7 @@ LaTeX Info: Redefining \% on input line 220.
 \openout2 = `MarcoTeórico.aux'.
 
  (MarcoTeórico.tex
-Underfull \hbox (badness 10000) in paragraph at lines 4--7
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--7
-
- []
-
+Package acronym Info: Label `acro:VLAN' overridden on input line 17.
 
 
 [7
@@ -1414,60 +2089,172 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--7
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 37--41
+Package acronym Info: Label `acro:VLAN' overridden on input line 24.
+Package acronym Info: Label `acro:VLAN' overridden on input line 25.
+Package acronym Info: Label `acro:OSPF' overridden on input line 30.
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--36
+
+ []
+
+Package acronym Info: Label `acro:LSDB' newly defined as it shall be overridden
+although it is yet undefined on input line 36.
+Package acronym Info: Label `acro:LSA' newly defined as it shall be overridden
+although it is yet undefined on input line 37.
+Package acronym Info: Label `acro:SPF' newly defined as it shall be overridden
+although it is yet undefined on input line 38.
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--50
 
  []
 
 
 
-LaTeX Info: Redefining \. on input line 55.
-LaTeX Info: Redefining \% on input line 55.
+LaTeX Info: Redefining \. on input line 54.
+LaTeX Info: Redefining \% on input line 54.
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 64--66
+Package acronym Info: Label `acro:IP' overridden on input line 56.
+Package acronym Info: Label `acro:PAgP' newly defined as it shall be overridden
+although it is yet undefined on input line 68.
+Package acronym Info: Label `acro:LACP' newly defined as it shall be overridden
+although it is yet undefined on input line 68.
+Package acronym Info: Label `acro:DHCP' overridden on input line 79.
+Package acronym Info: Label `acro:IP' overridden on input line 79.
+Package acronym Info: Label `acro:DHCP' overridden on input line 82.
+Package acronym Info: Label `acro:DHCP' overridden on input line 82.
+Package acronym Info: Label `acro:DHCP' overridden on input line 83.
+Package acronym Info: Label `acro:DHCP' overridden on input line 83.
+Package acronym Info: Label `acro:IP' overridden on input line 83.
 
- []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 64--66
-
- []
-
-
-
-LaTeX Info: Redefining \. on input line 86.
-LaTeX Info: Redefining \% on input line 86.
+LaTeX Info: Redefining \. on input line 84.
+LaTeX Info: Redefining \% on input line 84.
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 94--98
+Package acronym Info: Label `acro:DHCP' overridden on input line 84.
+Package acronym Info: Label `acro:DHCP' overridden on input line 85.
+Package acronym Info: Label `acro:IP' overridden on input line 85.
+Package acronym Info: Label `acro:IP' overridden on input line 86.
+Package acronym Info: Label `acro:IP' overridden on input line 87.
+Package acronym Info: Label `acro:DHCP' overridden on input line 87.
+Package acronym Info: Label `acro:NAT' overridden on input line 92.
+Package acronym Info: Label `acro:IP' overridden on input line 92.
+Package acronym Info: Label `acro:NAT' overridden on input line 94.
+Package acronym Info: Label `acro:IP' overridden on input line 94.
+Package acronym Info: Label `acro:IP' overridden on input line 94.
+Package acronym Info: Label `acro:NAT' overridden on input line 95.
+Package acronym Info: Label `acro:IP' overridden on input line 95.
+Package acronym Info: Label `acro:IP' overridden on input line 95.
+Package acronym Info: Label `acro:PAT' newly defined as it shall be overridden
+although it is yet undefined on input line 96.
+Package acronym Info: Label `acro:IP' overridden on input line 96.
+Package acronym Info: Label `acro:NAT' overridden on input line 99.
+Package acronym Info: Label `acro:IP' overridden on input line 101.
+Package acronym Info: Label `acro:IP' overridden on input line 101.
+Package acronym Info: Label `acro:IP' overridden on input line 102.
+Package acronym Info: Label `acro:ACL' overridden on input line 112.
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--113
 
  []
 
 
 
-LaTeX Info: Redefining \. on input line 118.
-LaTeX Info: Redefining \% on input line 118.
+LaTeX Info: Redefining \. on input line 113.
+LaTeX Info: Redefining \% on input line 113.
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 131--137
+Package acronym Info: Label `acro:ACL' overridden on input line 116.
+Package acronym Info: Label `acro:IP' overridden on input line 116.
+Package acronym Info: Label `acro:ACL' overridden on input line 120.
+Package acronym Info: Label `acro:IP' overridden on input line 120.
+Package acronym Info: Label `acro:ACL' overridden on input line 121.
+Package acronym Info: Label `acro:IP' overridden on input line 121.
+Package acronym Info: Label `acro:ACL' overridden on input line 124.
+Package acronym Info: Label `acro:IP' overridden on input line 129.
+Package acronym Info: Label `acro:SSH' overridden on input line 134.
+Package acronym Info: Label `acro:MITM' newly defined as it shall be overridden
+although it is yet undefined on input line 143.
 
+Overfull \hbox (2.47296pt too wide) in paragraph at lines 143--144
+[]\T1/futs/b/n/10.95 (-20) Protecci�n con-tra ata-ques: \T1/futs/m/n/10.95 (-20) Re-du-ce el ries-go de ata-ques de in-ter-me-dia-rios ([][][][][])
  []
 
 
 
-LaTeX Info: Redefining \. on input line 146.
-LaTeX Info: Redefining \% on input line 146.
+LaTeX Info: Redefining \. on input line 144.
+LaTeX Info: Redefining \% on input line 144.
 [11]
-Overfull \hbox (1.89743pt too wide) in paragraph at lines 167--168
-[]\T1/futs/b/n/10.95 (-20) Protecci�n con-tra ata-ques: \T1/futs/m/n/10.95 (-20) Re-du-ce el ries-go de ata-ques de in-ter-me-dia-rios (MITM)
- []
+Package acronym Info: Label `acro:SSH' overridden on input line 144.
+Package acronym Info: Label `acro:DMZ' overridden on input line 148.
+Package acronym Info: Label `acro:DMZ' overridden on input line 149.
+Package acronym Info: Label `acro:DMZ' overridden on input line 151.
+Package acronym Info: Label `acro:DHCP' overridden on input line 160.
+Package acronym Info: Label `acro:DHCP' overridden on input line 160.
+Package acronym Info: Label `acro:DHCP' overridden on input line 161.
+Package acronym Info: Label `acro:DHCP' overridden on input line 163.
+Package acronym Info: Label `acro:DHCP' overridden on input line 163.
+Package acronym Info: Label `acro:DHCP' overridden on input line 164.
+Package acronym Info: Label `acro:DHCP' overridden on input line 164.
+Package acronym Info: Label `acro:DHCP' overridden on input line 165.
+Package acronym Info: Label `acro:VPN' newly defined as it shall be overridden
+although it is yet undefined on input line 170.
+Package acronym Info: Label `acro:IPSec' newly defined as it shall be overridden
+although it is yet undefined on input line 170.
+Package acronym Info: Label `acro:IPSec' overridden on input line 170.
 
 
-
-LaTeX Info: Redefining \. on input line 178.
-LaTeX Info: Redefining \% on input line 178.
+LaTeX Info: Redefining \. on input line 173.
+LaTeX Info: Redefining \% on input line 173.
 [12]
+Package acronym Info: Label `acro:IPSec' overridden on input line 175.
+Package acronym Info: Label `acro:IP' overridden on input line 175.
+Package acronym Info: Label `acro:IPSec' overridden on input line 176.
+Package acronym Info: Label `acro:IPSec' overridden on input line 179.
+Package acronym Info: Label `acro:IP' overridden on input line 181.
+Package acronym Info: Label `acro:IPSec' overridden on input line 181.
+Package acronym Info: Label `acro:VPN' overridden on input line 183.
+Package acronym Info: Label `acro:IPSec' overridden on input line 183.
+Package acronym Info: Label `acro:IP' overridden on input line 184.
+Package acronym Info: Label `acro:VPN' overridden on input line 188.
+Package acronym Info: Label `acro:IPSec' overridden on input line 188.
+Package acronym Info: Label `acro:VPN' overridden on input line 193.
+Package acronym Info: Label `acro:IP' overridden on input line 193.
+Package acronym Info: Label `acro:IoT' overridden on input line 198.
 
-LaTeX Info: Redefining \. on input line 203.
-LaTeX Info: Redefining \% on input line 203.
+Underfull \hbox (badness 10000) in paragraph at lines 198--202
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--202
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 202.
+LaTeX Info: Redefining \% on input line 202.
 [13]
+Underfull \hbox (badness 10000) in paragraph at lines 203--206
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--206
+
+ []
+
+Package acronym Info: Label `acro:LPWAN' newly defined as it shall be overridden
+although it is yet undefined on input line 209.
+Package acronym Info: Label `acro:LoRa' newly defined as it shall be overridden
+although it is yet undefined on input line 209.
+Package acronym Info: Label `acro:NB-IoT' newly defined as it shall be overridden
+although it is yet undefined on input line 209.
+
 Underfull \hbox (badness 10000) in paragraph at lines 207--211
 
  []
@@ -1478,50 +2265,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 207--211
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--215
+Underfull \hbox (badness 10000) in paragraph at lines 212--216
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--215
+Underfull \hbox (badness 10000) in paragraph at lines 212--216
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 216--220
+Underfull \hbox (badness 10000) in paragraph at lines 217--219
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 216--220
+Underfull \hbox (badness 10000) in paragraph at lines 217--219
 
  []
 
+)
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--225
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 221--225
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 226--228
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 226--228
-
- []
-
-
-
-LaTeX Info: Redefining \. on input line 228.
-LaTeX Info: Redefining \% on input line 228.
-[14])
+LaTeX Info: Redefining \. on input line 221.
+LaTeX Info: Redefining \% on input line 221.
+[14]
 
 LaTeX Info: Redefining \. on input line 221.
 LaTeX Info: Redefining \% on input line 221.
@@ -1550,8 +2317,8 @@ LaTeX Info: Redefining \. on input line 50.
 LaTeX Info: Redefining \% on input line 50.
 [18]
 
-LaTeX Info: Redefining \. on input line 76.
-LaTeX Info: Redefining \% on input line 76.
+LaTeX Info: Redefining \. on input line 78.
+LaTeX Info: Redefining \% on input line 78.
 [19]
 
 LaTeX Info: Redefining \. on input line 102.
@@ -1631,22 +2398,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [27]
-<Imágenes/Routers.png, id=1080, 271.76532pt x 173.14688pt>
+<Imágenes/Routers.png, id=1848, 271.76532pt x 173.14688pt>
 File: Imágenes/Routers.png Graphic file (type png)
 <use Imágenes/Routers.png>
 Package pdftex.def Info: Imágenes/Routers.png  used on input line 52.
-(pdftex.def)             Requested size: 193.5pt x 123.28917pt.
+(pdftex.def)             Requested size: 154.79764pt x 98.6287pt.
 
 
 LaTeX Info: Redefining \. on input line 56.
 LaTeX Info: Redefining \% on input line 56.
 [28]
-<Imágenes/RedInvitados.png, id=1088, 391.4625pt x 113.67468pt>
+<Imágenes/RedInvitados.png, id=1856, 391.4625pt x 113.67468pt>
 File: Imágenes/RedInvitados.png Graphic file (type png)
 <use Imágenes/RedInvitados.png>
 Package pdftex.def Info: Imágenes/RedInvitados.png  used on input line 67.
-(pdftex.def)             Requested size: 193.5pt x 56.1902pt.
-<Imágenes/DMZInvitados.png, id=1090, 295.85532pt x 132.495pt>
+(pdftex.def)             Requested size: 232.20236pt x 67.42825pt.
+<Imágenes/DMZInvitados.png, id=1858, 295.85532pt x 132.495pt>
 File: Imágenes/DMZInvitados.png Graphic file (type png)
 <use Imágenes/DMZInvitados.png>
 Package pdftex.def Info: Imágenes/DMZInvitados.png  used on input line 82.
@@ -1656,52 +2423,55 @@ Package pdftex.def Info: Imágenes/DMZInvitados.png  used on input line 82.
 LaTeX Info: Redefining \. on input line 86.
 LaTeX Info: Redefining \% on input line 86.
 [29 <./Imágenes/Routers.png> <./Imágenes/RedInvitados.png>]
-<Imágenes/DMZIOMT.png, id=1101, 183.68625pt x 155.83218pt>
+<Imágenes/DMZIOMT.png, id=1870, 183.68625pt x 155.83218pt>
 File: Imágenes/DMZIOMT.png Graphic file (type png)
 <use Imágenes/DMZIOMT.png>
 Package pdftex.def Info: Imágenes/DMZIOMT.png  used on input line 97.
-(pdftex.def)             Requested size: 193.5pt x 164.16838pt.
-
-
-LaTeX Info: Redefining \. on input line 109.
-LaTeX Info: Redefining \% on input line 109.
-[30 <./Imágenes/DMZInvitados.png> <./Imágenes/DMZIOMT.png>]
-<Imágenes/DMZInterna.png, id=1112, 322.20375pt x 140.02313pt>
+(pdftex.def)             Requested size: 135.45236pt x 114.9193pt.
+<Imágenes/DMZInterna.png, id=1873, 322.20375pt x 140.02313pt>
 File: Imágenes/DMZInterna.png Graphic file (type png)
 <use Imágenes/DMZInterna.png>
 Package pdftex.def Info: Imágenes/DMZInterna.png  used on input line 112.
 (pdftex.def)             Requested size: 193.5pt x 84.09357pt.
-<Imágenes/SwitchesCore.png, id=1114, 270.25969pt x 188.95593pt>
+
+
+LaTeX Info: Redefining \. on input line 116.
+LaTeX Info: Redefining \% on input line 116.
+[30 <./Imágenes/DMZInvitados.png> <./Imágenes/DMZIOMT.png>]
+<Imágenes/SwitchesCore.png, id=1883, 270.25969pt x 188.95593pt>
 File: Imágenes/SwitchesCore.png Graphic file (type png)
 <use Imágenes/SwitchesCore.png>
 Package pdftex.def Info: Imágenes/SwitchesCore.png  used on input line 126.
 (pdftex.def)             Requested size: 193.5pt x 135.29274pt.
-<Imágenes/SwitchesDistribucion.png, id=1116, 903.375pt x 267.24844pt>
+<Imágenes/SwitchesDistribucion.png, id=1885, 903.375pt x 267.24844pt>
 File: Imágenes/SwitchesDistribucion.png Graphic file (type png)
 <use Imágenes/SwitchesDistribucion.png>
 Package pdftex.def Info: Imágenes/SwitchesDistribucion.png  used on input line 137.
-(pdftex.def)             Requested size: 193.5pt x 57.24117pt.
+(pdftex.def)             Requested size: 270.89882pt x 80.14252pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 LaTeX Info: Redefining \. on input line 141.
 LaTeX Info: Redefining \% on input line 141.
 [31 <./Imágenes/DMZInterna.png> <./Imágenes/SwitchesCore.png>]
-<Imágenes/SwitchesAcceso.png, id=1126, 512.66531pt x 359.84438pt>
+<Imágenes/SwitchesAcceso.png, id=1894, 512.66531pt x 359.84438pt>
 File: Imágenes/SwitchesAcceso.png Graphic file (type png)
 <use Imágenes/SwitchesAcceso.png>
 Package pdftex.def Info: Imágenes/SwitchesAcceso.png  used on input line 147.
-(pdftex.def)             Requested size: 193.5pt x 135.81982pt.
-<Imágenes/IoMT.png, id=1129, 735.49782pt x 274.02374pt>
+(pdftex.def)             Requested size: 232.20236pt x 162.9827pt.
+
+
+LaTeX Info: Redefining \. on input line 159.
+LaTeX Info: Redefining \% on input line 159.
+[32 <./Imágenes/SwitchesDistribucion.png> <./Imágenes/SwitchesAcceso.png>]
+<Imágenes/IoMT.png, id=1904, 735.49782pt x 274.02374pt>
 File: Imágenes/IoMT.png Graphic file (type png)
 <use Imágenes/IoMT.png>
 Package pdftex.def Info: Imágenes/IoMT.png  used on input line 162.
-(pdftex.def)             Requested size: 193.5pt x 72.0891pt.
-
-
-LaTeX Info: Redefining \. on input line 166.
-LaTeX Info: Redefining \% on input line 166.
-[32 <./Imágenes/SwitchesDistribucion.png> <./Imágenes/SwitchesAcceso.png>]
-<Imágenes/Plano Son Espases.png, id=1139, 1919.17pt x 957.5775pt>
+(pdftex.def)             Requested size: 251.54764pt x 93.71877pt.
+<Imágenes/Plano Son Espases.png, id=1907, 1919.17pt x 957.5775pt>
 File: Imágenes/Plano Son Espases.png Graphic file (type png)
 <use Imágenes/Plano Son Espases.png>
 Package pdftex.def Info: Imágenes/Plano Son Espases.png  used on input line 173.
@@ -1713,8 +2483,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 182--186
 
 
 
-LaTeX Info: Redefining \. on input line 189.
-LaTeX Info: Redefining \% on input line 189.
+LaTeX Info: Redefining \. on input line 187.
+LaTeX Info: Redefining \% on input line 187.
 [33 <./Imágenes/IoMT.png> <./Imágenes/Plano Son Espases.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 191--197
 
@@ -1725,39 +2495,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 191--197
 
  []
 
-<Imágenes/InterconexionHospitales.png, id=1153, 1395.71437pt x 231.86626pt>
+<Imágenes/InterconexionHospitales.png, id=1921, 1395.71437pt x 231.86626pt>
 File: Imágenes/InterconexionHospitales.png Graphic file (type png)
 <use Imágenes/InterconexionHospitales.png>
 Package pdftex.def Info: Imágenes/InterconexionHospitales.png  used on input line 206.
-(pdftex.def)             Requested size: 193.5pt x 32.14262pt.
+(pdftex.def)             Requested size: 232.20236pt x 38.57469pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 211--216
 
  []
 
-<Imágenes/Router-Sw.Core.png, id=1156, 162.6075pt x 155.83218pt>
+<Imágenes/Router-Sw.Core.png, id=1924, 162.6075pt x 155.83218pt>
 File: Imágenes/Router-Sw.Core.png Graphic file (type png)
 <use Imágenes/Router-Sw.Core.png>
 Package pdftex.def Info: Imágenes/Router-Sw.Core.png  used on input line 219.
-(pdftex.def)             Requested size: 193.5pt x 185.4521pt.
-
-Underfull \vbox (badness 6445) has occurred while \output is active []
+(pdftex.def)             Requested size: 116.10118pt x 111.26698pt.
 
 
-
-LaTeX Info: Redefining \. on input line 223.
-LaTeX Info: Redefining \% on input line 223.
+LaTeX Info: Redefining \. on input line 222.
+LaTeX Info: Redefining \% on input line 222.
 [34 <./Imágenes/InterconexionHospitales.png>]
-<Imágenes/Switches.png, id=1164, 338.01282pt x 219.82124pt>
+<Imágenes/Switches.png, id=1932, 338.01282pt x 219.82124pt>
 File: Imágenes/Switches.png Graphic file (type png)
 <use Imágenes/Switches.png>
 Package pdftex.def Info: Imágenes/Switches.png  used on input line 229.
 (pdftex.def)             Requested size: 193.5pt x 125.84277pt.
-<Imágenes/Clusters.png, id=1166, 363.60844pt x 125.71968pt>
+<Imágenes/Clusters.png, id=1934, 363.60844pt x 125.71968pt>
 File: Imágenes/Clusters.png Graphic file (type png)
 <use Imágenes/Clusters.png>
 Package pdftex.def Info: Imágenes/Clusters.png  used on input line 240.
-(pdftex.def)             Requested size: 193.5pt x 66.90543pt.
+(pdftex.def)             Requested size: 212.85118pt x 73.59654pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1766,7 +2533,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 244.
 LaTeX Info: Redefining \% on input line 244.
 [35 <./Imágenes/Router-Sw.Core.png> <./Imágenes/Switches.png>]
-<Imágenes/CLusterdentro.png, id=1174, 645.16031pt x 191.21437pt>
+<Imágenes/CLusterdentro.png, id=1943, 645.16031pt x 191.21437pt>
 File: Imágenes/CLusterdentro.png Graphic file (type png)
 <use Imágenes/CLusterdentro.png>
 Package pdftex.def Info: Imágenes/CLusterdentro.png  used on input line 248.
@@ -1880,87 +2647,84 @@ Underfull \hbox (badness 10000) in paragraph at lines 834--838
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 848--850
+Underfull \hbox (badness 10000) in paragraph at lines 842--846
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 850--852
 
  []
 
 
 
-LaTeX Info: Redefining \. on input line 850.
-LaTeX Info: Redefining \% on input line 850.
+LaTeX Info: Redefining \. on input line 852.
+LaTeX Info: Redefining \% on input line 852.
 [48]
-Underfull \hbox (badness 10000) in paragraph at lines 852--857
+Underfull \hbox (badness 10000) in paragraph at lines 854--861
 
  []
 
-<Imágenes/hsrpSW.png, id=1264, 906.38625pt x 191.9672pt>
+<Imágenes/hsrpSW.png, id=2034, 906.38625pt x 191.9672pt>
 File: Imágenes/hsrpSW.png Graphic file (type png)
 <use Imágenes/hsrpSW.png>
-Package pdftex.def Info: Imágenes/hsrpSW.png  used on input line 864.
-(pdftex.def)             Requested size: 193.5pt x 40.98215pt.
-<Imágenes/HSRProut.png, id=1266, 253.69781pt x 289.83281pt>
+Package pdftex.def Info: Imágenes/hsrpSW.png  used on input line 868.
+(pdftex.def)             Requested size: 232.20236pt x 49.178pt.
+<Imágenes/HSRProut.png, id=2036, 253.69781pt x 289.83281pt>
 File: Imágenes/HSRProut.png Graphic file (type png)
 <use Imágenes/HSRProut.png>
-Package pdftex.def Info: Imágenes/HSRProut.png  used on input line 874.
+Package pdftex.def Info: Imágenes/HSRProut.png  used on input line 878.
 (pdftex.def)             Requested size: 193.5pt x 221.06683pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-LaTeX Info: Redefining \. on input line 878.
-LaTeX Info: Redefining \% on input line 878.
+LaTeX Info: Redefining \. on input line 882.
+LaTeX Info: Redefining \% on input line 882.
 [49 <./Imágenes/hsrpSW.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 880--889
+Underfull \hbox (badness 10000) in paragraph at lines 884--893
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 880--889
+Underfull \hbox (badness 10000) in paragraph at lines 884--893
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 891--897
+Underfull \hbox (badness 10000) in paragraph at lines 895--901
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 891--897
+Underfull \hbox (badness 10000) in paragraph at lines 895--901
 
  []
 
 
 
-LaTeX Info: Redefining \. on input line 897.
-LaTeX Info: Redefining \% on input line 897.
+LaTeX Info: Redefining \. on input line 901.
+LaTeX Info: Redefining \% on input line 901.
 [50 <./Imágenes/HSRProut.png>]
-<Imágenes/Etherchannel.png, id=1283, 238.64156pt x 195.73125pt>
+<Imágenes/Etherchannel.png, id=2052, 238.64156pt x 195.73125pt>
 File: Imágenes/Etherchannel.png Graphic file (type png)
 <use Imágenes/Etherchannel.png>
-Package pdftex.def Info: Imágenes/Etherchannel.png  used on input line 900.
+Package pdftex.def Info: Imágenes/Etherchannel.png  used on input line 904.
 (pdftex.def)             Requested size: 193.5pt x 158.70569pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 909--914
+Underfull \hbox (badness 10000) in paragraph at lines 913--918
 
  []
 
 
 
-LaTeX Info: Redefining \. on input line 925.
-LaTeX Info: Redefining \% on input line 925.
+LaTeX Info: Redefining \. on input line 927.
+LaTeX Info: Redefining \% on input line 927.
 [51 <./Imágenes/Etherchannel.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 951--958
+Underfull \hbox (badness 10000) in paragraph at lines 956--963
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 951--958
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 960--964
+Underfull \hbox (badness 10000) in paragraph at lines 956--963
 
  []
 
@@ -1969,60 +2733,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 960--964
 LaTeX Info: Redefining \. on input line 964.
 LaTeX Info: Redefining \% on input line 964.
 [52]
-<Imágenes/RedSonEspases.png, id=1297, 758.08218pt x 473.51906pt>
-File: Imágenes/RedSonEspases.png Graphic file (type png)
-<use Imágenes/RedSonEspases.png>
-Package pdftex.def Info: Imágenes/RedSonEspases.png  used on input line 981.
-(pdftex.def)             Requested size: 597.51341pt x 373.22336pt.
+Underfull \hbox (badness 10000) in paragraph at lines 965--970
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ []
 
 
 
-LaTeX Info: Redefining \. on input line 985.
-LaTeX Info: Redefining \% on input line 985.
-[53]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-LaTeX Info: Redefining \. on input line 985.
-LaTeX Info: Redefining \% on input line 985.
-[54]
-Overfull \vbox (21.3221pt too high) has occurred while \output is active []
-
-
-
-LaTeX Info: Redefining \. on input line 985.
-LaTeX Info: Redefining \% on input line 985.
-[55 <./Imágenes/RedSonEspases.png>]
-<Imágenes/redInterocnexion.png, id=1312, 662.475pt x 424.58624pt>
-File: Imágenes/redInterocnexion.png Graphic file (type png)
-<use Imágenes/redInterocnexion.png>
-Package pdftex.def Info: Imágenes/redInterocnexion.png  used on input line 988.
-(pdftex.def)             Requested size: 597.5361pt x 382.96631pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-LaTeX Info: Redefining \. on input line 996.
-LaTeX Info: Redefining \% on input line 996.
-[56 <./Imágenes/redInterocnexion.png>])
+LaTeX Info: Redefining \. on input line 990.
+LaTeX Info: Redefining \% on input line 990.
+[53])
 
 LaTeX Info: Redefining \. on input line 224.
 LaTeX Info: Redefining \% on input line 224.
-[57]
+[54]
 \openout2 = `Implementación.aux'.
 
  (Implementación.tex
-
-[58
-
-
-
-
-]
 Underfull \hbox (badness 10000) in paragraph at lines 4--11
 
  []
@@ -2042,7 +2768,12 @@ Underfull \vbox (badness 1102) has occurred while \output is active []
 
 
 
-[59]
+[55
+
+
+
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 20--23
 
  []
@@ -2056,7 +2787,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--31
 
 LaTeX Info: Redefining \. on input line 37.
 LaTeX Info: Redefining \% on input line 37.
-[60]
+[56]
 Underfull \hbox (badness 10000) in paragraph at lines 40--44
 
  []
@@ -2090,7 +2821,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--68
 
 LaTeX Info: Redefining \. on input line 68.
 LaTeX Info: Redefining \% on input line 68.
-[61]
+[57]
 Underfull \hbox (badness 10000) in paragraph at lines 71--74
 
  []
@@ -2109,15 +2840,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--82
 
 LaTeX Info: Redefining \. on input line 82.
 LaTeX Info: Redefining \% on input line 82.
-[62]
+[58]
 
 LaTeX Info: Redefining \. on input line 105.
 LaTeX Info: Redefining \% on input line 105.
-[63])
+[59])
 
 LaTeX Info: Redefining \. on input line 225.
 LaTeX Info: Redefining \% on input line 225.
-[64]
+[60]
 \openout2 = `Pruebas.aux'.
 
  (Pruebas.tex
@@ -2132,15 +2863,151 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--13
 
 
 
-[65
+[61
 
 
 
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 31--35
 
-LaTeX Info: Redefining \. on input line 61.
-LaTeX Info: Redefining \% on input line 61.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--41
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--46
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 59.
+LaTeX Info: Redefining \% on input line 59.
+[62]
+Underfull \hbox (badness 10000) in paragraph at lines 71--76
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--82
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--87
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 87.
+LaTeX Info: Redefining \% on input line 87.
+[63]
+Underfull \hbox (badness 10000) in paragraph at lines 94--110
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--110
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--110
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--110
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--110
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--110
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--110
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--124
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--124
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--124
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--124
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--124
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 124.
+LaTeX Info: Redefining \% on input line 124.
+[64]
+Underfull \hbox (badness 10000) in paragraph at lines 134--138
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--144
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--148
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 148.
+LaTeX Info: Redefining \% on input line 148.
+[65]
+Underfull \hbox (badness 10000) in paragraph at lines 157--162
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--166
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--172
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 172.
+LaTeX Info: Redefining \% on input line 172.
 [66])
 
 LaTeX Info: Redefining \. on input line 226.
@@ -2221,8 +3088,8 @@ LaTeX Info: Redefining \. on input line 222.
 LaTeX Info: Redefining \% on input line 222.
 [75]
 
-LaTeX Info: Redefining \. on input line 267.
-LaTeX Info: Redefining \% on input line 267.
+LaTeX Info: Redefining \. on input line 266.
+LaTeX Info: Redefining \% on input line 266.
 [76]
 
 LaTeX Info: Redefining \. on input line 315.
@@ -2233,34 +3100,34 @@ LaTeX Info: Redefining \. on input line 365.
 LaTeX Info: Redefining \% on input line 365.
 [78]
 
-LaTeX Info: Redefining \. on input line 416.
-LaTeX Info: Redefining \% on input line 416.
+LaTeX Info: Redefining \. on input line 415.
+LaTeX Info: Redefining \% on input line 415.
 [79]
-Overfull \hbox (3.7233pt too wide) in paragraph at lines 465--467
-[][][][][][][][][][][][][][][][][][][][] 
- []
-
-
 
 LaTeX Info: Redefining \. on input line 467.
 LaTeX Info: Redefining \% on input line 467.
 [80]
-Overfull \hbox (3.7233pt too wide) in paragraph at lines 494--495
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 469--471
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (3.7233pt too wide) in paragraph at lines 495--496
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 498--499
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (3.7233pt too wide) in paragraph at lines 505--506
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 499--500
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (3.7233pt too wide) in paragraph at lines 506--507
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 509--510
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 510--511
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -2269,49 +3136,1248 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-LaTeX Info: Redefining \. on input line 520.
-LaTeX Info: Redefining \% on input line 520.
+LaTeX Info: Redefining \. on input line 518.
+LaTeX Info: Redefining \% on input line 518.
 [81]
-Overfull \hbox (3.7233pt too wide) in paragraph at lines 538--539
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 542--543
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (3.7233pt too wide) in paragraph at lines 539--540
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 543--544
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (3.7233pt too wide) in paragraph at lines 540--542
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 544--546
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (3.7233pt too wide) in paragraph at lines 549--550
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 553--554
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (3.7233pt too wide) in paragraph at lines 550--551
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 554--555
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (3.7233pt too wide) in paragraph at lines 551--552
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 555--557
 [][][][][][][][][][][][][][][][][][][][] 
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 LaTeX Info: Redefining \. on input line 572.
 LaTeX Info: Redefining \% on input line 572.
-[82])
+[82]
+
+LaTeX Info: Redefining \. on input line 618.
+LaTeX Info: Redefining \% on input line 618.
+[83]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 671.
+LaTeX Info: Redefining \% on input line 671.
+[84]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 724.
+LaTeX Info: Redefining \% on input line 724.
+[85]
+
+LaTeX Info: Redefining \. on input line 775.
+LaTeX Info: Redefining \% on input line 775.
+[86]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 827.
+LaTeX Info: Redefining \% on input line 827.
+[87]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 880.
+LaTeX Info: Redefining \% on input line 880.
+[88]
+
+LaTeX Info: Redefining \. on input line 930.
+LaTeX Info: Redefining \% on input line 930.
+[89]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 981.
+LaTeX Info: Redefining \% on input line 981.
+[90]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 1034.
+LaTeX Info: Redefining \% on input line 1034.
+[91]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 1087.
+LaTeX Info: Redefining \% on input line 1087.
+[92]
+
+LaTeX Info: Redefining \. on input line 1138.
+LaTeX Info: Redefining \% on input line 1138.
+[93]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 1190.
+LaTeX Info: Redefining \% on input line 1190.
+[94]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 1243.
+LaTeX Info: Redefining \% on input line 1243.
+[95]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 1296.
+LaTeX Info: Redefining \% on input line 1296.
+[96]
+
+LaTeX Info: Redefining \. on input line 1346.
+LaTeX Info: Redefining \% on input line 1346.
+[97]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 1398.
+LaTeX Info: Redefining \% on input line 1398.
+[98]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 1451.
+LaTeX Info: Redefining \% on input line 1451.
+[99]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 1504.
+LaTeX Info: Redefining \% on input line 1504.
+[100]
+
+LaTeX Info: Redefining \. on input line 1554.
+LaTeX Info: Redefining \% on input line 1554.
+[101]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 1606.
+LaTeX Info: Redefining \% on input line 1606.
+[102]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 1659.
+LaTeX Info: Redefining \% on input line 1659.
+[103]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 1712.
+LaTeX Info: Redefining \% on input line 1712.
+[104]
+
+LaTeX Info: Redefining \. on input line 1762.
+LaTeX Info: Redefining \% on input line 1762.
+[105]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 1814.
+LaTeX Info: Redefining \% on input line 1814.
+[106]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 1867.
+LaTeX Info: Redefining \% on input line 1867.
+[107]
+
+LaTeX Info: Redefining \. on input line 1917.
+LaTeX Info: Redefining \% on input line 1917.
+[108]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 1969.
+LaTeX Info: Redefining \% on input line 1969.
+[109]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 2022.
+LaTeX Info: Redefining \% on input line 2022.
+[110]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 2075.
+LaTeX Info: Redefining \% on input line 2075.
+[111]
+
+LaTeX Info: Redefining \. on input line 2124.
+LaTeX Info: Redefining \% on input line 2124.
+[112]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 2177.
+LaTeX Info: Redefining \% on input line 2177.
+[113]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 2230.
+LaTeX Info: Redefining \% on input line 2230.
+[114]
+
+LaTeX Info: Redefining \. on input line 2281.
+LaTeX Info: Redefining \% on input line 2281.
+[115]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 2333.
+LaTeX Info: Redefining \% on input line 2333.
+[116]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 2386.
+LaTeX Info: Redefining \% on input line 2386.
+[117]
+
+LaTeX Info: Redefining \. on input line 2436.
+LaTeX Info: Redefining \% on input line 2436.
+[118]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 2488.
+LaTeX Info: Redefining \% on input line 2488.
+[119]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 2541.
+LaTeX Info: Redefining \% on input line 2541.
+[120]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 2594.
+LaTeX Info: Redefining \% on input line 2594.
+[121]
+
+LaTeX Info: Redefining \. on input line 2644.
+LaTeX Info: Redefining \% on input line 2644.
+[122]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 2696.
+LaTeX Info: Redefining \% on input line 2696.
+[123]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 2749.
+LaTeX Info: Redefining \% on input line 2749.
+[124]
+
+LaTeX Info: Redefining \. on input line 2799.
+LaTeX Info: Redefining \% on input line 2799.
+[125]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 2851.
+LaTeX Info: Redefining \% on input line 2851.
+[126]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 2904.
+LaTeX Info: Redefining \% on input line 2904.
+[127]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 2957.
+LaTeX Info: Redefining \% on input line 2957.
+[128]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 3010.
+LaTeX Info: Redefining \% on input line 3010.
+[129]
+
+LaTeX Info: Redefining \. on input line 3060.
+LaTeX Info: Redefining \% on input line 3060.
+[130]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 3112.
+LaTeX Info: Redefining \% on input line 3112.
+[131]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 3165.
+LaTeX Info: Redefining \% on input line 3165.
+[132]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 3218.
+LaTeX Info: Redefining \% on input line 3218.
+[133]
+
+LaTeX Info: Redefining \. on input line 3268.
+LaTeX Info: Redefining \% on input line 3268.
+[134]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 3320.
+LaTeX Info: Redefining \% on input line 3320.
+[135]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 3373.
+LaTeX Info: Redefining \% on input line 3373.
+[136]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 3426.
+LaTeX Info: Redefining \% on input line 3426.
+[137]
+
+LaTeX Info: Redefining \. on input line 3476.
+LaTeX Info: Redefining \% on input line 3476.
+[138]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 3528.
+LaTeX Info: Redefining \% on input line 3528.
+[139]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 3581.
+LaTeX Info: Redefining \% on input line 3581.
+[140]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 3634.
+LaTeX Info: Redefining \% on input line 3634.
+[141]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 3687.
+LaTeX Info: Redefining \% on input line 3687.
+[142]
+
+LaTeX Info: Redefining \. on input line 3737.
+LaTeX Info: Redefining \% on input line 3737.
+[143]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 3789.
+LaTeX Info: Redefining \% on input line 3789.
+[144]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 3842.
+LaTeX Info: Redefining \% on input line 3842.
+[145]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 3895.
+LaTeX Info: Redefining \% on input line 3895.
+[146]
+
+LaTeX Info: Redefining \. on input line 3945.
+LaTeX Info: Redefining \% on input line 3945.
+[147]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 3997.
+LaTeX Info: Redefining \% on input line 3997.
+[148]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 4050.
+LaTeX Info: Redefining \% on input line 4050.
+[149]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 4103.
+LaTeX Info: Redefining \% on input line 4103.
+[150]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 4156.
+LaTeX Info: Redefining \% on input line 4156.
+[151]
+
+LaTeX Info: Redefining \. on input line 4207.
+LaTeX Info: Redefining \% on input line 4207.
+[152]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 4259.
+LaTeX Info: Redefining \% on input line 4259.
+[153]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 4312.
+LaTeX Info: Redefining \% on input line 4312.
+[154]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 4365.
+LaTeX Info: Redefining \% on input line 4365.
+[155]
+
+LaTeX Info: Redefining \. on input line 4416.
+LaTeX Info: Redefining \% on input line 4416.
+[156]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 4468.
+LaTeX Info: Redefining \% on input line 4468.
+[157]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 4521.
+LaTeX Info: Redefining \% on input line 4521.
+[158]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 4574.
+LaTeX Info: Redefining \% on input line 4574.
+[159]
+
+LaTeX Info: Redefining \. on input line 4624.
+LaTeX Info: Redefining \% on input line 4624.
+[160]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 4676.
+LaTeX Info: Redefining \% on input line 4676.
+[161]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 4729.
+LaTeX Info: Redefining \% on input line 4729.
+[162]
+
+LaTeX Info: Redefining \. on input line 4779.
+LaTeX Info: Redefining \% on input line 4779.
+[163]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 4831.
+LaTeX Info: Redefining \% on input line 4831.
+[164]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 4884.
+LaTeX Info: Redefining \% on input line 4884.
+[165]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 4937.
+LaTeX Info: Redefining \% on input line 4937.
+[166]
+
+LaTeX Info: Redefining \. on input line 4989.
+LaTeX Info: Redefining \% on input line 4989.
+[167]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 5041.
+LaTeX Info: Redefining \% on input line 5041.
+[168]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 5094.
+LaTeX Info: Redefining \% on input line 5094.
+[169]
+
+LaTeX Info: Redefining \. on input line 5146.
+LaTeX Info: Redefining \% on input line 5146.
+[170]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 5198.
+LaTeX Info: Redefining \% on input line 5198.
+[171]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 5251.
+LaTeX Info: Redefining \% on input line 5251.
+[172]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 5304.
+LaTeX Info: Redefining \% on input line 5304.
+[173]
+
+LaTeX Info: Redefining \. on input line 5356.
+LaTeX Info: Redefining \% on input line 5356.
+[174]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 5408.
+LaTeX Info: Redefining \% on input line 5408.
+[175]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 5461.
+LaTeX Info: Redefining \% on input line 5461.
+[176]
+
+LaTeX Info: Redefining \. on input line 5513.
+LaTeX Info: Redefining \% on input line 5513.
+[177]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 5565.
+LaTeX Info: Redefining \% on input line 5565.
+[178]
+
+LaTeX Info: Redefining \. on input line 5617.
+LaTeX Info: Redefining \% on input line 5617.
+[179]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 5669.
+LaTeX Info: Redefining \% on input line 5669.
+[180]
+
+LaTeX Info: Redefining \. on input line 5721.
+LaTeX Info: Redefining \% on input line 5721.
+[181]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 5774.
+LaTeX Info: Redefining \% on input line 5774.
+[182]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 5827.
+LaTeX Info: Redefining \% on input line 5827.
+[183]
+
+LaTeX Info: Redefining \. on input line 5877.
+LaTeX Info: Redefining \% on input line 5877.
+[184]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 5929.
+LaTeX Info: Redefining \% on input line 5929.
+[185]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 5982.
+LaTeX Info: Redefining \% on input line 5982.
+[186]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 6035.
+LaTeX Info: Redefining \% on input line 6035.
+[187]
+
+LaTeX Info: Redefining \. on input line 6085.
+LaTeX Info: Redefining \% on input line 6085.
+[188]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 6137.
+LaTeX Info: Redefining \% on input line 6137.
+[189]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 6190.
+LaTeX Info: Redefining \% on input line 6190.
+[190]
+
+LaTeX Info: Redefining \. on input line 6240.
+LaTeX Info: Redefining \% on input line 6240.
+[191]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 6292.
+LaTeX Info: Redefining \% on input line 6292.
+[192]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 6345.
+LaTeX Info: Redefining \% on input line 6345.
+[193]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 6398.
+LaTeX Info: Redefining \% on input line 6398.
+[194]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 6451.
+LaTeX Info: Redefining \% on input line 6451.
+[195]
+
+LaTeX Info: Redefining \. on input line 6503.
+LaTeX Info: Redefining \% on input line 6503.
+[196]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 6555.
+LaTeX Info: Redefining \% on input line 6555.
+[197]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 6608.
+LaTeX Info: Redefining \% on input line 6608.
+[198]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 6661.
+LaTeX Info: Redefining \% on input line 6661.
+[199]
+
+LaTeX Info: Redefining \. on input line 6713.
+LaTeX Info: Redefining \% on input line 6713.
+[200]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 6765.
+LaTeX Info: Redefining \% on input line 6765.
+[201]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 6818.
+LaTeX Info: Redefining \% on input line 6818.
+[202]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 6871.
+LaTeX Info: Redefining \% on input line 6871.
+[203]
+
+LaTeX Info: Redefining \. on input line 6924.
+LaTeX Info: Redefining \% on input line 6924.
+[204]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 6976.
+LaTeX Info: Redefining \% on input line 6976.
+[205]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 7029.
+LaTeX Info: Redefining \% on input line 7029.
+[206]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 7082.
+LaTeX Info: Redefining \% on input line 7082.
+[207]
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 7092--7093
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 7135.
+LaTeX Info: Redefining \% on input line 7135.
+[208]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 7188.
+LaTeX Info: Redefining \% on input line 7188.
+[209]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 7241.
+LaTeX Info: Redefining \% on input line 7241.
+[210]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 7294.
+LaTeX Info: Redefining \% on input line 7294.
+[211]
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 7299--7300
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 7306--7307
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 7307--7308
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 7315--7316
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 7316--7317
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 7317--7318
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 7351.
+LaTeX Info: Redefining \% on input line 7351.
+[212]
+
+LaTeX Info: Redefining \. on input line 7400.
+LaTeX Info: Redefining \% on input line 7400.
+[213]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 7453.
+LaTeX Info: Redefining \% on input line 7453.
+[214]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 7506.
+LaTeX Info: Redefining \% on input line 7506.
+[215]
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 7524--7525
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 7525--7526
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 7559.
+LaTeX Info: Redefining \% on input line 7559.
+[216]
+
+LaTeX Info: Redefining \. on input line 7612.
+LaTeX Info: Redefining \% on input line 7612.
+[217]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 7664.
+LaTeX Info: Redefining \% on input line 7664.
+[218]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 7717.
+LaTeX Info: Redefining \% on input line 7717.
+[219]
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 7752--7753
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 7753--7754
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (3.7233pt too wide) in paragraph at lines 7754--7755
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 7770.
+LaTeX Info: Redefining \% on input line 7770.
+[220]
+<Imágenes/OSPF Distr.png, id=10355, 320.69812pt x 603.75563pt>
+File: Imágenes/OSPF Distr.png Graphic file (type png)
+<use Imágenes/OSPF Distr.png>
+Package pdftex.def Info: Imágenes/OSPF Distr.png  used on input line 7791.
+(pdftex.def)             Requested size: 193.5pt x 364.29214pt.
+
+
+LaTeX Info: Redefining \. on input line 7797.
+LaTeX Info: Redefining \% on input line 7797.
+[221 <./Imágenes/OSPF Distr.png>]
+<Imágenes/DHCP-PC-RRHH.png, id=10375, 517.18219pt x 219.82124pt>
+File: Imágenes/DHCP-PC-RRHH.png Graphic file (type png)
+<use Imágenes/DHCP-PC-RRHH.png>
+Package pdftex.def Info: Imágenes/DHCP-PC-RRHH.png  used on input line 7800.
+(pdftex.def)             Requested size: 193.5pt x 82.24492pt.
+<Imágenes/DHCP-PC-Admision.png, id=10376, 518.6878pt x 218.31563pt>
+File: Imágenes/DHCP-PC-Admision.png Graphic file (type png)
+<use Imágenes/DHCP-PC-Admision.png>
+Package pdftex.def Info: Imágenes/DHCP-PC-Admision.png  used on input line 7806.
+(pdftex.def)             Requested size: 193.5pt x 81.44508pt.
+<Imágenes/natHaciaInternet.png, id=10377, 404.26031pt x 62.48344pt>
+File: Imágenes/natHaciaInternet.png Graphic file (type png)
+<use Imágenes/natHaciaInternet.png>
+Package pdftex.def Info: Imágenes/natHaciaInternet.png  used on input line 7815.
+(pdftex.def)             Requested size: 193.5pt x 29.90779pt.
+<Imágenes/natdesdeIntenret.png, id=10378, 398.99063pt x 39.89906pt>
+File: Imágenes/natdesdeIntenret.png Graphic file (type png)
+<use Imágenes/natdesdeIntenret.png>
+Package pdftex.def Info: Imágenes/natdesdeIntenret.png  used on input line 7821.
+(pdftex.def)             Requested size: 193.5pt x 19.3498pt.
+<Imágenes/ssh.png, id=10379, 519.44063pt x 185.19188pt>
+File: Imágenes/ssh.png Graphic file (type png)
+<use Imágenes/ssh.png>
+Package pdftex.def Info: Imágenes/ssh.png  used on input line 7829.
+(pdftex.def)             Requested size: 193.5pt x 68.98616pt.
+
+
+LaTeX Info: Redefining \. on input line 7831.
+LaTeX Info: Redefining \% on input line 7831.
+[222 <./Imágenes/DHCP-PC-RRHH.png> <./Imágenes/DHCP-PC-Admision.png> <./Imágenes/natHaciaInternet.png> <./Imágenes/natdesdeIntenret.png>]
+<Imágenes/Autent.png, id=10388, 289.08pt x 94.10156pt>
+File: Imágenes/Autent.png Graphic file (type png)
+<use Imágenes/Autent.png>
+Package pdftex.def Info: Imágenes/Autent.png  used on input line 7837.
+(pdftex.def)             Requested size: 193.5pt x 62.9874pt.
+<Imágenes/vpn.png, id=10389, 453.19313pt x 317.68687pt>
+File: Imágenes/vpn.png Graphic file (type png)
+<use Imágenes/vpn.png>
+Package pdftex.def Info: Imágenes/vpn.png  used on input line 7845.
+(pdftex.def)             Requested size: 193.5pt x 135.64287pt.
+<Imágenes/dhcpsnooping.png, id=10390, 289.08pt x 347.79938pt>
+File: Imágenes/dhcpsnooping.png Graphic file (type png)
+<use Imágenes/dhcpsnooping.png>
+Package pdftex.def Info: Imágenes/dhcpsnooping.png  used on input line 7854.
+(pdftex.def)             Requested size: 193.5pt x 232.80147pt.
+
+Underfull \vbox (badness 1502) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 7856.
+LaTeX Info: Redefining \% on input line 7856.
+[223 <./Imágenes/ssh.png> <./Imágenes/Autent.png> <./Imágenes/vpn.png>]
+<Imágenes/snooping2.png, id=10398, 453.19313pt x 86.57344pt>
+File: Imágenes/snooping2.png Graphic file (type png)
+<use Imágenes/snooping2.png>
+Package pdftex.def Info: Imágenes/snooping2.png  used on input line 7862.
+(pdftex.def)             Requested size: 193.5pt x 36.96428pt.
+<Imágenes/inv-internet.png, id=10399, 321.45094pt x 150.5625pt>
+File: Imágenes/inv-internet.png Graphic file (type png)
+<use Imágenes/inv-internet.png>
+Package pdftex.def Info: Imágenes/inv-internet.png  used on input line 7871.
+(pdftex.def)             Requested size: 193.5pt x 90.63455pt.
+
+Underfull \vbox (badness 2351) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 7874.
+LaTeX Info: Redefining \% on input line 7874.
+[224 <./Imágenes/dhcpsnooping.png> <./Imágenes/snooping2.png>]
+File: Imágenes/inv-internet.png Graphic file (type png)
+<use Imágenes/inv-internet.png>
+Package pdftex.def Info: Imágenes/inv-internet.png  used on input line 7878.
+(pdftex.def)             Requested size: 193.5pt x 90.63455pt.
+<Imágenes/inter-serv.png, id=10406, 431.36156pt x 65.49469pt>
+File: Imágenes/inter-serv.png Graphic file (type png)
+<use Imágenes/inter-serv.png>
+Package pdftex.def Info: Imágenes/inter-serv.png  used on input line 7885.
+(pdftex.def)             Requested size: 193.5pt x 29.37938pt.
+<Imágenes/BlockAdmin-Iomt.png, id=10407, 515.67656pt x 222.07968pt>
+File: Imágenes/BlockAdmin-Iomt.png Graphic file (type png)
+<use Imágenes/BlockAdmin-Iomt.png>
+Package pdftex.def Info: Imágenes/BlockAdmin-Iomt.png  used on input line 7894.
+(pdftex.def)             Requested size: 193.5pt x 83.33049pt.
+
+Underfull \vbox (badness 5302) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 7897.
+LaTeX Info: Redefining \% on input line 7897.
+[225 <./Imágenes/inv-internet.png> <./Imágenes/inter-serv.png>]
+<Imágenes/blockadmin-medico.png, id=10414, 479.54156pt x 123.46124pt>
+File: Imágenes/blockadmin-medico.png Graphic file (type png)
+<use Imágenes/blockadmin-medico.png>
+Package pdftex.def Info: Imágenes/blockadmin-medico.png  used on input line 7901.
+(pdftex.def)             Requested size: 193.5pt x 49.81879pt.
+<Imágenes/blockadmin-uci.png, id=10415, 456.20438pt x 117.43875pt>
+File: Imágenes/blockadmin-uci.png Graphic file (type png)
+<use Imágenes/blockadmin-uci.png>
+Package pdftex.def Info: Imágenes/blockadmin-uci.png  used on input line 7908.
+(pdftex.def)             Requested size: 193.5pt x 49.81134pt.
+<Imágenes/blockinv-int.png, id=10416, 374.14781pt x 121.20282pt>
+File: Imágenes/blockinv-int.png Graphic file (type png)
+<use Imágenes/blockinv-int.png>
+Package pdftex.def Info: Imágenes/blockinv-int.png  used on input line 7915.
+(pdftex.def)             Requested size: 193.5pt x 62.68369pt.
+<Imágenes/blockinv-iomt.png, id=10417, 340.27126pt x 121.95563pt>
+File: Imágenes/blockinv-iomt.png Graphic file (type png)
+<use Imágenes/blockinv-iomt.png>
+Package pdftex.def Info: Imágenes/blockinv-iomt.png  used on input line 7922.
+(pdftex.def)             Requested size: 193.5pt x 69.35165pt.
+
+
+LaTeX Info: Redefining \. on input line 7924.
+LaTeX Info: Redefining \% on input line 7924.
+[226 <./Imágenes/BlockAdmin-Iomt.png> <./Imágenes/blockadmin-medico.png> <./Imágenes/blockadmin-uci.png> <./Imágenes/blockinv-int.png>]
+<Imágenes/blocknoaut-serv.png, id=10426, 399.74344pt x 119.69719pt>
+File: Imágenes/blocknoaut-serv.png Graphic file (type png)
+<use Imágenes/blocknoaut-serv.png>
+Package pdftex.def Info: Imágenes/blocknoaut-serv.png  used on input line 7929.
+(pdftex.def)             Requested size: 193.5pt x 57.94164pt.
+<Imágenes/permmed-uci.png, id=10427, 329.73187pt x 143.78719pt>
+File: Imágenes/permmed-uci.png Graphic file (type png)
+<use Imágenes/permmed-uci.png>
+Package pdftex.def Info: Imágenes/permmed-uci.png  used on input line 7938.
+(pdftex.def)             Requested size: 193.5pt x 84.38173pt.
+<Imágenes/permmed-tipo1.png, id=10428, 386.94562pt x 140.02313pt>
+File: Imágenes/permmed-tipo1.png Graphic file (type png)
+<use Imágenes/permmed-tipo1.png>
+Package pdftex.def Info: Imágenes/permmed-tipo1.png  used on input line 7945.
+(pdftex.def)             Requested size: 193.5pt x 70.02206pt.
+
+
+LaTeX Info: Redefining \. on input line 7948.
+LaTeX Info: Redefining \% on input line 7948.
+[227 <./Imágenes/blockinv-iomt.png> <./Imágenes/blocknoaut-serv.png> <./Imágenes/permmed-uci.png>]
+<Imágenes/permuci-tipo2.png, id=10437, 402.75468pt x 140.02313pt>
+File: Imágenes/permuci-tipo2.png Graphic file (type png)
+<use Imágenes/permuci-tipo2.png>
+Package pdftex.def Info: Imágenes/permuci-tipo2.png  used on input line 7952.
+(pdftex.def)             Requested size: 193.5pt x 67.2723pt.
+<Imágenes/permuci-tipo3.png, id=10438, 379.4175pt x 145.29282pt>
+File: Imágenes/permuci-tipo3.png Graphic file (type png)
+<use Imágenes/permuci-tipo3.png>
+Package pdftex.def Info: Imágenes/permuci-tipo3.png  used on input line 7959.
+(pdftex.def)             Requested size: 193.5pt x 74.09834pt.
+<Imágenes/permaut-serv.png, id=10439, 369.63094pt x 141.52875pt>
+File: Imágenes/permaut-serv.png Graphic file (type png)
+<use Imágenes/permaut-serv.png>
+Package pdftex.def Info: Imágenes/permaut-serv.png  used on input line 7966.
+(pdftex.def)             Requested size: 193.5pt x 74.0899pt.
+
+Underfull \vbox (badness 3792) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 7969.
+LaTeX Info: Redefining \% on input line 7969.
+[228 <./Imágenes/permmed-tipo1.png> <./Imágenes/permuci-tipo2.png> <./Imágenes/permuci-tipo3.png>]
+<Imágenes/RprincipalAntes.png, id=10447, 417.81094pt x 106.14656pt>
+File: Imágenes/RprincipalAntes.png Graphic file (type png)
+<use Imágenes/RprincipalAntes.png>
+Package pdftex.def Info: Imágenes/RprincipalAntes.png  used on input line 7975.
+(pdftex.def)             Requested size: 193.5pt x 49.16003pt.
+<Imágenes/Rauxiliar1Antes.png, id=10448, 419.31656pt x 104.64093pt>
+File: Imágenes/Rauxiliar1Antes.png Graphic file (type png)
+<use Imágenes/Rauxiliar1Antes.png>
+Package pdftex.def Info: Imágenes/Rauxiliar1Antes.png  used on input line 7980.
+(pdftex.def)             Requested size: 193.5pt x 48.28708pt.
+<Imágenes/Rauxiliar2Antes.png, id=10449, 422.32782pt x 106.89937pt>
+File: Imágenes/Rauxiliar2Antes.png Graphic file (type png)
+<use Imágenes/Rauxiliar2Antes.png>
+Package pdftex.def Info: Imágenes/Rauxiliar2Antes.png  used on input line 7985.
+(pdftex.def)             Requested size: 193.5pt x 48.98018pt.
+<Imágenes/Rauxiliar1Desp.png, id=10450, 417.05812pt x 104.64093pt>
+File: Imágenes/Rauxiliar1Desp.png Graphic file (type png)
+<use Imágenes/Rauxiliar1Desp.png>
+Package pdftex.def Info: Imágenes/Rauxiliar1Desp.png  used on input line 7990.
+(pdftex.def)             Requested size: 193.5pt x 48.55054pt.
+<Imágenes/Rauxiliar2depsues.png, id=10451, 427.5975pt x 105.39375pt>
+File: Imágenes/Rauxiliar2depsues.png Graphic file (type png)
+<use Imágenes/Rauxiliar2depsues.png>
+Package pdftex.def Info: Imágenes/Rauxiliar2depsues.png  used on input line 7995.
+(pdftex.def)             Requested size: 193.5pt x 47.6937pt.
+
+
+LaTeX Info: Redefining \. on input line 7998.
+LaTeX Info: Redefining \% on input line 7998.
+[229 <./Imágenes/permaut-serv.png> <./Imágenes/RprincipalAntes.png> <./Imágenes/Rauxiliar1Antes.png> <./Imágenes/Rauxiliar2Antes.png> <./Imágenes/Rauxiliar1Desp.png>]
+<Imágenes/Sw1Antes.png, id=10461, 411.78844pt x 84.315pt>
+File: Imágenes/Sw1Antes.png Graphic file (type png)
+<use Imágenes/Sw1Antes.png>
+Package pdftex.def Info: Imágenes/Sw1Antes.png  used on input line 8002.
+(pdftex.def)             Requested size: 193.5pt x 39.62032pt.
+<Imágenes/Sw2Antes.png, id=10462, 398.99063pt x 83.5622pt>
+File: Imágenes/Sw2Antes.png Graphic file (type png)
+<use Imágenes/Sw2Antes.png>
+Package pdftex.def Info: Imágenes/Sw2Antes.png  used on input line 8007.
+(pdftex.def)             Requested size: 193.5pt x 40.52505pt.
+<Imágenes/Sw2Deps.png, id=10463, 405.01312pt x 82.80937pt>
+File: Imágenes/Sw2Deps.png Graphic file (type png)
+<use Imágenes/Sw2Deps.png>
+Package pdftex.def Info: Imágenes/Sw2Deps.png  used on input line 8012.
+(pdftex.def)             Requested size: 193.5pt x 39.56355pt.
+<Imágenes/SwAccAntes.png, id=10464, 431.36156pt x 188.95593pt>
+File: Imágenes/SwAccAntes.png Graphic file (type png)
+<use Imágenes/SwAccAntes.png>
+Package pdftex.def Info: Imágenes/SwAccAntes.png  used on input line 8019.
+(pdftex.def)             Requested size: 193.5pt x 84.76123pt.
+<Imágenes/SwDistrAntes.png, id=10465, 434.37282pt x 198.7425pt>
+File: Imágenes/SwDistrAntes.png Graphic file (type png)
+<use Imágenes/SwDistrAntes.png>
+Package pdftex.def Info: Imágenes/SwDistrAntes.png  used on input line 8024.
+(pdftex.def)             Requested size: 193.5pt x 88.53564pt.
+<Imágenes/SwAccDesp.png, id=10466, 426.09187pt x 185.94469pt>
+File: Imágenes/SwAccDesp.png Graphic file (type png)
+<use Imágenes/SwAccDesp.png>
+Package pdftex.def Info: Imágenes/SwAccDesp.png  used on input line 8029.
+(pdftex.def)             Requested size: 193.5pt x 84.44322pt.
+
+
+LaTeX Info: Redefining \. on input line 8031.
+LaTeX Info: Redefining \% on input line 8031.
+[230 <./Imágenes/Rauxiliar2depsues.png> <./Imágenes/Sw1Antes.png> <./Imágenes/Sw2Antes.png> <./Imágenes/Sw2Deps.png> <./Imágenes/SwAccAntes.png>]
+<Imágenes/SwDistrDesp.png, id=10476, 425.33907pt x 198.7425pt>
+File: Imágenes/SwDistrDesp.png Graphic file (type png)
+<use Imágenes/SwDistrDesp.png>
+Package pdftex.def Info: Imágenes/SwDistrDesp.png  used on input line 8034.
+(pdftex.def)             Requested size: 193.5pt x 90.41583pt.
+<Imágenes/RedSonEspases.png, id=10477, 758.08218pt x 473.51906pt>
+File: Imágenes/RedSonEspases.png Graphic file (type png)
+<use Imágenes/RedSonEspases.png>
+Package pdftex.def Info: Imágenes/RedSonEspases.png  used on input line 8042.
+(pdftex.def)             Requested size: 597.51341pt x 373.22336pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 8046.
+LaTeX Info: Redefining \% on input line 8046.
+[231 <./Imágenes/SwDistrAntes.png> <./Imágenes/SwAccDesp.png> <./Imágenes/SwDistrDesp.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 8046.
+LaTeX Info: Redefining \% on input line 8046.
+[232]
+Overfull \vbox (50.16562pt too high) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 8046.
+LaTeX Info: Redefining \% on input line 8046.
+[233 <./Imágenes/RedSonEspases.png>]
+<Imágenes/redInterocnexion.png, id=10495, 662.475pt x 424.58624pt>
+File: Imágenes/redInterocnexion.png Graphic file (type png)
+<use Imágenes/redInterocnexion.png>
+Package pdftex.def Info: Imágenes/redInterocnexion.png  used on input line 8049.
+(pdftex.def)             Requested size: 597.5361pt x 382.96631pt.
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 LaTeX Info: Redefining \. on input line 235.
 LaTeX Info: Redefining \% on input line 235.
-[83]
+[234]
+Overfull \vbox (21.34479pt too high) has occurred while \output is active []
 
-[84
+
+
+LaTeX Info: Redefining \. on input line 235.
+LaTeX Info: Redefining \% on input line 235.
+[235 <./Imágenes/redInterocnexion.png>]
+
+[236
 
 
 
@@ -2322,25 +4388,39 @@ LaTeX Info: Redefining \% on input line 235.
 
 bibitemlist
 
-Underfull \hbox (badness 4353) in paragraph at lines 30--30
-[]\T1/futs/m/n/10 (+20) E. HOS-PI-TAL. (2023) �qu� equi-pos son esen-cia-les en la
+Underfull \hbox (badness 2165) in paragraph at lines 51--51
+[]\T1/futs/m/n/10 (+20) I. Cis-co Sys-tems, ``Cis-co hos-pi-tal net-work de-sign,'' Cis-co, Tech.
  []
 
 
-Underfull \hbox (badness 6910) in paragraph at lines 30--30
-\T1/futs/m/n/10 (+20) uni-dad de cui-da-dos in-ten-si-vos de un hos-pi-tal? Ac-ce-di-
+Underfull \hbox (badness 1648) in paragraph at lines 57--57
+[]\T1/futs/m/n/10 (+20) C. Sys-tems, \T1/futs/m/it/10 (+20) Con-fi-gu-ring DHCP Snoo-ping\T1/futs/m/n/10 (+20) , 2019. [On-li-ne]. Avai-la-ble:
  []
 
 
-Underfull \hbox (badness 1360) in paragraph at lines 30--30
-\T1/futs/m/n/10 (+20) do: xxxx-xx-xx. [On-li-ne]. Avai-la-ble: [][]$https : / / www . elhospital . com / es / noticias /
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
+[][]$\T1/futs/m/n/10 (+5) https : / / www . cisco . com / c / en / us / td / docs / switches / datacenter / nexus5000 / sw / security /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
+\T1/futs/m/n/10 (+20) 502 _ n2 _ 1m / b _ Cisco _ n5k _ security _ con^^\g _ gd _ rel _ 502 _ n2 _ 1 / Cisco _ n5k _ security _
+ []
+
+
+
+[237
+
+]
+Underfull \hbox (badness 2573) in paragraph at lines 138--138
+[]\T1/futs/m/n/10 (+20) ------. (2023) Un-ders-tand ra-pid span-ning tree pro-to-col (802.1w).
  []
 
 )
 
-[85
-
-]
+LaTeX Info: Redefining \. on input line 253.
+LaTeX Info: Redefining \% on input line 253.
+[238]
 \tf@toc=\write6
 \openout6 = `MemoriaTFG.toc'.
 
@@ -2363,22 +4443,22 @@ L3 programming layer <2020/03/25>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `MemoriaTFG.out' has not changed.
-(rerunfilecheck)             Checksum: FE293E6671D21505098259A9AECD49AD;25898.
+(rerunfilecheck)             Checksum: 929FB2187683859ECCE659832E326A63;45916.
 Package rerunfilecheck Info: File `MemoriaTFG.brf' has not changed.
-(rerunfilecheck)             Checksum: 9ECAAEB6AE0D38C69ADE598D957A7771;617.
+(rerunfilecheck)             Checksum: 6073FA9820A33B855654714FA6686371;1684.
  ) 
 Here is how much of TeX's memory you used:
- 27763 strings out of 473523
- 518706 string characters out of 5714146
- 1171234 words of memory out of 5000000
- 49025 multiletter control sequences out of 15000+600000
- 788615 words of font info for 583 fonts, out of 8000000 for 9000
+ 35906 strings out of 473523
+ 689010 string characters out of 5714146
+ 1173931 words of memory out of 5000000
+ 49700 multiletter control sequences out of 15000+600000
+ 791918 words of font info for 617 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,23n,107p,1093b,2584s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso12.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putb8a.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on MemoriaTFG.pdf (103 pages, 1593635 bytes).
+Output written on MemoriaTFG.pdf (258 pages, 3209872 bytes).
 PDF statistics:
- 2207 PDF objects out of 2487 (max. 8388607)
- 864 named destinations out of 1000 (max. 500000)
- 148618 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 12282 PDF objects out of 12825 (max. 8388607)
+ 8286 named destinations out of 8907 (max. 500000)
+ 153609 words of extra memory for PDF output out of 154059 (max. 10000000)
 

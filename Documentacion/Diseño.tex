@@ -49,7 +49,7 @@ redundancia y tolerancia a fallos mediante HSRP (Hot Standby Router Protocol). E
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{Imágenes/Routers.png}
+    \includegraphics[width=0.4\textwidth]{Imágenes/Routers.png}
     \caption{Redundancia en Routers}
     \label{fig:Routers} 
 \end{figure}
@@ -64,7 +64,7 @@ física de la red de invitados.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{Imágenes/RedInvitados.png}
+    \includegraphics[width=0.6\textwidth]{Imágenes/RedInvitados.png}
     \caption{Topología Física de la Red de Invitados}
     \label{fig:RedInvitados}
 \end{figure}
@@ -94,7 +94,7 @@ y el control de acceso a los recursos internos. La Figura \ref{fig:DMZIOMT} mues
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{Imágenes/DMZIOMT.png}
+    \includegraphics[width=0.35\textwidth]{Imágenes/DMZIOMT.png}
     \caption{Topología Física de la DMZ IoMT}
     \label{fig:DMZIOMT}
 \end{figure}
@@ -134,7 +134,7 @@ lo que permite implementar redundancia y tolerancia a fallos. La Figura \ref{fig
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{Imágenes/SwitchesDistribucion.png}
+    \includegraphics[width=0.7\textwidth]{Imágenes/SwitchesDistribucion.png}
     \caption{Interconexión de Switches de Distribución}
     \label{fig:SwitchesDistribucion}
 \end{figure}
@@ -144,7 +144,7 @@ está conectado a dos switches de distribución, permitiendo la redundancia y to
 lo que permite que si uno de los enlaces falla, el otro enlace pueda seguir proporcionando conectividad a los dispositivos finales. La Figura \ref{fig:SwitchesAcceso} muestra la topología física de la interconexión de los switches de acceso.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{Imágenes/SwitchesAcceso.png}
+    \includegraphics[width=0.6\textwidth]{Imágenes/SwitchesAcceso.png}
     \caption{Interconexión de Switches de Acceso}
     \label{fig:SwitchesAcceso}
 \end{figure}
@@ -159,7 +159,7 @@ Cada capa está formada por un switch L3 que conecta con tres puntos de acceso, 
  
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{Imágenes/IoMT.png}
+    \includegraphics[width=0.65\textwidth]{Imágenes/IoMT.png}
     \caption{Topología Física de la Red de Dispositivos IoMT}
     \label{fig:IoMT}
 \end{figure}
@@ -203,7 +203,7 @@ se muestra la topología física de los routers de interconexión entre hospital
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{Imágenes/InterconexionHospitales.png}
+    \includegraphics[width=0.6\textwidth]{Imágenes/InterconexionHospitales.png}
     \caption{Topología Física de la Interconexión entre Hospitales}
     \label{fig:InterconexionHospitales}
 \end{figure}
@@ -216,7 +216,7 @@ Además, cada router de cada hospital está conectado a dos switches core (L3), 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{Imágenes/Router-Sw.Core.png}
+    \includegraphics[width=0.3\textwidth]{Imágenes/Router-Sw.Core.png}
     \caption{Topología Física de la Interconexión entre el Router y los Switches Core en Hospitales}
     \label{fig:InterconexionRouHospitales}
 \end{figure}
@@ -237,7 +237,7 @@ según las principales áreas del hospital.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{Imágenes/Clusters.png}
+    \includegraphics[width=0.55\textwidth]{Imágenes/Clusters.png}
     \caption{Topología Física de la Interconexión con Clusters en Hospitales}
     \label{fig:CLustersHospitales}
 \end{figure}
@@ -839,6 +839,8 @@ En el caso de la red del Hospital Son Espases, cuenta con:
     \item Un servidor DHCP en la DMZ Invitados, que se encarga de asignar direcciones IP a cada dispositivo final de la red de invitados.
     \item Dos servidores DHCP en la DMZ IoMT, que se encargan de asignar direcciones IP a cada dispositivo IoMT de la red IoMT. En este caso, uno funciona de backup, para en caso de fallada del servidor principal, que los dispositivos IoMT sigan teniendo este servicio.
 \end{itemize}
+Los servidores están configurados con pools de direcciones, de forma que asignan IPs dinámicas a los dispositivos de cada VLAN, siguiendo el subnetting mostrado en la sección \ref{tab:subnettingSonEspases}.
+\\ \\
 Mediante el uso de este servicio obtenemos las siguientes ventajas:
 \begin{itemize}
     \item Evitar conflictos de direcciones IP.
@@ -851,9 +853,11 @@ Cabe recordar que en la herramienta Cisco Packet Tracer no se puede configurar l
 \subsection{NAT (Network Address Translation)}
 Para permitir la salida controlada a Internet desde las subredes autorizadas, se ha implementado Network Address Translation (NAT) en los routers de cada hospital, 
 según se detalla en la sección \ref{subsec:nat}. En ambos diseños, el NAT está configurado en los routers principales, permitiendo así que los dispositivos internos puedan acceder a Internet utilizando la misma IP pública. El tipo de 
-NAT configurado es el PAT, lo que permite que múltiples dispositivos puedan utilizar la IP pública usando diferentes números de puerto para distinguir las conexiones.
+NAT configurado, en el caso de la comunicación desde dentro hacia fuera, es el PAT, lo que permite que múltiples dispositivos puedan utilizar la IP pública usando diferentes números de puerto para distinguir las conexiones. En el caso de las comunicaciones desde Internet hacia dentro (servidor web), se ha configurado un NAT estático, lo que permite que 
+el router traduzca la dirección pública proveniente del ISP y permitir la conexión con el servidor web, que tiene una IP privada.
 \\ \\
-En la red de inetrconexión entre hospitales, la interconexión entre routers se produce utilizando una subred con direcciones IP privadas, es decir, el NAT solo se usa para las peticiones hacia Internet.
+En este diseño, se ha optado por que las comunicaciones que vyan desde dentro hacia fuera vayan por el ISP 1 y las comunicaciones desde fuera hacia dentro vayan por el ISP 2, de esta forma 
+permitimos que las NATs estén bien configuradas y que no solapen las IPs públicas de las interfaces.
 \subsection{HSRP (Hot Standby Router Protocol)}
 Para garantizar la alta disponibilidad en los gateways de las redes internas y evitar puntos únicos de fallo, se ha configurado HSRP, para mas información sobre HSRP ir a la sección \ref{subsec:hsrp}. 
 Como se ha comentado en la sección \ref{sec:criterios}, la redundancia de routers o switches solo se ha configurado en la red del Hospital Son Espases. Concretamente, se ha configurado en los switches de distribución 
@@ -861,7 +865,7 @@ que conectan con los switches de acceso, como se puede apreciar en la Figura \re
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{Imágenes/hsrpSW.png}
+    \includegraphics[width=0.6\textwidth]{Imágenes/hsrpSW.png}
     \caption{HSRP en Switches de Distribución en Hospital Son Espases}
     \label{fig:HSRPSW}
 \end{figure}
@@ -905,7 +909,7 @@ En la Figura \ref{fig:EtherChannel} se muestra una conexión redundante a nivel 
 \subsection{RSTP (Rapid Spanning-Tree Protocol)}
 
 
-\section{Seguridad de la Red}
+\section{Seguridad de la Red (cambiar)}
 El diseño de la infraestructura de red hospitalaria simulada ha priorizado desde el inicio la seguridad como pilar esencial, dada la sensibilidad de los datos clínicos que se 
 gestionan y la criticidad de los servicios asistenciales que dependen de ella. Además, la incorporación de dispositivos médicos conectados (IoMT) requieren unos controles de tráfico y 
 acceso mas robustos.
@@ -917,7 +921,8 @@ Las ACLs permiten tener un control del tráfico que pasa por ciertos tramos, es 
     \item \textbf{En los routers:} 
     \begin{itemize}
         \item Permitir la conexión con Internet a los dispositivos de la red de invitados.
-        \item Permitir paquetes DHCP y OSPF.
+        \item Permitir la conexión desde Internet hasta el servidor web.
+        \item Permitir paquetes DHCP, OSPF y HSRP.
         \item Denegar cualquier otro tipo de tráfico.
     \end{itemize}
     \item \textbf{Switch IoMT Planta 3:}
@@ -954,13 +959,14 @@ ya que el switch de acceso descarta cualquier oferta de dirección IP provenient
 \\ \\
 También se ha configurado la opción de limitar la cantidad de paquetes DHCP enviados al servidor DHCP para evitar saturaciones.
 \\ \\
-Este mecanismo de seguridad solo esta configurado en la red del Hospital de Son Espases.
+Este mecanismo de seguridad solo está configurado en la red del Hospital de Son Espases.
 
 \subsection{VPN IPSec}
 Para proprocionar seguridad a las interconexiones entre los routers de cada hospital, se ha configurado una VPN IPsec, detallada en la sección \ref{subsec:ipsec}, en la que se encriptan y autentican todos los paquetes IP que se transmiten a través de esa conexión.
 De esta forma conseguimos una gran capa de seguridad que nos garantiza la confidencialidad, integridad y autenticidad de los datos que viajan por esa red IP.
 \\ \\
-Este mecansimo de seguridad solo esta implementado en la red de interconexión entre hospitales, ya que la red del Hospital Son Espases no tiene conexiones entre routers de otros hospitales.
+Este mecansimo de seguridad solo esta implementado en la red de interconexión entre hospitales, ya que la red del Hospital Son Espases no tiene conexiones entre routers de otros hospitales. 
+Además cabe recordar que la comunicación entre hospitales solo se puede realizar entre el dispositivo autorizado de un hospital con el servidor de archivos de otro hospital.
 
 \subsection{SSH}
 Para la administración remota segura de los dispositivos de red (routers y switches), se ha habilitado SSH como protocolo seguro de gestión, en sustitución de protocolos inseguros como Telnet. 
@@ -976,19 +982,7 @@ Para que la DMZ sea una zona segura para los servidores, se han implementado una
 
 \section{Redes Completas}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio, angle=270]{Imágenes/RedSonEspases.png}
-    \caption{Red Completa del Hospital Son Espases}
-    \label{fig:SonEspases}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio, angle=270]{Imágenes/redInterocnexion.png}
-    \caption{Red Completa de Interconexión entre Hospitales}
-    \label{fig:interconexion}
-\end{figure}
+Para ver las redes completas de la red del Hospital Son Espases y la red de interconexión entre hospitales, ver el anexo \ref{anexo:redcompletasonespas} y \ref{anexo:redcompletahosp}, respectivamente.
 
 \subsection{Leyenda}
 Como se puede apreciar en la Figura \ref{fig:SonEspases}, todas las areas estan coloreadas, esto es así para poder 

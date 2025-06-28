@@ -32,17 +32,17 @@ los aspectos técnicos como los operativos de la red.
 Son aquellos requisitos que definen las funciones y servicios que debe ofrecer la infraestructura de red para satisfacer las necesidades del entorno hospitalario y los 
 dispositivos conectados.
 \begin{itemize}
-    \item El sistema debe permitir la interconexión entre los cuatro hospitales.
     \item Cada hospital debe disponer de tres subredes diferenciadas: una para invitados, una para dispositivos IoMT y otra para la red interna hospitalaria.
     \item Cada hospital debe estar dividido en VLANs por departamentos, asegurando la separación lógica de las áreas médicas, administrativas, de investigación y de enfermería.
     \item La red debe permitir la asignación dinámica de direcciones IP mediante servidores DHCP en cada subred.
     \item Debe garantizar la resolución de nombres internos mediante DNS.
-    \item Los dispositivos autorizados deben poder acceder a servidores de datos y dispositivos médicos críticos entre hospitales.
+    \item Los dispositivos autorizados (PCs del departamento de IT) deben poder acceder a servidores de datos y dispositivos médicos críticos entre hospitales.
     \item Los dispositivos médicos IoMT deben disponer de una subred propia con dos servidores DHCP, uno de ellos de respaldo.
     \item Deben implementarse servicios de NAT para acceso a Internet desde las subredes del hospital.
     \item Se debe permitir gestión remota segura de los dispositivos de red mediante SSH.
     \item La red debe contar con redundancia de enlaces y gateways mediante EtherChannel y HSRP.
     \item Tanto la red intrahospitalaria como la interhospitalaria debe estar configurada de tal forma que haya configuraciones dinámicas de enrutamiento utilizando OSPF.
+    \item Las comunicaciones desde el exterior de la red hacia el interior tienen que pasar por una interfaz diferente de las que van desde el interior hacia el exterior.
 \end{itemize}
 \subsection{Requisitos No Funcionales}
 Son aquellos que definen condiciones de calidad, operativas o de gestión que debe cumplir el sistema, sin especificar funciones concretas.
@@ -59,6 +59,12 @@ Establecen las condiciones que debe cumplir la red para garantizar su funcionami
     \item La infraestructura debe permitir la monitorización continua del estado de los dispositivos y enlaces para detectar fallos proactivamente.
 \end{itemize}
 
+\subsection{Requisitos de Conectividad}
+Definen las condiciones relacionadas con la transmisión de datos y la comunicación entre dispositivos y servicios dentro de la red, en términos generales.
+\begin{itemize}
+    \item Todos los dispositivos de la red deben tener conectividad con cualquier dispositivo de la red.
+\end{itemize}
+
 \subsection{Requisitos de Seguridad}
 \label{subsec: TiposIoMT}
 Establecen las condiciones que debe cumplir la red para proteger su infraestructura, los datos transmitidos y los servicios prestados. En términos generales se establecen los siguientes requisitos:
@@ -67,9 +73,10 @@ Establecen las condiciones que debe cumplir la red para proteger su infraestruct
     \item Deben configurarse listas de control de acceso (ACLs) para:
     \begin{itemize}
         \item Bloquear el tráfico desde la red de invitados hacia la red interna y la red de dispositivos IoMT.
-        \item Restringir el acceso a la base de datos de cada hospital, permitiendo únicamente a los dispositivos autorizados de cada hospital acceder a ella.
+        \item Restringir el acceso a la base de datos de cada hospital, permitiendo únicamente a un PC autorizado del departamento de IT de cada hospital acceder a ella.
         \item Restringir el acceso a los dispositivos IoMT según su clasificación y función, limitando la conectividad entre ellos.
         \item Permitir el acceso a los dispositivos de la red interna únicamente a los dispositivos autorizados de las áreas de servicios quirúrgicos, médicos, centrales y UCI.
+        \item Solo permitir el tráfico desde Internet hasta el servidor web.
     \end{itemize}
     \item La gestión de dispositivos de red debe realizarse mediante conexiones seguras (SSH).
     \item Todos los dispositivos de red deben contar con una configuración de autenticación, con contraseñas seguras, para evitar accesos no autorizados.
@@ -96,13 +103,5 @@ A continuación se detallan los requisitos de seguridad específicos para los di
     \item Los dispositivos IoMT Tipo 3 solo pueden tener conectividad con un único dispositivo autorizado del departamento de la UCI.
 \end{itemize}
 
-\subsection{Requisitos de Conectividad}
-Definen las condiciones relacionadas con la transmisión de datos y la comunicación entre dispositivos y servicios dentro de la red, en términos generales.
-\begin{itemize}
-    \item Solo los dispositivos autorizados de cada hospital pueden acceder a la base de datos de otros hospitales.
-    \item Cualquier dispositivo de la red de invitados no puede tener conectividad con la red interna o con la red de dispositivos IoMT.
-    \item Dentro de la red interna, los dispositivos del area de administración, de enfermeria (exceptuando la UCI) y de apoyo, no pueden tener conectividad 
-    con las areas de servicios quirúrgicos, médicos, centrales y UCI.
-    \item Cualquier dispositivo de las areas de servicios quirúrgicos, médicos, centrales y UCI puede tener conectividad con cualquier otro dispositivo de la red interna.
-\end{itemize}
+
 

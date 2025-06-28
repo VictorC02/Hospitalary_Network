@@ -3,10 +3,7 @@
 \chapter{Marco Teórico}\label{MarcoTeórico}
 Para comprender en profundidad el desarrollo de este proyecto y justificar las decisiones adoptadas durante su diseño e implementación, resulta imprescindible establecer 
 una base teórica que aborde los conceptos y tecnologías implicadas. Este marco teórico tiene como finalidad proporcionar una visión general sobre las 
-infraestructuras de red en entornos hospitalarios, protocolos de comunicación, seguridad y tecnologías específicas para entornos sanitarios.\\ \\
-
-Este capítulo establece las bases conceptuales necesarias para comprender el diseño e implementación de una infraestructura de red hospitalaria que garantice conectividad
-, redundancia y seguridad.
+infraestructuras de red en entornos hospitalarios, protocolos de comunicación, seguridad y tecnologías específicas para entornos sanitarios.
 
 \section{Arquitectura de Redes Hospitalarias}
 
@@ -17,59 +14,46 @@ Las redes hospitalarias adoptan un modelo jerárquico de tres capas que optimiza
     interconectar los switches de distribución con los routers principales y gestionar el tráfico entre las distintas subredes.
     \item \textbf{Capa de Distribución:} Actúa como intermediaria entre la capa de acceso y la capa de núcleo, gestionando el tráfico local y balanceando la carga
     entre los distintos switches core. También implementa políticas de seguridad, segmentación de tráfico y control de acceso, permitiendo la comunicación entre las distintas 
-    VLANs y subredes del hospital.
+    \acs{VLAN}s y subredes del hospital.
     \item \textbf{Capa de Acceso:} Conecta los dispositivos finales, como estaciones de trabajo, impresoras y dispositivos médicos. Esta capa se encarga de proporcionar
     conectividad a los usuarios y dispositivos, permitiendo el acceso a los recursos de red y servicios compartidos. 
 \end{itemize}
+Esta estructura optimiza el rendimiento, la escalabilidad y la facilidad de mantenimiento, aspectos críticos en entornos hospitalarios donde la disponibilidad y la seguridad son prioritarias.
+
 \subsection{Segmentación de la Red}
-La segmentación mediante VLANs (Virtual Local Area Networks) es fundamental en entornos hospitalarios para separar diferentes tipos de tráfico y mejorar la seguridad. 
-Una VLAN permite agrupar lógicamente dispositivos dentro de una misma red física, segmentando el tráfico de datos aunque se encuentren conectados al mismo switch o 
-infraestructura física. Los beneficios principales incluyen:
-\begin{itemize}
-    \item \textbf{Aislamiento de tráfico:} Cada VLAN mantiene su propio dominio de broadcast, reduciendo la propagación de tráfico innecesario.
-    \item \textbf{Seguridad:} Permite aplicar políticas de seguridad específicas a cada VLAN, restringiendo el acceso a recursos críticos y protegiendo datos sensibles.
-    \item \textbf{Optimización del rendimiento:} Minimiza los cuellos de botella y mejora la eficiencia de la comunicación.
-\end{itemize}
+La segmentación mediante \acs{VLAN}s (Virtual Local Area Networks) permite aislar el tráfico de diferentes áreas o servicios, mejorando la seguridad y el rendimiento. 
+Cada \acs{VLAN} constituye un dominio de broadcast independiente, permitiendo la aplicación de políticas específicas y reduciendo la propagación de tráfico innecesario.
 
 \section{Protocolos de Enrutamiento Dinámico}
 \subsection{OSPF (Open Shortest Path First)}
 \label{subsec:ospf}
-OSPF es un protocolo de enrutamiento de estado de enlace (link-state) que utiliza el algoritmo de Dijkstra para calcular las rutas más cortas. Sus características principales son:
+\acs{OSPF} es un protocolo de enrutamiento de estado de enlace ampliamente utilizado en redes hospitalarias por su capacidad de rápida convergencia y soporte para redes complejas. 
+Utiliza el algoritmo de Dijkstra para calcular rutas óptimas y mantiene una base de datos topológica completa en cada router, lo que permite una gestión eficiente y escalable 
+del enrutamiento interno \cite{cisco-ospf}.
 \\ \\
 \textbf{Funcionamiento Básico:}
 \begin{itemize}
-    \item Cada router mantiene una Base de Datos de Estado de Enlace (LSDB) con información topológica completa de la red.
-    \item Utiliza LSAs (Link State Advertisements) para intercambiar información entre routers.
-    \item Calcula rutas óptimas mediante el algoritmo SPF (Shortest Path First) de Dijkstra.
-\end{itemize}
-\textbf{Ventajas en Entornos Hospitalarios:}
-\begin{itemize}
-    \item Convergencia rápida ante cambios en la topología de la red, lo que es crítico en entornos donde la disponibilidad es esencial.
-    \item Soporta redes de gran tamaño y complejidad, permitiendo una escalabilidad adecuada para hospitales con múltiples departamentos y servicios.
-    \item Uso eficiente del ancho de banda al enviar actualizaciones solo cuando hay cambios en la red, reduciendo el tráfico innecesario.
+    \item Cada router mantiene una Base de Datos de Estado de Enlace (\acs{LSDB}) con información topológica completa de la red.
+    \item Utiliza \acs{LSA}s (Link State Advertisements) para intercambiar información entre routers.
+    \item Calcula rutas óptimas mediante el algoritmo \acs{SPF} (Shortest Path First) de Dijkstra.
 \end{itemize}
 
-\subsection{Algoritmo de Dijkstra}
-El algoritmo de Dijkstra es fundamental para el funcionamiento de OSPF, ya que permite calcular la ruta más corta entre nodos en una red. Su funcionamiento se basa en:
-\begin{enumerate}
-    \item \textbf{Descubrimiento de topología local:} Cada router identifica sus enlaces directos y sus costos asociados.
-    \item \textbf{Inundación con LSAs:} Los routers envían información sobre sus enlaces a todos los demás routers de la red, actualizando la LSDB.
-    \item \textbf{Construcción del grafo:} A partir de la LSDB, cada router construye un grafo que representa la topología de la red.
-    \item \textbf{Cálculo de rutas:} Utilizando el algoritmo de Dijkstra, cada router determina la ruta más corta a cada destino basado en los costos de los enlaces.
-\end{enumerate}
+\subsubsection{Algoritmo de Dijkstra}
+El algoritmo de Dijkstra, implementado en OSPF, calcula la ruta más corta entre nodos considerando los costos de enlace, lo que resulta esencial para garantizar la disponibilidad 
+y eficiencia en la transmisión de datos críticos en hospitales.
 
 \section{Protocolos de Redundancia y Alta Disponibilidad}
 \subsection{HSRP (Hot Standby Router Protocol)}
 \label{subsec:hsrp}
-HSRP es un protocolo propietario de Cisco que proporciona redundancia a nivel de gateway mediante la creación de un router virtual que actúa como puerta de enlace 
-predeterminada para los dispositivos conectados directamente. Sus características principales son: \\ \\
+HSRP es un protocolo propietario de Cisco que proporciona redundancia de gateway mediante la creación de un router virtual. Un router activo gestiona el tráfico, mientras que uno 
+o más routers en standby asumen el control en caso de fallo, asegurando la continuidad del servicio \cite{cisco-hsrp}. \\ \\
 
 \textbf{Arquitectura HSRP:}
 \begin{itemize}
     \item \textbf{Router Activo:} Un router se designa como activo y gestiona el tráfico hacia el gateway virtual.
     \item \textbf{Router Pasivo (Standby):} Otro router se configura como pasivo, listo para asumir el rol de activo en caso de fallo del router activo.
     \item \textbf{Router Pasivo (Listen):} El tercer router se configura como pasivo en modo listen, listo para asumir el rol de router pasivo en modo Standby en caso de fallo del router activo.
-    \item \textbf{Gateway Virtual:} Se asigna una dirección IP virtual que actúa como puerta de enlace para los dispositivos de la red.
+    \item \textbf{Gateway Virtual:} Se asigna una dirección \acs{IP} virtual que actúa como puerta de enlace para los dispositivos de la red.
 \end{itemize}
 \textbf{Mecanismos de Detección de Fallos:}
 \begin{itemize}
@@ -80,7 +64,8 @@ predeterminada para los dispositivos conectados directamente. Sus característic
 
 \subsection{EtherChannel y Agregación de Enlaces}
 \label{subsec:etherchannel}
-EtherChannel es una tecnología que permite agregar múltiples enlaces físicos para actuar como un único enlace lógico. Los beneficios incluyen:
+EtherChannel permite agrupar múltiples enlaces físicos en un único enlace lógico, incrementando el ancho de banda, proporcionando redundancia y balanceando la carga de tráfico. Cisco soporta tanto
+ \acs{PAgP} (protocolo propietario) como \acs{LACP} (estándar IEEE) para la negociación de enlaces agregados \cite{networklessons-etherchannel}. Algunos beneficios de los que ofrece son:
 
 \begin{itemize}
     \item \textbf{Mayor ancho de banda:} Combina el ancho de banda de varios enlaces físicos, mejorando la capacidad de la red.
@@ -91,71 +76,62 @@ EtherChannel es una tecnología que permite agregar múltiples enlaces físicos 
 \section{Servicios de Red Fundamentales}
 \subsection{DHCP (Dynamic Host Configuration Protocol)}
 \label{subsec:dhcp}
-DHCP es un protocolo de red que permite la asignación dinámica de direcciones IP a dispositivos conectados a la red. Sus características principales son:
-\\ \\
-\textbf{Funcionamiento:}
+\acs{DHCP} automatiza la asignación de direcciones \acs{IP} y otros parámetros de red, simplificando la gestión y reduciendo errores de configuración. En entornos hospitalarios, esto facilita la 
+incorporación y administración de numerosos dispositivos médicos y administrativos. Su funcionamiento es el siguiente:
 \begin{enumerate}
-    \item \textbf{Descubrimiento:} El cliente envía un mensaje DHCP Discover para localizar servidores DHCP disponibles.
-    \item \textbf{Oferta:} Los servidores DHCP responden con un mensaje DHCP Offer que incluye una dirección IP y otros parámetros de configuración.
-    \item \textbf{Solicitud:} El cliente selecciona una oferta y envía un mensaje DHCP Request al servidor elegido.
-    \item \textbf{Confirmación:} El servidor responde con un mensaje DHCP Acknowledgment, confirmando la asignación de la dirección IP.
-    \item \textbf{Renovación:} Antes de que expire el tiempo de concesión, el cliente solicita una renovación de la dirección IP para continuar utilizándola.
-    \item \textbf{Liberación:} Cuando el cliente ya no necesita la dirección IP, envía un mensaje DHCP Release al servidor para liberar la dirección.
+    \item \textbf{Descubrimiento:} El cliente envía un mensaje \acs{DHCP} Discover para localizar servidores \acs{DHCP} disponibles.
+    \item \textbf{Oferta:} Los servidores \acs{DHCP} responden con un mensaje \acs{DHCP} Offer que incluye una dirección \acs{IP} y otros parámetros de configuración.
+    \item \textbf{Solicitud:} El cliente selecciona una oferta y envía un mensaje \acs{DHCP} Request al servidor elegido.
+    \item \textbf{Confirmación:} El servidor responde con un mensaje \acs{DHCP} Acknowledgment, confirmando la asignación de la dirección \acs{IP}.
+    \item \textbf{Renovación:} Antes de que expire el tiempo de concesión, el cliente solicita una renovación de la dirección \acs{IP} para continuar utilizándola.
+    \item \textbf{Liberación:} Cuando el cliente ya no necesita la dirección \acs{IP}, envía un mensaje \acs{DHCP} Release al servidor para liberar la dirección.
 \end{enumerate}
-
-\textbf{Beneficios en Entornos Hospitalarios:}
-\begin{itemize}
-    \item \textbf{Facilidad de gestión:} Permite la asignación automática de direcciones IP, simplificando la administración de dispositivos conectados.
-    \item \textbf{Reducción de errores:} Minimiza la posibilidad de conflictos de direcciones IP al asignar dinámicamente direcciones únicas a cada dispositivo.
-    \item \textbf{Flexibilidad:} Facilita la incorporación de nuevos dispositivos a la red sin necesidad de configuraciones manuales, lo que es esencial en entornos 
-    hospitalarios con alta rotación de equipos.
-\end{itemize}
 
 \subsection{NAT (Network Address Translation)}
 \label{subsec:nat}
-NAT permite que múltiples dispositivos compartan una única dirección IP pública, siendo esencial para la conectividad a Internet en redes hospitalarias. Los tipos principales son:
+\acs{NAT} permite que múltiples dispositivos compartan una única dirección \acs{IP} pública, siendo esencial para la conectividad a Internet en redes hospitalarias \cite{cisco-hospital-design}. Los tipos principales son:
 \begin{itemize}
-    \item \textbf{NAT Estático:} Asocia una dirección IP privada a una dirección IP pública específica, permitiendo el acceso externo a un dispositivo concreto.
-    \item \textbf{NAT Dinámico:} Asigna direcciones IP públicas de un grupo a dispositivos privados según sea necesario, optimizando el uso de direcciones IP.
-    \item \textbf{PAT (Port Address Translation):} Permite que múltiples dispositivos compartan una única dirección IP pública utilizando diferentes números de puerto para distinguir las conexiones.
+    \item \textbf{\acs{NAT} Estático:} Asocia una dirección \acs{IP} privada a una dirección \acs{IP} pública específica, permitiendo el acceso externo a un dispositivo concreto.
+    \item \textbf{\acs{NAT} Dinámico:} Asigna direcciones \acs{IP} públicas de un grupo a dispositivos privados según sea necesario, optimizando el uso de direcciones \acs{IP}.
+    \item \textbf{\acs{PAT} (Port Address Translation):} Permite que múltiples dispositivos compartan una única dirección \acs{IP} pública utilizando diferentes números de puerto para distinguir las conexiones.
 \end{itemize}
 
-\textbf{Ventajas de NAT en Entornos Hospitalarios:}
+\textbf{Ventajas de \acs{NAT} en Entornos Hospitalarios:}
 \begin{itemize}
-    \item \textbf{Conservación de direcciones IP:} Permite que múltiples dispositivos utilicen una única dirección IP pública, lo que es crucial en entornos con recursos limitados.
-    \item \textbf{Seguridad:} Oculta las direcciones IP internas de la red, dificultando el acceso no autorizado desde el exterior.
-    \item \textbf{Flexibilidad:} Facilita la conexión a Internet de dispositivos que no requieren acceso directo desde el exterior, como impresoras o dispositivos IoMT.
+    \item \textbf{Conservación de direcciones \acs{IP}:} Permite que múltiples dispositivos utilicen una única dirección \acs{IP} pública, lo que es crucial en entornos con recursos limitados.
+    \item \textbf{Seguridad:} Oculta las direcciones \acs{IP} internas de la red, dificultando el acceso no autorizado desde el exterior.
+    \item \textbf{Flexibilidad:} Facilita la conexión a Internet de dispositivos que no requieren acceso directo desde el exterior, como impresoras o dispositivos \acs{IoMT}.
 \end{itemize}
 
 \section{Seguridad de Red y Control de Acceso}
 La seguridad en redes hospitalarias se ha convertido en un aspecto esencial dentro de la gestión tecnológica sanitaria, dado que en estos entornos no solo se maneja información 
 crítica de carácter personal y médico, sino que además se conectan dispositivos clínicos cuyo correcto funcionamiento puede incidir directamente en la seguridad y salud de 
-los pacientes. La evolución hacia infraestructuras digitales más complejas y la incorporación masiva de dispositivos médicos conectados (IoMT) ha incrementado notablemente 
+los pacientes. La evolución hacia infraestructuras digitales más complejas y la incorporación masiva de dispositivos médicos conectados (\acs{IoMT}) ha incrementado notablemente 
 la superficie de exposición a posibles ciberataques, lo que obliga a diseñar políticas de seguridad específicas, adaptadas a las necesidades de este tipo de entornos.
 \\ \\
-Para garantizar la seguridad de la infraestructura de red hospitalaria, se pueden usar mecanismos de control de tráfico como las Listas de Control de Acceso (ACLs) o las zonas demitilarizadas. 
+Para garantizar la seguridad de la infraestructura de red hospitalaria, se pueden usar mecanismos de control de tráfico como las Listas de Control de Acceso (\acs{ACL}s) o las zonas demitilarizadas. 
 
 \subsection{Listas de Control de Acceso (ACLs)}
 \label{subsec:acl}
-Las ACLs permiten filtrar el tráfico de red según criterios específicos, como direcciones IP, protocolos o puertos. Las ACLs se configuran en los dispositivos de red (switches y routers). Estas se 
+Las \acs{ACL}s permiten filtrar el tráfico de red según criterios específicos, como direcciones \acs{IP}, protocolos o puertos. Las ACLs se configuran en los dispositivos de red (switches y routers) \cite{cisco-hospital-design}. Estas se 
 clasifican en dos tipos principales:
 
 \begin{itemize}
-    \item \textbf{ACLs estándar:} Filtran el tráfico únicamente por dirección IP de origen, permitiendo o denegando el acceso a toda la red o a subredes específicas.
-    \item \textbf{ACLs extendidas:} Permiten un filtrado más granular, considerando tanto la dirección IP de origen como la de destino, protocolos y puertos específicos.
+    \item \textbf{\acs{ACL}s estándar:} Filtran el tráfico únicamente por dirección \acs{IP} de origen, permitiendo o denegando el acceso a toda la red o a subredes específicas.
+    \item \textbf{\acs{ACL}s extendidas:} Permiten un filtrado más granular, considerando tanto la dirección \acs{IP} de origen como la de destino, protocolos y puertos específicos.
 \end{itemize}
 
-Los componenetes de una ACL incluyen:
+Los componenetes de una \acs{ACL} incluyen:
 \begin{itemize}
     \item \textbf{Sujeto:} Entidad que solicita acceso a un recurso, como un usuario o dispositivo.
     \item \textbf{Acción:} Permite o deniega el acceso al recurso solicitado.
     \item \textbf{Objeto:} Recurso al que se solicita acceso, como un servidor, base de datos o dispositivo de red.
-    \item \textbf{Condición:} Criterios que determinan si se permite o deniega el acceso, como direcciones IP, protocolos o puertos.
+    \item \textbf{Condición:} Criterios que determinan si se permite o deniega el acceso, como direcciones \acs{IP}, protocolos o puertos.
 \end{itemize}
 
 \subsection{SSH (Secure Shell)}
 \label{subsec:ssh}
-SSH es un protocolo de red que permite la administración segura de dispositivos a través de una conexión cifrada. Sus características principales son:
+\acs{SSH} es un protocolo de red que permite la administración segura de dispositivos a través de una conexión cifrada \cite{cisco-hospital-design}. Sus características principales son:
 \begin{itemize}
     \item \textbf{Cifrado de datos:} Protege la confidencialidad e integridad de la información transmitida, evitando que sea interceptada por terceros.
     \item \textbf{Autenticación segura:} Utiliza claves públicas y privadas para autenticar a los usuarios, garantizando que solo personal autorizado pueda acceder a los dispositivos.
@@ -164,15 +140,15 @@ SSH es un protocolo de red que permite la administración segura de dispositivos
 \textbf{Beneficios de SSH en Entornos Hospitalarios:}
 \begin{itemize}
     \item \textbf{Seguridad en la administración remota:} Facilita la gestión de dispositivos de red sin comprometer la seguridad de la información.
-    \item \textbf{Protección contra ataques:} Reduce el riesgo de ataques de intermediarios (MITM) y suplantación de identidad, asegurando que las comunicaciones sean auténticas.
-    \item \textbf{Auditoría y seguimiento:} Permite registrar las actividades realizadas durante las sesiones SSH, facilitando la auditoría y el seguimiento de acciones administrativas.
+    \item \textbf{Protección contra ataques:} Reduce el riesgo de ataques de intermediarios (\acs{MITM}) y suplantación de identidad, asegurando que las comunicaciones sean auténticas.
+    \item \textbf{Auditoría y seguimiento:} Permite registrar las actividades realizadas durante las sesiones \acs{SSH}, facilitando la auditoría y el seguimiento de acciones administrativas.
 \end{itemize}
 
 \subsection{Zonas Desmilitarizadas (DMZ)}
-Las zonas desmilitarizadas (DMZ) son una técnica de seguridad que permite aislar servicios accesibles desde Internet de la red interna del hospital, proporcionando una capa adicional de protección.
-En entornos hospitalarios, las DMZ se utilizan para alojar servicios como servidores web, servidores de correo electrónico o aplicaciones accesibles desde el exterior.
+Las zonas desmilitarizadas (\acs{DMZ}) son una técnica de seguridad que permite aislar servicios accesibles desde Internet de la red interna del hospital, proporcionando una capa adicional de protección.
+En entornos hospitalarios, las \acs{DMZ} se utilizan para alojar servicios como servidores web, servidores de correo electrónico o aplicaciones accesibles desde el exterior \cite{cisco-hospital-design}.
 
-\textbf{Beneficios de las DMZ en Entornos Hospitalarios:}
+\textbf{Beneficios de las \acs{DMZ} en Entornos Hospitalarios:}
 \begin{itemize}
     \item \textbf{Aislamiento de servicios:} Permite que los servicios accesibles desde Internet estén separados de la red interna, reduciendo el riesgo de comprometer sistemas críticos.
     \item \textbf{Control de acceso:} Facilita la implementación de políticas de seguridad más estrictas para los servicios expuestos, limitando el acceso a recursos internos.
@@ -181,51 +157,66 @@ En entornos hospitalarios, las DMZ se utilizan para alojar servicios como servid
 
 \subsection{DHCP Snooping}
 \label{subsec:dhcpsnooping}
-DHCP Snooping es una característica de seguridad que protege la red contra ataques de suplantación de servidor DHCP (DHCP Spoofing). Funciona filtrando las solicitudes DHCP y
-permitiendo solo aquellas provenientes de servidores DHCP autorizados. Sus características principales son:
+\acs{DHCP} Snooping es una característica de seguridad que protege la red contra ataques de suplantación de servidor \acs{DHCP} (DHCP Spoofing). Funciona filtrando las solicitudes DHCP y
+permitiendo solo aquellas provenientes de servidores \acs{DHCP} autorizados \cite{cisco_dhcp_snooping}. Sus características principales son:
 \begin{itemize}
-    \item \textbf{Filtrado de mensajes DHCP:} Permite que solo los mensajes DHCP provenientes de servidores autorizados sean aceptados, bloqueando solicitudes maliciosas.
-    \item \textbf{Prevención de ataques:} Protege contra ataques de suplantación de servidor DHCP, donde un atacante intenta responder a solicitudes DHCP con información falsa.
-    \item \textbf{Registro de asignaciones:} Mantiene un registro de las asignaciones de direcciones IP realizadas por los servidores DHCP autorizados, facilitando la auditoría y el seguimiento.
+    \item \textbf{Filtrado de mensajes \acs{DHCP}:} Permite que solo los mensajes \acs{DHCP} provenientes de servidores autorizados sean aceptados, bloqueando solicitudes maliciosas.
+    \item \textbf{Prevención de ataques:} Protege contra ataques de suplantación de servidor \acs{DHCP}, donde un atacante intenta responder a solicitudes \acs{DHCP} con información falsa.
+    \item \textbf{Registro de asignaciones:} Mantiene un registro de las asignaciones de direcciones IP realizadas por los servidores \acs{DHCP} autorizados, facilitando la auditoría y el seguimiento.
 \end{itemize}
 
-\subsection{IPSec (Internet Protocol Security)}
+\subsection{VPN IPSec (Virtual Private Network Internet Protocol Security)}
 \label{subsec:ipsec}
-IPsec es un conjunto de protocolos que proporciona seguridad a nivel de red mediante la autenticación y cifrado de paquetes IP. Sus características principales son:
+La \acs{VPN} \acs{IPSec} (Internet Protocol Security) es una tecnología que utiliza el conjunto de protocolos \acs{IPSec} para crear túneles cifrados seguros a través de redes públicas, 
+como Internet. Su función principal es garantizar la confidencialidad, integridad y autenticidad de los datos transmitidos entre dos puntos, protegiendo la información 
+sensible frente a accesos no autorizados y ataques de intermediarios \cite{ipsec}.
+
+\subsubsection{IPSec}
+\acs{IPSec} es un conjunto de protocolos que proporciona seguridad a nivel de red mediante la autenticación y cifrado de paquetes \acs{IP}. Esto permite que los datos enviados desde 
+un origen sean cifrados y autenticados para que solo el destinatario legítimo pueda acceder a ellos. \acs{IPSec} asegura además la integridad de los datos, evitando modificaciones 
+durante la transmisión \cite{ipsec}.
+\subsubsection{Modos de IPSec}
+\acs{IPSec} opera principalmente en dos modos:
 \begin{itemize}
-    \item \textbf{Autenticación de origen:} Verifica la identidad del remitente de los paquetes IP, asegurando que provienen de una fuente confiable.
-    \item \textbf{Cifrado de datos:} Protege la confidencialidad de los datos transmitidos mediante el cifrado de los paquetes IP, evitando que sean interceptados por terceros.
-    \item \textbf{Integridad de datos:} Garantiza que los datos no han sido alterados durante la transmisión, utilizando funciones hash para verificar la integridad.
+    \item \textbf{Modo Túnel:} Protege todo el paquete \acs{IP} original, incluyendo encabezado y carga útil, encapsulándolo dentro de un nuevo paquete con un encabezado \acs{IPSec}. 
+    Este modo es ideal para conexiones a través de redes públicas, ya que oculta la información original y proporciona un túnel seguro entre dos redes o dispositivos. 
+    Es el modo utilizado por las \acs{VPN} \acs{IPSec} para garantizar la privacidad y seguridad de extremo a extremo \cite{ipsec}.
+    \item \textbf{Modo Transporte:} Solo cifra la carga útil del paquete \acs{IP}, dejando el encabezado original sin cifrar para que los enrutadores puedan dirigir el tráfico. 
+    Se utiliza en redes confiables o para comunicaciones directas entre dos dispositivos, por ejemplo, en conexiones cliente-servidor dentro de una misma organización \cite{ipsec}.
 \end{itemize}
-\textbf{Beneficios de IPsec en Entornos Hospitalarios:}
+\subsubsection{Funcionamiento VPN IPSec}
+Una \acs{VPN} \acs{IPSec} crea un túnel cifrado entre dos puntos finales (por ejemplo, dos routers o un cliente y un servidor), permitiendo que los datos viajen de forma segura a través de redes 
+no confiables \cite{ipsec}. El proceso incluye:
 \begin{itemize}
-    \item \textbf{Protección de datos sensibles:} Asegura que la información médica y personal transmitida a través de la red esté protegida contra accesos no autorizados.
-    \item \textbf{Seguridad en comunicaciones remotas:} Facilita la creación de túneles seguros para la comunicación entre dispositivos médicos y sistemas de otros hospitales.
+    \item Negociación de parámetros de seguridad mediante protocolos como ISAKMP/IKE para establecer asociaciones seguras.
+    \item Establecimiento de claves criptográficas para cifrar y descifrar la información.
+    \item Creación del túnel \acs{VPN} que encapsula y protege el tráfico \acs{IP}.
+    \item Transmisión segura de datos autenticados y cifrados, con protección contra ataques de repetición y suplantación.
 \end{itemize}
 
 \section{Introducción a IoMT (Internet of Medical Things)}
-Internet of Medical Things (IoMT) es una evolución natural de Internet of Things (IoT) aplicada al ámbito sanitario, que permite la interconexión de dispositivos médicos, 
+Internet of Medical Things (\acs{IoMT}) es una evolución natural de Internet of Things (\acs{IoT}) aplicada al ámbito sanitario, que permite la interconexión de dispositivos médicos, 
 sensores y sistemas de información clínica a través de redes seguras. Esta tecnología posibilita la monitorización remota de pacientes, el control en tiempo real de 
 parámetros fisiológicos y la gestión eficiente de recursos hospitalarios, contribuyendo a mejorar la calidad asistencial y la toma de decisiones clínicas basadas en datos 
-fiables y actualizados. \\ \\
+fiables y actualizados \cite{articulo2} \cite{articulo3}. \\ \\
 
-En la práctica hospitalaria, el IoMT se ha consolidado como una herramienta fundamental para optimizar los procesos sanitarios, incrementando la capacidad de respuesta ante situaciones
-críticas y reduciendo la carga de trabajo del personal clínico. Gracias a la integración de sensores biomédicos, dispsoitivos portátiles y plataformas de gestión de datos, 
-los profesionales sanitarios pueden disponer de información vital en tiempo real, lo que favorece diagnósticos más precisos y tratamientos personalizados. \\ \\
+En la práctica hospitalaria, el acs{IoMT} se ha consolidado como una herramienta fundamental para optimizar los procesos sanitarios, incrementando la capacidad de respuesta ante situaciones
+críticas y reduciendo la carga de trabajo del personal clínico. Gracias a la integración de sensores biomédicos, dispositivos portátiles y plataformas de gestión de datos, 
+los profesionales sanitarios pueden disponer de información vital en tiempo real, lo que favorece diagnósticos más precisos y tratamientos personalizados \cite{articulo3}. \\ \\
 
-Además, el IoMT desempeña un papel esencial en la mejora de la eficiencia operativa hospitalaria. Como se recoge en la literatura, su implementación permite localizar y gestionar
+Además, el \acs{IoMT} desempeña un papel esencial en la mejora de la eficiencia operativa hospitalaria. Como se recoge en la literatura, su implementación permite localizar y gestionar
 equipamiento médico, optimizar la trazabilidad de pacientes y activos, y mejorar la monitorización de entornos hospitalarios críticos, como quirófanos y unidades de cuidados intensivos.
-Este ecosistema conectado se apoya en tecnologías de comunicación de baja potencia y largo alcance (LPWAN) como Sigfox, LoRa y NB-IoT, que proporcionan conectividad eficiente para
-dispositivos médicos que requieren bajo consumo energético y cobertura extendida dentro y fuera de los centros sanitarios. \\ \\
+Este ecosistema conectado se apoya en tecnologías de comunicación de baja potencia y largo alcance (\acs{LPWAN}) como Sigfox, \acs{LoRa} y \acs{NB-IoT}, que proporcionan conectividad eficiente para
+dispositivos médicos que requieren bajo consumo energético y cobertura extendida dentro y fuera de los centros sanitarios \cite{articulo2}. \\ \\
 
-Desde el punto de vista arquitectónico, las soluciones IoMT han evolucionado hacia modelos distribuidos basados en edge/fog computing, donde los datos se procesan parcialemnte
+Desde el punto de vista arquitectónico, las soluciones \acs{IoMT} han evolucionado hacia modelos distribuidos basados en edge/fog computing, donde los datos se procesan parcialemnte
 en pasarelas inteligentes cercanas a los dispositivos, antes de enviarse a plataformas en la nube para su almacenamiento y análisis avanzado. Este enfoque permite reducir la 
 latencia, mejorar la seguridad de los datos sensibles y aliviar la carga de tráfico hacia los servidores centrales, favoreciendo la continuidad asistencial en entornos hospitalarios
-con elevada demanda de recursos. \\ \\
+con elevada demanda de recursos \cite{articulo1} \cite{articulo3}. \\ \\
 
-El auge del IoMT también plantea desafíos en materia de seguridad, privacidad e interoperabilidad, dado que la cantidad de información médica gestionada por estos sistemas es altamente 
-sensible y está sujeta a estrictos marcos normativos. \\ \\
+El auge del \acs{IoMT} también plantea desafíos en materia de seguridad, privacidad e interoperabilidad, dado que la cantidad de información médica gestionada por estos sistemas es altamente 
+sensible y está sujeta a estrictos marcos normativos \cite{articulo3}. \\ \\
 
-En definitiva, la implantación del IoMT en entronos hospitalrios representa una oportunidad estratégica para transformar la asistencia sanitaria, dotándola de mayor flexibilidad, 
+En definitiva, la implantación del \acs{IoMT} en entronos hospitalrios representa una oportunidad estratégica para transformar la asistencia sanitaria, dotándola de mayor flexibilidad, 
 capacidad predictiva y resiliencia frente a sistuaciones de crisis como la vivida durante la pandemia de COVID-19, donde estas tecnologías demostraron su potencial para mejorar la 
-monitorización, la toma de decisiones y la gestión de recursos clínicos en tiempo real.
+monitorización, la toma de decisiones y la gestión de recursos clínicos en tiempo real \cite{articulo3}.
