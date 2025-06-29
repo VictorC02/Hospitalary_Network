@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.14)  29 JUN 2025 23:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.14)  29 JUN 2025 23:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2592,9 +2592,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 964--969
 Package acronym Info: Label `acro:MAC' newly defined as it shall be overridden
 although it is yet undefined on input line 977.
 
-LaTeX Warning: Reference `subsubsec:dispsoicion' on page 53 undefined on input line 988.
-
-
 
 LaTeX Info: Redefining \. on input line 989.
 LaTeX Info: Redefining \% on input line 989.
@@ -3939,7 +3936,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 7770.
 LaTeX Info: Redefining \% on input line 7770.
 [220]
-<Imágenes/OSPF Distr.png, id=10182, 320.69812pt x 603.75563pt>
+<Imágenes/OSPF Distr.png, id=10183, 320.69812pt x 603.75563pt>
 File: Imágenes/OSPF Distr.png Graphic file (type png)
 <use Imágenes/OSPF Distr.png>
 Package pdftex.def Info: Imágenes/OSPF Distr.png  used on input line 7791.
@@ -3949,27 +3946,27 @@ Package pdftex.def Info: Imágenes/OSPF Distr.png  used on input line 7791.
 LaTeX Info: Redefining \. on input line 7797.
 LaTeX Info: Redefining \% on input line 7797.
 [221 <./Imágenes/OSPF Distr.png>]
-<Imágenes/DHCP-PC-RRHH.png, id=10202, 517.18219pt x 219.82124pt>
+<Imágenes/DHCP-PC-RRHH.png, id=10203, 517.18219pt x 219.82124pt>
 File: Imágenes/DHCP-PC-RRHH.png Graphic file (type png)
 <use Imágenes/DHCP-PC-RRHH.png>
 Package pdftex.def Info: Imágenes/DHCP-PC-RRHH.png  used on input line 7800.
 (pdftex.def)             Requested size: 193.5pt x 82.24492pt.
-<Imágenes/DHCP-PC-Admision.png, id=10203, 518.6878pt x 218.31563pt>
+<Imágenes/DHCP-PC-Admision.png, id=10204, 518.6878pt x 218.31563pt>
 File: Imágenes/DHCP-PC-Admision.png Graphic file (type png)
 <use Imágenes/DHCP-PC-Admision.png>
 Package pdftex.def Info: Imágenes/DHCP-PC-Admision.png  used on input line 7806.
 (pdftex.def)             Requested size: 193.5pt x 81.44508pt.
-<Imágenes/natHaciaInternet.png, id=10204, 404.26031pt x 62.48344pt>
+<Imágenes/natHaciaInternet.png, id=10205, 404.26031pt x 62.48344pt>
 File: Imágenes/natHaciaInternet.png Graphic file (type png)
 <use Imágenes/natHaciaInternet.png>
 Package pdftex.def Info: Imágenes/natHaciaInternet.png  used on input line 7815.
 (pdftex.def)             Requested size: 193.5pt x 29.90779pt.
-<Imágenes/natdesdeIntenret.png, id=10205, 398.99063pt x 39.89906pt>
+<Imágenes/natdesdeIntenret.png, id=10206, 398.99063pt x 39.89906pt>
 File: Imágenes/natdesdeIntenret.png Graphic file (type png)
 <use Imágenes/natdesdeIntenret.png>
 Package pdftex.def Info: Imágenes/natdesdeIntenret.png  used on input line 7821.
 (pdftex.def)             Requested size: 193.5pt x 19.3498pt.
-<Imágenes/ssh.png, id=10206, 519.44063pt x 185.19188pt>
+<Imágenes/ssh.png, id=10207, 519.44063pt x 185.19188pt>
 File: Imágenes/ssh.png Graphic file (type png)
 <use Imágenes/ssh.png>
 Package pdftex.def Info: Imágenes/ssh.png  used on input line 7829.
@@ -3979,17 +3976,17 @@ Package pdftex.def Info: Imágenes/ssh.png  used on input line 7829.
 LaTeX Info: Redefining \. on input line 7831.
 LaTeX Info: Redefining \% on input line 7831.
 [222 <./Imágenes/DHCP-PC-RRHH.png> <./Imágenes/DHCP-PC-Admision.png> <./Imágenes/natHaciaInternet.png> <./Imágenes/natdesdeIntenret.png>]
-<Imágenes/Autent.png, id=10215, 289.08pt x 94.10156pt>
+<Imágenes/Autent.png, id=10216, 289.08pt x 94.10156pt>
 File: Imágenes/Autent.png Graphic file (type png)
 <use Imágenes/Autent.png>
 Package pdftex.def Info: Imágenes/Autent.png  used on input line 7837.
 (pdftex.def)             Requested size: 193.5pt x 62.9874pt.
-<Imágenes/vpn.png, id=10216, 453.19313pt x 317.68687pt>
+<Imágenes/vpn.png, id=10217, 453.19313pt x 317.68687pt>
 File: Imágenes/vpn.png Graphic file (type png)
 <use Imágenes/vpn.png>
 Package pdftex.def Info: Imágenes/vpn.png  used on input line 7845.
 (pdftex.def)             Requested size: 193.5pt x 135.64287pt.
-<Imágenes/dhcpsnooping.png, id=10217, 289.08pt x 347.79938pt>
+<Imágenes/dhcpsnooping.png, id=10218, 289.08pt x 347.79938pt>
 File: Imágenes/dhcpsnooping.png Graphic file (type png)
 <use Imágenes/dhcpsnooping.png>
 Package pdftex.def Info: Imágenes/dhcpsnooping.png  used on input line 7854.
@@ -4002,12 +3999,12 @@ Underfull \vbox (badness 1502) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 7856.
 LaTeX Info: Redefining \% on input line 7856.
 [223 <./Imágenes/ssh.png> <./Imágenes/Autent.png> <./Imágenes/vpn.png>]
-<Imágenes/snooping2.png, id=10225, 453.19313pt x 86.57344pt>
+<Imágenes/snooping2.png, id=10226, 453.19313pt x 86.57344pt>
 File: Imágenes/snooping2.png Graphic file (type png)
 <use Imágenes/snooping2.png>
 Package pdftex.def Info: Imágenes/snooping2.png  used on input line 7862.
 (pdftex.def)             Requested size: 193.5pt x 36.96428pt.
-<Imágenes/inv-internet.png, id=10226, 321.45094pt x 150.5625pt>
+<Imágenes/inv-internet.png, id=10227, 321.45094pt x 150.5625pt>
 File: Imágenes/inv-internet.png Graphic file (type png)
 <use Imágenes/inv-internet.png>
 Package pdftex.def Info: Imágenes/inv-internet.png  used on input line 7871.
@@ -4024,12 +4021,12 @@ File: Imágenes/inv-internet.png Graphic file (type png)
 <use Imágenes/inv-internet.png>
 Package pdftex.def Info: Imágenes/inv-internet.png  used on input line 7878.
 (pdftex.def)             Requested size: 193.5pt x 90.63455pt.
-<Imágenes/inter-serv.png, id=10233, 431.36156pt x 65.49469pt>
+<Imágenes/inter-serv.png, id=10234, 431.36156pt x 65.49469pt>
 File: Imágenes/inter-serv.png Graphic file (type png)
 <use Imágenes/inter-serv.png>
 Package pdftex.def Info: Imágenes/inter-serv.png  used on input line 7885.
 (pdftex.def)             Requested size: 193.5pt x 29.37938pt.
-<Imágenes/BlockAdmin-Iomt.png, id=10234, 515.67656pt x 222.07968pt>
+<Imágenes/BlockAdmin-Iomt.png, id=10235, 515.67656pt x 222.07968pt>
 File: Imágenes/BlockAdmin-Iomt.png Graphic file (type png)
 <use Imágenes/BlockAdmin-Iomt.png>
 Package pdftex.def Info: Imágenes/BlockAdmin-Iomt.png  used on input line 7894.
@@ -4042,22 +4039,22 @@ Underfull \vbox (badness 5302) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 7897.
 LaTeX Info: Redefining \% on input line 7897.
 [225 <./Imágenes/inv-internet.png> <./Imágenes/inter-serv.png>]
-<Imágenes/blockadmin-medico.png, id=10241, 479.54156pt x 123.46124pt>
+<Imágenes/blockadmin-medico.png, id=10242, 479.54156pt x 123.46124pt>
 File: Imágenes/blockadmin-medico.png Graphic file (type png)
 <use Imágenes/blockadmin-medico.png>
 Package pdftex.def Info: Imágenes/blockadmin-medico.png  used on input line 7901.
 (pdftex.def)             Requested size: 193.5pt x 49.81879pt.
-<Imágenes/blockadmin-uci.png, id=10242, 456.20438pt x 117.43875pt>
+<Imágenes/blockadmin-uci.png, id=10243, 456.20438pt x 117.43875pt>
 File: Imágenes/blockadmin-uci.png Graphic file (type png)
 <use Imágenes/blockadmin-uci.png>
 Package pdftex.def Info: Imágenes/blockadmin-uci.png  used on input line 7908.
 (pdftex.def)             Requested size: 193.5pt x 49.81134pt.
-<Imágenes/blockinv-int.png, id=10243, 374.14781pt x 121.20282pt>
+<Imágenes/blockinv-int.png, id=10244, 374.14781pt x 121.20282pt>
 File: Imágenes/blockinv-int.png Graphic file (type png)
 <use Imágenes/blockinv-int.png>
 Package pdftex.def Info: Imágenes/blockinv-int.png  used on input line 7915.
 (pdftex.def)             Requested size: 193.5pt x 62.68369pt.
-<Imágenes/blockinv-iomt.png, id=10244, 340.27126pt x 121.95563pt>
+<Imágenes/blockinv-iomt.png, id=10245, 340.27126pt x 121.95563pt>
 File: Imágenes/blockinv-iomt.png Graphic file (type png)
 <use Imágenes/blockinv-iomt.png>
 Package pdftex.def Info: Imágenes/blockinv-iomt.png  used on input line 7922.
@@ -4067,17 +4064,17 @@ Package pdftex.def Info: Imágenes/blockinv-iomt.png  used on input line 7922.
 LaTeX Info: Redefining \. on input line 7924.
 LaTeX Info: Redefining \% on input line 7924.
 [226 <./Imágenes/BlockAdmin-Iomt.png> <./Imágenes/blockadmin-medico.png> <./Imágenes/blockadmin-uci.png> <./Imágenes/blockinv-int.png>]
-<Imágenes/blocknoaut-serv.png, id=10253, 399.74344pt x 119.69719pt>
+<Imágenes/blocknoaut-serv.png, id=10254, 399.74344pt x 119.69719pt>
 File: Imágenes/blocknoaut-serv.png Graphic file (type png)
 <use Imágenes/blocknoaut-serv.png>
 Package pdftex.def Info: Imágenes/blocknoaut-serv.png  used on input line 7929.
 (pdftex.def)             Requested size: 193.5pt x 57.94164pt.
-<Imágenes/permmed-uci.png, id=10254, 329.73187pt x 143.78719pt>
+<Imágenes/permmed-uci.png, id=10255, 329.73187pt x 143.78719pt>
 File: Imágenes/permmed-uci.png Graphic file (type png)
 <use Imágenes/permmed-uci.png>
 Package pdftex.def Info: Imágenes/permmed-uci.png  used on input line 7938.
 (pdftex.def)             Requested size: 193.5pt x 84.38173pt.
-<Imágenes/permmed-tipo1.png, id=10255, 386.94562pt x 140.02313pt>
+<Imágenes/permmed-tipo1.png, id=10256, 386.94562pt x 140.02313pt>
 File: Imágenes/permmed-tipo1.png Graphic file (type png)
 <use Imágenes/permmed-tipo1.png>
 Package pdftex.def Info: Imágenes/permmed-tipo1.png  used on input line 7945.
@@ -4087,17 +4084,17 @@ Package pdftex.def Info: Imágenes/permmed-tipo1.png  used on input line 7945.
 LaTeX Info: Redefining \. on input line 7948.
 LaTeX Info: Redefining \% on input line 7948.
 [227 <./Imágenes/blockinv-iomt.png> <./Imágenes/blocknoaut-serv.png> <./Imágenes/permmed-uci.png>]
-<Imágenes/permuci-tipo2.png, id=10264, 402.75468pt x 140.02313pt>
+<Imágenes/permuci-tipo2.png, id=10265, 402.75468pt x 140.02313pt>
 File: Imágenes/permuci-tipo2.png Graphic file (type png)
 <use Imágenes/permuci-tipo2.png>
 Package pdftex.def Info: Imágenes/permuci-tipo2.png  used on input line 7952.
 (pdftex.def)             Requested size: 193.5pt x 67.2723pt.
-<Imágenes/permuci-tipo3.png, id=10265, 379.4175pt x 145.29282pt>
+<Imágenes/permuci-tipo3.png, id=10266, 379.4175pt x 145.29282pt>
 File: Imágenes/permuci-tipo3.png Graphic file (type png)
 <use Imágenes/permuci-tipo3.png>
 Package pdftex.def Info: Imágenes/permuci-tipo3.png  used on input line 7959.
 (pdftex.def)             Requested size: 193.5pt x 74.09834pt.
-<Imágenes/permaut-serv.png, id=10266, 369.63094pt x 141.52875pt>
+<Imágenes/permaut-serv.png, id=10267, 369.63094pt x 141.52875pt>
 File: Imágenes/permaut-serv.png Graphic file (type png)
 <use Imágenes/permaut-serv.png>
 Package pdftex.def Info: Imágenes/permaut-serv.png  used on input line 7966.
@@ -4110,27 +4107,27 @@ Underfull \vbox (badness 3792) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 7969.
 LaTeX Info: Redefining \% on input line 7969.
 [228 <./Imágenes/permmed-tipo1.png> <./Imágenes/permuci-tipo2.png> <./Imágenes/permuci-tipo3.png>]
-<Imágenes/RprincipalAntes.png, id=10274, 417.81094pt x 106.14656pt>
+<Imágenes/RprincipalAntes.png, id=10275, 417.81094pt x 106.14656pt>
 File: Imágenes/RprincipalAntes.png Graphic file (type png)
 <use Imágenes/RprincipalAntes.png>
 Package pdftex.def Info: Imágenes/RprincipalAntes.png  used on input line 7975.
 (pdftex.def)             Requested size: 193.5pt x 49.16003pt.
-<Imágenes/Rauxiliar1Antes.png, id=10275, 419.31656pt x 104.64093pt>
+<Imágenes/Rauxiliar1Antes.png, id=10276, 419.31656pt x 104.64093pt>
 File: Imágenes/Rauxiliar1Antes.png Graphic file (type png)
 <use Imágenes/Rauxiliar1Antes.png>
 Package pdftex.def Info: Imágenes/Rauxiliar1Antes.png  used on input line 7980.
 (pdftex.def)             Requested size: 193.5pt x 48.28708pt.
-<Imágenes/Rauxiliar2Antes.png, id=10276, 422.32782pt x 106.89937pt>
+<Imágenes/Rauxiliar2Antes.png, id=10277, 422.32782pt x 106.89937pt>
 File: Imágenes/Rauxiliar2Antes.png Graphic file (type png)
 <use Imágenes/Rauxiliar2Antes.png>
 Package pdftex.def Info: Imágenes/Rauxiliar2Antes.png  used on input line 7985.
 (pdftex.def)             Requested size: 193.5pt x 48.98018pt.
-<Imágenes/Rauxiliar1Desp.png, id=10277, 417.05812pt x 104.64093pt>
+<Imágenes/Rauxiliar1Desp.png, id=10278, 417.05812pt x 104.64093pt>
 File: Imágenes/Rauxiliar1Desp.png Graphic file (type png)
 <use Imágenes/Rauxiliar1Desp.png>
 Package pdftex.def Info: Imágenes/Rauxiliar1Desp.png  used on input line 7990.
 (pdftex.def)             Requested size: 193.5pt x 48.55054pt.
-<Imágenes/Rauxiliar2depsues.png, id=10278, 427.5975pt x 105.39375pt>
+<Imágenes/Rauxiliar2depsues.png, id=10279, 427.5975pt x 105.39375pt>
 File: Imágenes/Rauxiliar2depsues.png Graphic file (type png)
 <use Imágenes/Rauxiliar2depsues.png>
 Package pdftex.def Info: Imágenes/Rauxiliar2depsues.png  used on input line 7995.
@@ -4140,32 +4137,32 @@ Package pdftex.def Info: Imágenes/Rauxiliar2depsues.png  used on input line 799
 LaTeX Info: Redefining \. on input line 7998.
 LaTeX Info: Redefining \% on input line 7998.
 [229 <./Imágenes/permaut-serv.png> <./Imágenes/RprincipalAntes.png> <./Imágenes/Rauxiliar1Antes.png> <./Imágenes/Rauxiliar2Antes.png> <./Imágenes/Rauxiliar1Desp.png>]
-<Imágenes/Sw1Antes.png, id=10288, 411.78844pt x 84.315pt>
+<Imágenes/Sw1Antes.png, id=10289, 411.78844pt x 84.315pt>
 File: Imágenes/Sw1Antes.png Graphic file (type png)
 <use Imágenes/Sw1Antes.png>
 Package pdftex.def Info: Imágenes/Sw1Antes.png  used on input line 8002.
 (pdftex.def)             Requested size: 193.5pt x 39.62032pt.
-<Imágenes/Sw2Antes.png, id=10289, 398.99063pt x 83.5622pt>
+<Imágenes/Sw2Antes.png, id=10290, 398.99063pt x 83.5622pt>
 File: Imágenes/Sw2Antes.png Graphic file (type png)
 <use Imágenes/Sw2Antes.png>
 Package pdftex.def Info: Imágenes/Sw2Antes.png  used on input line 8007.
 (pdftex.def)             Requested size: 193.5pt x 40.52505pt.
-<Imágenes/Sw2Deps.png, id=10290, 405.01312pt x 82.80937pt>
+<Imágenes/Sw2Deps.png, id=10291, 405.01312pt x 82.80937pt>
 File: Imágenes/Sw2Deps.png Graphic file (type png)
 <use Imágenes/Sw2Deps.png>
 Package pdftex.def Info: Imágenes/Sw2Deps.png  used on input line 8012.
 (pdftex.def)             Requested size: 193.5pt x 39.56355pt.
-<Imágenes/SwAccAntes.png, id=10291, 431.36156pt x 188.95593pt>
+<Imágenes/SwAccAntes.png, id=10292, 431.36156pt x 188.95593pt>
 File: Imágenes/SwAccAntes.png Graphic file (type png)
 <use Imágenes/SwAccAntes.png>
 Package pdftex.def Info: Imágenes/SwAccAntes.png  used on input line 8019.
 (pdftex.def)             Requested size: 193.5pt x 84.76123pt.
-<Imágenes/SwDistrAntes.png, id=10292, 434.37282pt x 198.7425pt>
+<Imágenes/SwDistrAntes.png, id=10293, 434.37282pt x 198.7425pt>
 File: Imágenes/SwDistrAntes.png Graphic file (type png)
 <use Imágenes/SwDistrAntes.png>
 Package pdftex.def Info: Imágenes/SwDistrAntes.png  used on input line 8024.
 (pdftex.def)             Requested size: 193.5pt x 88.53564pt.
-<Imágenes/SwAccDesp.png, id=10293, 426.09187pt x 185.94469pt>
+<Imágenes/SwAccDesp.png, id=10294, 426.09187pt x 185.94469pt>
 File: Imágenes/SwAccDesp.png Graphic file (type png)
 <use Imágenes/SwAccDesp.png>
 Package pdftex.def Info: Imágenes/SwAccDesp.png  used on input line 8029.
@@ -4175,12 +4172,12 @@ Package pdftex.def Info: Imágenes/SwAccDesp.png  used on input line 8029.
 LaTeX Info: Redefining \. on input line 8031.
 LaTeX Info: Redefining \% on input line 8031.
 [230 <./Imágenes/Rauxiliar2depsues.png> <./Imágenes/Sw1Antes.png> <./Imágenes/Sw2Antes.png> <./Imágenes/Sw2Deps.png> <./Imágenes/SwAccAntes.png>]
-<Imágenes/SwDistrDesp.png, id=10303, 425.33907pt x 198.7425pt>
+<Imágenes/SwDistrDesp.png, id=10304, 425.33907pt x 198.7425pt>
 File: Imágenes/SwDistrDesp.png Graphic file (type png)
 <use Imágenes/SwDistrDesp.png>
 Package pdftex.def Info: Imágenes/SwDistrDesp.png  used on input line 8034.
 (pdftex.def)             Requested size: 193.5pt x 90.41583pt.
-<Imágenes/RedSonEspases.png, id=10304, 758.08218pt x 473.51906pt>
+<Imágenes/RedSonEspases.png, id=10305, 758.08218pt x 473.51906pt>
 File: Imágenes/RedSonEspases.png Graphic file (type png)
 <use Imágenes/RedSonEspases.png>
 Package pdftex.def Info: Imágenes/RedSonEspases.png  used on input line 8042.
@@ -4207,7 +4204,7 @@ Overfull \vbox (50.16562pt too high) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 8046.
 LaTeX Info: Redefining \% on input line 8046.
 [233 <./Imágenes/RedSonEspases.png>]
-<Imágenes/redInterocnexion.png, id=10322, 662.475pt x 424.58624pt>
+<Imágenes/redInterocnexion.png, id=10323, 662.475pt x 424.58624pt>
 File: Imágenes/redInterocnexion.png Graphic file (type png)
 <use Imágenes/redInterocnexion.png>
 Package pdftex.def Info: Imágenes/redInterocnexion.png  used on input line 8049.
@@ -4289,27 +4286,23 @@ LaTeX Info: Redefining \% on input line 14.
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `MemoriaTFG.out' has not changed.
 (rerunfilecheck)             Checksum: A918D04667461A2A59D9EEDA26468105;45773.
 Package rerunfilecheck Info: File `MemoriaTFG.brf' has not changed.
 (rerunfilecheck)             Checksum: 68617E6EAA386D1516594CC0AA263F2E;1709.
  ) 
 Here is how much of TeX's memory you used:
- 35860 strings out of 473523
- 688607 string characters out of 5714146
- 1173979 words of memory out of 5000000
- 49706 multiletter control sequences out of 15000+600000
+ 35859 strings out of 473523
+ 688584 string characters out of 5714146
+ 1173943 words of memory out of 5000000
+ 49705 multiletter control sequences out of 15000+600000
  794498 words of font info for 644 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,23n,107p,1093b,2584s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso12.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putb8a.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/Victor/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on MemoriaTFG.pdf (258 pages, 3184365 bytes).
+Output written on MemoriaTFG.pdf (258 pages, 3184289 bytes).
 PDF statistics:
- 12088 PDF objects out of 12825 (max. 8388607)
+ 12089 PDF objects out of 12825 (max. 8388607)
  8198 named destinations out of 8907 (max. 500000)
  153601 words of extra memory for PDF output out of 154059 (max. 10000000)
 
