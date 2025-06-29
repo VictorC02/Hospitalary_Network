@@ -7,20 +7,20 @@
 La digitalización de los servicios sanitarios ha supuesto una transformación profunda en la forma en que los hospitales gestionan su información clínica, administrativa y 
 operativa. Actualmente, la mayoría de los procesos hospitalarios dependen de sistemas informáticos interconectados, que requieren de infraestructuras de red robustas, estables 
 y seguras. Desde el acceso a historiales médicos electrónicos hasta los sistemas de monitorización de pacientes o la gestión de dispositivos médicos, todos estos servicios 
-se apoyan sobre una red de comunicaciones fiable que garantice la disponibilidad continua y la integridad de los datos transmitidos. \\
+se apoyan sobre una red de comunicaciones fiable que garantice la disponibilidad continua y la integridad de los datos transmitidos. \\ 
 
-En paralelo a este proceso de digitalización, se ha producido un aumento exponencial en la conectividad de dispositivos médicos mediante tecnologías \acs{IoT}, fenómeno conocido 
-como Internet of Medical Things (\acs{IoMT}). Este tipo de dispositivos permite monitorizar parámetros clínicos en tiempo real, mejorar la trazabilidad de pacientes y optimizar 
-la gestión hospitalaria, pero también introduce nuevos riesgos de seguridad, debido a su alta exposición en la red y sus limitaciones en materia de protección de datos. \\
+En paralelo a este proceso de digitalización, se ha producido un aumento exponencial en la conectividad de dispositivos médicos mediante tecnologías \ac{IoT}, fenómeno conocido 
+como \ac{IoMT}. Este tipo de dispositivos permite monitorizar parámetros clínicos en tiempo real, mejorar la trazabilidad de pacientes y optimizar 
+la gestión hospitalaria, pero también introduce nuevos riesgos de seguridad, debido a su alta exposición en la red y sus limitaciones en materia de protección de datos. \\ 
 
 En este contexto, el correcto diseño de una red hospitalaria no solo debe garantizar la conectividad y el buen funcionamiento de los servicios clínicos y administrativos, 
 sino también ofrecer mecanismos de seguridad física y lógica que protejan la infraestructura frente a amenazas externas e internas. La segmentación de red, la creación de 
-\acs{VLAN}s específicas y la protección de subredes destinadas a dispositivos \acs{IoMT} se han convertido en elementos estratégicos para asegurar la continuidad asistencial y la 
+\ac{VLAN}s específicas y la protección de subredes destinadas a dispositivos IoMT se han convertido en elementos estratégicos para asegurar la continuidad asistencial y la 
 privacidad de los datos clínicos en entornos hospitalarios modernos.
 
 \subsection{Motivación}
 La motivación principal para la realización de este proyecto surge de la relevancia crítica que tienen las infraestructuras de red en centros 
-hospitalarios y del interés personal por el diseño de redes seguras en entornos sensibles y de alta disponibilidad. El auge de los dispositivos \acs{IoMT}, con sus particulares 
+hospitalarios y del interés personal por el diseño de redes seguras en entornos sensibles y de alta disponibilidad. El auge de los dispositivos IoMT, con sus particulares 
 desafíos de seguridad y gestión, supone un área de gran proyección profesional y tecnológica, lo que convierte este proyecto en una oportunidad para profundizar en soluciones 
 actuales de segmentación, control de accesos y políticas de seguridad adaptadas a estas nuevas tecnologías. \\
 
@@ -28,11 +28,11 @@ Además, el planteamiento del proyecto permite aplicar conocimientos teóricos a
 Cisco Packet Tracer y gestionando la documentación técnica y las configuraciones de red de forma controlada. \\
 
 Este proyecto no solo supone un reto técnico, sino también una aportación académica de valor para futuros estudiantes o profesionales interesados en infraestructuras de 
-red hospitalarias, ya que documenta una propuesta de red segmentada, segura y adaptada a las necesidades actuales de conectividad y protección de dispositivos \acs{IoMT}.
+red hospitalarias, ya que documenta una propuesta de red segmentada, segura y adaptada a las necesidades actuales de conectividad y protección de dispositivos IoMT.
 
 \section{Objetivos del Proyecto}
 El presente proyecto tiene como finalidad diseñar, implementar y simular una red hospitalaria segura y segmentada mediante la herramienta Cisco Packet Tracer, aplicando buenas 
-prácticas de seguridad a nivel físico y lógico, y adaptándola a las necesidades actuales de conectividad y protección de dispositivos médicos conectados (\acs{IoMT}). Para ello, 
+prácticas de seguridad a nivel físico y lógico, y adaptándola a las necesidades actuales de conectividad y protección de dispositivos médicos conectados (IoMT). Para ello, 
 se han definido un objetivo general y varios objetivos específicos que guían el desarrollo del trabajo:
 
 \subsection{Objetivo General}
@@ -44,15 +44,15 @@ y los servidores de otros hospitales, garantizando la seguridad de la informaci�
 
 \subsection{Objetivos Específicos}
 \begin{itemize}
-    \item \textbf{Analizar los requisitos funcionales y de seguridad} de una red hospitalaria moderna, como la de Son Espases, considerando la incorporación de dispositivos \acs{IoMT} y las 
+    \item \textbf{Analizar los requisitos funcionales y de seguridad} de una red hospitalaria moderna, como la de Son Espases, considerando la incorporación de dispositivos IoMT y las 
     particularidades de entornos asistenciales.
     \item \textbf{Definir una topología de red física y lógica adecuada}, organizando los diferentes departamentos y servicios hospitalarios mediante técnicas de 
-    segmentación, como la creación de \acs{VLAN}s y subredes.
+    segmentación, como la creación de VLANs y subredes.
     \item \textbf{Diseñar una red de interconexión entre cuatro hospitales}, garantizando la comunicación segura y eficiente entre ellos.
-    \item \textbf{Planificar y configurar el direccionamiento \acs{IP}} de la red hospitalaria, garantizando su correcto funcionamiento y escalabilidad.
-    \item \textbf{Implementar medidas de seguridad a nivel lógico}, mediante el uso de \acs{ACL}s, segmentación de tráfico, configuración de resiliencia contra atques reales (DHCP Spoofing) 
+    \item \textbf{Planificar y configurar el direccionamiento \ac{IP}} de la red hospitalaria, garantizando su correcto funcionamiento y escalabilidad.
+    \item \textbf{Implementar medidas de seguridad a nivel lógico}, mediante el uso de \ac{ACL}s, segmentación de tráfico, configuración de resiliencia contra ataques reales (DHCP Spoofing) 
     y asegurar una comunicación interhospitalaria segura.
-    \item \textbf{Diseñar e integrar una subred específica para dispositivos \ac{IoMT}}, aplicando controles de seguridad reforzados y limitando su acceso a los recursos esenciales de la red.
+    \item \textbf{Diseñar e integrar una subred específica para dispositivos IoMT}, aplicando controles de seguridad reforzados y limitando su acceso a los recursos esenciales de la red.
     \item \textbf{Realizar pruebas de conectividad, seguridad y funcionamiento}, validando la correcta comunicación entre los diferentes dispositivos, el cumplimiento de las políticas de 
     seguridad y la eficiencia de la segmentación implementada.
     \item \textbf{Documentar todas las fases del proyecto}, incluyendo análisis de requisitos, diseño de la topología, configuración de dispositivos, resultados de las pruebas y conclusiones 
@@ -61,7 +61,7 @@ y los servidores de otros hospitales, garantizando la seguridad de la informaci�
 
 \section{Alcance del Proyecto}
 El presente proyecto tiene como objetivo el diseño, configuración y simulación de una infraestructura de red hospitalaria segura y segmentada, adaptada a los requisitos 
-actuales de conectividad, segmentación y protección de dispositivos médicos conectados (\acs{IoMT}). Para ello, se han establecido unos límites funcionales y técnicos claramente 
+actuales de conectividad, segmentación y protección de dispositivos médicos conectados (IoMT). Para ello, se han establecido unos límites funcionales y técnicos claramente 
 definidos que determinan el alcance real de este trabajo.
 
 \subsection{Alcance Funcional}
@@ -69,7 +69,7 @@ El proyecto contempla:
 \begin{itemize}
     \item \textbf{El diseño de dos infraestructuras de red diferenciadas:}
     \begin{itemize}
-        \item Una red de interconexión entre cuatro hospitales (Son Espases, Son Llatzer, Hospital Comarcal d'Inca y Hospital de Manacor).
+        \item Una red de interconexión entre cuatro hospitales (Son Espases, Son Llàtzer, Hospital Comarcal d'Inca y Hospital de Manacor).
         \item El diseño detallado de la red de un hospital individual (Son Espases).
     \end{itemize}
     \item \textbf{Segmentación de cada hospital en tres subredes independientes:}
@@ -78,31 +78,31 @@ El proyecto contempla:
         \item Red de dispositivos \acs{IoMT} (172.16.0.0/12).
         \item Red interna hospitalaria (10.0.0.0/8).
     \end{itemize}
-    \item \textbf{División de cada hospital en \acs{VLAN}s por departamentos}, separando administración, servicios quirúrigicos, servicios médicos, servicios centrales, áreas de enfermería y 
+    \item \textbf{División de cada hospital en VLANs por departamentos}, separando administración, servicios quirúrgicos, servicios médicos, servicios centrales, áreas de enfermería y 
     áreas de apoyo.
-    \item \textbf{Implementación de políticas de seguridad mediante \acs{ACL}s}, para:
+    \item \textbf{Implementación de políticas de seguridad mediante ACLs}, para:
     \begin{itemize}
         \item Bloquear el tráfico entre la red de invitados y cualquier otra subred.
-        \item Restringir la comunicación de dispositivos \acs{IoMT} exclusivamente a dispositivos del área médica o del departamento de la \acs{UCI}.
-        \item Limitar el acceso entre \acs{VLAN}s en función de criterios de seguridad departamentales.
+        \item Restringir la comunicación de dispositivos IoMT exclusivamente a dispositivos del área médica o del departamento de la \ac{UCI}.
+        \item Limitar el acceso entre VLANs en función de criterios de seguridad departamentales.
     \end{itemize}
-    \item \textbf{Configuración de \acs{DMZ} específicas para cada subred}, con su propio servidor \acs{DHCP}. En el caso de la subred \acs{IoMT}, se añaden dos servidores \acs{DHCP}, uno principal y 
+    \item \textbf{Configuración de \ac{DMZ} específicas para cada subred}, con su propio servidor \ac{DHCP}. En el caso de la subred IoMT, se añaden dos servidores DHCP, uno principal y 
     otro de respaldo.
     \item \textbf{Implementación de servicios de red:}
     \begin{itemize}
-        \item \textbf{\acs{DHCP}} para la asignación dinámica de direcciones \acs{IP} a los dispositivos de cada subred.
-        \item \textbf{\acs{DNS}} para la resolución de nombres de dominio internos.
-        \item \textbf{\acs{NAT}} para permitir el acceso a Internet desde las subredes internas.
-        \item \textbf{\acs{HSRP}} para garantizar la alta disponibilidad de los routers principales.
-        \item \textbf{\acs{SSH}} para la gestión segura de los dispositivos de red.
-        \item \textbf{\acs{OSPF}} para el enrutamiento dinámico entre las diferentes \acs{VLAN}s y subredes.
+        \item \textbf{DHCP} para la asignación dinámica de direcciones IP a los dispositivos de cada subred.
+        \item \textbf{\ac{DNS}} para la resolución de nombres de dominio internos.
+        \item \textbf{\ac{NAT}} para permitir el acceso a Internet desde las subredes internas.
+        \item \textbf{\ac{HSRP}} para garantizar la alta disponibilidad de los routers principales.
+        \item \textbf{\ac{SSH}} para la gestión segura de los dispositivos de red.
+        \item \textbf{\ac{OSPF}} para el enrutamiento dinámico entre las diferentes VLANs y subredes.
         \item \textbf{EtherChannel} para la agregación de enlaces entre switches, mejorando la capacidad y redundancia de la red.
-        \item \textbf{IPSec} para la interconexión segura entre hospitales, garantizando la privacidad de los datos transmitidos.
+        \item \textbf{\ac{IPSec}} para la interconexión segura entre hospitales, garantizando la privacidad de los datos transmitidos.
     \end{itemize}
     \item \textbf{Pruebas de conectividad, seguridad y tolerancia a fallos}, incluyendo:
     \begin{itemize}
-        \item Verificación de la comunicación entre dispositivos de diferentes \acs{VLAN}s.
-        \item Validación de las políticas de seguridad implementadas mediante \acs{ACL}s.
+        \item Verificación de la comunicación entre dispositivos de diferentes VLANs.
+        \item Validación de las políticas de seguridad implementadas mediante ACLs.
         \item Comprobación del funcionamiento de los servicios de red configurados.
         \item Pruebas de tolerancia a fallos mediante la simulación de caídas de enlaces y dispositivos.
     \end{itemize}
@@ -112,16 +112,16 @@ El proyecto contempla:
 \label{subsec:limites}
 Para delimitar correctamente el trabajo realizado, se establecen las siguientes exclusiones y limitaciones:
 \begin{itemize}
-    \item No se realiza una simulación de ciberataques avanzados, sino únicamente pruebas básicas de seguridad mediante restricciones de \acs{ACL}s y control de tráfico.
+    \item No se realiza una simulación de ciberataques avanzados, sino únicamente pruebas básicas de seguridad mediante restricciones de ACLs y control de tráfico.
     \item El hardware de red empleado en la simulación se limita a los dispositivos disponibles en Cisco Packet Tracer, que pueden no corresponder con equipamiento 
     hospitalario de última generación.
     \item Se asume disponibilidad presupuestaria ilimitada para la adquisición de hardware y software, priorizando el cumplimiento de los objetivos técnicos y de 
     seguridad sobre las restricciones económicas o logísticas.
 \end{itemize}
-Además también existen las limitaciones propias de la herramienta Cisco Packet Tracer, a continuación se muestran las más relevantes:
+Además, también existen las limitaciones propias de la herramienta Cisco Packet Tracer, a continuación se muestran las más relevantes:
 \begin{itemize}
-    \item Limitaciones de puertos en routers, esto imposibilita que la interconexión entre hospitales tenga enlaces redundantes.
-    \item Limitaciones de puertos en routers, esto imposibilita que se configure HSRP en todos los switches de distribución que conectan con switches de acceso.
+    \item Limitaciones de puertos en routers, lo que imposibilita que la interconexión entre hospitales tenga enlaces redundantes.
+    \item Limitaciones de puertos en switches de distribución, lo que imposibilita que se configure HSRP en todos los switches de distribución que conectan con switches de acceso.
     \item La herramienta no permite la compatibilidad entre EtherChannel y DHCP Snooping, por lo que solo se ha podido implementar en los switches sin enlaces redundantes.
 \end{itemize}
 
@@ -135,16 +135,16 @@ A continuación, se describe brevemente la estructura del documento:
     \item \textbf{Capítulo 2: Marco Teórico.} Se recogen los conceptos fundamentales necesarios para entender el proyecto, incluyendo una descripción de los protocolos implementados 
     en el proyecto, una breve introducción a las redes en hospitales y una breve descripción de los dispositivos IoMT.
     \item \textbf{Capítulo 3: Análisis.} Se detallan las necesidades funcionales, de seguridad, de conectividad y de gestión que debe cubrir la red hospitalaria, 
-    incluyendo los requisitos particulares para los dispositivos \acs{IoMT}.
+    incluyendo los requisitos particulares para los dispositivos IoMT.
     \item \textbf{Capítulo 4: Metodología de Trabajo.} Se expone el enfoque metodológico adoptado, basado en un desarrollo secuencial por fases siguiendo un modelo en cascada, 
     se describe la planificación del proyecto y las herramientas utilizadas.
-    \item \textbf{Capítulo 5: Diseño de la Red.} Se presenta la topología física y lógica de la red hospitalaria, el direccionamiento \acs{IP}, la segmentación mediante \acs{VLAN}s, las 
-    políticas de seguridad, la estructura de la subred específica para \acs{IoMT} y la descripción de la configuración de los protocolos de red.
+    \item \textbf{Capítulo 5: Diseño de la Red.} Se presenta la topología física y lógica de la red hospitalaria, el direccionamiento IP, la segmentación mediante VLANs, las 
+    políticas de seguridad, la estructura de la subred específica para IoMT y la descripción de la configuración de los protocolos de red.
     \item \textbf{Capítulo 6: Implementación.} Se detalla la configuración de los dispositivos de red en Cisco Packet Tracer e implementación de los protocolos de red.
     \item \textbf{Capítulo 7: Pruebas y Validación.} Se describen las pruebas de conectividad, seguridad y funcionamiento realizadas sobre la red simulada y se presentan los 
     resultados obtenidos.
     \item \textbf{Capítulo 8: Conclusión.} Se resumen los logros alcanzados y se proponen posibles mejoras y ampliaciones del 
     proyecto para su aplicación en un entorno real.
     \item \textbf{Anexos.} Se incluyen las configuraciones completas de los dispositivos de red, diagramas adicionales y figuras complementarias.
-    \item \textbf{Bibliografía.} Se recogen todas las fuentes de información utilizadas para la realización del proyecto, siguiendo el formato de citación \acs{IEEE}.
+    \item \textbf{Bibliografía.} Se recogen todas las fuentes de información utilizadas para la realización del proyecto, siguiendo el formato de citación \ac{IEEE}.
 \end{itemize}

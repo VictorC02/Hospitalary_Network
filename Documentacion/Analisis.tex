@@ -13,10 +13,10 @@ los interesados son los siguientes:
     \item \textbf{Personal administrativo:} Encargados de la gestión de citas, facturación, expedientes, inventario y coordinación interna del hospital. Aunque sus tareas 
     no están directamente relacionadas con la atención clínica, requieren acceso constante a sistemas de información conectados a la red. Su trabajo depende de la fiabilidad 
     de los servicios internos como bases de datos y aplicaciones de gestión.
-    \item \textbf{Departamento de \acs{IT}:} Responsables del mantenimiento, configuración y supervisión de la infraestructura de red. Este grupo necesita una red segura, escalable 
+    \item \textbf{Departamento de IT:} Responsables del mantenimiento, configuración y supervisión de la infraestructura de red. Este grupo necesita una red segura, escalable 
     y fácilmente monitorizable, así como herramientas para la detección de fallos, gestión de dispositivos IoMT y control de accesos.
     \item \textbf{Dirección del hospital:} Interesada en que la red contribuya a mejorar la eficiencia operativa del centro, optimice los recursos y garantice el cumplimiento 
-    de la legislación vigente, especialmente en lo relativo a la protección de datos (\acs{LOPDGDD} y \acs{RGPD}). También se preocupan por el coste y la sostenibilidad del sistema a 
+    de la legislación vigente, especialmente en lo relativo a la protección de datos (\ac{LOPDGDD} y \ac{RGPD}). También se preocupan por el coste y la sostenibilidad del sistema a 
     largo plazo.
     \item \textbf{Pacientes:} Interesados en que la red de invitados funcione correctamente y no tenga fallos de seguridad. Su experiencia asistencial mejora cuando los 
     procesos internos son ágiles, seguros y eficientes. La red hospitalaria debe garantizar que su información médica esté protegida, que los dispositivos de monitorización 
@@ -36,7 +36,7 @@ dispositivos conectados.
     \item Cada hospital debe estar dividido en VLANs por departamentos, asegurando la separación lógica de las áreas médicas, administrativas, de investigación y de enfermería.
     \item La red debe permitir la asignación dinámica de direcciones IP mediante servidores DHCP en cada subred.
     \item Debe garantizar la resolución de nombres internos mediante DNS.
-    \item Los dispositivos autorizados (PCs del departamento de IT) deben poder acceder a servidores de datos y dispositivos médicos críticos entre hospitales.
+    \item Los dispositivos autorizados (\ac{PC}s del departamento de IT) deben poder acceder a servidores de datos y dispositivos médicos críticos entre hospitales.
     \item Los dispositivos médicos IoMT deben disponer de una subred propia con dos servidores DHCP, uno de ellos de respaldo.
     \item Deben implementarse servicios de NAT para acceso a Internet desde las subredes del hospital.
     \item Se debe permitir gestión remota segura de los dispositivos de red mediante SSH.
@@ -75,33 +75,29 @@ Establecen las condiciones que debe cumplir la red para proteger su infraestruct
         \item Bloquear el tráfico desde la red de invitados hacia la red interna y la red de dispositivos IoMT.
         \item Restringir el acceso a la base de datos de cada hospital, permitiendo únicamente a un PC autorizado del departamento de IT de cada hospital acceder a ella.
         \item Restringir el acceso a los dispositivos IoMT según su clasificación y función, limitando la conectividad entre ellos.
-        \item Permitir el acceso a los dispositivos de la red interna únicamente a los dispositivos autorizados de las áreas de servicios quirúrgicos, médicos, centrales y UCI.
+        \item Permitir el acceso a los dispositivos de la red interna únicamente a los dispositivos autorizados de las áreas de servicios quirúrgicos, médicos, centrales y \ac{UCI}.
         \item Solo permitir el tráfico desde Internet hasta el servidor web.
     \end{itemize}
     \item La gestión de dispositivos de red debe realizarse mediante conexiones seguras (SSH).
     \item Todos los dispositivos de red deben contar con una configuración de autenticación, con contraseñas seguras, para evitar accesos no autorizados.
     \item La interconexión entre hospitales debe realizarse a través de enlaces seguros, utilizando VPNs o túneles cifrados para proteger la información transmitida.
 \end{itemize}
-
-Para establecer los requisitos de seguridad específicos para los dispositivos IoMT, se deben considerar las sigueintes clasificaciones de dispositivos:
+Para establecer los requisitos de seguridad específicos para los dispositivos IoMT, se deben considerar las siguientes clasificaciones de dispositivos:
 \begin{itemize}
     \item \textbf{Dispositivos IoMT Comunes (Tipo 1):} Son aquellos dispositivos comunes para la atención médica que pueden ser utilizados por el personal 
-    médico. Estos dispositivos pueden incluir sistemas de monitoreo remoto de pacientes, sensores de localización, dispositivos implantables, etc.
-    \item \textbf{Dispositivos IoMT Importantes UCI (Tipo 2):} Son aquellos dispositivos que no son críticos dentro de la UCI, es decir, que su función princiapl no es vital de forma 
-    inmediata. Estos dispositivos inluyen bobmas de vacío para heridas, lámparas de fototerapia, dispositivos de rehabilitación, etc \cite{IoMT-UCI}.
-    \item \textbf{Dispositivos IoMT Críticos UCI (Tipo 3):} Son aquellos dispositivos que son críticos dentro de la UCI, es decir, son aquellos que permiten el monitoreo y soporte
-    vital de pacietnes en estado grave, donde la vigilancia constante y la intervención inmediata pueden marcar la diferencia entre la vida y la muerte, y que por tanto necesitan medidas
+    médico. Estos dispositivos pueden incluir sistemas de monitorización remota de pacientes, sensores de localización, dispositivos implantables, etc.
+    \item \textbf{Dispositivos IoMT Importantes UCI (Tipo 2):} Son aquellos dispositivos que no son críticos dentro de la UCI, es decir, que su función principal no es vital de forma 
+    inmediata. Estos dispositivos incluyen bombas de vacío para heridas, lámparas de fototerapia, dispositivos de rehabilitación, etc \cite{IoMT-UCI}.
+    \item \textbf{Dispositivos IoMT Críticos UCI (Tipo 3):} Son aquellos dispositivos que son críticos dentro de la UCI, es decir, son aquellos que permiten la monitorización y soporte
+    vital de pacientes en estado grave, donde la vigilancia constante y la intervención inmediata pueden marcar la diferencia entre la vida y la muerte, y que por tanto necesitan medidas
     de seguridad extras. Estos dispositivos incluyen monitores cardíacos y de signos vitales, ventiladores mecánicos, bombas de infusión, sistemas de hemodiálisis, etc\cite{IoMT-UCI}.
 \end{itemize}
 A continuación se detallan los requisitos de seguridad específicos para los dispositivos IoMT:
 \begin{itemize}
     \item Los dispositivos IoMT deben estar aislados en una subred propia para evitar interferencias con la red interna y de invitados.
-    \item Los dispositivos IoMT deben contar con un servidor propio de DHCP para asignación de direcciones IP, con un servidor de respaldo para garantizar la continuidad del servicio.
-    \item Los dispositivos IoMT Tipo 1 solo deben tener conectividad con los dispositivos de las areas médicas de servicios quirúrgicos, médicos y centrales, 
-    además de por los dispositivos del departamento de la UCI.
+    \item Los dispositivos IoMT deben contar con un servidor propio de DHCP para la asignación de direcciones IP y un servidor de respaldo para garantizar la continuidad del servicio.
+    \item Los dispositivos IoMT Tipo 1 solo deben tener conectividad con los dispositivos de las áreas médicas de servicios quirúrgicos, médicos y centrales, 
+    además de los dispositivos del departamento de la UCI.
     \item Los dispositivos IoMT Tipo 2 deben tener conectividad únicamente con los dispositivos del departamento de la UCI.
     \item Los dispositivos IoMT Tipo 3 solo pueden tener conectividad con un único dispositivo autorizado del departamento de la UCI.
 \end{itemize}
-
-
-

@@ -2,9 +2,9 @@
 
 \chapter{Diseño}\label{diseño}
 El correcto diseño de una infraestructura de red es un factor determinante para garantizar la eficiencia, la seguridad y la disponibilidad de los servicios en cualquier entorno,
- y resulta especialmente crítico en instalaciones hospitalarias, donde el funcionamiento continuo de los sistemas de información y de los dispositivos médicos conectados puede 
- tener un impacto directo en la seguridad y atención de los pacientes. Por ello, el diseño debe contemplar no solo la organización topológica de los dispositivos y enlaces, sino
-  también la segmentación lógica, las políticas de seguridad y la planificación de los servicios de red necesarios.
+y resulta especialmente crítico en instalaciones hospitalarias, donde el funcionamiento continuo de los sistemas de información y de los dispositivos médicos conectados puede 
+tener un impacto directo en la seguridad y atención de los pacientes. Por ello, el diseño debe contemplar no solo la organización topológica de los dispositivos y enlaces, sino
+también la segmentación lógica, las políticas de seguridad y la planificación de los servicios de red necesarios.
 \\ \\
 En este capítulo se presenta el diseño detallado de la infraestructura de red hospitalaria propuesta, partiendo de los requisitos funcionales, de seguridad y de conectividad 
 definidos previamente. El diseño abarca dos niveles: por un lado, la red de interconexión entre los cuatro hospitales simulados, y por otro, el diseño específico y detallado 
@@ -12,7 +12,7 @@ de la red de uno de los hospitales, empleando técnicas de segmentación mediant
 \\ \\
 Asimismo, se describen las decisiones adoptadas respecto a la topología física y lógica, la planificación del direccionamiento IP, la definición de las VLANs, la organización 
 de los servicios de red, las políticas de seguridad implementadas y la configuración de mecanismos de redundancia y tolerancia a fallos. Todos estos elementos se han planificado
- en base a los criterios de diseño establecidos en capítulos anteriores y conforme a las buenas prácticas recomendadas para entornos sanitarios.
+en base a los criterios de diseño establecidos en capítulos anteriores y conforme a las buenas prácticas recomendadas para entornos sanitarios.
 \\ \\
 Este capítulo servirá como base para la posterior implementación y simulación de la red en Cisco Packet Tracer, así como para la ejecución de pruebas de conectividad y 
 seguridad orientadas a validar su funcionamiento.
@@ -37,7 +37,7 @@ y los dispositivos seleccionados para cumplir con los requisitos de conectividad
 La topología física representa la disposición y conexión física de routers, switches, servidores, dispositivos IoMT y departamentos.
 \subsubsection{Routers}
 En este diseño, como se muestra en la Figura \ref{fig:Routers}, se han implementado tres routers principales, los cuales están configurados para proporcionar 
-redundancia y tolerancia a fallos mediante HSRP (Hot Standby Router Protocol). Estos routers se conectan con:
+redundancia y tolerancia a fallos mediante Hot Standby Router Protocol (HSRP). Estos routers se conectan con:
 
 \begin{itemize}
     \item Red de Invitados.
@@ -54,14 +54,13 @@ redundancia y tolerancia a fallos mediante HSRP (Hot Standby Router Protocol). E
     \label{fig:Routers} 
 \end{figure}
 
-Además, estos routers están conectados a dos routers más, que simularían la conexión a Internet (ISP1 y ISP2).
+Además, estos routers están conectados a dos routers más, que simularían la conexión a Internet (\ac{ISP} 1 y 2).
 
 \subsubsection{Red de Invitados}
 La red de invitados está diseñada para proporcionar acceso a Internet a los dispositivos de invitados, garantizando que no interfieran con la red interna del hospital. Esta red 
-cuenta con dos switches L2 que conectan con dos puntos de acceso inalámbrico (APs) que proporcionan conectividad a los dispositivos móviles de los invitados. La interconexión entre 
+cuenta con dos switches L2 que conectan con dos puntos de acceso inalámbrico \ac{AP} que proporcionan conectividad a los dispositivos móviles de los invitados. La interconexión entre 
 el router y la red de invitados se realiza a través de un switch L3, que permite la segmentación y el control del tráfico de red. La Figura \ref{fig:RedInvitados} muestra la topología 
 física de la red de invitados.
-
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{Imágenes/RedInvitados.png}
@@ -84,12 +83,12 @@ internos. La Figura \ref{fig:DMZInvitados} muestra la topología física de la D
     \label{fig:DMZInvitados}
 \end{figure}
 
-Como se ha podido ver en la Figura \ref{fig:DMZInvitados}, también se encuentra en esta DMZ el servidor web del hospital, de esta forma los dispsoitivos de Internet que quieuran acceder
+Como se ha podido ver en la Figura \ref{fig:DMZInvitados}, también se encuentra en esta DMZ el servidor web del hospital, de esta forma los dispositivos de Internet que quieran acceder
 a la web del hospital lo harán a través de esta DMZ evitando así que puedan conocer o acceder a la DMZ interna, añadiendo de esta forma una capa extra de seguridad.
 
 \subsubsection{DMZ IoMT}
-La DMZ IoMt tiene como finalidad dar direcciones IP dinámicas a los dispositivos IoMT de la red, permitiendo que estos dispositivos puedan tener conectividad con otros dispsoitivos de la red, sin 
-que estos servidores DHCP puedan ser detectados o acceddidos por dispositivos externos. Esta DMZ está conectada a un switch L2 que conecta con los routers, permitiendo la segmentación del tráfico 
+La DMZ IoMT tiene como finalidad dar direcciones IP dinámicas a los dispositivos IoMT de la red, permitiendo que estos dispositivos puedan tener conectividad con otros dispositivos de la red, sin 
+que estos servidores DHCP puedan ser detectados o accedidos por dispositivos externos. Esta DMZ está conectada a un switch L2 que conecta con los routers, permitiendo la segmentación del tráfico 
 y el control de acceso a los recursos internos. La Figura \ref{fig:DMZIOMT} muestra la topología física de la DMZ IoMT.
 
 \begin{figure}[H]
@@ -129,7 +128,7 @@ Estos switches core están conectados en forma de malla, permitiendo la redundan
 \end{figure}
 
 Estos switches core están conectados en forma de malla a seis switches de distribución, uno por cada área del hospital (Administración, Servicios Quirúrgicos, Servicios Médicos, Servicios Centrales, Enfermería y Apoyo), 
-permitiendo la segmentación del tráfico y el control de acceso a los recursos internos. Además, cada switch de distribución esta conectado a otro dos switches de distribución, 
+permitiendo la segmentación del tráfico y el control de acceso a los recursos internos. Además, cada switch de distribución está conectado a otros dos switches de distribución, 
 lo que permite implementar redundancia y tolerancia a fallos. La Figura \ref{fig:SwitchesDistribucion} muestra la topología física de la interconexión de los switches de distribución.
 
 \begin{figure}[H]
@@ -149,13 +148,13 @@ lo que permite que si uno de los enlaces falla, el otro enlace pueda seguir prop
     \label{fig:SwitchesAcceso}
 \end{figure}
 
-Como se puede ver en la Figura \ref{fig:SwitchesAcceso}, cada departamento esta formado por un PC de escritorio, una impresora y un punto de acceso que da conectividad inalámbrica a un portátil y un smartphone. Esto es así 
-a modo de ejemplo, para que se vea que es posible conectar varios dispositivos diferentes y con diferentes conexiones, por supuesto cada departamento es completamente escalable ya que se pueden añadir tantos dispositivos como se necesiten, teneiendo en cuenta que el límite de direcciones IP asignables son 56.
+Como se puede ver en la Figura \ref{fig:SwitchesAcceso}, cada departamento está formado por un PC de escritorio, una impresora y un punto de acceso que da conectividad inalámbrica a un portátil y un smartphone. Esto es así 
+a modo de ejemplo, para que se vea que es posible conectar varios dispositivos diferentes y con diferentes conexiones, por supuesto cada departamento es completamente escalable ya que se pueden añadir tantos dispositivos como se necesiten, teniendo en cuenta que el límite de direcciones IP asignables son 56.
 
 \subsubsection{Red IoMT}
-La red IoMT esta conectada directamente a los switches core, de esta forma se consigue que no saturen a los routers con su constante tráfico. En la Figura \ref{fig:IoMT} se muestra la topología física de la red IoMT.
-Se puede apreciar claramente que esta dividida en cuatro capas, una por cada planta del hospital, de esta forma podemos distinguir los tipos de dispositivos IoMT según la planta en la que se encuentren. 
-Cada capa está formada por un switch L3 que conecta con tres puntos de acceso, lo que permite que haya cobertura inalámbrica a lo largo de cada planta, y además permite que si los dispositivos IoMT se desplazan, puedan coenctarse a otro punto de acceso bajo el mismo SSID.
+La red IoMT está conectada directamente a los switches core, de esta forma se consigue que no saturen a los routers con su constante tráfico. En la Figura \ref{fig:IoMT} se muestra la topología física de la red IoMT.
+Se puede apreciar claramente que está dividida en cuatro capas, una por cada planta del hospital, de esta forma podemos distinguir los tipos de dispositivos IoMT según la planta en la que se encuentren. 
+Cada capa está formada por un switch L3 que conecta con tres puntos de acceso, lo que permite que haya cobertura inalámbrica a lo largo de cada planta, y además permite que si los dispositivos IoMT se desplazan, puedan conectarse a otro punto de acceso bajo el mismo SSID.
  
 \begin{figure}[H]
     \centering
@@ -165,9 +164,9 @@ Cada capa está formada por un switch L3 que conecta con tres puntos de acceso, 
 \end{figure}
 
 \subsubsection{Disposición Física}
-\label{subsubsec:dispsoicion}
+\label{subsubsec:disposicion}
 La Figura \ref{fig:disposicion} muestra una imagen en tres dimensiones de la disposición de los dispositivos de red y diferentes departamentos del hospital, de esta forma se puede apreciar 
-de forma mas clara la disposición física de los diferentes elementos de la red. La ubicación de algunos departamentos se ha extraído de un vídeo de Youtube publicado por el Govern de les Illes Balears \cite{SonEspases}.
+de forma más clara la disposición física de los diferentes elementos de la red. La ubicación de algunos departamentos se ha extraído de un vídeo de Youtube publicado por el Govern de les Illes Balears \cite{SonEspases}.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{Imágenes/Plano Son Espases.png}
@@ -209,7 +208,7 @@ se muestra la topología física de los routers de interconexión entre hospital
 \end{figure}
 
 Como se puede apreciar en la Figura \ref{fig:InterconexionHospitales}, cada hospital tiene un único router conectado a otro router, simulando así la conexión a Internet, excepto en el caso del Hospital de Son Espases, que 
-tiene dos ISPs distintos, ya que al ser el hospital principal, se ha decidido que tenga dos conexiones a Internet para garantizar la redundancia y la tolerancia a fallos.
+tiene dos ISPs distintos, ya que en los requisitos del sistema se definió así (\ref{análisis}).
 \\ \\
 Además, cada router de cada hospital está conectado a dos switches core (L3), que son los que dan conectividad con el router a todos los dispositivos de la red interna, en la Figura 
 \ref{fig:InterconexionRouHospitales} se muestra la topología física de la interconexión entre el router y los switches core. 
@@ -296,8 +295,8 @@ políticas de seguridad específicas entre diferentes segmentos de la red.
 Cada hospital se ha organizado internamente mediante VLANs asignadas a los diferentes departamentos y servicios. En el caso de la red de Son Espases, se han definido y configurado 
 las siguientes VLANs: 
 \begin{itemize}
-    \item \textbf{VLAN 10:} RRHH (Recursos Humanos)
-    \item \textbf{VLAN 20:} FyC (Finanzas y Contabilidad)
+    \item \textbf{VLAN 10:} Recursos Humanos (RRHH)
+    \item \textbf{VLAN 20:} Finanzas y Contabilidad (FyC)
     \item \textbf{VLAN 30:} Oftalmologia
     \item \textbf{VLAN 40:} Urologia 
     \item \textbf{VLAN 50:} Cardiologia 
@@ -305,7 +304,7 @@ las siguientes VLANs:
     \item \textbf{VLAN 70:} Radiologia 
     \item \textbf{VLAN 80:} Inmunologia 
     \item \textbf{VLAN 90:} Admision
-    \item \textbf{VLAN 100:} UCI (Unidad de Cuidados Intensivos)
+    \item \textbf{VLAN 100:} Unidad de Cuidados Intensivos (UCI)
     \item \textbf{VLAN 110:} Atencion paciente 
     \item \textbf{VLAN 120:} Asesoria Jurídica
     \item \textbf{VLAN 150:} DMZ Interno
@@ -327,76 +326,76 @@ las siguientes VLANs:
 
 En el caso de la red de interconexión entre hospitales, se han definido las siguientes VLANs para el hospital de Son Espases:
 \begin{itemize}
-    \item \textbf{VLAN 10:} RRHH (Recursos Humanos)
-    \item \textbf{VLAN 20:} FyC (Finanzas y Contabilidad)
-    \item \textbf{VLAN 30:} IT (Tecnologías de la Información)
-    \item \textbf{VLAN 40:} SG (Servicios Generales)
-    \item \textbf{VLAN 50:} SQ (Servicios Quirúrgicos)
-    \item \textbf{VLAN 60:} SM (Servicios Médicos)
-    \item \textbf{VLAN 70:} SC (Servicios Centrales)
-    \item \textbf{VLAN 80:} UA (Unidad de Admisión)
-    \item \textbf{VLAN 90:} UCI (Unidad de Cuidados Intensivos)
-    \item \textbf{VLAN 100:} SU (Servicio de Urgencias)
-    \item \textbf{VLAN 110:} CE (Consultas Externas)
-    \item \textbf{VLAN 120:} AP (Atención al Paciente)
-    \item \textbf{VLAN 130:} AJ (Asesoria Jurídica)
-    \item \textbf{VLAN 140:} DeI (Docencia e Investigación)
+    \item \textbf{VLAN 10:} Recursos Humanos (RRHH)
+    \item \textbf{VLAN 20:} Finanzas y Contabilidad (FyC)
+    \item \textbf{VLAN 30:} Tecnologías de la Información (IT)
+    \item \textbf{VLAN 40:} Servicios Generales (SG)
+    \item \textbf{VLAN 50:} Servicios Quirúrgicos (SQ)
+    \item \textbf{VLAN 60:} Servicios Médicos (SM)
+    \item \textbf{VLAN 70:} Servicios Centrales (SC)
+    \item \textbf{VLAN 80:} Unidad de Admisión (UA)
+    \item \textbf{VLAN 90:} Unidad de Cuidados Intensivos (UCI)
+    \item \textbf{VLAN 100:} Servicio de Urgencias (SU)
+    \item \textbf{VLAN 110:} Consultas Externas (CE)
+    \item \textbf{VLAN 120:} Atención al Paciente (AP)
+    \item \textbf{VLAN 130:} Asesoria Jurídica (AJ)
+    \item \textbf{VLAN 140:} Docencia e Investigación (DeI)
     \item \textbf{VLAN 180:} DMZ Son Espases
     \item \textbf{VLAN 200:} Interconexión Switches Distribución - Switches Core
 \end{itemize}
 
 Para la red del Hospital de Manacor, se han definido las siguientes VLANs:
 \begin{itemize}
-    \item \textbf{VLAN 210:} RRHH (Recursos Humanos)
-    \item \textbf{VLAN 220:} FyC (Finanzas y Contabilidad)
-    \item \textbf{VLAN 230:} IT (Tecnologías de la Información)
-    \item \textbf{VLAN 240:} SG (Servicios Generales)
-    \item \textbf{VLAN 250:} SQ (Servicios Quirúrgicos)
-    \item \textbf{VLAN 260:} SM (Servicios Médicos)
-    \item \textbf{VLAN 270:} SC (Servicios Centrales)
-    \item \textbf{VLAN 280:} UA (Unidad de Admisión)
-    \item \textbf{VLAN 290:} SU (Servicio de Urgencias)
-    \item \textbf{VLAN 300:} CE (Consultas Externas)
-    \item \textbf{VLAN 310:} AP (Atención al Paciente)
-    \item \textbf{VLAN 320:} AJ (Asesoria Jurídica)
+    \item \textbf{VLAN 210:} Recursos Humanos (RRHH)
+    \item \textbf{VLAN 220:} Finanzas y Contabilidad (FyC)
+    \item \textbf{VLAN 230:} Tecnologías de la Información (IT)
+    \item \textbf{VLAN 240:} Servicios Generales (SG)
+    \item \textbf{VLAN 250:} Servicios Quirúrgicos (SQ)
+    \item \textbf{VLAN 260:} Servicios Médicos (SM)
+    \item \textbf{VLAN 270:} Servicios Centrales (SC)
+    \item \textbf{VLAN 280:} Unidad de Admisión (UA)
+    \item \textbf{VLAN 290:} Servicio de Urgencias (SU)
+    \item \textbf{VLAN 300:} Consultas Externas (CE)
+    \item \textbf{VLAN 310:} Atención al Paciente (AP)
+    \item \textbf{VLAN 320:} Asesoria Jurídica (AJ)
     \item \textbf{VLAN 380:} Interconexión Switches Distribución - Switches Core
     \item \textbf{VLAN 400:} DMZ Manacor
 \end{itemize}
 
 Para la red del Hospital Comarcal de Inca, se han definido las siguientes VLANs:
 \begin{itemize}
-    \item \textbf{VLAN 410:} RRHH (Recursos Humanos)
-    \item \textbf{VLAN 420:} FyC (Finanzas y Contabilidad)
-    \item \textbf{VLAN 430:} IT (Tecnologías de la Información)
-    \item \textbf{VLAN 440:} SG (Servicios Generales)
-    \item \textbf{VLAN 450:} SQ (Servicios Quirúrgicos)
-    \item \textbf{VLAN 460:} SM (Servicios Médicos)
-    \item \textbf{VLAN 470:} SC (Servicios Centrales)
-    \item \textbf{VLAN 480:} UA (Unidad de Admisión)
-    \item \textbf{VLAN 490:} SU (Servicio de Urgencias)
-    \item \textbf{VLAN 500:} CE (Consultas Externas)
+    \item \textbf{VLAN 410:} Recursos Humanos (RRHH)
+    \item \textbf{VLAN 420:} Finanzas y Contabilidad (FyC)
+    \item \textbf{VLAN 430:} Tecnologías de la Información (IT)
+    \item \textbf{VLAN 440:} Servicios Generales (SG)
+    \item \textbf{VLAN 450:} Servicios Quirúrgicos (SQ)
+    \item \textbf{VLAN 460:} Servicios Médicos (SM)
+    \item \textbf{VLAN 470:} Servicios Centrales (SC)
+    \item \textbf{VLAN 480:} Unidad de Admisión (UA)
+    \item \textbf{VLAN 490:} Servicio de Urgencias (SU)
+    \item \textbf{VLAN 500:} Consultas Externas (CE)
     \item \textbf{VLAN 510:} UCI (Unidad de Cuidados Intensivos)
-    \item \textbf{VLAN 520:} AP (Atención al Paciente)
-    \item \textbf{VLAN 530:} AJ (Asesoria Jurídica)
+    \item \textbf{VLAN 520:} Atención al Paciente (AP)
+    \item \textbf{VLAN 530:} Asesoria Jurídica (AJ)
     \item \textbf{VLAN 580:} Interconexión Switches Distribución - Switches Core
     \item \textbf{VLAN 600:} DMZ Inca
 \end{itemize}
 
 Para la red del Hospital Son Llàtzer, se han definido las siguientes VLANs:
 \begin{itemize}
-    \item \textbf{VLAN 610:} RRHH (Recursos Humanos)
-    \item \textbf{VLAN 620:} FyC (Finanzas y Contabilidad)
-    \item \textbf{VLAN 630:} IT (Tecnologías de la Información)
-    \item \textbf{VLAN 640:} SG (Servicios Generales)
-    \item \textbf{VLAN 650:} SQ (Servicios Quirúrgicos)
-    \item \textbf{VLAN 660:} SM (Servicios Médicos)
-    \item \textbf{VLAN 670:} SC (Servicios Centrales)
-    \item \textbf{VLAN 680:} UA (Unidad de Admisión)
-    \item \textbf{VLAN 690:} SU (Servicio de Urgencias)
-    \item \textbf{VLAN 700:} CE (Consultas Externas)
+    \item \textbf{VLAN 610:} Recursos Humanos (RRHH)
+    \item \textbf{VLAN 620:} Finanzas y Contabilidad (FyC)
+    \item \textbf{VLAN 630:} Tecnologías de la Información (IT)
+    \item \textbf{VLAN 640:} Servicios Generales (SG)
+    \item \textbf{VLAN 650:} Servicios Quirúrgicos (SQ)
+    \item \textbf{VLAN 660:} Servicios Médicos (SM)
+    \item \textbf{VLAN 670:} Servicios Centrales (SC)
+    \item \textbf{VLAN 680:} Unidad de Admisión (UA)
+    \item \textbf{VLAN 690:} Servicio de Urgencias (SU)
+    \item \textbf{VLAN 700:} Consultas Externas (CE)
     \item \textbf{VLAN 710:} UCI (Unidad de Cuidados Intensivos)
-    \item \textbf{VLAN 720:} AP (Atención al Paciente)
-    \item \textbf{VLAN 730:} AJ (Asesoria Jurídica)
+    \item \textbf{VLAN 720:} Atención al Paciente (AP)
+    \item \textbf{VLAN 730:} Asesoria Jurídica (AJ)
     \item \textbf{VLAN 740:} DeI (Docencia e Investigación)
     \item \textbf{VLAN 780:} Interconexión Switches Distribución - Switches Core
     \item \textbf{VLAN 800:} DMZ Son Llàtzer
@@ -434,7 +433,7 @@ segmentación del tráfico, la implementación de políticas de seguridad y la g
 El esquema de direccionamiento se ha planificado atendiendo a los siguientes criterios:
 \begin{itemize}
     \item Separación de subredes por tipo de servicio: red de invitados, red IoMT y red interna hospitalaria.
-    \item Uso de rangos de direcciones IP privadas (192.168.0.0/16, 172.16.0.0/12 y 10.0.0.0/8), según las recomendaciones de la RFC 1918.
+    \item Uso de rangos de direcciones IP privadas (192.168.0.0/16, 172.16.0.0/12 y 10.0.0.0/8), según las recomendaciones de la \ac{RFC} 1918.
     \item Evitar solapamientos entre subredes y facilitar su integración en redes hospitalarias de mayor escala.
     \item Facilitar la implementación de ACLs y políticas de seguridad basadas en rangos de IP.
     \item Garantizar escalabilidad para añadir nuevos dispositivos, departamentos o servicios en el futuro.
@@ -830,7 +829,7 @@ Para garantizar el correcto funcionamiento, la conectividad eficiente y la segur
 de red y servicios esenciales. Estos protocolos permiten automatizar la asignación de direcciones, gestionar la conectividad entre dispositivos y hospitales, proteger las 
 comunicaciones y asegurar la alta disponibilidad en los puntos críticos de la red.
 
-\subsection{DHCP (Dynamic Host Configuration Protocol)}
+\subsection{Dynamic Host Configuration Protocol (DHCP)}
 El Dynamic Host Configuration Protocol (DHCP) se ha configurado para realizar la asignación automática de direcciones IP a los dispositivos finales conectados en cada subred y VLAN, según se detalla en la sección \ref{subsec:dhcp}.
 \\ \\
 En el caso de la red del Hospital Son Espases, cuenta con:
@@ -850,7 +849,7 @@ Mediante el uso de este servicio obtenemos las siguientes ventajas:
 En el caso de la red de interconexión entre hospitales, se cuenta con un servidor DHCP en la DMZ de cada hospital, que se encarga de asignar direcciones IP a cada dispositivo final del hospital. \\ \\
 Cabe recordar que en la herramienta Cisco Packet Tracer no se puede configurar la opción de DHCP failover, por eso el concepto de implementar dos servidores DHCP es teórico y no es demostrable en este proyecto.
 
-\subsection{NAT (Network Address Translation)}
+\subsection{Network Address Translation (NAT)}
 Para permitir la salida controlada a Internet desde las subredes autorizadas, se ha implementado Network Address Translation (NAT) en los routers de cada hospital, 
 según se detalla en la sección \ref{subsec:nat}. En ambos diseños, el NAT está configurado en los routers principales, permitiendo así que los dispositivos internos puedan acceder a Internet utilizando la misma IP pública. El tipo de 
 NAT configurado, en el caso de la comunicación desde dentro hacia fuera, es el PAT, lo que permite que múltiples dispositivos puedan utilizar la IP pública usando diferentes números de puerto para distinguir las conexiones. En el caso de las comunicaciones desde Internet hacia dentro (servidor web), se ha configurado un NAT estático, lo que permite que 
@@ -858,7 +857,7 @@ el router traduzca la dirección pública proveniente del ISP y permitir la cone
 \\ \\
 En este diseño, se ha optado por que las comunicaciones que vyan desde dentro hacia fuera vayan por el ISP 1 y las comunicaciones desde fuera hacia dentro vayan por el ISP 2, de esta forma 
 permitimos que las NATs estén bien configuradas y que no solapen las IPs públicas de las interfaces.
-\subsection{HSRP (Hot Standby Router Protocol)}
+\subsection{Hot Standby Router Protocol (HSRP)}
 Para garantizar la alta disponibilidad en los gateways de las redes internas y evitar puntos únicos de fallo, se ha configurado HSRP, para mas información sobre HSRP ir a la sección \ref{subsec:hsrp}. 
 Como se ha comentado en la sección \ref{sec:criterios}, la redundancia de routers o switches solo se ha configurado en la red del Hospital Son Espases. Concretamente, se ha configurado en los switches de distribución 
 que conectan con los switches de acceso, como se puede apreciar en la Figura \ref{fig:HSRPSW}.
@@ -880,7 +879,7 @@ se pueden apreciar los tres routers redundantes.
     \label{fig:HSRPRou}
 \end{figure}
 
-\subsection{OSPF (Open Shortest Path First)}
+\subsection{Open Shortest Path First (OSPF)}
 Como protocolo de enrutamiento dinámico se ha implementado OSPF, detallado en la sección \ref{subsec:ospf}, 
 tanto en la red del Hospital Son Espases como en la red de interconexión entre hospitales. 
 \\ \\
@@ -909,7 +908,7 @@ En la Figura \ref{fig:EtherChannel} se muestra una conexión redundante a nivel 
 \subsection{RSTP (Rapid Spanning-Tree Protocol)}
 
 
-\section{Seguridad de la Red (cambiar)}
+\section{Seguridad de la Red}
 El diseño de la infraestructura de red hospitalaria simulada ha priorizado desde el inicio la seguridad como pilar esencial, dada la sensibilidad de los datos clínicos que se 
 gestionan y la criticidad de los servicios asistenciales que dependen de ella. Además, la incorporación de dispositivos médicos conectados (IoMT) requieren unos controles de tráfico y 
 acceso mas robustos.
@@ -933,7 +932,7 @@ Las ACLs permiten tener un control del tráfico que pasa por ciertos tramos, es 
         \item Permitir paquetes DHCP y OSPF.
         \item Denegar cualquier otro tipo de tráfico.
     \end{itemize}
-    \item \textbf{Switch IoMT Planta 0,1 y 2:}
+    \item \textbf{Switch IoMT Planta 0, 1 y 2:}
     \begin{itemize}
         \item Permitir la conexión de los dispositivos IoMT de tipo 1 con dispositivos de las áreas de servicios quirúrgicos, médicos y centrales.
         \item Permitir paquetes DHCP y OSPF.
@@ -968,14 +967,14 @@ De esta forma conseguimos una gran capa de seguridad que nos garantiza la confid
 Este mecansimo de seguridad solo esta implementado en la red de interconexión entre hospitales, ya que la red del Hospital Son Espases no tiene conexiones entre routers de otros hospitales. 
 Además cabe recordar que la comunicación entre hospitales solo se puede realizar entre el dispositivo autorizado de un hospital con el servidor de archivos de otro hospital.
 
-\subsection{SSH}
+\subsection{Secure Shell (SSH)}
 Para la administración remota segura de los dispositivos de red (routers y switches), se ha habilitado SSH como protocolo seguro de gestión, en sustitución de protocolos inseguros como Telnet. 
 Esta configuración se ha implementado en todos los dispositivos de red (switches L2, switches L3 y routers). 
 
 \subsection{Configuración DMZ}\label{subsec:dmz}
 Para que la DMZ sea una zona segura para los servidores, se han implementado una serie de mecanismos de seguridad:
 \begin{itemize}
-    \item \textbf{"switchport port-security maximum 1":} Limita el número máximo de direcciones MAC permitidas en el puerto a 1.
+    \item \textbf{"switchport port-security maximum 1":} Limita el número máximo de direcciones \ac{MAC} permitidas en el puerto a 1.
     \item \textbf{"switchport port-security mac-address sticky":} Activa el aprendizaje automático de direcciones MAC en modo "sticky", estas direcciones se almacenan en la configuración de ejecución, permitiendo que el puerto solo acepte dispositivos previamente conectados sin necesidad de configurar manualmente cada MAC.
     \item \textbf{"switchport port-security violation shutdown":} Deshabilita el puerto automáticamente cuando se detecta una violación de seguridad (por ejemplo, la conexión de un dispositivo con una MAC diferente a la permitida).
 \end{itemize}

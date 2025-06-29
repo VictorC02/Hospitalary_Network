@@ -1,13 +1,14 @@
 %!TeX root=MemoriaTFG.tex
 
 \chapter{Implementación}\label{Implementación}
-Una vez definidos los diseño de las infraestructuras de redes hospitalaria, es necesario proceder a su implementación, configurando todos los dispositivos de red, servicios y políticas de seguridad conforme a la planificación establecida. Esta fase es clave para materializar las decisiones de diseño en un entorno funcional y operativo, permitiendo comprobar la viabilidad técnica de la solución propuesta y sentando las bases para su posterior validación.
+Una vez definidos los diseños de las infraestructuras de redes hospitalarias, es necesario proceder a su implementación, configurando todos los dispositivos de red, servicios y políticas de seguridad conforme a la planificación establecida. Esta fase es clave para materializar las decisiones de diseño en un entorno funcional y operativo, permitiendo comprobar la viabilidad técnica de la solución propuesta y sentando las bases para su posterior validación.
 \\ \\
-En este capítulo se describe el proceso de configuración y puesta en funcionamiento de la red simulada en Cisco Packet Tracer, abarcando la configuración básica de los dispsoitivos de red, las creaciones de las VLANs, implemnetación de mecansimos de redundancia, direccionamiento IP, mecanismos de seguridad y sservicios esenciales como DHCP o NAT.
+En este capítulo se describe el proceso de configuración y puesta en funcionamiento de la red simulada en Cisco Packet Tracer, abarcando la configuración básica de los dispositivos de red, la creación de las VLANs, implementación de mecanismos de redundancia, direccionamiento IP, mecanismos de seguridad y servicios esenciales como DHCP o NAT.
 \\ \\
 Durante la implementación se han seguido los criterios de diseño definidos en capítulos anteriores, adaptando cada configuración a las limitaciones y capacidades del entorno de simulación empleado.
 \\ \\
-Este capítulo detalla paso a paso el trabajo realizado en la implementación de las redes hospitalarias, siguiendo una estrucutura ordenada y temporal de las configuraciones realizadas.
+Este capítulo detalla paso a paso el trabajo realizado en la implementación de las redes hospitalarias, siguiendo una estructura ordenada y temporal de las configuraciones realizadas.
+
 \section{Configuración Básica de Dispositivos}
 En ambos diseños, cada dispositivo de red cuenta con una configuración básica, que incluye lo siguiente:
 \begin{itemize}
@@ -15,9 +16,9 @@ En ambos diseños, cada dispositivo de red cuenta con una configuración básica
     \item Configuración de la contraseña genérica "cisco" para poder acceder a la configuración de los dispositivos.
     \item Configuración de la contraseña genérica "cisco" para poder acceder a la línea de comandos de los dispositivos.
     \item Encriptar contraseñas.
-    \item Configuración de SSH para la gestión remota, usando encriptacion RSA de 1024 bits.
+    \item Configuración de SSH para la gestión remota, usando encriptación RSA de 1024 bits.
 \end{itemize}
-De esta forma se consigue que cada dispositivo de red cuente con varias capas básicas de seguridad, que evitan el acceso desautorizado a la línea de comandos. Además de contar con un servicio de gestión remota, utilizando un protocolo de red seguro como es SSH.
+De esta forma se consigue que cada dispositivo de red cuente con varias capas básicas de seguridad, que evitan el acceso no autorizado a la línea de comandos. Además, se cuenta con un servicio de gestión remota, utilizando un protocolo de red seguro como es SSH.
 \\ \\
 Para ver los comandos utilizados, ir al anexo \ref{anexo:confBas}.
 
@@ -43,9 +44,9 @@ la conexión con el otro switch core, se configura el puerto de forma que se tra
 Ver el anexo \ref{anexo:VLANSwCo}, para visualizar una plantilla de los comandos usados en esta configuración.
 
 \section{Implementación EtherChannel}
-En la red del Hospital Son Espases se configuró EtherChannel entre los switches de acceso y los de distribución para conseguir redundancia nivel de enlaces. para ello, se tuvieron 
-que configurar tanto el switch de acceso como el switch de distribución. La única diferencia entre la configuración entre los switches, es que en los switches de distribución hay que hacer el port-channel entre enlaces GigabitEthernet, mientras 
-que en los switches de acceso se hace en enlaces FastEthernet 
+En la red del Hospital Son Espases se configuró EtherChannel entre los switches de acceso y los de distribución para conseguir redundancia a nivel de enlaces. Para ello, se tuvieron 
+que configurar tanto el switch de acceso como el switch de distribución. La única diferencia entre la configuración entre los switches es que en los switches de distribución hay que hacer el port-channel entre enlaces GigabitEthernet, mientras 
+que en los switches de acceso se hace en enlaces FastEthernet.
 \\ \\
 Para ver los comandos utilizados para implementar EtherChannel, ver el anexo \ref{anexo:etherchannel}.
 
@@ -55,55 +56,60 @@ Para garantizar la seguridad en las DMZ, se han implementado algunas configuraci
 Para ver los comandos utilizados para implementar las medidas de seguridad en la DMZ, ver el anexo \ref{anexo:dmz}.
 
 \section{Implementación de Direccionamiento IP}
-Para que las redes puedan tener conectividad es necesaria la implementación del direccionamiento IP, en el caso de la red del Hospital Son Espases, se ha implementado HSRP, que permite obtener redundancia a nivel de hardware/dispositivo.
-Además, también se ha implementado un direccionamiento IP estático, en los elementos de la red que necesitasen este recurso , ver para mas detalles la sección \ref{sec:direccionamiento}.
+Para que las redes puedan tener conectividad es necesaria la implementación del direccionamiento IP. En el caso de la red del Hospital Son Espases, se ha implementado HSRP, que permite obtener redundancia a nivel de hardware/dispositivo.
+Además, también se ha implementado un direccionamiento IP estático en los elementos de la red que necesitasen este recurso. Para más detalles, ver la sección \ref{sec:direccionamiento}.
 \subsection{Implementación HSRP}
-La implementación de HSRP conlleva la asignación de una IP virtual, que será la accedida por los demás dispositivos, a su vez también hay que asignar una dirección IP a cada dispositivo que tenga configurado HSRP, cada uno con una prioridad diferente.
+La implementación de HSRP conlleva la asignación de una IP virtual, que será la accedida por los demás dispositivos; a su vez, también hay que asignar una dirección IP a cada dispositivo que tenga configurado HSRP, cada uno con una prioridad diferente.
 \\ \\
-La configuración de HSRP en routers y en switches L3 difiere un poco, ya que en los routers no se pueden definir VLANs, y por tanto no se puede trasnmitir la información de una VLAN en concreto por un enlace, es por eso que hay que crear una subinterfaz que permita la transmisión de paquetes provenientes de una VLAN.
+La configuración de HSRP en routers y en switches L3 difiere un poco, ya que en los routers no se pueden definir VLANs y, por tanto, no se puede transmitir la información de una VLAN en concreto por un enlace. Es por eso que hay que crear una subinterfaz que permita la transmisión de paquetes provenientes de una VLAN.
 \\ \\
 Para ver los comandos utilizados para configurar HSRP en routers, ver el anexo \ref{anexo:hsrpRou}.
 \\ \\
 Para ver los comandos utilizados para configurar HSRP en switches L3, ver el anexo \ref{anexo:hsrpL3}.
 \subsection{Direccionamiento Estático}
-En ambas redes hospitalarias es necesario el direccionamiento IP estático, para mas detalles ver la sección \ref{subsec:estaticas}. Para ver los comandos utilizados para configurar el direccionamiento IP estático, ver el anexo \ref{anexo:estatico}.
+En ambas redes hospitalarias es necesario el direccionamiento IP estático. Para más detalles, ver la sección \ref{subsec:estaticas}. Para ver los comandos utilizados para configurar el direccionamiento IP estático, ver el anexo \ref{anexo:estatico}.
 \subsection{DHCP Relay}
-DHCP Relay es una función que permite que los clientes DHCP en una red o subred reciban direcciones IP y otros parámetros de configuración de un servidor DHCP ubicado en una red difrente \cite{cisco_dhcp_relay}. En ambas redes, el servidor DHCP esta ubicado en otra VLAN o subred, es por eso que sabiendo la IP estática del servidor DHCP, hay que definirla en las interfaces VLAN de los switches de distribución. 
+DHCP Relay es una función que permite que los clientes DHCP en una red o subred reciban direcciones IP y otros parámetros de configuración de un servidor DHCP ubicado en una red diferente \cite{cisco_dhcp_relay}. En ambas redes, el servidor DHCP está ubicado en otra VLAN o subred, por lo que, sabiendo la IP estática del servidor DHCP, hay que definirla en las interfaces VLAN de los switches de distribución. 
 \\ \\
 Para ver el comando utilizado para configurar el DHCP Relay, ver el anexo \ref{anexo:relay}.
+
 \section{Implementación OSPF}
-Para la implementación de OSPF en las redes, simplemente hay que definir a que redes está cada dispositivo conectado, de esta forma, se van comunicando las redes a las que está conectado ccada dispsoitivo de red, permitiendo que otros dispositivos que no están conectados directamente sepan a que redes estan conectados estos. Para mas detalles, ver la sección \ref{subsec:ospf}.
+Para la implementación de OSPF en las redes, simplemente hay que definir a qué redes está cada dispositivo conectado. De esta forma, se van comunicando las redes a las que está conectado cada dispositivo de red, permitiendo que otros dispositivos que no están conectados directamente sepan a qué redes están conectados estos. Para más detalles, ver la sección \ref{subsec:ospf}.
 \\ \\
 Para ver una plantilla de los comandos utilizados para configurar OSPF, ver el anexo \ref{anexo:ospf}.
+
 \section{Implementación RSTP}
-Rapid Spanning Tree Protocol (RSTP) está diseñado para proporcionar una convergencia mucho más rápida en redes Ethernet con topologías redundantes \cite{cisco_rstp_8021w}. En el caso de la red del Hospital Son Espases, esta configuración es muy útil, ya que mejora consistentemente la eficiencia y rendimiento de la red.
+Rapid Spanning Tree Protocol (RSTP) está diseñado para proporcionar una convergencia mucho más rápida en redes Ethernet con topologías redundantes \cite{cisco_rstp_8021w}. En el caso de la red del Hospital Son Espases, esta configuración es muy útil, ya que mejora consistentemente la eficiencia y el rendimiento de la red.
 \\ \\
 Para ver los comandos utilizados para configurar RSTP en los switches L3, ver el anexo \ref{anexo:rstp}.
+
 \section{Implementación NAT}
 Para implementar el servicio NAT en los routers de los hospitales, hay que hacer los siguientes pasos:
 \begin{itemize}
-    \item Definir como nat outside las interfaces de los routers que dirijen tráfico hacia fuera de la red.
-    \item Definir como nat inside las interfaces de los routers que dirijen tráfico hacía el interior de la red.
-    \item Crear listas de control de acceso que permitan saber que subredes se van a beneficiar de este servicio.
-    \item Crear las NATs asignandoles las listas de control de acceso a las interfaces pertinentes.
+    \item Definir como nat outside las interfaces de los routers que dirigen tráfico hacia fuera de la red.
+    \item Definir como nat inside las interfaces de los routers que dirigen tráfico hacia el interior de la red.
+    \item Crear listas de control de acceso que permitan saber qué subredes se van a beneficiar de este servicio.
+    \item Crear las NAT asignándoles las listas de control de acceso a las interfaces pertinentes.
 \end{itemize}
-Para ver las NAT configuradas en los routers principales, siguiendo el diseño propuesto en la sección \ref{subsec:nat}, ver el anexo \ref{anexo:nat1}, para la configuración para el NAT en 
-la interfaz que conecta con el ISP 1 y ver el anexo \ref{anexo:nat2}, para la configuración para el NAT en la interfaz que conecta con el ISP 2.
+Para ver las NAT configuradas en los routers principales, siguiendo el diseño propuesto en la sección \ref{subsec:nat}, ver el anexo \ref{anexo:nat1} para la configuración para el NAT en 
+la interfaz que conecta con el ISP 1 y ver el anexo \ref{anexo:nat2} para la configuración para el NAT en la interfaz que conecta con el ISP 2.
+
 \section{Implementación DHCP Snooping}
-DHCP Snooping es una función de seguridad de Capa 2 en switches que protege la red contra diversos ataques, ver la seción \ref{subsec:dhcpsnooping} para mas detalles. Para implementar la configuración de seguridad de DHCP Snooping, hay que seguir los siguientes pasos:
+DHCP Snooping es una función de seguridad de Capa 2 en switches que protege la red contra diversos ataques. Ver la sección \ref{subsec:dhcpsnooping} para más detalles. Para implementar la configuración de seguridad de DHCP Snooping, hay que seguir los siguientes pasos:
 \begin{itemize}
-    \item Activar dhcp snooping en el dispositivo.
-    \item Activar dhcp snooping en la vlan del departamento del switch de acceso correspondiente.
-    \item Limitar la cantidad de paquetes dhcp en todas las interfaces.
+    \item Activar DHCP snooping en el dispositivo.
+    \item Activar DHCP snooping en la VLAN del departamento del switch de acceso correspondiente.
+    \item Limitar la cantidad de paquetes DHCP en todas las interfaces.
     \item Asignar la etiqueta trust a las interfaces por las que deberían venir los paquetes DHCP del servidor autorizado.
 \end{itemize}
 Para ver una plantilla de los comandos utilizados para configurar DHCP Snooping en los switches de acceso, ver el anexo \ref{anexo:snooping}.
+
 \section{Implementación ACLs}
 Teniendo en cuenta las ACLs que se deben implementar, detalladas en la sección \ref{subsec:acls}, se han implementado de la siguiente forma en los dispositivos de red correspondientes.
 \begin{itemize}
     \item \textbf{En los routers:} Ver anexo \ref{anexo:aclRout}.
     \item \textbf{Switch IoMT Planta 3:} Ver anexo \ref{anexo:aclIoMTP3}.
-    \item \textbf{Switch IoMT Planta 0,1 y 2:} Ver anexo \ref{anexo:aclIoMTP012}.
+    \item \textbf{Switch IoMT Planta 0, 1 y 2:} Ver anexo \ref{anexo:aclIoMTP012}.
     \item \textbf{Switches de Distribución:} Ver anexo \ref{anexo:acldistr}.
     \item \textbf{Routers de la red de interconexión:} Ver anexo \ref{anexo:aclint}.
 \end{itemize}
@@ -111,11 +117,11 @@ Teniendo en cuenta las ACLs que se deben implementar, detalladas en la sección 
 \section{Implementación VPN}
 Para la implementación de la VPN, hay que seguir los siguientes pasos:
 \begin{itemize}
-    \item Cargar un modulo de lanzamiento en los routers, que posibilita la configuración de las VPN.
+    \item Cargar un módulo de lanzamiento en los routers, que posibilita la configuración de las VPN.
     \item Configurar las claves de autenticación.
-    \item Configurar el tunel ipsec.
+    \item Configurar el túnel IPSec.
     \item Configurar el mapa de la VPN.
-    \item Asignar el mapa de la VPN a la interfaz que conecta con los demas routers.
+    \item Asignar el mapa de la VPN a la interfaz que conecta con los demás routers.
     \item Crear ACLs que permitan el tráfico entre los dispositivos autorizados para la comunicación.
 \end{itemize}
 

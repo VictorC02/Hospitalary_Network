@@ -3,11 +3,11 @@
 \chapter{Pruebas y Validación}\label{pruebas}
 Una vez completada la implementación de la infraestructura de red hospitalaria simulada, resulta imprescindible realizar un proceso de pruebas y validación que permita 
 verificar que la red funciona correctamente, cumple con los requisitos establecidos y garantiza los niveles de seguridad, segmentación y disponibilidad previstos en el diseño.
-\\ \\
+\\ \\ 
 El propósito de este capítulo es detallar el conjunto de pruebas funcionales, de conectividad, de seguridad y de tolerancia a fallos realizadas sobre la red implementada en 
 Cisco Packet Tracer. Estas pruebas permiten detectar posibles errores de configuración, comprobar la eficacia de las políticas de acceso y confirmar la correcta comunicación 
 entre los diferentes dispositivos, subredes y hospitales.
-\\ \\
+\\ \\ 
 Las pruebas se han clasificado según su naturaleza:
 \begin{itemize}
     \item Pruebas de Conectividad.
@@ -29,19 +29,19 @@ A continuación se muestran las pruebas de conectividad realizadas:
 
 \subsection{Conectividad de Dispositivos Internos con Internet}\label{subsec:ConHaciInt}
 Para comprobar que hay conectividad entre los dispositivos de la red interna con Internet, hay que hacer un ping desde un dispositivo conectado a la red interna hasta la puerta de enlace del ISP 1, 
-que es el que da acceso a Internet. 
-\\ \\
+que es el que da acceso a Internet.
+\\ \\ 
 Para ver la salida por consola del ping realizado en el PC conectado a la red interna, ver el anexo \ref{anexo:pruebaInt-Inter}.
 
 \subsection{Conectividad de Dispositivos Invitados con Internet}
 Para comprobar que hay conectividad entre los dispositivos de la red de invitados con Internet, hay que hacer un ping desde un dispositivo conectado a la red de invitados hasta la puerta de enlace del ISP 1, 
-que es el que da acceso a Internet. 
-\\ \\
+que es el que da acceso a Internet.
+\\ \\ 
 Para ver la salida por consola del ping realizado en el portátil conectado a la red de invitados, ver el anexo \ref{anexo:pruebaInv-Inter}.
 
 \subsection{Conectividad de Internet con Servidor Web}\label{subsec:ConDesdeInt}
-Para comprobar que hay conectividad entre Internet y el servidor web, hay que hacer un ping desde el ISP 2 hasta la peurta de enlace con el router del hospital, ya que el NAT estático configurado es el que se encarga de redirijir el tráfico hasta el servidor web del hospital.
-\\ \\
+Para comprobar que hay conectividad entre Internet y el servidor web, hay que hacer un ping desde el ISP 2 hasta la puerta de enlace con el router del hospital, ya que el NAT estático configurado es el que se encarga de redirigir el tráfico hasta el servidor web del hospital.
+\\ \\ 
 Para ver la salida por consola del ping realizado desde Internet hasta el servidor web del hospital, ver el anexo \ref{anexo:pruebaInter-Serv}.
 
 \section{Pruebas de Seguridad}
@@ -70,56 +70,56 @@ A continuación se muestran las pruebas de seguridad realizadas:
 \subsection{VPN IPSec}
 Para comprobar que la VPN está bien configurada y que se encriptan todos los paquetes que pasan por la red, basta con insertar el comando "show crypto ipsec sa" y fijarse en la interfaz que 
 conecta con el router con el cual se han intercambiado paquetes, habiendo realizado previamente una comunicación entre dos dispositivos de dos hospitales.
-\\ \\
+\\ \\ 
 Para ver la salida por consola del comando aplicado, ver el anexo \ref{anexo:pruebavpn}. En este caso, se ha realizado un par de pings desde el PC de IT del hospital de Manacor hasta el 
 servidor de archivos del hospital Son Espases, y se ha insertado el comando anterior en el router del hospital de Manacor.
 
 \subsection{DHCP Snooping}
-Para comprobar que DHCP Snooping esta bien configurado, hay que ver que todas las interfaces del switch, excepto la que comunica con el servidor DHCP autorizado, no están en modo 
-"Trusted" y además hay que ver que las IPs y MACs de los dispositivos que han solicitado una IP dinámica, están registradas en una tabla propia del switch.
-\\ \\
+Para comprobar que DHCP Snooping está bien configurado, hay que ver que todas las interfaces del switch, excepto la que comunica con el servidor DHCP autorizado, no están en modo 
+"Trusted" y además hay que ver que las IPs y MACs de los dispositivos que han solicitado una IP dinámica están registradas en una tabla propia del switch.
+\\ \\ 
 Para ver la salida por consola de la comprobación del modo de las interfaces, ver el anexo \ref{anexo:pruebasnoo1}. Y para ver la salida por consola de la comprobación de las IPs de la tabla del switch, ver el anexo \ref{anexo:pruebasnoo2}.
 
 \subsection{SSH}
 Para garantizar que la gestión remota mediante SSH está bien configurada, se ha intentado acceder mediante SSH a cualquier dispositivo de red del hospital y ha habido que autenticarse para poder acceder a él.
-\\ \\
-Para ver una imágen que corrobore la autenticación anteriormente mencionada, ver el anexo \ref{anexo:pruebaSSH}. En esa imágen, se puede ver como se ha iniciado una petición de acceso remoto al switch de distribución 1, usando el usuario "admin" y la contraseña "cisco".
+\\ \\ 
+Para ver una imagen que corrobore la autenticación anteriormente mencionada, ver el anexo \ref{anexo:pruebaSSH}. En esa imagen, se puede ver cómo se ha iniciado una petición de acceso remoto al switch de distribución 1, usando el usuario "admin" y la contraseña "cisco".
 
 \subsection{Autenticación en Dispositivos de Red}
-Para comprobar que hay un sistema de autenticación configurado en los dispositivos de red, se ha iententado acceder a cada dispsoitivo de red, para poder acceder al CLI del dispositivo se ha tenido que poner una primera contraseña, 
+Para comprobar que hay un sistema de autenticación configurado en los dispositivos de red, se ha intentado acceder a cada dispositivo de red. Para poder acceder al CLI del dispositivo se ha tenido que poner una primera contraseña, 
 en este caso "cisco", y para poder acceder con privilegios de administrador, se ha tenido que utilizar la contraseña "cisco". Para ver la secuencia de comandos y la salida resultante, ver el anexo \ref{anexo:pruebaAutent}.
 
 \subsection{ACLs}
 \subsubsection{Bloqueos}
-Para probar que el tráfico entre los dispositivos de áreas administrativas y dispositivos de la UCI o IoMT de tipo 1, basta con hacer un ping desde un PC del departamento de Recursos Humanos 
-a un dispositivo de esas áreas. La salida por consola al hacer un ping deberia ser "Destination host unreachable". 
-\\ \\
-También se puede acceder a las listas de control de acceso y ver que reglas se han aplicado. 
-\\ \\
+Para probar que el tráfico entre los dispositivos de áreas administrativas y dispositivos de la UCI o IoMT de tipo 1 está correctamente bloqueado, basta con hacer un ping desde un PC del departamento de Recursos Humanos 
+a un dispositivo de esas áreas. La salida por consola al hacer un ping debería ser "Destination host unreachable".
+\\ \\ 
+También se puede acceder a las listas de control de acceso y ver qué reglas se han aplicado.
+\\ \\ 
 Para ver la salida por consola del ping desde un PC de Recursos Humanos a un dispositivo IoMT, ver el anexo \ref{anexo:blockadmin-iomt}.
-\\ \\
+\\ \\ 
 Para ver la salida por consola del ping desde un PC de Recursos Humanos a un PC del área médica, ver el anexo \ref{anexo:blockadmin-med}.
-\\ \\
+\\ \\ 
 Para ver la salida por consola del ping desde un PC de Recursos Humanos a un PC de la UCI, ver el anexo \ref{anexo:blockadmin-uci}.
-\\ \\
+\\ \\ 
 Para ver la salida por consola del ping desde un PC de la red de invitados a un PC de la red interna, ver el anexo \ref{anexo:blockinv-int}.
-\\ \\
+\\ \\ 
 Para ver la salida por consola del ping desde un PC de la red de invitados a un dispositivo IoMT, ver el anexo \ref{anexo:blockinv-iomt}.
-\\ \\
-Para ver la salida por consola del ping desde un PC no autorizado de la red interna de Son Espases a el servidor de archivos del hospital de Manacor, ver el anexo \ref{anexo:blockinv-iomt}.
+\\ \\ 
+Para ver la salida por consola del ping desde un PC no autorizado de la red interna de Son Espases al servidor de archivos del hospital de Manacor, ver el anexo \ref{anexo:blockinv-iomt}.
 
 \subsubsection{Permisos}
-Para probar que hay conectividad o que se permite la comunicación entre dos dispositivos, basta con hacer un ping desde un dispositivo hasta otro y de esa forma comprobar que los paquetes llegan al destinatario. A veces puede que los primeros paquetes ICMP no den conectividad, ya que primero se tienen que enviar mensajes ARP para conocer la dirección MAC 
-del dispositivo de destino, una vez conocida la dirección MAC, los switches ya pueden enrutar el paquete ICMP en modo unicast hacia el dispositivo de destino.
-\\ \\
+Para probar que hay conectividad o que se permite la comunicación entre dos dispositivos, basta con hacer un ping desde un dispositivo hasta otro y de esa forma comprobar que los paquetes llegan al destinatario. A veces puede que los primeros paquetes \ac{ICMP} no den conectividad, ya que primero se tienen que enviar mensajes ARP para conocer la dirección MAC 
+del dispositivo de destino. Una vez conocida la dirección MAC, los switches ya pueden enrutar el paquete ICMP en modo unicast hacia el dispositivo de destino.
+\\ \\ 
 Para ver la salida por consola del ping desde un PC de las áreas médicas a un PC de la UCI, ver el anexo \ref{anexo:permmed-uci}.
-\\ \\
+\\ \\ 
 Para ver la salida por consola del ping desde un PC de las áreas médicas a un dispositivo IoMT tipo 1, ver el anexo \ref{anexo:permmed-tipo1}.
-\\ \\
+\\ \\ 
 Para ver la salida por consola del ping desde un dispositivo de la UCI a un dispositivo IoMT tipo 2, ver el anexo \ref{anexo:permuci-tipo2}.
-\\ \\
+\\ \\ 
 Para ver la salida por consola del ping desde el PC autorizado de la UCI a un dispositivo IoMT tipo 3, ver el anexo \ref{anexo:permuci-tipo3}.
-\\ \\
+\\ \\ 
 Para ver la salida por consola del ping desde un PC de IT de un hospital a un servidor de archivos de otro hospital, ver el anexo \ref{anexo:permit-serv}.
 
 \section{Pruebas de Disponibilidad}
@@ -131,19 +131,20 @@ A continuación se muestran las pruebas de disponibilidad realizadas:
 \end{itemize}
 
 \subsection{Tolerancia a fallos de HSRP en Routers}
-Para comprobar que hay tolerancia a fallos a nivel de hardware en cuanto a los routers, hay que simular una caída de un router y probar que el router auxiliar coje el relevo y se convierte en 
-el router que gestiona las comunicaciones. 
-\\ \\
+Para comprobar que hay tolerancia a fallos a nivel de hardware en cuanto a los routers, hay que simular una caída de un router y probar que el router auxiliar coge el relevo y se convierte en 
+el router que gestiona las comunicaciones.
+\\ \\ 
 Para ver la salida por consola que debería salir al simular la caída del router, ver el anexo \ref{anexo:pruebahsrprou}.
 
 \subsection{Tolerancia a fallos de HSRP en Switches L3}
-Para comprobar que hay tolerancia a fallos a nivel de hardware en cuanto a los switches, hay que simular una caída de un switch y probar que el switch auxiliar coje el relevo y se convierte en 
-el switch que gestiona las comunicaciones. 
-\\ \\
+Para comprobar que hay tolerancia a fallos a nivel de hardware en cuanto a los switches, hay que simular una caída de un switch y probar que el switch auxiliar coge el relevo y se convierte en 
+el switch que gestiona las comunicaciones.
+\\ \\ 
 Para ver la salida por consola que debería salir al simular la caída del switch, ver el anexo \ref{anexo:pruebahsrpsw}.
+
 \subsection{Tolerancia a fallos de EtherChannel}
-Para comprobar que hay tolerancia de fallos a nivel de enlace en las conexiones entre los switches de acceso y los switches de distribución, hay que simular la caída de uno de estos enlaces redundantes y probar que las comunicaciones siguen funcionando.
-\\ \\
+Para comprobar que hay tolerancia a fallos a nivel de enlace en las conexiones entre los switches de acceso y los switches de distribución, hay que simular la caída de uno de estos enlaces redundantes y probar que las comunicaciones siguen funcionando.
+\\ \\ 
 Para ver la salida por consola que debería salir al simular la caída de un enlace redundante, ver el anexo \ref{anexo:pruebaether}.
 
 \section{Pruebas de Protocolos de Red}
@@ -156,18 +157,19 @@ A continuación se muestran las pruebas de protocolos de red realizadas:
 \subsection{OSPF}
 Para garantizar que el protocolo OSPF funciona correctamente en la red, se ha comprobado que todos los dispositivos de red tengan visibilidad del resto de redes del hospital. 
 En caso de que se muestren todas las redes del hospital, se puede afirmar que el protocolo OSPF ha hecho su función. Para ver la salida por consola de las rutas que salen en todos 
-los dispositivos de red del hospital, ver el anexo \ref{anexo:Pruebaospf}. 
-\\ \\
-En el caso de la red de interconexión entre hospitales, también deberian salir las redes de los otros hospitales.
+los dispositivos de red del hospital, ver el anexo \ref{anexo:Pruebaospf}.
+\\ \\ 
+En el caso de la red de interconexión entre hospitales, también deberían salir las redes de los otros hospitales.
+
 \subsection{DHCP}
-Para comprobar que el protocolo DHCP se ha configurado correctamente, se ha comprobado que todos los dispositivos de todas las VLANs tengan direcciones IPs dinámicas propias de cada subred.
-\\ \\
+Para comprobar que el protocolo DHCP se ha configurado correctamente, se ha comprobado que todos los dispositivos de todas las VLANs tengan direcciones IP dinámicas propias de cada subred.
+\\ \\ 
 Para ver alguna de las IPs asignadas por el servidor DHCP interno, ver el anexo \ref{anexo:Pruebadhcp}.
+
 \subsection{NAT}
-Para comprobar que el servicio NAT está bien implementado y configurado se ha probado, tanto que desde Internet se pueda acceder al servidor web, como que desde la red interna o la de invitados se pueda acceder a Internet.
-Mirando en la consola del router las traducciones de direcciones IPs y comprobando la conectividad entre los dispositivos correspondientes (comprobada en las secciones \ref{subsec:ConHaciInt} y \ref{subsec:ConDesdeInt}), se puede afirmar que el servicio NAT funciona correctamente.
-\\ \\
-Para ver las imágenes de la traducción de IPs en el router para las comunicaciones desde el interior hacia Internet, ver el anexo \ref{anexo:haciaInt}. y para ver las imágenes de la traducción de IPs 
+Para comprobar que el servicio NAT está bien implementado y configurado, se ha probado tanto que desde Internet se pueda acceder al servidor web, como que desde la red interna o la de invitados se pueda acceder a Internet.
+Mirando en la consola del router las traducciones de direcciones IP y comprobando la conectividad entre los dispositivos correspondientes (comprobada en las secciones \ref{subsec:ConHaciInt} y \ref{subsec:ConDesdeInt}), se puede afirmar que el servicio NAT funciona correctamente.
+\\ \\ 
+Para ver las imágenes de la traducción de IPs en el router para las comunicaciones desde el interior hacia Internet, ver el anexo \ref{anexo:haciaInt}. Y para ver las imágenes de la traducción de IPs 
 en el router para las comunicaciones desde Internet hacia el servidor web, ver el anexo \ref{anexo:desdeInt}.
 
-\section{Resultados y Análisis}
