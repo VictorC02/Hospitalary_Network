@@ -297,16 +297,16 @@ las siguientes VLANs:
 \begin{itemize}
     \item \textbf{VLAN 10:} Recursos Humanos (RRHH)
     \item \textbf{VLAN 20:} Finanzas y Contabilidad (FyC)
-    \item \textbf{VLAN 30:} Oftalmologia
-    \item \textbf{VLAN 40:} Urologia 
-    \item \textbf{VLAN 50:} Cardiologia 
-    \item \textbf{VLAN 60:} Dermatologia 
-    \item \textbf{VLAN 70:} Radiologia 
-    \item \textbf{VLAN 80:} Inmunologia 
+    \item \textbf{VLAN 30:} Oftalmología
+    \item \textbf{VLAN 40:} Urología 
+    \item \textbf{VLAN 50:} Cardiología
+    \item \textbf{VLAN 60:} Dermatología 
+    \item \textbf{VLAN 70:} Radiología 
+    \item \textbf{VLAN 80:} Inmunología 
     \item \textbf{VLAN 90:} Admision
     \item \textbf{VLAN 100:} Unidad de Cuidados Intensivos (UCI)
     \item \textbf{VLAN 110:} Atencion paciente 
-    \item \textbf{VLAN 120:} Asesoria Jurídica
+    \item \textbf{VLAN 120:} Asesoría Jurídica
     \item \textbf{VLAN 150:} DMZ Interno
     \item \textbf{VLAN 160:} DMZ IoMT
     \item \textbf{VLAN 170:} DMZ Invitados
@@ -402,7 +402,7 @@ Para la red del Hospital Son Llàtzer, se han definido las siguientes VLANs:
 \end{itemize}
 
 En el caso de la red de Son Espases, se ha optado por configurar solamente los departamentos mostrados anteriormente, realmente hay muchos mas departamentos \cite{GerenciaSonEspases}, pero con el objetivo
-de no duplicar esfuerzos en la configuración de dispositivos irrelevantes, se ha optado por no configurar el resto de departamentos.
+de no duplicar esfuerzos en la configuración de dispositivos no representativos, se ha optado por no configurar el resto de departamentos.
 \\ \\
 En el caso de la red de interconexión entre hospitales, se ha optado por configurar todos los departamentos de los hospitales, con el fin de probar la conectividad desde cualquier area o 
 departamento de un hospital a cualquier area o departamento de otro hospital.
@@ -453,9 +453,9 @@ Son Espases. En la tabla se puede apreciar que hay 5 columnas, a continuación s
     \item \textbf{Network Address:} Es la dirección de red que identifica a toda la subred. Es la primera dirección del bloque de direcciones IP asignadas a esa subred 
     y no puede asignarse a ningún dispositivo. Sirve para que los routers y switches reconozcan la red en su tabla de enrutamiento. Por ejemplo: 192.168.0.0.
     \item \textbf{Máscara de Subred:} Es el valor que determina cuántos bits se utilizan para identificar la parte de red y cuántos para los hosts dentro de esa subred. 
-    Se expresa en notación decimal, por ejemplo 255.255.255.0.
+    Se expresa en notación decimal punteada, por ejemplo 255.255.255.0.
     \item \textbf{Rango de Direcciones Host:} Indica las direcciones IP que se pueden asignar a dispositivos dentro de esa subred. Es el intervalo de direcciones 
-    comprendido entre la primera dirección válida y la dirección anterior a la de broadcast. Por ejemplo, 192.168.0.1.
+    comprendido entre la primera dirección válida y la dirección anterior a la de broadcast. Por ejemplo, 192.168.0.1-192.168.0.63.
     \item \textbf{Dirección Broadcast:} Es la última dirección de cada subred. Se utiliza para enviar mensajes simultáneos a todos los dispositivos de esa subred. No se 
     puede asignar a ningún dispositivo. Por ejemplo, 192.168.0.255 para la subred 192.168.0.0/24.
 \end{enumerate}
@@ -836,7 +836,7 @@ En el caso de la red del Hospital Son Espases, cuenta con:
 \begin{itemize}
     \item Un servidor DHCP en la DMZ Interna, que se encarga de asignar direcciones IP a cada dispositivo final de las red interna.
     \item Un servidor DHCP en la DMZ Invitados, que se encarga de asignar direcciones IP a cada dispositivo final de la red de invitados.
-    \item Dos servidores DHCP en la DMZ IoMT, que se encargan de asignar direcciones IP a cada dispositivo IoMT de la red IoMT. En este caso, uno funciona de backup, para en caso de fallada del servidor principal, que los dispositivos IoMT sigan teniendo este servicio.
+    \item Dos servidores DHCP en la DMZ IoMT, que se encargan de asignar direcciones IP a cada dispositivo IoMT de la red IoMT. En este caso, uno funciona de backup, para que en caso de fallada del servidor principal, los dispositivos IoMT sigan teniendo este servicio.
 \end{itemize}
 Los servidores están configurados con pools de direcciones, de forma que asignan IPs dinámicas a los dispositivos de cada VLAN, siguiendo el subnetting mostrado en la sección \ref{tab:subnettingSonEspases}.
 \\ \\
@@ -855,7 +855,7 @@ según se detalla en la sección \ref{subsec:nat}. En ambos diseños, el NAT est
 NAT configurado, en el caso de la comunicación desde dentro hacia fuera, es el PAT, lo que permite que múltiples dispositivos puedan utilizar la IP pública usando diferentes números de puerto para distinguir las conexiones. En el caso de las comunicaciones desde Internet hacia dentro (servidor web), se ha configurado un NAT estático, lo que permite que 
 el router traduzca la dirección pública proveniente del ISP y permitir la conexión con el servidor web, que tiene una IP privada.
 \\ \\
-En este diseño, se ha optado por que las comunicaciones que vyan desde dentro hacia fuera vayan por el ISP 1 y las comunicaciones desde fuera hacia dentro vayan por el ISP 2, de esta forma 
+En este diseño, se ha optado por que las comunicaciones que vayan desde dentro hacia fuera pasen por el ISP 1 y las comunicaciones desde fuera hacia dentro lo hagan por el ISP 2, de esta forma 
 permitimos que las NATs estén bien configuradas y que no solapen las IPs públicas de las interfaces.
 \subsection{Hot Standby Router Protocol (HSRP)}
 Para garantizar la alta disponibilidad en los gateways de las redes internas y evitar puntos únicos de fallo, se ha configurado HSRP, para mas información sobre HSRP ir a la sección \ref{subsec:hsrp}. 
@@ -865,7 +865,7 @@ que conectan con los switches de acceso, como se puede apreciar en la Figura \re
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{Imágenes/hsrpSW.png}
-    \caption{HSRP en Switches de Distribución en Hospital Son Espases}
+    \caption{HSRP en switches de distribución en Hospital Son Espases}
     \label{fig:HSRPSW}
 \end{figure}
 
@@ -885,7 +885,7 @@ tanto en la red del Hospital Son Espases como en la red de interconexión entre 
 \\ \\
 En el caso de la red del Hospital Son Espases, se ha añadido una configuración extra, que permite definir el coste de las rutas OSPF, de esta forma se ha configurado la red de 
 interconexión entre switches de distribución y switches core para que tengan un coste de 10, mientras que la red de interconexión de switches de distribución tengan un coste de 100. De
- esta forma forzamos a que las comunicaicones se hagan directamente entre los switches de distirbución y los switches core y que las conexiones entre los switches de distribución sean meramente redudnantes y que no 
+ esta forma se fuerza a que las comunicaciones se hagan directamente entre los switches de distribución y los switches core y que las conexiones entre los switches de distribución sean meramente redudnantes y que no 
 congestionen la red innecesariamente.
 \\ \\
 El protocolo OSPF se ha configurado, en ambos diseños, en cada switch L3 y en los routers, ya que son los dispositivos de red que tienen capacidad de enrutamiento.
@@ -906,7 +906,9 @@ En la Figura \ref{fig:EtherChannel} se muestra una conexión redundante a nivel 
 \end{figure}
 
 \subsection{RSTP (Rapid Spanning-Tree Protocol)}
-
+RSTP (Rapid Spanning Tree Protocol) es una versión mejorada del protocolo STP (Spanning Tree Protocol), diseñado para prevenir bucles en redes Ethernet que utilizan switches.
+\\ \\
+En el caso de ambas redes, RSTP se configura en todos los switches de interconexión, es decir, los switches de capa 3.
 
 \section{Seguridad de la Red}
 El diseño de la infraestructura de red hospitalaria simulada ha priorizado desde el inicio la seguridad como pilar esencial, dada la sensibilidad de los datos clínicos que se 
@@ -914,40 +916,40 @@ gestionan y la criticidad de los servicios asistenciales que dependen de ella. A
 acceso mas robustos.
 \\ \\
 En esta sección, se detallan las medidas de seguridad adopatadas en ambos diseños de red.
-\subsection{ACLs (decir que acls son extendidas o estandars)}\label{subsec:acls}
+\subsection{ACLs}\label{subsec:acls}
 Las ACLs permiten tener un control del tráfico que pasa por ciertos tramos, es por eso que, siguiendo con los requisitos establecidos en la sección \ref{subsec: TiposIoMT}, se han implementado las siguientes ACLs:
 \begin{itemize}
     \item \textbf{En los routers:} 
     \begin{itemize}
-        \item Permitir la conexión con Internet a los dispositivos de la red de invitados.
-        \item Permitir la conexión desde Internet hasta el servidor web.
-        \item Permitir paquetes DHCP, OSPF y HSRP.
-        \item Denegar cualquier otro tipo de tráfico.
+        \item Permitir la conexión con Internet a los dispositivos de la red de invitados (ACL extendida).
+        \item Permitir la conexión desde Internet hasta el servidor web (ACL extendida).
+        \item Permitir paquetes OSPF y HSRP (ACL estándar).
+        \item Denegar cualquier otro tipo de tráfico (ACL estándar).
     \end{itemize}
     \item \textbf{Switch IoMT Planta 3:}
     \begin{itemize}
-        \item Permitir la conexión de los dispositivos IoMT de tipo 1 con dispositivos de las áreas de servicios quirúrgicos, médicos y centrales.
-        \item Permitir la conexión de los dispositivos IoMT de tipo 2 con dispositivos del departamento de la UCI.
-        \item Permitir la conexión de los dispositivos IoMT de tipo 3 con el dispositivo autorizado de la UCI.
-        \item Permitir paquetes DHCP y OSPF.
-        \item Denegar cualquier otro tipo de tráfico.
+        \item Permitir la conexión de los dispositivos IoMT de tipo 1 con dispositivos de las áreas de servicios quirúrgicos, médicos y centrales (ACL extendida).
+        \item Permitir la conexión de los dispositivos IoMT de tipo 2 con dispositivos del departamento de la UCI (ACL extendida).
+        \item Permitir la conexión de los dispositivos IoMT de tipo 3 con el dispositivo autorizado de la UCI (ACL extendida).
+        \item Permitir paquetes DHCP y OSPF (ACL estándar).
+        \item Denegar cualquier otro tipo de tráfico (ACL estándar).
     \end{itemize}
     \item \textbf{Switch IoMT Planta 0, 1 y 2:}
     \begin{itemize}
-        \item Permitir la conexión de los dispositivos IoMT de tipo 1 con dispositivos de las áreas de servicios quirúrgicos, médicos y centrales.
-        \item Permitir paquetes DHCP y OSPF.
-        \item Denegar cualquier otro tipo de tráfico.
+        \item Permitir la conexión de los dispositivos IoMT de tipo 1 con dispositivos de las áreas de servicios quirúrgicos, médicos y centrales (ACL extendida).
+        \item Permitir paquetes DHCP y OSPF (ACL estándar).
+        \item Denegar cualquier otro tipo de tráfico (ACL estándar).
     \end{itemize}
     \item \textbf{Switches de Distribución:}
     \begin{itemize}
-        \item Denegar la salida de paquetes hacia las áreas de servicios quirúrgicos, médicos y centrales.
-        \item Permitir cualquier otro tipo de tráfico.
+        \item Denegar la salida de paquetes hacia las áreas de servicios quirúrgicos, médicos y centrales (ACL extendida).
+        \item Permitir cualquier otro tipo de tráfico (ACL estándar).
     \end{itemize}
     \item \textbf{Routers de la red de interconexión:}
     \begin{itemize}
-        \item Denegar la conexión entre los dispositivos no autorizados con el servidor de archivos.
-        \item Denegar la conexión entre los dispositivos de otros hospitales con dispositivos del hospital.
-        \item Permitir cualquier otro tipo de tráfico.
+        \item Denegar la conexión entre los dispositivos no autorizados con el servidor de archivos (ACL extendida).
+        \item Denegar la conexión entre los dispositivos de otros hospitales con dispositivos del hospital (ACL extendida).
+        \item Permitir cualquier otro tipo de tráfico (ACL estándar).
     \end{itemize}
 \end{itemize}
 
@@ -956,7 +958,7 @@ Para evitar ataques de DHCP Spoofing, se ha configurado DHCP Snooping en todos l
 configurar DHCP Spoofing en enlaces redundantes. Con la configuración de este mecanismo de seguridad, conseguimos que los dispositivos finales solo acepten las direcciones IP dadas por los servidores DHCP autorizados, 
 ya que el switch de acceso descarta cualquier oferta de dirección IP proveniente de un servidor DHCP no autorizado \cite{cisco_dhcp_snooping}.
 \\ \\
-También se ha configurado la opción de limitar la cantidad de paquetes DHCP enviados al servidor DHCP para evitar saturaciones.
+También se ha configurado la opción de limitar la cantidad de paquetes DHCP enviados al servidor DHCP para evitar saturaciones (DHCP Starvation).
 \\ \\
 Este mecanismo de seguridad solo está configurado en la red del Hospital de Son Espases.
 
@@ -964,7 +966,7 @@ Este mecanismo de seguridad solo está configurado en la red del Hospital de Son
 Para proprocionar seguridad a las interconexiones entre los routers de cada hospital, se ha configurado una VPN IPsec, detallada en la sección \ref{subsec:ipsec}, en la que se encriptan y autentican todos los paquetes IP que se transmiten a través de esa conexión.
 De esta forma conseguimos una gran capa de seguridad que nos garantiza la confidencialidad, integridad y autenticidad de los datos que viajan por esa red IP.
 \\ \\
-Este mecansimo de seguridad solo esta implementado en la red de interconexión entre hospitales, ya que la red del Hospital Son Espases no tiene conexiones entre routers de otros hospitales. 
+Este mecansimo de seguridad solo se ha implementado en la red de interconexión entre hospitales, ya que la red del Hospital Son Espases no tiene conexiones entre routers de otros hospitales. 
 Además cabe recordar que la comunicación entre hospitales solo se puede realizar entre el dispositivo autorizado de un hospital con el servidor de archivos de otro hospital.
 
 \subsection{Secure Shell (SSH)}
