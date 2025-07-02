@@ -13,8 +13,8 @@ Este capítulo detalla paso a paso el trabajo realizado en la implementación de
 En ambos diseños, cada dispositivo de red cuenta con una configuración básica, que incluye lo siguiente:
 \begin{itemize}
     \item Cambiar el hostname, por el correspondiente a cada dispositivo.
-    \item Configuración de la contraseña genérica "cisco" para poder acceder a la configuración de los dispositivos.
-    \item Configuración de la contraseña genérica "cisco" para poder acceder a la línea de comandos de los dispositivos.
+    \item Configuración de la contraseña genérica \textit{cisco} para poder acceder a la configuración de los dispositivos.
+    \item Configuración de la contraseña genérica \textit{cisco} para poder acceder a la línea de comandos de los dispositivos.
     \item Encriptar contraseñas.
     \item Configuración de SSH para la gestión remota, usando encriptación RSA de 1024 bits.
 \end{itemize}
@@ -23,7 +23,7 @@ De esta forma se consigue que cada dispositivo de red cuente con varias capas b�
 Para ver los comandos utilizados, ir al anexo \ref{anexo:confBas}.
 
 \section{Creación de VLANs y Asignación de Puertos}
-En ambos diseños, las VLANs se han configurado tanto en los switches L2 (Acceso) como en los switches L3 (Distribución y Core). Cada switch cuenta con una configuración diferente, ya que cada uno tiene una función distinta dentro de la red.
+En ambos diseños, las VLANs se han configurado tanto en los switches L2 (Acceso) como en los switches L3 (Distribución y Core). Cada switch, tanto L2 como L3, cuenta con una configuración diferente, ya que cada uno tiene una función distinta dentro de la red.
 \subsection{VLANs en Switches de Acceso}
 En los switches de acceso, se ha definido la VLAN correspondiente al departamento o DMZ que da servicio el switch de acceso y seguidamente se han configurado los puertos conectados a los dispositivos en modo access de forma que solo se transmita la VLAN del departamento o DMZ. En el caso 
 de los puertos conectados a los switches de distribución, los puertos se han configurado en modo trunk, de esta forma se pueden transmitir varias VLANs \cite{cisco_trunk_access}.  
@@ -45,20 +45,33 @@ Ver el anexo \ref{anexo:VLANSwCo}, para visualizar una plantilla de los comandos
 
 \section{Implementación EtherChannel}
 En la red del Hospital Son Espases se configuró EtherChannel entre los switches de acceso y los de distribución para conseguir redundancia a nivel de enlaces. Para ello, se tuvieron 
-que configurar tanto el switch de acceso como el switch de distribución. La única diferencia entre la configuración entre los switches es que en los switches de distribución hay que hacer el port-channel entre enlaces GigabitEthernet, mientras 
+que configurar tanto el switch de acceso como el switch de distribución. La única diferencia entre la configuración entre los switches es que en los switches de distribución hay que configurar el port-channel entre enlaces GigabitEthernet, mientras 
 que en los switches de acceso se hace en enlaces FastEthernet.
 \\ \\
 Para ver los comandos utilizados para implementar EtherChannel, ver el anexo \ref{anexo:etherchannel}.
 
 \section{Seguridad en DMZ}
-Para garantizar la seguridad en las DMZ, se han implementado algunas configuraciones básicas de seguridad, detalladas en la sección \ref{subsec:dmz}.
+Para garantizar la seguridad en las DMZ, se han implementado algunas configuraciones básicas de seguridad, detalladas en la sección \ref{subsec:dmz}. Aparte de las reglas de control 
+de tráfico implementadas en el router que interconecta la DMZ e Internet, detalladas en la sección \ref{subsec:acls}.
 \\ \\
 Para ver los comandos utilizados para implementar las medidas de seguridad en la DMZ, ver el anexo \ref{anexo:dmz}.
 
 \section{Implementación de Direccionamiento IP}
-Para que las redes puedan tener conectividad es necesaria la implementación del direccionamiento IP. En el caso de la red del Hospital Son Espases, se ha implementado HSRP, que permite obtener redundancia a nivel de hardware/dispositivo.
-Además, también se ha implementado un direccionamiento IP estático en los elementos de la red que necesitasen este recurso. Para más detalles, ver la sección \ref{sec:direccionamiento}.
-\subsection{Implementación HSRP}
+En esta sección se describe la implementación del direccionamiento IP, tanto dinámico como estático, ara que las redes puedan tener conectividad. Además, también se ha 
+implementado un direccionamiento IP estático en los elementos de la red que necesitan este recurso, como son los servidores, interfaces de dispositivos de red, impresoras o dispositivos privilegiados. Para más detalles, ver la sección \ref{sec:direccionamiento}.
+\subsection{Direccionamiento Estático}
+En ambas redes hospitalarias es necesario el direccionamiento IP estático para los diferentes elementos de la red, anteriormente mencionados. Para más detalles, ver la sección \ref{subsec:estaticas}.
+\\ \\
+Para ver los comandos utilizados para configurar el direccionamiento IP estático, ver el anexo \ref{anexo:estatico}.
+\subsection{Direccionamiento Dinámico}
+El direccionamiento dinámico se ha implementado mediante el uso de servidores DHCP, que se encargan de asignar direcciones IPs (también asigna otros valores, como la puerta de enlace) dentro de un rango de direcciones preestablecido en su configuración. Para que este servicio funcione es necesaria la configuración de DHCP Relay.
+
+\subsection{DHCP Relay}
+DHCP Relay es una función que permite que los clientes DHCP en una red o subred reciban direcciones IP y otros parámetros de configuración de un servidor DHCP ubicado en una red diferente \cite{cisco_dhcp_relay}. En ambas redes, el servidor DHCP está ubicado en otra VLAN o subred, por lo que, sabiendo la IP estática del servidor DHCP, hay que definirla en las interfaces VLAN de los switches de distribución. 
+\\ \\
+Para ver el comando utilizado para configurar el DHCP Relay, ver el anexo \ref{anexo:relay}.
+
+\section{Implementación HSRP}
 La implementación de HSRP conlleva la asignación de una IP virtual, que será la accedida por los demás dispositivos; a su vez, también hay que asignar una dirección IP a cada dispositivo que tenga configurado HSRP, cada uno con una prioridad diferente.
 \\ \\
 La configuración de HSRP en routers y en switches L3 difiere un poco, ya que en los routers no se pueden definir VLANs y, por tanto, no se puede transmitir la información de una VLAN en concreto por un enlace. Es por eso que hay que crear una subinterfaz que permita la transmisión de paquetes provenientes de una VLAN.
@@ -66,15 +79,12 @@ La configuración de HSRP en routers y en switches L3 difiere un poco, ya que en
 Para ver los comandos utilizados para configurar HSRP en routers, ver el anexo \ref{anexo:hsrpRou}.
 \\ \\
 Para ver los comandos utilizados para configurar HSRP en switches L3, ver el anexo \ref{anexo:hsrpL3}.
-\subsection{Direccionamiento Estático}
-En ambas redes hospitalarias es necesario el direccionamiento IP estático. Para más detalles, ver la sección \ref{subsec:estaticas}. Para ver los comandos utilizados para configurar el direccionamiento IP estático, ver el anexo \ref{anexo:estatico}.
-\subsection{DHCP Relay}
-DHCP Relay es una función que permite que los clientes DHCP en una red o subred reciban direcciones IP y otros parámetros de configuración de un servidor DHCP ubicado en una red diferente \cite{cisco_dhcp_relay}. En ambas redes, el servidor DHCP está ubicado en otra VLAN o subred, por lo que, sabiendo la IP estática del servidor DHCP, hay que definirla en las interfaces VLAN de los switches de distribución. 
-\\ \\
-Para ver el comando utilizado para configurar el DHCP Relay, ver el anexo \ref{anexo:relay}.
+
+
 
 \section{Implementación OSPF}
-Para la implementación de OSPF en las redes, simplemente hay que definir a qué redes está cada dispositivo conectado. De esta forma, se van comunicando las redes a las que está conectado cada dispositivo de red, permitiendo que otros dispositivos que no están conectados directamente sepan a qué redes están conectados estos. Para más detalles, ver la sección \ref{subsec:ospf}.
+Para implementar OSPF en ambas redes, es necesario especificar en cada dispositivo de red las redes a las que está conectado. De este modo, los routers intercambian esta información entre sí, permitiendo que cada dispositivo conozca no solo sus propias redes conectadas, sino también las de los demás routers dentro del área OSPF. Esto permite establecer rutas hacia redes que no están directamente conectadas, facilitando el enrutamiento dinámico y la convergencia de la red.
+Para una explicación detallada del proceso de configuración, puede consultarse la sección \ref{subsec:ospf}.
 \\ \\
 Para ver una plantilla de los comandos utilizados para configurar OSPF, ver el anexo \ref{anexo:ospf}.
 
@@ -95,7 +105,7 @@ Para ver las NAT configuradas en los routers principales, siguiendo el diseño p
 la interfaz que conecta con el ISP 1 y ver el anexo \ref{anexo:nat2} para la configuración para el NAT en la interfaz que conecta con el ISP 2.
 
 \section{Implementación DHCP Snooping}
-DHCP Snooping es una función de seguridad de Capa 2 en switches que protege la red contra diversos ataques. Ver la sección \ref{subsec:dhcpsnooping} para más detalles. Para implementar la configuración de seguridad de DHCP Snooping, hay que seguir los siguientes pasos:
+DHCP Snooping es una función de seguridad de Capa 2 en switches que protege la red contra diversos ataques, como DHCP Spoofing. Ver la sección \ref{subsec:dhcpsnooping} para más detalles. Para implementar la configuración de seguridad de DHCP Snooping, hay que seguir los siguientes pasos:
 \begin{itemize}
     \item Activar DHCP snooping en el dispositivo.
     \item Activar DHCP snooping en la VLAN del departamento del switch de acceso correspondiente.

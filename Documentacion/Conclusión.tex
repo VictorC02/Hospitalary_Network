@@ -21,16 +21,59 @@ los resultados alcanzados. A continuación, se enumeran los principales hitos co
     \item \textbf{Diseño completo de una infraestructura de red hospitalaria segmentada} mediante VLANs y subredes diferenciadas para invitados, dispositivos IoMT y servicios hospitalarios, adaptada a los requisitos de seguridad propios de un entorno sanitario.
     \item \textbf{Implementación de una red simulada de interconexión entre cuatro hospitales}, garantizando la comunicación segura entre ellos mediante la implementación de VPN IPSec, y asegurando la continuidad del servicio mediante mecanismos de redundancia de enlaces y gateways.
     \item \textbf{Integración de dispositivos médicos conectados (IoMT)} en una subred específica, aplicando restricciones de seguridad reforzadas, gestión independiente de direcciones IP y control de accesos selectivo.
-    \item \textbf{Configuración eficaz de servicios de red críticos}, como DHCP, DNS, NAT y SSH, que permiten gestionar de forma automatizada y segura las comunicaciones internas y externas de la red.
+    \item \textbf{Configuración eficaz de servicios de red esenciales}, como DHCP, DNS, NAT y SSH, que permiten gestionar de forma automatizada y segura las comunicaciones internas y externas de la red.
 \end{itemize}
+
+A continuación se muestra una tabla representativa de los requisitos cumplidos, recalcando en cada caso con que herramienta o configuración se ha conseguido cumplir.
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \begin{tabular}{|p{4.5cm}|p{2cm}|p{4.5cm}|}
+        \hline
+        \textbf{Requisito} & \textbf{Cumplido} & \textbf{Detalles}  \\
+        \hline
+        Tres subredes diferenciadas & \checkmark & Segmentación mediante VLANs  \\
+        \hline
+        Direccionamiento IP dinámico & \checkmark & DHCP  \\
+        \hline
+        Acceso controlado a servidores de archivos & \checkmark & ACLs  \\
+        \hline
+        Comunicación con internet  & \checkmark & NAT  \\
+        \hline
+        Enrutamiento dinámico & \checkmark & OSPF  \\
+        \hline
+        Interfaces distintas para enviar y recibir datos con Internet & \checkmark & ISP 1 para enviar información a Internet y ISP 2 para recibir información desde Internet  \\
+        \hline
+        Redundancia a nivel de enlace & \checkmark & EtherChannel  \\
+        \hline
+        Redundancia a nivel de hardware & \checkmark & HSRP  \\
+        \hline
+        Red modular y escalable & \checkmark & Segmentación mediante VLANs y división en tres subredes  \\
+        \hline
+        Detección de fallos físicos de la red proactivamente & \checkmark & HSRP y EtherChannel  \\
+        \hline
+        Filtrado de tráfico & \checkmark & ACL  \\
+        \hline
+        Gestión remota segura de dispositivos de red & \checkmark & SSH  \\
+        \hline
+        Autenticación en dispositivos de red & \checkmark & Contraseñas Cifradas  \\
+        \hline
+        Comunicaciones seguras entre hospitales & \checkmark & VPN IPSec \\
+        \hline
+        Seguridad contra DHCP Spoofing  & \checkmark & DHCP Snooping \\
+        \hline
+    \end{tabular}
+    \caption{Tabla de requisitos cumplidos}
+\end{table}
 
 \section{Mejoras y Ampliaciones Futuras}
 Si bien los resultados han sido satisfactorios, se identifican algunas líneas de mejora y ampliación para desarrollos futuros:
 
 \begin{itemize}
-    \item Añadir servicios de monitorización de red en tiempo real y sistemas IDS/IPS para la detección proactiva de amenazas.
+    \item Añadir servicios de monitorización de red en tiempo real (syslog) y sistemas IDS/IPS para la detección proactiva de amenazas.
     \item Incorporar mecanismos de seguridad adicionales para la subred dedicada a los invitados.
     \item Simular escenarios de ataque más avanzados para evaluar la robustez de la infraestructura ante ciberamenazas complejas.
+    \item Implementar el servicio de correo electrónico en la red.
     \item Implementar el diseño en una herramienta de virtualización profesional (como GNS3 o Cisco VIRL) que permita un mayor realismo y 
     compatibilidad con tecnologías actuales no disponibles en Cisco Packet Tracer.
 \end{itemize}

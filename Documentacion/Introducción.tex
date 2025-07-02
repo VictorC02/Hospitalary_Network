@@ -1,8 +1,15 @@
 %!TeX root=MemoriaTFG.tex
 
 \chapter{Introducción}
+Este capítulo tiene como finalidad contextualizar el proyecto, exponer la motivación que lo ha impulsado, definir sus objetivos, establecer su alcance y limitaciones, 
+y presentar la estructura que sigue el documento. 
 
 \section{Contexto y Motivación}
+Antes de abordar el diseño y desarrollo de una infraestructura de red hospitalaria, resulta esencial comprender el contexto actual en el que se enmarca 
+este proyecto y las razones que justifican su realización.
+\\ \\
+Esta sección expone, por un lado, el contexto tecnológico y asistencial en el que surge la necesidad de este proyecto y, por otro, las motivaciones personales, 
+académicas y profesionales que han impulsado su desarrollo como Trabajo de Fin de Grado.
 \subsection{Contexto}
 La digitalización de los servicios sanitarios ha supuesto una transformación profunda en la forma en que los hospitales gestionan su información clínica, administrativa y 
 operativa. Actualmente, la mayoría de los procesos hospitalarios dependen de sistemas informáticos interconectados, que requieren de infraestructuras de red robustas, estables 
@@ -36,22 +43,23 @@ prácticas de seguridad a nivel físico y lógico, y adaptándola a las necesida
 se han definido un objetivo general y varios objetivos específicos que guían el desarrollo del trabajo:
 
 \subsection{Objetivo General}
-Diseñar y simular una infraestructura de red hospitalaria segura y segmentada, implementando medidas de seguridad física y lógica, incluyendo una subred específica para 
+\begin{itemize}
+    \item Diseñar y simular una infraestructura de red hospitalaria segura y segmentada, implementando medidas de seguridad física y lógica, incluyendo una subred específica para 
 dispositivos \ac{IoMT}, utilizando Cisco Packet Tracer como entorno de simulación.
-\\
-Además de diseñar y simular una infraestructura de red hospitalaria entre cuatro hospitales, centrando el trabajo en la interconexión entre los dispositivos finales de cada hospital 
+    \item Diseñar y simular una infraestructura de red hospitalaria entre cuatro hospitales, centrando el trabajo en la interconexión entre los dispositivos finales de cada hospital 
 y los servidores de otros hospitales, garantizando la seguridad de la información transmitida por los enlaces de interconexión.
+\end{itemize}
 
-\subsection{Objetivos Específicos}
+Ambos objetivos generales se desglosan en los siguientes objetivos específicos.
 \begin{itemize}
     \item \textbf{Analizar los requisitos funcionales y de seguridad} de una red hospitalaria moderna, como la de Son Espases, considerando la incorporación de dispositivos IoMT y las 
     particularidades de entornos asistenciales.
     \item \textbf{Definir una topología de red física y lógica adecuada}, organizando los diferentes departamentos y servicios hospitalarios mediante técnicas de 
     segmentación, como la creación de VLANs y subredes.
-    \item \textbf{Diseñar una red de interconexión entre cuatro hospitales}, garantizando la comunicación segura y eficiente entre ellos.
+    \item \textbf{Diseñar una red de interconexión entre cuatro hospitales}, garantizando la comunicación segura y eficiente entre ellos, mediante el uso de conexiones \ac{VPN} \ac{IPSec} y el uso de métricas como el tiempo de respuesta.
     \item \textbf{Planificar y configurar el direccionamiento \ac{IP}} de la red hospitalaria, garantizando su correcto funcionamiento y escalabilidad.
     \item \textbf{Implementar medidas de seguridad a nivel lógico}, mediante el uso de \ac{ACL}s, segmentación de tráfico, configuración de resiliencia contra ataques reales (DHCP Spoofing) 
-    y asegurar una comunicación interhospitalaria segura.
+    y asegurar una comunicación interhospitalaria segura, mediante el uso de VPN IPSec.
     \item \textbf{Diseñar e integrar una subred específica para dispositivos IoMT}, aplicando controles de seguridad reforzados y limitando su acceso a los recursos esenciales de la red.
     \item \textbf{Realizar pruebas de conectividad, seguridad y funcionamiento}, validando la correcta comunicación entre los diferentes dispositivos, el cumplimiento de las políticas de 
     seguridad y la eficiencia de la segmentación implementada.
@@ -87,7 +95,7 @@ El proyecto contempla:
         \item Limitar el acceso entre VLANs en función de criterios de seguridad departamentales.
     \end{itemize}
     \item \textbf{Configuración de \ac{DMZ} específicas para cada subred}, con su propio servidor \ac{DHCP}. En el caso de la subred IoMT, se añaden dos servidores DHCP, uno principal y 
-    otro de respaldo.
+    otro de respaldo, ya que hay dispositivos críticos que no pueden dejar de tener los servicios esenciales para su correcto funcionamiento.
     \item \textbf{Implementación de servicios de red:}
     \begin{itemize}
         \item \textbf{DHCP} para la asignación dinámica de direcciones IP a los dispositivos de cada subred.
@@ -96,8 +104,9 @@ El proyecto contempla:
         \item \textbf{\ac{HSRP}} para garantizar la alta disponibilidad de los routers principales.
         \item \textbf{\ac{SSH}} para la gestión segura de los dispositivos de red.
         \item \textbf{\ac{OSPF}} para el enrutamiento dinámico entre las diferentes VLANs y subredes.
+        \item \textbf{\ac{RSTP}} para optimizar la gestión de bucles en las comunicaciones internas.
         \item \textbf{EtherChannel} para la agregación de enlaces entre switches, mejorando la capacidad y redundancia de la red.
-        \item \textbf{\ac{IPSec}} para la interconexión segura entre hospitales, garantizando la privacidad de los datos transmitidos.
+        \item \textbf{VPN IPSec} para la interconexión segura entre hospitales, garantizando la privacidad de los datos transmitidos.
     \end{itemize}
     \item \textbf{Pruebas de conectividad, seguridad y tolerancia a fallos}, incluyendo:
     \begin{itemize}
@@ -121,23 +130,23 @@ Para delimitar correctamente el trabajo realizado, se establecen las siguientes 
 Además, también existen las limitaciones propias de la herramienta Cisco Packet Tracer, a continuación se muestran las más relevantes:
 \begin{itemize}
     \item Limitaciones de puertos en routers, lo que imposibilita que la interconexión entre hospitales tenga enlaces redundantes.
-    \item Limitaciones de puertos en switches de distribución, lo que imposibilita que se configure HSRP en todos los switches de distribución que conectan con switches de acceso.
+    \item Limitaciones de puertos en switches de capa 3, lo que imposibilita que se configure HSRP en todos los switches de distribución que conectan con switches de acceso.
     \item La herramienta no permite la compatibilidad entre EtherChannel y DHCP Snooping, por lo que solo se ha podido implementar en los switches sin enlaces redundantes.
 \end{itemize}
 
 \section{Estructura del Documento}
 El presente proyecto se organiza en varios capítulos que recogen de forma ordenada y estructurada las diferentes fases y contenidos desarrollados durante el proyecto. 
-A continuación, se describe brevemente la estructura del documento:
+A continuación, se describe brevemente la estructura de la memoria:
 
 \begin{itemize}
     \item \textbf{Capítulo 1: Introducción.} Se contextualiza la importancia de las redes hospitalarias, se define el objetivo general y los objetivos específicos del 
     proyecto, se delimitan su alcance y limitaciones y se explica la estructura del documento.
     \item \textbf{Capítulo 2: Marco Teórico.} Se recogen los conceptos fundamentales necesarios para entender el proyecto, incluyendo una descripción de los protocolos implementados 
-    en el proyecto, una breve introducción a las redes en hospitales y una breve descripción de los dispositivos IoMT.
+    en el curso del mismo, una breve introducción a las redes en hospitales y una breve descripción sobre los dispositivos IoMT.
     \item \textbf{Capítulo 3: Análisis.} Se detallan las necesidades funcionales, de seguridad, de conectividad y de gestión que debe cubrir la red hospitalaria, 
     incluyendo los requisitos particulares para los dispositivos IoMT.
-    \item \textbf{Capítulo 4: Metodología de Trabajo.} Se expone el enfoque metodológico adoptado, basado en un desarrollo secuencial por fases siguiendo un modelo en cascada, 
-    se describe la planificación del proyecto y las herramientas utilizadas.
+    \item \textbf{Capítulo 4: Metodología de Trabajo.} Se expone el enfoque metodológico adoptado basado en un desarrollo secuencial por fases siguiendo un modelo en cascada.  
+    Se describe la planificación del proyecto y las herramientas utilizadas.
     \item \textbf{Capítulo 5: Diseño de la Red.} Se presenta la topología física y lógica de la red hospitalaria, el direccionamiento IP, la segmentación mediante VLANs, las 
     políticas de seguridad, la estructura de la subred específica para IoMT y la descripción de la configuración de los protocolos de red.
     \item \textbf{Capítulo 6: Implementación.} Se detalla la configuración de los dispositivos de red en Cisco Packet Tracer e implementación de los protocolos de red.

@@ -29,11 +29,11 @@ Para la red de interconexión entre hospitales, se optó por simplificar la topo
 se omiten las configuraciones de redundancia (HSRP y EtherChannel) y se simplifica la cantidad de VLANs y subredes, manteniendo la funcionalidad básica de comunicación entre ellos. Esta decisión se tomó 
 para no duplicar el esfuerzo de configuración y para centrarse en mejorar las configuraciones de seguridad y conectividad entre los hospitales. 
 
-\section{Topología de Red Propuesta}
+\section{Topología de red propuesta}
 En esta sección se presentan las topologías de red propuestas tanto para el Hospital Universitario Son Espases como para la red de interconexión de los cuatro hospitales, que incluye tanto la topología física como la lógica, detallando en cada caso las decisiones adoptadas
 y los dispositivos seleccionados para cumplir con los requisitos de conectividad, seguridad y rendimiento.
 
-\subsection{Topología Física Son Espases}
+\subsection{Topología física Son Espases}
 La topología física representa la disposición y conexión física de routers, switches, servidores, dispositivos IoMT y departamentos.
 \subsubsection{Routers}
 En este diseño, como se muestra en la Figura \ref{fig:Routers}, se han implementado tres routers principales, los cuales están configurados para proporcionar 
@@ -914,7 +914,7 @@ gestionan y la criticidad de los servicios asistenciales que dependen de ella. A
 acceso mas robustos.
 \\ \\
 En esta sección, se detallan las medidas de seguridad adopatadas en ambos diseños de red.
-\subsection{ACLs}\label{subsec:acls}
+\subsection{ACLs (decir que acls son extendidas o estandars)}\label{subsec:acls}
 Las ACLs permiten tener un control del tráfico que pasa por ciertos tramos, es por eso que, siguiendo con los requisitos establecidos en la sección \ref{subsec: TiposIoMT}, se han implementado las siguientes ACLs:
 \begin{itemize}
     \item \textbf{En los routers:} 

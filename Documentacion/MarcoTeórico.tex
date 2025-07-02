@@ -6,9 +6,16 @@ una base teórica que aborde los conceptos y tecnologías implicadas. Este marco
 infraestructuras de red en entornos hospitalarios, protocolos de comunicación, seguridad y tecnologías específicas para entornos sanitarios.
 
 \section{Arquitectura de Redes Hospitalarias}
+El correcto diseño de una infraestructura de red en entornos hospitalarios resulta esencial para garantizar la continuidad de los servicios asistenciales, la 
+integridad de los datos clínicos y la seguridad de los dispositivos conectados. La particularidad de estas redes radica en la coexistencia de distintos tipos de 
+tráfico (administrativo, clínico, de invitados y de dispositivos médicos), lo que exige una arquitectura flexible, segmentada y altamente disponible.
+
+\subsection{Segmentación de la Red}
+La segmentación mediante VLANs permite aislar el tráfico de diferentes áreas o servicios, mejorando la seguridad y el rendimiento. 
+Cada VLAN constituye un dominio de difusión (broadcast) independiente, permitiendo la aplicación de políticas específicas y reduciendo la propagación de tráfico innecesario.
 
 \subsection{Modelo Jerárquico de Red}
-Las redes hospitalarias adoptan un modelo jerárquico de tres capas que optimiza el rendimiento, escalabilidad y mantenimiento. Esta arquitectura se compone de:
+Las redes hospitalarias adoptan un modelo jerárquico de tres capas que optimiza el rendimiento, escalabilidad y mantenimiento. Esta arquitectura (Figura \ref{fig:3capas}) se compone de:
 \begin{itemize}
     \item \textbf{Capa de Núcleo (Core):} Proporciona conectividad de alta velocidad entre diferentes áreas internas del hospital y acceso a servicios externos. Se encarga de 
     interconectar los switches de distribución con los routers principales y gestionar el tráfico entre las distintas subredes.
@@ -19,12 +26,18 @@ Las redes hospitalarias adoptan un modelo jerárquico de tres capas que optimiza
     conectividad a los usuarios y dispositivos, permitiendo el acceso a los recursos de red y servicios compartidos. 
 \end{itemize}
 Esta estructura optimiza el rendimiento, la escalabilidad y la facilidad de mantenimiento, aspectos críticos en entornos hospitalarios donde la disponibilidad y la seguridad son prioritarias.
-
-\subsection{Segmentación de la Red}
-La segmentación mediante VLANs permite aislar el tráfico de diferentes áreas o servicios, mejorando la seguridad y el rendimiento. 
-Cada VLAN constituye un dominio de broadcast independiente, permitiendo la aplicación de políticas específicas y reduciendo la propagación de tráfico innecesario.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Imágenes/modelo a tres capas.png}
+    \caption{Modelo Jerárquico de Tres Capas}
+    \label{fig:3capas}
+\end{figure}
 
 \section{Protocolos de Enrutamiento Dinámico}
+En redes hospitalarias con múltiples sedes interconectadas y una estructura de red segmentada y redundante, resulta imprescindible contar con mecanismos que permitan 
+gestionar automáticamente las rutas entre dispositivos y subredes. Los protocolos de enrutamiento dinámico son esenciales para garantizar la conectividad, optimizar el 
+tráfico de red y asegurar una rápida convergencia ante cambios en la topología.
+
 \subsection{Open Shortest Path First (OSPF)}
 \label{subsec:ospf}
 OSPF es un protocolo de enrutamiento de estado de enlace ampliamente utilizado en redes hospitalarias por su capacidad de rápida convergencia y soporte para redes complejas. 
@@ -43,6 +56,12 @@ El algoritmo de Dijkstra, implementado en OSPF, calcula la ruta más corta entre
 y eficiencia en la transmisión de datos críticos en hospitales.
 
 \section{Protocolos de Redundancia y Alta Disponibilidad}
+En entornos críticos como el hospitalario, donde la disponibilidad continua de la red es indispensable para garantizar la atención sanitaria y el acceso a información 
+clínica, resulta fundamental implementar mecanismos que eviten la pérdida de servicio ante posibles incidencias en enlaces o dispositivos de red.
+\\ \\
+Para ello, se utilizan protocolos de redundancia y alta disponibilidad, que permiten asegurar la continuidad de la conectividad y minimizar los tiempos de caída mediante 
+la conmutación automática ante fallos.
+
 \subsection{Hot Standby Router Protocol (HSRP)}
 \label{subsec:hsrp}
 HSRP es un protocolo propietario de Cisco que proporciona redundancia de gateway mediante la creación de un router virtual. Un router activo gestiona el tráfico, mientras que uno 
@@ -74,6 +93,9 @@ EtherChannel permite agrupar múltiples enlaces físicos en un único enlace ló
 \end{itemize}
 
 \section{Servicios de Red Fundamentales}
+Para el correcto funcionamiento de cualquier infraestructura de red, y especialmente en entornos hospitalarios donde conviven múltiples dispositivos, servicios y usuarios, 
+resulta imprescindible disponer de una serie de servicios de red esenciales que garanticen la conectividad, la gestión eficiente de direcciones IP y el acceso controlado a recursos externos.
+
 \subsection{Dynamic Host Configuration Protocol (DHCP)}
 \label{subsec:dhcp}
 DHCP automatiza la asignación de direcciones IP y otros parámetros de red, simplificando la gestión y reduciendo errores de configuración. En entornos hospitalarios, esto facilita la 
@@ -96,7 +118,7 @@ NAT permite que múltiples dispositivos compartan una única dirección IP públ
     \item \textbf{\ac{PAT}:} Permite que múltiples dispositivos compartan una única dirección IP pública utilizando diferentes números de puerto para distinguir las conexiones.
 \end{itemize}
 
-\textbf{Ventajas de NAT en Entornos Hospitalarios:}
+\textbf{Ventajas de NAT:}
 \begin{itemize}
     \item \textbf{Conservación de direcciones IP:} Permite que múltiples dispositivos utilicen una única dirección IP pública, lo que es crucial en entornos con recursos limitados.
     \item \textbf{Seguridad:} Oculta las direcciones IP internas de la red, dificultando el acceso no autorizado desde el exterior.
@@ -113,7 +135,7 @@ Para garantizar la seguridad de la infraestructura de red hospitalaria, se puede
 
 \subsection{Listas de Control de Acceso (ACLs)}
 \label{subsec:acl}
-Las ACLs permiten filtrar el tráfico de red según criterios específicos, como direcciones IP, protocolos o puertos. Las ACLs se configuran en los dispositivos de red (switches y routers) \cite{cisco-hospital-design}. Estas se 
+Las ACLs permiten filtrar el tráfico de red según criterios específicos, como direcciones IP, protocolos o puertos. Las ACLs se configuran en los dispositivos de red (switches de capa 3 y routers) \cite{cisco-hospital-design}. Estas se 
 clasifican en dos tipos principales:
 
 \begin{itemize}
@@ -137,7 +159,7 @@ SSH es un protocolo de red que permite la administración segura de dispositivos
     \item \textbf{Autenticación segura:} Utiliza claves públicas y privadas para autenticar a los usuarios, garantizando que solo personal autorizado pueda acceder a los dispositivos.
     \item \textbf{Túneles seguros:} Permite crear túneles cifrados para transmitir datos sensibles, como credenciales o información médica, entre dispositivos.
 \end{itemize}
-\textbf{Beneficios de SSH en Entornos Hospitalarios:}
+\textbf{Beneficios de SSH:}
 \begin{itemize}
     \item \textbf{Seguridad en la administración remota:} Facilita la gestión de dispositivos de red sin comprometer la seguridad de la información.
     \item \textbf{Protección contra ataques:} Reduce el riesgo de ataques de intermediarios (\ac{MITM}) y suplantación de identidad, asegurando que las comunicaciones sean auténticas.
@@ -146,9 +168,11 @@ SSH es un protocolo de red que permite la administración segura de dispositivos
 
 \subsection{Zonas Desmilitarizadas (DMZ)}
 Las zonas desmilitarizadas (DMZ) son una técnica de seguridad que permite aislar servicios accesibles desde Internet de la red interna del hospital, proporcionando una capa adicional de protección.
-En entornos hospitalarios, las DMZ se utilizan para alojar servicios como servidores web, servidores de correo electrónico o aplicaciones accesibles desde el exterior \cite{cisco-hospital-design}.
+En entornos hospitalarios, las DMZ se utilizan para alojar servicios como servidores web, servidores de correo electrónico o aplicaciones accesibles desde el exterior \cite{dmz}.
+\\ \\
+También suelen incluir elementos de filtrado de tráfico como los firewalls, pero tambíen se pueden implementar configuraciones en los routers, para que simulen las funciones de los firewalls.
 
-\textbf{Beneficios de las DMZ en Entornos Hospitalarios:}
+\textbf{Beneficios de las DMZ:}
 \begin{itemize}
     \item \textbf{Aislamiento de servicios:} Permite que los servicios accesibles desde Internet estén separados de la red interna, reduciendo el riesgo de comprometer sistemas críticos.
     \item \textbf{Control de acceso:} Facilita la implementación de políticas de seguridad más estrictas para los servicios expuestos, limitando el acceso a recursos internos.

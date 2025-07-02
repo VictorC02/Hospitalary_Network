@@ -49,6 +49,13 @@ I.~Cisco~Systems, ``Cisco hospital network design,'' Cisco, Tech. Rep., 2023.
   \url{https://es.scribd.com/document/723946102/Report-CISCO-Hospital-Network-Design}
 \BIBentrySTDinterwordspacing
 
+\bibitem{dmz}
+\BIBentryALTinterwordspacing
+INCIBE. (2019) Qué es una dmz y cómo te puede ayudar a proteger tu empresa.
+  [Online]. Available:
+  \url{https://www.incibe.es/empresas/blog/dmz-y-te-puede-ayudar-proteger-tu-empresa}
+\BIBentrySTDinterwordspacing
+
 \bibitem{cisco_dhcp_snooping}
 \BIBentryALTinterwordspacing
 C.~Systems, \emph{Configuring DHCP Snooping}, 2019. [Online]. Available:

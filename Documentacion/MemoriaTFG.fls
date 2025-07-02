@@ -230,9 +230,15 @@ INPUT MemoriaTFG.aux
 INPUT .\Acrónimos.aux
 INPUT .\Acrónimos.aux
 INPUT Acrónimos.aux
-INPUT .\Resum.aux
-INPUT .\Resum.aux
-INPUT Resum.aux
+INPUT .\Resumen.aux
+INPUT .\Resumen.aux
+INPUT Resumen.aux
+INPUT .\ResumIng.aux
+INPUT .\ResumIng.aux
+INPUT ResumIng.aux
+INPUT .\ResumCat.aux
+INPUT .\ResumCat.aux
+INPUT ResumCat.aux
 INPUT .\Introducción.aux
 INPUT .\Introducción.aux
 INPUT Introducción.aux
@@ -418,12 +424,24 @@ OUTPUT Acrónimos.aux
 INPUT .\Acrónimos.tex
 INPUT .\Acrónimos.tex
 INPUT Acrónimos.tex
-INPUT .\Resum.tex
-INPUT .\Resum.tex
-OUTPUT Resum.aux
-INPUT .\Resum.tex
-INPUT .\Resum.tex
-INPUT Resum.tex
+INPUT .\Resumen.tex
+INPUT .\Resumen.tex
+OUTPUT Resumen.aux
+INPUT .\Resumen.tex
+INPUT .\Resumen.tex
+INPUT Resumen.tex
+INPUT .\ResumIng.tex
+INPUT .\ResumIng.tex
+OUTPUT ResumIng.aux
+INPUT .\ResumIng.tex
+INPUT .\ResumIng.tex
+INPUT ResumIng.tex
+INPUT .\ResumCat.tex
+INPUT .\ResumCat.tex
+OUTPUT ResumCat.aux
+INPUT .\ResumCat.tex
+INPUT .\ResumCat.tex
+INPUT ResumCat.tex
 INPUT .\Introducción.tex
 INPUT .\Introducción.tex
 OUTPUT Introducción.aux
@@ -450,6 +468,13 @@ OUTPUT MarcoTeórico.aux
 INPUT .\MarcoTeórico.tex
 INPUT .\MarcoTeórico.tex
 INPUT MarcoTeórico.tex
+INPUT .\Imágenes\modelo a tres capas.png
+INPUT .\Imágenes\modelo a tres capas.png
+INPUT .\Imágenes\modelo a tres capas.png
+INPUT .\Imágenes\modelo a tres capas.png
+INPUT .\Imágenes\modelo a tres capas.png
+INPUT .\Imágenes\modelo a tres capas.png
+INPUT .\Imágenes\modelo a tres capas.png
 INPUT .\Analisis.tex
 INPUT .\Analisis.tex
 OUTPUT Analisis.aux
@@ -660,9 +685,6 @@ OUTPUT Pruebas.aux
 INPUT .\Pruebas.tex
 INPUT .\Pruebas.tex
 INPUT Pruebas.tex
-INPUT C:\Users\Victor\AppData\Local\Programs\MiKTeX\fonts\vf\public\fourier\futr8t.vf
-INPUT C:\Users\Victor\AppData\Local\Programs\MiKTeX\fonts\tfm\public\fourier\futr8r.tfm
-INPUT C:\Users\Victor\AppData\Local\Programs\MiKTeX\fonts\tfm\public\fourier\fourier-alt.tfm
 INPUT .\Conclusión.tex
 INPUT .\Conclusión.tex
 OUTPUT Conclusión.aux
@@ -936,6 +958,27 @@ INPUT .\Imágenes\SwDistrDesp.png
 INPUT .\Imágenes\SwDistrDesp.png
 INPUT .\Imágenes\SwDistrDesp.png
 INPUT .\Imágenes\SwDistrDesp.png
+INPUT .\Imágenes\ospf1.png
+INPUT .\Imágenes\ospf1.png
+INPUT .\Imágenes\ospf1.png
+INPUT .\Imágenes\ospf1.png
+INPUT .\Imágenes\ospf1.png
+INPUT .\Imágenes\ospf1.png
+INPUT .\Imágenes\ospf1.png
+INPUT .\Imágenes\ospf2.png
+INPUT .\Imágenes\ospf2.png
+INPUT .\Imágenes\ospf2.png
+INPUT .\Imágenes\ospf2.png
+INPUT .\Imágenes\ospf2.png
+INPUT .\Imágenes\ospf2.png
+INPUT .\Imágenes\ospf2.png
+INPUT .\Imágenes\ospf3.png
+INPUT .\Imágenes\ospf3.png
+INPUT .\Imágenes\ospf3.png
+INPUT .\Imágenes\ospf3.png
+INPUT .\Imágenes\ospf3.png
+INPUT .\Imágenes\ospf3.png
+INPUT .\Imágenes\ospf3.png
 INPUT .\Imágenes\RedSonEspases.png
 INPUT .\Imágenes\RedSonEspases.png
 INPUT .\Imágenes\RedSonEspases.png
@@ -966,9 +1009,15 @@ INPUT MemoriaTFG.aux
 INPUT .\Acrónimos.aux
 INPUT .\Acrónimos.aux
 INPUT Acrónimos.aux
-INPUT .\Resum.aux
-INPUT .\Resum.aux
-INPUT Resum.aux
+INPUT .\Resumen.aux
+INPUT .\Resumen.aux
+INPUT Resumen.aux
+INPUT .\ResumIng.aux
+INPUT .\ResumIng.aux
+INPUT ResumIng.aux
+INPUT .\ResumCat.aux
+INPUT .\ResumCat.aux
+INPUT ResumCat.aux
 INPUT .\Introducción.aux
 INPUT .\Introducción.aux
 INPUT Introducción.aux

@@ -2,7 +2,7 @@
 
 \chapter{Análisis }\label{análisis}
 
-\section{Interesados}
+\section{Partes Interesadas}
 Los interesados son aquellas personas o entidades que tienen un interés en el proyecto y pueden influir en su desarrollo o verse afectadas por él. En este caso, 
 los interesados son los siguientes:
 
@@ -33,14 +33,9 @@ Son aquellos requisitos que definen las funciones y servicios que debe ofrecer l
 dispositivos conectados.
 \begin{itemize}
     \item Cada hospital debe disponer de tres subredes diferenciadas: una para invitados, una para dispositivos IoMT y otra para la red interna hospitalaria.
-    \item Cada hospital debe estar dividido en VLANs por departamentos, asegurando la separación lógica de las áreas médicas, administrativas, de investigación y de enfermería.
-    \item La red debe permitir la asignación dinámica de direcciones IP mediante servidores DHCP en cada subred.
-    \item Debe garantizar la resolución de nombres internos mediante DNS.
-    \item Los dispositivos autorizados (\ac{PC}s del departamento de IT) deben poder acceder a servidores de datos y dispositivos médicos críticos entre hospitales.
-    \item Los dispositivos médicos IoMT deben disponer de una subred propia con dos servidores DHCP, uno de ellos de respaldo.
+    \item La red debe permitir la asignación dinámica de direcciones IP.
+    \item Los dispositivos privilegiados (\ac{PC}s del departamento de IT) deben poder acceder a servidores de datos de otros hospitales.
     \item Deben implementarse servicios de NAT para acceso a Internet desde las subredes del hospital.
-    \item Se debe permitir gestión remota segura de los dispositivos de red mediante SSH.
-    \item La red debe contar con redundancia de enlaces y gateways mediante EtherChannel y HSRP.
     \item Tanto la red intrahospitalaria como la interhospitalaria debe estar configurada de tal forma que haya configuraciones dinámicas de enrutamiento utilizando OSPF.
     \item Las comunicaciones desde el exterior de la red hacia el interior tienen que pasar por una interfaz diferente de las que van desde el interior hacia el exterior.
 \end{itemize}
@@ -74,11 +69,13 @@ Establecen las condiciones que debe cumplir la red para proteger su infraestruct
     \begin{itemize}
         \item Bloquear el tráfico desde la red de invitados hacia la red interna y la red de dispositivos IoMT.
         \item Restringir el acceso a la base de datos de cada hospital, permitiendo únicamente a un PC autorizado del departamento de IT de cada hospital acceder a ella.
-        \item Restringir el acceso a los dispositivos IoMT según su clasificación y función, limitando la conectividad entre ellos.
+        \item Restringir el acceso a los dispositivos IoMT según su clasificación y función, limitando la conectividad con ellos.
         \item Permitir el acceso a los dispositivos de la red interna únicamente a los dispositivos autorizados de las áreas de servicios quirúrgicos, médicos, centrales y \ac{UCI}.
-        \item Solo permitir el tráfico desde Internet hasta el servidor web.
+        \item Solo permitir el tráfico desde Internet hacia el DMZ.
+        \item Bloquear cualquier tráfico saliente de la DMZ que no sea hacia Internet.
+        \item Permitir el tráfico de la red interna hacia la DMZ.
     \end{itemize}
-    \item La gestión de dispositivos de red debe realizarse mediante conexiones seguras (SSH).
+    \item La gestión de dispositivos de red debe realizarse mediante conexiones seguras.
     \item Todos los dispositivos de red deben contar con una configuración de autenticación, con contraseñas seguras, para evitar accesos no autorizados.
     \item La interconexión entre hospitales debe realizarse a través de enlaces seguros, utilizando VPNs o túneles cifrados para proteger la información transmitida.
 \end{itemize}
