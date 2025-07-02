@@ -33,7 +33,7 @@ para no duplicar el esfuerzo de configuración y para centrarse en mejorar las c
 En esta sección se presentan las topologías de red propuestas tanto para el Hospital Universitario Son Espases como para la red de interconexión de los cuatro hospitales, que incluye tanto la topología física como la lógica, detallando en cada caso las decisiones adoptadas
 y los dispositivos seleccionados para cumplir con los requisitos de conectividad, seguridad y rendimiento.
 
-\subsection{Topología física Son Espases}
+\subsection{Topología física Son Espases (cambiar)}
 La topología física representa la disposición y conexión física de routers, switches, servidores, dispositivos IoMT y departamentos.
 \subsubsection{Routers}
 En este diseño, como se muestra en la Figura \ref{fig:Routers}, se han implementado tres routers principales, los cuales están configurados para proporcionar 
@@ -176,7 +176,7 @@ de forma más clara la disposición física de los diferentes elementos de la re
 Además, las grandes áreas y departamentos del Hospital de Son Espases se han extraído de sitios web oficiales del Govern de les Illes Balears, como el portal de Gerencia del Hospital Universitario de Son Espases 
 \cite{GerenciaSonEspases} o el documento oficial de la plantilla del Hospital Universitario de Son Espases \cite{PlantillaSonEspases}.
 
-\subsection{Topología Lógica Son Espases}
+\subsection{Topología Lógica Son Espases (cambiar)}
 
 La topología lógica define la organización del tráfico y las relaciones entre las distintas VLANs, subredes y servicios.
 \\ \\
@@ -195,7 +195,7 @@ Por ese motivo, hay una VLAN para cada tipo de dispositivo IoMT en la planta 3, 
 {\small \textbf{Nota:} \textit{Para recordar los tipos de dispositivos IoMT que hay, ver la sección \ref{subsec: TiposIoMT}}}
 
 
-\subsection{Topología Física de la Red de Interconexión entre Hospitales}
+\subsection{Topología Física de la Red de Interconexión entre Hospitales (cambiar)}
 Este diseño es el mismo para los cuatro hospitales, permitiendo así que todos dispongan de los mismos recursos, aunque individualmente cada uno tenga sus propios departamentos.
 En este diseño, el núcleo de la red es la interconexión de los cuatro hospitales, esta se lleva a cabo mediante enlaces directos entre cada router de cada hospital, en la Figura \ref{fig:InterconexionHospitales}
 se muestra la topología física de los routers de interconexión entre hospitales.
@@ -250,7 +250,7 @@ En la Figura \ref{fig:CLustersDentroHospitales} se aprecian las subredes que hay
 \end{figure}
 
 
-\subsection{Topología Lógica de la Red de Interconexión entre Hospitales}
+\subsection{Topología Lógica de la Red de Interconexión entre Hospitales (cambiar)}
 En este diseño, se ha definido una VLAN por cada departamento del hospital, además de las VLANs de interconexión entre switches y routers. Además, se han definido cuatro grandes subredes:
 \begin{itemize}
     \item \textbf{Subred Son Espases:} Esta subred alberga las VLANs de los departamentos y servicios internos del Hospital Son Espases, garantizando la comunicación entre ellos y el acceso a los recursos compartidos.
