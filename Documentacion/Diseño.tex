@@ -13,9 +13,6 @@ de la red de uno de los hospitales, empleando técnicas de segmentación mediant
 Asimismo, se describen las decisiones adoptadas respecto a la topología física y lógica, la planificación del direccionamiento IP, la definición de las VLANs, la organización 
 de los servicios de red, las políticas de seguridad implementadas y la configuración de mecanismos de redundancia y tolerancia a fallos. Todos estos elementos se han planificado
 en base a los criterios de diseño establecidos en capítulos anteriores y conforme a las buenas prácticas recomendadas para entornos sanitarios.
-\\ \\
-Este capítulo servirá como base para la posterior implementación y simulación de la red en Cisco Packet Tracer, así como para la ejecución de pruebas de conectividad y 
-seguridad orientadas a validar su funcionamiento.
 
 \section{Criterios de Diseño}
 \label{sec:criterios}
@@ -54,12 +51,12 @@ redundancia y tolerancia a fallos mediante Hot Standby Router Protocol (HSRP). E
     \label{fig:Routers} 
 \end{figure}
 
-Todos estos dispositivos están conectados mediante enlaces GigabitEthernet usando un cable de cobre directo, excepto en el caso de las conexiones con los \ac{ISP} que se usan enlaces Serial. Además, todos se interconectan entre todos siguiendo la 
+Todos estos dispositivos están conectados mediante enlaces Ethernet usando un cable de cobre directo, excepto en el caso de las conexiones con los \ac{ISP} que se usan enlaces Serial. Además, todos se interconectan entre todos siguiendo la 
 topología de malla total, con el fin de conseguir redundancia en esta parte de la red, que es la más crítica.
 
 \subsubsection{Switch de Invitados}
 El switch de invitados es el encargado de interconectar a los routers con los dispositivos de red de la red de invitados, en este caso, interconecta a dos switches de capa 2, 
-mediante un enlace FastEthernet usando un cable de cobre trenzado, e interconecta con el servidor DHCP de esta subred, mediante un enlace GigabitEthernet usando un cable de cobre directo.
+mediante un enlace FastEthernet usando un cable de cobre trenzado, e interconecta con el servidor DHCP de esta subred, mediante un enlace Ethernet usando un cable de cobre directo.
 \\ \\
 Como se puede apreciar en la Figura \ref{fig:invFIs}, estos switches de capa 2, también están conectados a dos APs, los cuales a su vez, conectan con los dispositivos finales de esta subred, mediante una conexión inalámbrica.
 
@@ -72,7 +69,7 @@ Como se puede apreciar en la Figura \ref{fig:invFIs}, estos switches de capa 2, 
 
 \subsubsection{Switch de la DMZ Interna}
 Como se puede apreciar en la Figura \ref{fig:dmzIntFis}, este switch de capa 2, que actúa como puerta de entrada a la DMZ, interconecta con el único servidor que es accesible desde Internet (servidor web). El enlace 
-con el servidor es GigabitEthernet usando un cable de cobre directo.
+con el servidor es Ethernet usando un cable de cobre directo.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.4\textwidth]{Imágenes/dmzIntFis.png}
@@ -89,7 +86,7 @@ Con el fin de conseguir redundancia y balanceo de carga en el cuerpo de la subre
 siguen la topología de malla total (Figura \ref{fig:intSwitch}), mientras que las conexiones entre los switches de distribución de la subred interna siguen la topología de malla parcial, es decir, 
 se conectan dos a dos (Figura \ref{fig:intSwitchDis}). En el caso de la subred IoMT no hay conexiones entre los propios switches de distribución, ya que al haber mucho tráfico por parte de los dispositivos IoMT, se podría dar la casuística de que se saturasen más fácilmente los switches de distribución (Figura \ref{fig:intSwitchiomt}).
 \\ \\
-Todas las conexiones entre switches de capa 3 son GigabitEthernet usando cables de cobre trenzado, mientras que las conexiones con los servidores usan cables de cobre directo.
+Todas las conexiones entre switches de capa 3 son Ethernet usando cables de cobre trenzado, mientras que las conexiones con los servidores usan cables de cobre directo.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.4\textwidth]{Imágenes/dmzIntFis.png}
@@ -133,7 +130,7 @@ ya que están interconectados con los switches de acceso (capa 2), mediante enla
 entre los switches de distribución con los de acceso habría otro enlace que daría servicio al departamento que conecta el switch de acceso.
 \\ \\
 Como se puede apreciar en la Figura \ref{fig:RRHH}, en este caso es el área administrativa del hospital, cada switch de acceso conecta con un PC, una impresora y un AP, que da conectividad inalámbrica a otro tipo de dispositivos finales (smartphone y portátil).
-Como se ve estos enlaces son FastEthernet usando cables de cobre directos.
+Como se ve estos enlaces son Ethernet usando cables de cobre directos.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{Imágenes/rrhh.png}
@@ -143,7 +140,7 @@ Como se ve estos enlaces son FastEthernet usando cables de cobre directos.
 Además, como se puede apreciar en la Figura \ref{fig:redundaciaARe}, cada switch de acceso está conectado a dos switches de distribución, con el fin de garantizar la tolerancia a fallos a nivel de hardware.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{Imágenes/redundaciarrhh.png}
+    \includegraphics[width=0.9\textwidth]{Imágenes/redundaciarrhh.png}
     \caption{Redundancia a nivel de hardware en área administrativa}
     \label{fig:redundaciaARe} 
 \end{figure}
@@ -264,7 +261,7 @@ Además, en la última planta, se han definido dos VLANs distintas (VLAN 220 y V
 
 Como vemos estas VLANs manejan rangos de direcciones IP diferentes a las de la red interna o de invitados, de esta forma conseguimos segmentar y diferenciar claramente que dispositivos son IoMT y cuales no lo son.
 
-\subsection{Topología Física de la Red de Interconexión entre Hospitales (cambiar)}
+\subsection{Topología Física de la Red de Interconexión entre Hospitales}
 Este diseño es el mismo para los cuatro hospitales, permitiendo así que todos dispongan de los mismos recursos, aunque individualmente cada uno tenga sus propios departamentos.
 En este diseño, el núcleo de la red es la interconexión de los cuatro hospitales, esta se lleva a cabo mediante enlaces directos, de tipo Serial, entre cada router de cada hospital, en la Figura \ref{fig:InterconexionHospitales}
 se muestra la topología física de los routers de interconexión entre hospitales.
@@ -325,7 +322,7 @@ En este diseño, se ha definido una VLAN por cada departamento del hospital, ade
 \begin{itemize}
     \item \textbf{Subred Son Espases:} Esta subred alberga las VLANs de los departamentos y servicios internos del Hospital Son Espases, garantizando la comunicación entre ellos y el acceso a los recursos compartidos.
     \item \textbf{Subred Manacor:} Esta subred alberga las VLANs de los departamentos y servicios internos del Hospital de Manacor, garantizando la comunicación entre ellos y el acceso a los recursos compartidos.
-    \item \textbf{Subred Inca:} vEsta subred alberga las VLANs de los departamentos y servicios internos del Hospital Comarcal de Inca, garantizando la comunicación entre ellos y el acceso a los recursos compartidos.
+    \item \textbf{Subred Inca:} Esta subred alberga las VLANs de los departamentos y servicios internos del Hospital Comarcal de Inca, garantizando la comunicación entre ellos y el acceso a los recursos compartidos.
     \item \textbf{Subred Son Llàtzer:} Esta subred alberga las VLANs de los departamentos y servicios internos del Hospital Son Llàtzer, garantizando la comunicación entre ellos y el acceso a los recursos compartidos.
 \end{itemize}
 Cada hospital tiene su propia DMZ, donde alberga los servidores necesarios para dar los servicios al hospital y además cuenta con un servidor de archivos, que almacena información relevante del hospital, con el fin de que sea accesible por dispositivos autorizados de otros hospitales.

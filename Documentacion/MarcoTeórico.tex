@@ -29,7 +29,7 @@ Esta estructura optimiza el rendimiento, la escalabilidad y la facilidad de mant
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{Imágenes/modelo a tres capas.png}
-    \caption{Modelo Jerárquico de Tres Capas}
+    \caption{Modelo Jerárquico de Tres Capas \cite{3capas}}
     \label{fig:3capas}
 \end{figure}
 
@@ -151,21 +151,6 @@ Los componentes de una ACL incluyen:
     \item \textbf{Condición:} Criterios que determinan si se permite o deniega el acceso, como direcciones IP, protocolos o puertos.
 \end{itemize}
 
-\subsection{Secure Shell (SSH)}
-\label{subsec:ssh}
-SSH es un protocolo de red que permite la administración segura de dispositivos a través de una conexión cifrada \cite{cisco-hospital-design}. Sus características principales son:
-\begin{itemize}
-    \item \textbf{Cifrado de datos:} Protege la confidencialidad e integridad de la información transmitida, evitando que sea interceptada por terceros.
-    \item \textbf{Autenticación segura:} Utiliza claves públicas y privadas para autenticar a los usuarios, garantizando que solo personal autorizado pueda acceder a los dispositivos.
-    \item \textbf{Túneles seguros:} Permite crear túneles cifrados para transmitir datos sensibles, como credenciales o información médica, entre dispositivos.
-\end{itemize}
-\textbf{Beneficios de SSH:}
-\begin{itemize}
-    \item \textbf{Seguridad en la administración remota:} Facilita la gestión de dispositivos de red sin comprometer la seguridad de la información.
-    \item \textbf{Protección contra ataques:} Reduce el riesgo de ataques de intermediarios (\ac{MITM}) y suplantación de identidad, asegurando que las comunicaciones sean auténticas.
-    \item \textbf{Auditoría y seguimiento:} Permite registrar las actividades realizadas durante las sesiones SSH, facilitando la auditoría y el seguimiento de acciones administrativas.
-\end{itemize}
-
 \subsection{Zonas Desmilitarizadas (DMZ)}
 Las zonas desmilitarizadas (DMZ) son una técnica de seguridad que permite aislar servicios accesibles desde Internet de la red interna del hospital, proporcionando una capa adicional de protección.
 En entornos hospitalarios, las DMZ se utilizan para alojar servicios como servidores web, servidores de correo electrónico o aplicaciones accesibles desde el exterior \cite{dmz}.
@@ -177,16 +162,6 @@ También suelen incluir elementos de filtrado de tráfico como los firewalls, pe
     \item \textbf{Aislamiento de servicios:} Permite que los servicios accesibles desde Internet estén separados de la red interna, reduciendo el riesgo de comprometer sistemas críticos.
     \item \textbf{Control de acceso:} Facilita la implementación de políticas de seguridad más estrictas para los servicios expuestos, limitando el acceso a recursos internos.
     \item \textbf{Monitoreo y detección de intrusiones:} Las DMZ permiten una mejor supervisión del tráfico entrante y saliente, facilitando la detección de actividades sospechosas.
-\end{itemize}
-
-\subsection{DHCP Snooping}
-\label{subsec:dhcpsnooping}
-DHCP Snooping es una característica de seguridad que protege la red contra ataques de suplantación de servidor DHCP (DHCP Spoofing). Funciona filtrando las solicitudes DHCP y
-permitiendo solo aquellas provenientes de servidores DHCP autorizados \cite{cisco_dhcp_snooping}. Sus características principales son:
-\begin{itemize}
-    \item \textbf{Filtrado de mensajes DHCP:} Permite que solo los mensajes DHCP provenientes de servidores autorizados sean aceptados, bloqueando solicitudes maliciosas.
-    \item \textbf{Prevención de ataques:} Protege contra ataques de suplantación de servidor DHCP, donde un atacante intenta responder a solicitudes DHCP con información falsa.
-    \item \textbf{Registro de asignaciones:} Mantiene un registro de las asignaciones de direcciones IP realizadas por los servidores DHCP autorizados, facilitando la auditoría y el seguimiento.
 \end{itemize}
 
 \subsection{Virtual Private Network Internet Protocol Security (VPN IPSec)}
@@ -227,16 +202,6 @@ fiables y actualizados \cite{articulo2} \cite{articulo3}. \\ \\
 En la práctica hospitalaria, la \ac{IoMT} se ha consolidado como una herramienta fundamental para optimizar los procesos sanitarios, incrementando la capacidad de respuesta ante situaciones
 críticas y reduciendo la carga de trabajo del personal clínico. Gracias a la integración de sensores biomédicos, dispositivos portátiles y plataformas de gestión de datos, 
 los profesionales sanitarios pueden disponer de información vital en tiempo real, lo que favorece diagnósticos más precisos y tratamientos personalizados \cite{articulo3}. \\ \\
-
-Además, el IoMT desempeña un papel esencial en la mejora de la eficiencia operativa hospitalaria. Como se recoge en la literatura, su implementación permite localizar y gestionar
-equipamiento médico, optimizar la trazabilidad de pacientes y activos, y mejorar la monitorización de entornos hospitalarios críticos, como quirófanos y unidades de cuidados intensivos.
-Este ecosistema conectado se apoya en tecnologías de comunicación de baja potencia y largo alcance (\ac{LPWAN}) como Sigfox, \ac{LoRa} y \ac{NB-IoT}, que proporcionan conectividad eficiente para
-dispositivos médicos que requieren bajo consumo energético y cobertura extendida dentro y fuera de los centros sanitarios \cite{articulo2}. \\ \\
-
-Desde el punto de vista arquitectónico, las soluciones IoMT han evolucionado hacia modelos distribuidos basados en edge/fog computing, donde los datos se procesan parcialmente
-en pasarelas inteligentes cercanas a los dispositivos, antes de enviarse a plataformas en la nube para su almacenamiento y análisis avanzado. Este enfoque permite reducir la 
-latencia, mejorar la seguridad de los datos sensibles y aliviar la carga de tráfico hacia los servidores centrales, favoreciendo la continuidad asistencial en entornos hospitalarios
-con elevada demanda de recursos \cite{articulo1} \cite{articulo3}. \\ \\
 
 El auge del IoMT también plantea desafíos en materia de seguridad, privacidad e interoperabilidad, dado que la cantidad de información médica gestionada por estos sistemas es altamente 
 sensible y está sujeta a estrictos marcos normativos \cite{articulo3}. \\ \\

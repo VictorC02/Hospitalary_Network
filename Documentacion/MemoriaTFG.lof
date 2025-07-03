@@ -5,78 +5,78 @@
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Modelo Jerárquico de Tres Capas}}{8}{figure.2.1}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Modelo Jerárquico de Tres Capas \cite {3capas}}}{8}{figure.2.1}%
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Topología física de los Routers}}{27}{figure.5.1}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Topología física del Switch de Invitados}}{28}{figure.5.2}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Topología física del Switch de la DMZ Interna}}{28}{figure.5.3}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Topología física de los servidores de la subred interna}}{29}{figure.5.4}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Topología física de los servidores DHCP de la subred IoMT}}{29}{figure.5.5}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Topología física de la interconexión entre switches core y switches IoMT}}{29}{figure.5.6}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Topología física de la interconexión entre switches de capa 3}}{30}{figure.5.7}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Topología física de la interconexión entre switches de distribución}}{30}{figure.5.8}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Topología física de la interconexión entre switches IoMT}}{30}{figure.5.9}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Topología física del área administrativa del hospital}}{31}{figure.5.10}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Redundancia a nivel de hardware en área administrativa}}{31}{figure.5.11}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Topología física de la subred IoMT}}{32}{figure.5.12}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Disposición física de los elementos de red}}{32}{figure.5.13}%
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Topología lógica de los routers}}{34}{figure.5.14}%
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Topología lógica de la interconexión de switches L3}}{34}{figure.5.15}%
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Topología lógica del área administrativa del hospital Son Espases}}{35}{figure.5.16}%
-\contentsline {figure}{\numberline {5.17}{\ignorespaces Topología lógica de la Red de Invitados}}{35}{figure.5.17}%
-\contentsline {figure}{\numberline {5.18}{\ignorespaces Topología lógica de la Red IoMT}}{36}{figure.5.18}%
-\contentsline {figure}{\numberline {5.19}{\ignorespaces Topología física de la Interconexión entre Hospitales}}{37}{figure.5.19}%
-\contentsline {figure}{\numberline {5.20}{\ignorespaces Topología física de la interconexión entre el Router y los Switches Core en Hospitales}}{37}{figure.5.20}%
-\contentsline {figure}{\numberline {5.21}{\ignorespaces Topología física de la interconexión entre los Switches L3 en Hospitales}}{38}{figure.5.21}%
-\contentsline {figure}{\numberline {5.22}{\ignorespaces Topología física de la interconexión con Clusters en Hospitales}}{38}{figure.5.22}%
-\contentsline {figure}{\numberline {5.23}{\ignorespaces Topología física de la interconexión con Clusters en Hospitales}}{39}{figure.5.23}%
-\contentsline {figure}{\numberline {5.24}{\ignorespaces HSRP en switches de distribución en Hospital Son Espases}}{52}{figure.5.24}%
-\contentsline {figure}{\numberline {5.25}{\ignorespaces HSRP en Routers en Hospital Son Espases}}{52}{figure.5.25}%
-\contentsline {figure}{\numberline {5.26}{\ignorespaces EtherChannel entre Switches de Acceso y Distribución en Hospital Son Espases}}{53}{figure.5.26}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Topología física de los Routers}}{25}{figure.5.1}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Topología física del Switch de Invitados}}{25}{figure.5.2}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Topología física del Switch de la DMZ Interna}}{26}{figure.5.3}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Topología física de los servidores de la subred interna}}{26}{figure.5.4}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Topología física de los servidores DHCP de la subred IoMT}}{27}{figure.5.5}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Topología física de la interconexión entre switches core y switches IoMT}}{27}{figure.5.6}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Topología física de la interconexión entre switches de capa 3}}{27}{figure.5.7}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Topología física de la interconexión entre switches de distribución}}{28}{figure.5.8}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Topología física de la interconexión entre switches IoMT}}{28}{figure.5.9}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Topología física del área administrativa del hospital}}{29}{figure.5.10}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Redundancia a nivel de hardware en área administrativa}}{29}{figure.5.11}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Topología física de la subred IoMT}}{30}{figure.5.12}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Disposición física de los elementos de red}}{30}{figure.5.13}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Topología lógica de los routers}}{32}{figure.5.14}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Topología lógica de la interconexión de switches L3}}{32}{figure.5.15}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Topología lógica del área administrativa del hospital Son Espases}}{33}{figure.5.16}%
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Topología lógica de la Red de Invitados}}{33}{figure.5.17}%
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Topología lógica de la Red IoMT}}{34}{figure.5.18}%
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Topología física de la Interconexión entre Hospitales}}{35}{figure.5.19}%
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Topología física de la interconexión entre el Router y los Switches Core en Hospitales}}{35}{figure.5.20}%
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Topología física de la interconexión entre los Switches L3 en Hospitales}}{36}{figure.5.21}%
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Topología física de la interconexión con Clusters en Hospitales}}{36}{figure.5.22}%
+\contentsline {figure}{\numberline {5.23}{\ignorespaces Topología física de la interconexión con Clusters en Hospitales}}{37}{figure.5.23}%
+\contentsline {figure}{\numberline {5.24}{\ignorespaces HSRP en switches de distribución en Hospital Son Espases}}{50}{figure.5.24}%
+\contentsline {figure}{\numberline {5.25}{\ignorespaces HSRP en Routers en Hospital Son Espases}}{50}{figure.5.25}%
+\contentsline {figure}{\numberline {5.26}{\ignorespaces EtherChannel entre Switches de Acceso y Distribución en Hospital Son Espases}}{51}{figure.5.26}%
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {A.1}{\ignorespaces OSPF en Switches de Distribución en Hospital Son Espases}}{227}{figure.Alph1.1}%
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Dirección IP Dinámica en PC de Recursos Humanos}}{228}{figure.Alph1.2}%
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Dirección IP Dinámica en PC de Admisión}}{228}{figure.Alph1.3}%
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Traducción IPs hacia Internet}}{228}{figure.Alph1.4}%
-\contentsline {figure}{\numberline {A.5}{\ignorespaces Traducción IPs desde Internet}}{228}{figure.Alph1.5}%
-\contentsline {figure}{\numberline {A.6}{\ignorespaces Conexión Remota mediante SSH a Switch de Distribución 1}}{229}{figure.Alph1.6}%
-\contentsline {figure}{\numberline {A.7}{\ignorespaces Autenticación en Switch de Distribución 2}}{229}{figure.Alph1.7}%
-\contentsline {figure}{\numberline {A.8}{\ignorespaces Salida por consola de show crypto ipsec sa}}{229}{figure.Alph1.8}%
-\contentsline {figure}{\numberline {A.9}{\ignorespaces Salida por consola de show ip dhcp snooping}}{230}{figure.Alph1.9}%
-\contentsline {figure}{\numberline {A.10}{\ignorespaces Salida por consola de show ip dhcp snooping binding}}{230}{figure.Alph1.10}%
-\contentsline {figure}{\numberline {A.11}{\ignorespaces Conectividad Dispositivos Internos con Internet}}{231}{figure.Alph1.11}%
-\contentsline {figure}{\numberline {A.12}{\ignorespaces Conectividad Dispositivos Invitados con Internet}}{231}{figure.Alph1.12}%
-\contentsline {figure}{\numberline {A.13}{\ignorespaces Conectividad Internet con Servidor Web}}{231}{figure.Alph1.13}%
-\contentsline {figure}{\numberline {A.14}{\ignorespaces Bloqueo entre Dispositivo Administrativo con Dispositivo IoMT}}{232}{figure.Alph1.14}%
-\contentsline {figure}{\numberline {A.15}{\ignorespaces Bloqueo entre Dispositivo Administrativo con Dispositivo Médico}}{232}{figure.Alph1.15}%
-\contentsline {figure}{\numberline {A.16}{\ignorespaces Bloqueo entre Dispositivo Administrativo con Dispositivo de la UCI}}{232}{figure.Alph1.16}%
-\contentsline {figure}{\numberline {A.17}{\ignorespaces Bloqueo entre Dispositivo Invitado con Dispositivo Interno}}{232}{figure.Alph1.17}%
-\contentsline {figure}{\numberline {A.18}{\ignorespaces Bloqueo entre Dispositivo Invitado con Dispositivo IoMT}}{233}{figure.Alph1.18}%
-\contentsline {figure}{\numberline {A.19}{\ignorespaces Bloqueo entre Dispositivo No Autorizado con Servidor de Archivos}}{233}{figure.Alph1.19}%
-\contentsline {figure}{\numberline {A.20}{\ignorespaces Conectividad entre Dispositivo Médico con Dispositivo UCI}}{233}{figure.Alph1.20}%
-\contentsline {figure}{\numberline {A.21}{\ignorespaces Conectividad entre Dispositivo Médico con Dispositivo IoMT Tipo 1}}{234}{figure.Alph1.21}%
-\contentsline {figure}{\numberline {A.22}{\ignorespaces Conectividad entre Dispositivo de la UCI con Dispositivo IoMT Tipo 2}}{234}{figure.Alph1.22}%
-\contentsline {figure}{\numberline {A.23}{\ignorespaces Conectividad entre Dispositivo Autorizado de la UCI con Dispositivo IoMT Tipo 3}}{234}{figure.Alph1.23}%
-\contentsline {figure}{\numberline {A.24}{\ignorespaces Conectividad PC Autorizado de IT con Servidor de Archivos}}{235}{figure.Alph1.24}%
-\contentsline {figure}{\numberline {A.25}{\ignorespaces Router Principal Antes}}{235}{figure.Alph1.25}%
-\contentsline {figure}{\numberline {A.26}{\ignorespaces Router Auxiliar 1 Antes}}{235}{figure.Alph1.26}%
-\contentsline {figure}{\numberline {A.27}{\ignorespaces Router Auxiliar 2 Antes}}{235}{figure.Alph1.27}%
-\contentsline {figure}{\numberline {A.28}{\ignorespaces Router Auxiliar 1 Después}}{235}{figure.Alph1.28}%
-\contentsline {figure}{\numberline {A.29}{\ignorespaces Router Auxiliar 2 Después}}{236}{figure.Alph1.29}%
-\contentsline {figure}{\numberline {A.30}{\ignorespaces Switch Principal Antes}}{236}{figure.Alph1.30}%
-\contentsline {figure}{\numberline {A.31}{\ignorespaces Switch Auxiliar Antes}}{236}{figure.Alph1.31}%
-\contentsline {figure}{\numberline {A.32}{\ignorespaces Switch Auxiliar Después}}{236}{figure.Alph1.32}%
-\contentsline {figure}{\numberline {A.33}{\ignorespaces Switch Acceso Antes}}{236}{figure.Alph1.33}%
-\contentsline {figure}{\numberline {A.34}{\ignorespaces Switch Distribución Antes}}{237}{figure.Alph1.34}%
-\contentsline {figure}{\numberline {A.35}{\ignorespaces Switch Acceso Después}}{237}{figure.Alph1.35}%
-\contentsline {figure}{\numberline {A.36}{\ignorespaces Switch Distribución Después}}{237}{figure.Alph1.36}%
-\contentsline {figure}{\numberline {A.37}{\ignorespaces Validación OSPF en Red Interconexión entre Hospitales Parte 1}}{238}{figure.Alph1.37}%
-\contentsline {figure}{\numberline {A.38}{\ignorespaces Validación OSPF en Red Interconexión entre Hospitales Parte 2}}{238}{figure.Alph1.38}%
-\contentsline {figure}{\numberline {A.39}{\ignorespaces Validación OSPF en Red Interconexión entre Hospitales Parte 3}}{239}{figure.Alph1.39}%
-\contentsline {figure}{\numberline {A.40}{\ignorespaces Red Completa del Hospital Son Espases}}{241}{figure.Alph1.40}%
-\contentsline {figure}{\numberline {A.41}{\ignorespaces Red Completa de Interconexión entre Hospitales}}{243}{figure.Alph1.41}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces OSPF en Switches de Distribución en Hospital Son Espases}}{223}{figure.Alph1.1}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Dirección IP Dinámica en PC de Recursos Humanos}}{224}{figure.Alph1.2}%
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Dirección IP Dinámica en PC de Admisión}}{224}{figure.Alph1.3}%
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Traducción IPs hacia Internet}}{224}{figure.Alph1.4}%
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Traducción IPs desde Internet}}{224}{figure.Alph1.5}%
+\contentsline {figure}{\numberline {A.6}{\ignorespaces Conexión Remota mediante SSH a Switch de Distribución 1}}{225}{figure.Alph1.6}%
+\contentsline {figure}{\numberline {A.7}{\ignorespaces Autenticación en Switch de Distribución 2}}{225}{figure.Alph1.7}%
+\contentsline {figure}{\numberline {A.8}{\ignorespaces Salida por consola de show crypto ipsec sa}}{225}{figure.Alph1.8}%
+\contentsline {figure}{\numberline {A.9}{\ignorespaces Salida por consola de show ip dhcp snooping}}{226}{figure.Alph1.9}%
+\contentsline {figure}{\numberline {A.10}{\ignorespaces Salida por consola de show ip dhcp snooping binding}}{226}{figure.Alph1.10}%
+\contentsline {figure}{\numberline {A.11}{\ignorespaces Conectividad Dispositivos Internos con Internet}}{227}{figure.Alph1.11}%
+\contentsline {figure}{\numberline {A.12}{\ignorespaces Conectividad Dispositivos Invitados con Internet}}{227}{figure.Alph1.12}%
+\contentsline {figure}{\numberline {A.13}{\ignorespaces Conectividad Internet con Servidor Web}}{227}{figure.Alph1.13}%
+\contentsline {figure}{\numberline {A.14}{\ignorespaces Bloqueo entre Dispositivo Administrativo con Dispositivo IoMT}}{228}{figure.Alph1.14}%
+\contentsline {figure}{\numberline {A.15}{\ignorespaces Bloqueo entre Dispositivo Administrativo con Dispositivo Médico}}{228}{figure.Alph1.15}%
+\contentsline {figure}{\numberline {A.16}{\ignorespaces Bloqueo entre Dispositivo Administrativo con Dispositivo de la UCI}}{228}{figure.Alph1.16}%
+\contentsline {figure}{\numberline {A.17}{\ignorespaces Bloqueo entre Dispositivo Invitado con Dispositivo Interno}}{228}{figure.Alph1.17}%
+\contentsline {figure}{\numberline {A.18}{\ignorespaces Bloqueo entre Dispositivo Invitado con Dispositivo IoMT}}{229}{figure.Alph1.18}%
+\contentsline {figure}{\numberline {A.19}{\ignorespaces Bloqueo entre Dispositivo No Autorizado con Servidor de Archivos}}{229}{figure.Alph1.19}%
+\contentsline {figure}{\numberline {A.20}{\ignorespaces Conectividad entre Dispositivo Médico con Dispositivo UCI}}{229}{figure.Alph1.20}%
+\contentsline {figure}{\numberline {A.21}{\ignorespaces Conectividad entre Dispositivo Médico con Dispositivo IoMT Tipo 1}}{230}{figure.Alph1.21}%
+\contentsline {figure}{\numberline {A.22}{\ignorespaces Conectividad entre Dispositivo de la UCI con Dispositivo IoMT Tipo 2}}{230}{figure.Alph1.22}%
+\contentsline {figure}{\numberline {A.23}{\ignorespaces Conectividad entre Dispositivo Autorizado de la UCI con Dispositivo IoMT Tipo 3}}{230}{figure.Alph1.23}%
+\contentsline {figure}{\numberline {A.24}{\ignorespaces Conectividad PC Autorizado de IT con Servidor de Archivos}}{231}{figure.Alph1.24}%
+\contentsline {figure}{\numberline {A.25}{\ignorespaces Router Principal Antes}}{231}{figure.Alph1.25}%
+\contentsline {figure}{\numberline {A.26}{\ignorespaces Router Auxiliar 1 Antes}}{231}{figure.Alph1.26}%
+\contentsline {figure}{\numberline {A.27}{\ignorespaces Router Auxiliar 2 Antes}}{231}{figure.Alph1.27}%
+\contentsline {figure}{\numberline {A.28}{\ignorespaces Router Auxiliar 1 Después}}{231}{figure.Alph1.28}%
+\contentsline {figure}{\numberline {A.29}{\ignorespaces Router Auxiliar 2 Después}}{232}{figure.Alph1.29}%
+\contentsline {figure}{\numberline {A.30}{\ignorespaces Switch Principal Antes}}{232}{figure.Alph1.30}%
+\contentsline {figure}{\numberline {A.31}{\ignorespaces Switch Auxiliar Antes}}{232}{figure.Alph1.31}%
+\contentsline {figure}{\numberline {A.32}{\ignorespaces Switch Auxiliar Después}}{232}{figure.Alph1.32}%
+\contentsline {figure}{\numberline {A.33}{\ignorespaces Switch Acceso Antes}}{232}{figure.Alph1.33}%
+\contentsline {figure}{\numberline {A.34}{\ignorespaces Switch Distribución Antes}}{233}{figure.Alph1.34}%
+\contentsline {figure}{\numberline {A.35}{\ignorespaces Switch Acceso Después}}{233}{figure.Alph1.35}%
+\contentsline {figure}{\numberline {A.36}{\ignorespaces Switch Distribución Después}}{233}{figure.Alph1.36}%
+\contentsline {figure}{\numberline {A.37}{\ignorespaces Validación OSPF en Red Interconexión entre Hospitales Parte 1}}{234}{figure.Alph1.37}%
+\contentsline {figure}{\numberline {A.38}{\ignorespaces Validación OSPF en Red Interconexión entre Hospitales Parte 2}}{234}{figure.Alph1.38}%
+\contentsline {figure}{\numberline {A.39}{\ignorespaces Validación OSPF en Red Interconexión entre Hospitales Parte 3}}{235}{figure.Alph1.39}%
+\contentsline {figure}{\numberline {A.40}{\ignorespaces Red Completa del Hospital Son Espases}}{237}{figure.Alph1.40}%
+\contentsline {figure}{\numberline {A.41}{\ignorespaces Red Completa de Interconexión entre Hospitales}}{239}{figure.Alph1.41}%

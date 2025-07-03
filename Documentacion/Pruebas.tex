@@ -92,35 +92,26 @@ en este caso \textit{cisco}, y para poder acceder con privilegios de administrad
 \subsection{ACLs}
 \subsubsection{Bloqueos}
 Para probar que el tráfico entre los dispositivos de áreas administrativas y dispositivos de la UCI o IoMT de tipo 1 está correctamente bloqueado, se debe realizar un ping desde un PC del departamento de Recursos Humanos 
-a un dispositivo de esas áreas. La salida por consola al hacer un ping debería ser "Destination host unreachable".
-\\ \\ 
-También se puede acceder a las listas de control de acceso y ver qué reglas se han aplicado.
-\\ \\ 
-Para ver la salida por consola del ping desde un PC de Recursos Humanos a un dispositivo IoMT, ver el anexo \ref{anexo:blockadmin-iomt}.
-\\ \\ 
-Para ver la salida por consola del ping desde un PC de Recursos Humanos a un PC del área médica, ver el anexo \ref{anexo:blockadmin-med}.
-\\ \\ 
-Para ver la salida por consola del ping desde un PC de Recursos Humanos a un PC de la UCI, ver el anexo \ref{anexo:blockadmin-uci}.
-\\ \\ 
-Para ver la salida por consola del ping desde un PC de la red de invitados a un PC de la red interna, ver el anexo \ref{anexo:blockinv-int}.
-\\ \\ 
-Para ver la salida por consola del ping desde un PC de la red de invitados a un dispositivo IoMT, ver el anexo \ref{anexo:blockinv-iomt}.
-\\ \\ 
-Para ver la salida por consola del ping desde un PC no autorizado de la red interna de Son Espases al servidor de archivos del hospital de Manacor, ver el anexo \ref{anexo:blockinv-iomt}.
+a un dispositivo de esas áreas. La salida por consola al hacer un ping debería ser "Destination host unreachable". Aunque también se puede acceder a las listas de control de acceso y ver qué reglas se han aplicado.
+\begin{itemize}
+    \item Para ver la salida por consola del ping desde un PC de Recursos Humanos a un dispositivo IoMT, ver el anexo \ref{anexo:blockadmin-iomt}.
+    \item Para ver la salida por consola del ping desde un PC de Recursos Humanos a un PC del área médica, ver el anexo \ref{anexo:blockadmin-med}.
+    \item Para ver la salida por consola del ping desde un PC de Recursos Humanos a un PC de la UCI, ver el anexo \ref{anexo:blockadmin-uci}.
+    \item Para ver la salida por consola del ping desde un PC de la red de invitados a un PC de la red interna, ver el anexo \ref{anexo:blockinv-int}.
+    \item Para ver la salida por consola del ping desde un PC de la red de invitados a un dispositivo IoMT, ver el anexo \ref{anexo:blockinv-iomt}.
+    \item Para ver la salida por consola del ping desde un PC no privilegiado de la red interna de Son Espases al servidor de archivos del hospital de Manacor, ver el anexo \ref{anexo:blockinv-iomt}.
+\end{itemize}
 
 \subsubsection{Permisos}
 Para probar que hay conectividad o que se permite la comunicación entre dos dispositivos, se debe realizar un ping desde un dispositivo hasta otro y de esa forma comprobar que los paquetes llegan al destinatario. A veces puede que los primeros paquetes \ac{ICMP} no den conectividad, ya que primero se tienen que enviar mensajes ARP para conocer la dirección MAC 
 del dispositivo de destino. Una vez conocida la dirección MAC, los switches ya pueden enrutar el paquete ICMP en modo unicast hacia el dispositivo de destino.
-\\ \\ 
-Para ver la salida por consola del ping desde un PC de las áreas médicas a un PC de la UCI, ver el anexo \ref{anexo:permmed-uci}.
-\\ \\ 
-Para ver la salida por consola del ping desde un PC de las áreas médicas a un dispositivo IoMT tipo 1, ver el anexo \ref{anexo:permmed-tipo1}.
-\\ \\ 
-Para ver la salida por consola del ping desde un dispositivo de la UCI a un dispositivo IoMT tipo 2, ver el anexo \ref{anexo:permuci-tipo2}.
-\\ \\ 
-Para ver la salida por consola del ping desde el PC autorizado de la UCI a un dispositivo IoMT tipo 3, ver el anexo \ref{anexo:permuci-tipo3}.
-\\ \\ 
-Para ver la salida por consola del ping desde un PC de IT de un hospital a un servidor de archivos de otro hospital, ver el anexo \ref{anexo:permit-serv}.
+\begin{itemize}
+    \item Para ver la salida por consola del ping desde un PC de las áreas médicas a un PC de la UCI, ver el anexo \ref{anexo:permmed-uci}.
+    \item Para ver la salida por consola del ping desde un PC de las áreas médicas a un dispositivo IoMT tipo 1, ver el anexo \ref{anexo:permmed-tipo1}.
+    \item Para ver la salida por consola del ping desde un dispositivo de la UCI a un dispositivo IoMT tipo 2, ver el anexo \ref{anexo:permuci-tipo2}.
+    \item Para ver la salida por consola del ping desde el PC privilegiado de la UCI a un dispositivo IoMT tipo 3, ver el anexo \ref{anexo:permuci-tipo3}.
+    \item Para ver la salida por consola del ping desde un PC de IT de un hospital a un servidor de archivos de otro hospital, ver el anexo \ref{anexo:permit-serv}.
+\end{itemize}
 
 \section{Pruebas de Disponibilidad}
 A continuación se muestran las pruebas de disponibilidad realizadas:
