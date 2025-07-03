@@ -33,200 +33,269 @@ para no duplicar el esfuerzo de configuración y para centrarse en mejorar las c
 En esta sección se presentan las topologías de red propuestas tanto para el Hospital Universitario Son Espases como para la red de interconexión de los cuatro hospitales, que incluye tanto la topología física como la lógica, detallando en cada caso las decisiones adoptadas
 y los dispositivos seleccionados para cumplir con los requisitos de conectividad, seguridad y rendimiento.
 
-\subsection{Topología física Son Espases (cambiar)}
+\subsection{Topología física Son Espases}\label{subsec:topologiafisica}
 La topología física representa la disposición y conexión física de routers, switches, servidores, dispositivos IoMT y departamentos.
 \subsubsection{Routers}
 En este diseño, como se muestra en la Figura \ref{fig:Routers}, se han implementado tres routers principales, los cuales están configurados para proporcionar 
 redundancia y tolerancia a fallos mediante Hot Standby Router Protocol (HSRP). Estos routers se conectan con:
 
 \begin{itemize}
-    \item Red de Invitados.
-    \item DMZ Invitados.
-    \item DMZ IoMT.
-    \item DMZ Interno.
-    \item Dos Switches Core.
+    \item \textbf{Sw.Invitados}, que es el dispositivo que interconecta a los routers con la red de invitados.
+    \item \textbf{Sw.DMZ Interno}, que conecta con el servidor que puede ser accedido desde Internet (servidor web).
+    \item \textbf{\acs{ISP} 1}, que simula Internet, y será la interfaz que se usará para las comunicaciones hacia Internet.
+    \item \textbf{\acs{ISP} 2}, que simula Internet, y será la interfaz que se usará para las comunicaciones desde Internet.
+    \item \textbf{Sw.Core1}, que interconecta a los routers con la red interna y con la red IoMT.
 \end{itemize}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.4\textwidth]{Imágenes/Routers.png}
-    \caption{Redundancia en Routers}
+    \includegraphics[width=0.6\textwidth]{Imágenes/Routers.png}
+    \caption{Topología física de los Routers}
     \label{fig:Routers} 
 \end{figure}
 
-Además, estos routers están conectados a dos routers más, que simularían la conexión a Internet (\ac{ISP} 1 y 2).
+Todos estos dispositivos están conectados mediante enlaces GigabitEthernet usando un cable de cobre directo, excepto en el caso de las conexiones con los \ac{ISP} que se usan enlaces Serial. Además, todos se interconectan entre todos siguiendo la 
+topología de malla total, con el fin de conseguir redundancia en esta parte de la red, que es la más crítica.
 
-\subsubsection{Red de Invitados}
-La red de invitados está diseñada para proporcionar acceso a Internet a los dispositivos de invitados, garantizando que no interfieran con la red interna del hospital. Esta red 
-cuenta con dos switches L2 que conectan con dos puntos de acceso inalámbrico \ac{AP} que proporcionan conectividad a los dispositivos móviles de los invitados. La interconexión entre 
-el router y la red de invitados se realiza a través de un switch L3, que permite la segmentación y el control del tráfico de red. La Figura \ref{fig:RedInvitados} muestra la topología 
-física de la red de invitados.
+\subsubsection{Switch de Invitados}
+El switch de invitados es el encargado de interconectar a los routers con los dispositivos de red de la red de invitados, en este caso, interconecta a dos switches de capa 2, 
+mediante un enlace FastEthernet usando un cable de cobre trenzado, e interconecta con el servidor DHCP de esta subred, mediante un enlace GigabitEthernet usando un cable de cobre directo.
+\\ \\
+Como se puede apreciar en la Figura \ref{fig:invFIs}, estos switches de capa 2, también están conectados a dos APs, los cuales a su vez, conectan con los dispositivos finales de esta subred, mediante una conexión inalámbrica.
+
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{Imágenes/RedInvitados.png}
-    \caption{Topología Física de la Red de Invitados}
+    \includegraphics[width=0.6\textwidth]{Imágenes/InvitadosFis.png}
+    \caption{Topología física del Switch de Invitados}
+    \label{fig:invFIs} 
+\end{figure}
+
+\subsubsection{Switch de la DMZ Interna}
+Como se puede apreciar en la Figura \ref{fig:dmzIntFis}, este switch de capa 2, que actúa como puerta de entrada a la DMZ, interconecta con el único servidor que es accesible desde Internet (servidor web). El enlace 
+con el servidor es GigabitEthernet usando un cable de cobre directo.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Imágenes/dmzIntFis.png}
+    \caption{Topología física del Switch de la DMZ Interna}
+    \label{fig:dmzIntFis} 
+\end{figure}
+
+\subsubsection{Switches Core 1 y 2}
+Ambos switches interconectan a los routers principales con otros doce switches de capa 3, dos de ellos interconectan con los servidores propios de las subredes IoMT e Interna; en el caso 
+de la subred interna, se interconectan al servidor de archivos del hospital y al servidor DHCP de la subred interna (Figura \ref{fig:servInt}); en el caso de la subred IoMT, se interconecta a los dos servidores DHCP propios de la subred IoMT, uno de ellos funciona como backup (Figura \ref{fig:servIomT}).
+El resto de switches de capa 3 son los de distribución, que actúan como puerta de entrada a las diferentes áreas del hospital (Administrativa, Quirúrgica, Médica, Servicios Generales, Enfermería y Apoyo) y a los dispositivos IoMT de cada planta del hospital (Figura \ref{fig:intIomt}).
+\\ \\
+Con el fin de conseguir redundancia y balanceo de carga en el cuerpo de la subred interna y subred IoMT, las conexiones entre los switches core y los switches de distribución 
+siguen la topología de malla total (Figura \ref{fig:intSwitch}), mientras que las conexiones entre los switches de distribución de la subred interna siguen la topología de malla parcial, es decir, 
+se conectan dos a dos (Figura \ref{fig:intSwitchDis}). En el caso de la subred IoMT no hay conexiones entre los propios switches de distribución, ya que al haber mucho tráfico por parte de los dispositivos IoMT, se podría dar la casuística de que se saturasen más fácilmente los switches de distribución (Figura \ref{fig:intSwitchiomt}).
+\\ \\
+Todas las conexiones entre switches de capa 3 son GigabitEthernet usando cables de cobre trenzado, mientras que las conexiones con los servidores usan cables de cobre directo.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Imágenes/dmzIntFis.png}
+    \caption{Topología física de los servidores de la subred interna}
+    \label{fig:servInt} 
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.35\textwidth]{Imágenes/ServIoMT.png}
+    \caption{Topología física de los servidores DHCP de la subred IoMT}
+    \label{fig:servIomT} 
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Imágenes/intiomT.png}
+    \caption{Topología física de la interconexión entre switches core y switches IoMT}
+    \label{fig:intIomt} 
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Imágenes/intSwitches.png}
+    \caption{Topología física de la interconexión entre switches de capa 3}
+    \label{fig:intSwitch} 
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Imágenes/intSwitDis.png}
+    \caption{Topología física de la interconexión entre switches de distribución}
+    \label{fig:intSwitchDis} 
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.15\textwidth]{Imágenes/intSwIomt.png}
+    \caption{Topología física de la interconexión entre switches IoMT}
+    \label{fig:intSwitchiomt} 
+\end{figure}
+
+\subsubsection{Switches Distribución}
+Como se ha comentado anteriormente, los switches de distribución eran la puerta de entrada hacia las diferentes áreas del hospital, incluyendo a los dispositivos IoMT. Esto es así 
+ya que están interconectados con los switches de acceso (capa 2), mediante enlaces FastEthernet redundantes usando cables de cobre trenzados, de esta forma en caso de fallo de uno de los enlaces 
+entre los switches de distribución con los de acceso habría otro enlace que daría servicio al departamento que conecta el switch de acceso.
+\\ \\
+Como se puede apreciar en la Figura \ref{fig:RRHH}, en este caso es el área administrativa del hospital, cada switch de acceso conecta con un PC, una impresora y un AP, que da conectividad inalámbrica a otro tipo de dispositivos finales (smartphone y portátil).
+Como se ve estos enlaces son FastEthernet usando cables de cobre directos.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Imágenes/rrhh.png}
+    \caption{Topología física del área administrativa del hospital}
+    \label{fig:RRHH} 
+\end{figure}
+Además, como se puede apreciar en la Figura \ref{fig:redundaciaARe}, cada switch de acceso está conectado a dos switches de distribución, con el fin de garantizar la tolerancia a fallos a nivel de hardware.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Imágenes/redundaciarrhh.png}
+    \caption{Redundancia a nivel de hardware en área administrativa}
+    \label{fig:redundaciaARe} 
+\end{figure}
+
+\subsubsection{Switches IoMT}
+Como se puede apreciar en la Figura \ref{fig:iomt}, hay cuatro switches de capa 3, uno por planta para poder interconectar a los diferentes dispositivos IoMT que pueda haber en cada piso del hospital. Cada switch se conecta con 
+tres APs, ya que son los necesarios para cubrir todo el área de cada planta del hospital, excepto el switch de la última planta, el cual conecta con cuatro APs, ya que en la planta 3 es donde se encuentra la UCI y por tanto 
+entran en juego los tres tipos de dispositivos IoMT definidos en la sección \ref{subsec: TiposIoMT}.
+Las conexiones entre los switches y los APs son Ethernet usando cables de cobre directos.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Imágenes/subrediomt.png}
+    \caption{Topología física de la subred IoMT}
+    \label{fig:iomt} 
+\end{figure}
+
+\subsubsection{Disposición física}
+Para complementar la información dada en la sección \ref{subsec:topologiafisica}, se ha realizado un modelo en tres dimensiones del hospital Son Espases, donde se diferencian por colores 
+los distintos departamentos del hospital, además de dar una pequeña visión de donde se encontrarían algunos elementos de la red, como puedan ser los switches, racks o APs.
+En la Figura \ref{fig:disposic} se aprecia como en cada planta se encuentra una sala para los switches, tanto de capa 2 como de capa 3, que conectan a los diferentes departamentos divididos por colores. También se 
+aprecian la ubicación de los APs que darían servicio a los dispositivos IoMT del hospital. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Imágenes/Plano Son Espases.png}
+    \caption{Disposición física de los elementos de red}
+    \label{fig:disposic} 
+\end{figure}
+Los elementos de red, como son los routers, switches core o servidores propios de cada subred, se encuentrán en la sala de servidores del hospital (área rosa).
+\\ \\
+A continuación se muestra la leyenda de la figura anterior:
+\begin{itemize}
+    \item \textbf{Rojo:} Área de Servicios Quirúrgicos.
+    \item \textbf{Verde:} Área de Servicios Médicos.
+    \item \textbf{Naranja:} Área de Servicios Centrales.
+    \item \textbf{Azul:} Área de Administración.
+    \item \textbf{Azul oscuro:} UCI.
+    \item \textbf{Amarillo:} Área de Hospitalización.
+    \item \textbf{Verde oscuro:} Área de Investigación.
+    \item \textbf{Marrón:} Área de Atención al Paciente.
+    \item \textbf{Rosa:} Área de Servidores y Dispositivos de Red.
+    \item \textbf{Morado:} Área de Docencia.
+\end{itemize}
+\subsection{Topología lógica Son Espases}
+
+La topología lógica define la organización del tráfico y las relaciones entre las distintas VLANs, subredes y servicios. 
+En la red del hospital Son Espases, se distinguen 3 grandes subredes:
+\begin{itemize}
+    \item \textbf{Subred Interna:} Esta subred alberga las VLANs de los departamentos y servicios
+ internos del hospital, garantizando la comunicación entre ellos y el acceso a los
+ recursos compartidos.
+    \item \textbf{Subred Invitados:} Esta subred está dedicada a los dispositivos IoMT, garantizando su
+ aislamiento y seguridad, así como la monitorización de su tráfico.
+    \item \textbf{Subred IoMT:} Esta subred permite el acceso a Internet y a servicios básicos
+ para los dispositivos de invitados, garantizando que no interfieran con la red
+ interna del hospital.
+\end{itemize}
+
+Todas estas subredes están conectadas a los tres routers principales, como se puede observar en la Figura \ref{fig:interco}. Aparte de las VLANs creadas para la DMZ y para la subred de invitados, 
+también se han implementado dos VLANs con el fin de poder transmitir información entre los switches core y los routers.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Imágenes/routersLog.png}
+    \caption{Topología lógica de los routers}
+    \label{fig:interco} 
+\end{figure}
+
+\subsubsection{Subred interna}
+Se consideran de la subred interna todos los dispositivos que tienen conectividad con los routers mediante los switches core (sin tener en cuenta los switches IoMT). Como se aprecia en la Figura \ref{fig:intercoLog} 
+los dispositivos conectados a los switches core, son los switches de distribución, para que estos puedan intercambiar información y den conectividad a otros dispositivos es necesario 
+implementar una VLAN dedicada (VLAN 200). Además, como también hay enlaces redundantes entre los switches de distribución, se ha implementado otra VLAN dedicada exclusivamente para estos (VLAN 205).
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Imágenes/interLog.png}
+    \caption{Topología lógica de la interconexión de switches L3}
+    \label{fig:intercoLog} 
+\end{figure}
+
+Los switches de distribución también conectan con switches de acceso, y estos a su vez conectan a todos los dispositivos finales de los departamentos, es por eso que cada departamento 
+tiene su propia VLAN, en la Figura \ref{fig:adminLog} se puede apreciar la topología lógica del área administrativa del hospital Son Espases.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Imágenes/adminLog.png}
+    \caption{Topología lógica del área administrativa del hospital Son Espases}
+    \label{fig:adminLog}
+\end{figure}
+
+El switch que conecta con los servidores de la subred interna está conectado a la subred de interconexión de switches de capa 3, por tanto comparten la VLAN de interconexión con los demás switches de capa 3, incluidos los IoMT, ya que aunque tengan 
+una subred diferente, estos se interconectan con los switches core mediante la VLAN de interconexión de switches de capa 3 (VLAN 200).
+
+\subsubsection{Subred de invitados}
+La subred de invitados está diseñada para proporcionar acceso a Internet a los dispositivos de invitados, garantizando que no interfieran con la red interna del hospital. Esta red 
+cuenta con dos switches L2 que conectan con dos Access Point (AP) que proporcionan conectividad a los dispositivos móviles de los invitados. La interconexión entre 
+el router y la red de invitados se realiza a través de un switch L3, que permite la segmentación y el control del tráfico de red. La Figura \ref{fig:RedInvitados} muestra la topología 
+lógica de la red de invitados.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Imágenes/RedInvitados.png}
+    \caption{Topología lógica de la Red de Invitados}
     \label{fig:RedInvitados}
 \end{figure}
 
 Esta red está muy simplificada, ya que no se han implementado configuraciones de redundancia ni de seguridad avanzadas, centrándose únicamente en la conectividad básica entre los dispositivos 
 invitados y el acceso a Internet. Por supuesto, esta red es completamente escalable y se puede ampliar con los dispositivos necesarios para cumplir con futuros requisitos del sistema.
 
-\subsubsection{DMZ Invitados}
-La DMZ de invitados está diseñada para dar acceso a Internet a los dispositivos invitados, permitiendo que estos dispositivos tengan una dirección IP única dentro de la red, sin 
-interferir con la red interna del hospital. Esta DMZ está conectada a un switch L2 que conecta con los routers, permitiendo la segmentación del tráfico y el control de acceso a los recursos 
-internos. La Figura \ref{fig:DMZInvitados} muestra la topología física de la DMZ de invitados.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\textwidth]{Imágenes/DMZInvitados.png}
-    \caption{Topología Física de la DMZ de Invitados}
-    \label{fig:DMZInvitados}
-\end{figure}
-
-Como se ha podido ver en la Figura \ref{fig:DMZInvitados}, también se encuentra en esta DMZ el servidor web del hospital, de esta forma los dispositivos de Internet que quieran acceder
-a la web del hospital lo harán a través de esta DMZ evitando así que puedan conocer o acceder a la DMZ interna, añadiendo de esta forma una capa extra de seguridad.
-
-\subsubsection{DMZ IoMT}
-La DMZ IoMT tiene como finalidad dar direcciones IP dinámicas a los dispositivos IoMT de la red, permitiendo que estos dispositivos puedan tener conectividad con otros dispositivos de la red, sin 
-que estos servidores DHCP puedan ser detectados o accedidos por dispositivos externos. Esta DMZ está conectada a un switch L2 que conecta con los routers, permitiendo la segmentación del tráfico 
-y el control de acceso a los recursos internos. La Figura \ref{fig:DMZIOMT} muestra la topología física de la DMZ IoMT.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.35\textwidth]{Imágenes/DMZIOMT.png}
-    \caption{Topología Física de la DMZ IoMT}
-    \label{fig:DMZIOMT}
-\end{figure}
-
-Como se puede apreciar en la Figura \ref{fig:DMZIOMT}, esta DMZ está formada por dos servidores DHCP, uno que está activo y otro en modo reposo, de esta forma se garantiza que si uno de 
-los servidores falla, el otro pueda tomar el control y seguir proporcionando direcciones IP a los dispositivos IoMT.
-
-\subsubsection{DMZ Interna}
-La DMZ Interna está diseñada para albergar los servidores internos del hospital, como el servidor de correo electrónico, el servidor DNS, el servidor DHCP y el servidor de archivos.
-Esta DMZ está conectada a un switch L2 que conecta con los routers, permitiendo la segmentación del tráfico y el control de acceso a los recursos internos. La Figura \ref{fig:DMZInterna} 
-muestra la topología física de la DMZ interna.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\textwidth]{Imágenes/DMZInterna.png}
-    \caption{Topología Física de la DMZ Interna}
-    \label{fig:DMZInterna}
-\end{figure}
-
-Este servidor de archivos es el encargado de almacenar todos los archivos relevantes que pueden ser compartidos con otros hospitales.
-
-\subsubsection{Red Interna}
-La red interna del hospital está diseñada para albergar todos los dispositivos de red y finales del hospital, incluyendo los switches core, los de distribución, los de acceso y los dispositivos finales 
-de cada departamento. Dentro de la red interna, primero nos encontramos con los switches core, que conectan con los routers y por tanto dan acceso a Internet y a las DMZ a todos los dispositivos de la red Interna.
-Estos switches core están conectados en forma de malla, permitiendo la redundancia y la tolerancia a fallos. La Figura \ref{fig:SwitchesCore} muestra la topología física de la interconexión de los switches core.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\textwidth]{Imágenes/SwitchesCore.png}
-    \caption{Interconexión de Switches Core}
-    \label{fig:SwitchesCore}
-\end{figure}
-
-Estos switches core están conectados en forma de malla a seis switches de distribución, uno por cada área del hospital (Administración, Servicios Quirúrgicos, Servicios Médicos, Servicios Centrales, Enfermería y Apoyo), 
-permitiendo la segmentación del tráfico y el control de acceso a los recursos internos. Además, cada switch de distribución está conectado a otros dos switches de distribución, 
-lo que permite implementar redundancia y tolerancia a fallos. La Figura \ref{fig:SwitchesDistribucion} muestra la topología física de la interconexión de los switches de distribución.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\textwidth]{Imágenes/SwitchesDistribucion.png}
-    \caption{Interconexión de Switches de Distribución}
-    \label{fig:SwitchesDistribucion}
-\end{figure}
-
-Estos switches de distribución están conectados a los switches de acceso, que son los encargados de conectar los dispositivos finales de cada departamento. Cada switch de acceso 
-está conectado a dos switches de distribución, permitiendo la redundancia y tolerancia a fallos, además, también tiene un doble enlace con uno de los switches de distribución, 
-lo que permite que si uno de los enlaces falla, el otro enlace pueda seguir proporcionando conectividad a los dispositivos finales. La Figura \ref{fig:SwitchesAcceso} muestra la topología física de la interconexión de los switches de acceso.
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{Imágenes/SwitchesAcceso.png}
-    \caption{Interconexión de Switches de Acceso}
-    \label{fig:SwitchesAcceso}
-\end{figure}
-
-Como se puede ver en la Figura \ref{fig:SwitchesAcceso}, cada departamento está formado por un PC de escritorio, una impresora y un punto de acceso que da conectividad inalámbrica a un portátil y un smartphone. Esto es así 
-a modo de ejemplo, para que se vea que es posible conectar varios dispositivos diferentes y con diferentes conexiones, por supuesto cada departamento es completamente escalable ya que se pueden añadir tantos dispositivos como se necesiten, teniendo en cuenta que el límite de direcciones IP asignables son 56.
-
-\subsubsection{Red IoMT}
-La red IoMT está conectada directamente a los switches core, de esta forma se consigue que no saturen a los routers con su constante tráfico. En la Figura \ref{fig:IoMT} se muestra la topología física de la red IoMT.
-Se puede apreciar claramente que está dividida en cuatro capas, una por cada planta del hospital, de esta forma podemos distinguir los tipos de dispositivos IoMT según la planta en la que se encuentren. 
-Cada capa está formada por un switch L3 que conecta con tres puntos de acceso, lo que permite que haya cobertura inalámbrica a lo largo de cada planta, y además permite que si los dispositivos IoMT se desplazan, puedan conectarse a otro punto de acceso bajo el mismo SSID.
- 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.65\textwidth]{Imágenes/IoMT.png}
-    \caption{Topología Física de la Red de Dispositivos IoMT}
-    \label{fig:IoMT}
-\end{figure}
-
-\subsubsection{Disposición Física}
-\label{subsubsec:disposicion}
-La Figura \ref{fig:disposicion} muestra una imagen en tres dimensiones de la disposición de los dispositivos de red y diferentes departamentos del hospital, de esta forma se puede apreciar 
-de forma más clara la disposición física de los diferentes elementos de la red. La ubicación de algunos departamentos se ha extraído de un vídeo de Youtube publicado por el Govern de les Illes Balears \cite{SonEspases}.
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{Imágenes/Plano Son Espases.png}
-    \caption{Disposición Física Elementos de Red del Hospital Son Espases}
-    \label{fig:disposicion}
-\end{figure}
-Además, las grandes áreas y departamentos del Hospital de Son Espases se han extraído de sitios web oficiales del Govern de les Illes Balears, como el portal de Gerencia del Hospital Universitario de Son Espases 
-\cite{GerenciaSonEspases} o el documento oficial de la plantilla del Hospital Universitario de Son Espases \cite{PlantillaSonEspases}.
-
-\subsection{Topología Lógica Son Espases (cambiar)}
-
-La topología lógica define la organización del tráfico y las relaciones entre las distintas VLANs, subredes y servicios.
+\subsubsection{Subred IoMT}
+En la subred IoMT se encuentran los cuatro switches de capa 3 que interconectan a los APs de cada planta, en total hay tres APs por planta, exceptuando en la cuarta planta, donde hay 
+cuatro APs, ya que se encuentra la UCI y hay que diferenciar los dispositivos IoMT de tipo 2 y 3 (detallados en la sección \ref{subsec: TiposIoMT}), ya que tienen restricciones de acceso diferentes. Es por eso que se han definido varias VLANs dependiendo 
+de la planta del hospital y del tipo de dispositivo IoMT que pueda haber en esa planta.
 \\ \\
-En este diseño, se ha definido una VLAN por cada departamento del hospital, así como VLANs específicas para servicios críticos como IoMT, red de invitados e interconexiones entre dispositivos de red. También se han definido tres grandes subredes:
-\begin{itemize}
-    \item \textbf{Subred Interna:} Esta subred alberga las VLANs de los departamentos y servicios internos del hospital, garantizando la comunicación entre ellos y el acceso a los recursos compartidos.
-    \item \textbf{Subred IoMT:} Esta subred está dedicada a los dispositivos IoMT, garantizando su aislamiento y seguridad, así como la monitorización de su tráfico.
-    \item \textbf{Subred de Invitados:} Esta subred permite el acceso a Internet y a servicios básicos para los dispositivos de invitados, garantizando que no interfieran con la red interna del hospital.
-\end{itemize}
+Como se aprecia en la Figura \ref{fig:Rediomt}, en las tres primeras plantas solo puede haber dispositivos IoMT de tipo 1, por tanto las VLANs 210, 211, 212 tendrán el mismo control de acceso, además de la VLAN 213, que se encuentra en la cuarta planta, que también puede contener dispositivos IoMT de tipo 1.
+Además, en la última planta, se han definido dos VLANs distintas (VLAN 220 y VLAN 230), para poder dar servicio a los dispositivos IoMT de tipo 2 y 3.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Imágenes/IoMT.png}
+    \caption{Topología lógica de la Red IoMT}
+    \label{fig:Rediomt}
+\end{figure}
 
-Además de esas subredes, también se han definido algunas VLANs específicas para la interconexión entre dispositivos de red, como los routers y switches core, así como para la DMZ interna y la DMZ IoMT.
-\\ \\
-La subred IoMT esta formada por una VLAN por cada planta, exceptuando la última planta, en la que hay tres VLANs distintas, esto es debido a que en esa planta es donde se encuentra la UCI, y por tanto los dispositivos IoMT de tipo 2 y 3.
-Por ese motivo, hay una VLAN para cada tipo de dispositivo IoMT en la planta 3, con esto se consigue una segmentación de red robusta y además se mejora la seguridad ya que se pueden implementar medidas de control de tráfico para filtrar según el tipo de dispositivo IoMT al que estén accediendo.
-\\ \\
-{\small \textbf{Nota:} \textit{Para recordar los tipos de dispositivos IoMT que hay, ver la sección \ref{subsec: TiposIoMT}}}
-
+Como vemos estas VLANs manejan rangos de direcciones IP diferentes a las de la red interna o de invitados, de esta forma conseguimos segmentar y diferenciar claramente que dispositivos son IoMT y cuales no lo son.
 
 \subsection{Topología Física de la Red de Interconexión entre Hospitales (cambiar)}
 Este diseño es el mismo para los cuatro hospitales, permitiendo así que todos dispongan de los mismos recursos, aunque individualmente cada uno tenga sus propios departamentos.
-En este diseño, el núcleo de la red es la interconexión de los cuatro hospitales, esta se lleva a cabo mediante enlaces directos entre cada router de cada hospital, en la Figura \ref{fig:InterconexionHospitales}
+En este diseño, el núcleo de la red es la interconexión de los cuatro hospitales, esta se lleva a cabo mediante enlaces directos, de tipo Serial, entre cada router de cada hospital, en la Figura \ref{fig:InterconexionHospitales}
 se muestra la topología física de los routers de interconexión entre hospitales.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{Imágenes/InterconexionHospitales.png}
-    \caption{Topología Física de la Interconexión entre Hospitales}
+    \includegraphics[width=1\textwidth]{Imágenes/InterconexionHospitales.png}
+    \caption{Topología física de la Interconexión entre Hospitales}
     \label{fig:InterconexionHospitales}
 \end{figure}
 
 Como se puede apreciar en la Figura \ref{fig:InterconexionHospitales}, cada hospital tiene un único router conectado a otro router, simulando así la conexión a Internet, excepto en el caso del Hospital de Son Espases, que 
-tiene dos ISPs distintos, ya que en los requisitos del sistema se definió así (\ref{análisis}).
+tiene dos ISPs distintos, ya que en los requisitos del sistema se definió así (\ref{análisis}). No obstante, en esta red no se ha configurado el NAT estático, por lo que no tiene relevancia la cantidad de ISPs.
 \\ \\
-Además, cada router de cada hospital está conectado a dos switches core (L3), que son los que dan conectividad con el router a todos los dispositivos de la red interna, en la Figura 
+Además, cada router de cada hospital está conectado a dos switches core (L3), mediante enlaces Ethernet usando cables de cobre directos, que son los que dan conectividad con el router a todos los dispositivos de la red interna, en la Figura 
 \ref{fig:InterconexionRouHospitales} se muestra la topología física de la interconexión entre el router y los switches core. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.3\textwidth]{Imágenes/Router-Sw.Core.png}
-    \caption{Topología Física de la Interconexión entre el Router y los Switches Core en Hospitales}
+    \caption{Topología física de la interconexión entre el Router y los Switches Core en Hospitales}
     \label{fig:InterconexionRouHospitales}
 \end{figure}
 
-Los dos switches core también estan conectados en forma de malla con 4 switches de distribución, uno por cada area del hospital (Administración, Áreas Médicas, Enfermeria, Área de Apoyo). 
+Los dos switches core también estan conectados en forma de malla con cuatro switches de distribución, mediante enlaces Ethernet usando cables de cobre trenzados, uno por cada area del hospital (Administración, Áreas Médicas, Enfermeria, Área de Apoyo). 
 Con el fin de conseguir redundancia y tolerancia a fallos, estos switches de distribución se interconectan entre ellos dos a dos. En la Figura \ref{fig:InterconexionSwHospitales} se muestra la topología de interconexión entre los switches core y los switches de distribución.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{Imágenes/Switches.png}
-    \caption{Topología Física de la Interconexión entre los Switches L3 en Hospitales}
+    \includegraphics[width=0.65\textwidth]{Imágenes/Switches.png}
+    \caption{Topología física de la interconexión entre los Switches L3 en Hospitales}
     \label{fig:InterconexionSwHospitales}
 \end{figure}
 
@@ -236,21 +305,22 @@ según las principales áreas del hospital.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.55\textwidth]{Imágenes/Clusters.png}
-    \caption{Topología Física de la Interconexión con Clusters en Hospitales}
+    \includegraphics[width=0.8\textwidth]{Imágenes/Clusters.png}
+    \caption{Topología física de la interconexión con Clusters en Hospitales}
     \label{fig:CLustersHospitales}
 \end{figure}
 
-En la Figura \ref{fig:CLustersDentroHospitales} se aprecian las subredes que hay dentro de los clusters, en este caso es la subred del area de adminsitración, la cual se compone por el departamento de Recursos Humanos, Finnazas y Contabilidad, Tecnologías de la Información y Servicios Generales.
+En la Figura \ref{fig:CLustersDentroHospitales} se aprecian las subredes que hay dentro de los clusters, en este caso es la subred del area de adminsitración, la cual se compone por el departamento de Recursos Humanos, Finnazas y Contabilidad, Tecnologías de la Información y Servicios Generales. Todos los enlaces 
+entre los switches de acceso con dispositivos finales son Ethernet usando cables de cobre directos, exceptuando la conexión entre los APs y los dispsoitivos inalámbricos, donde se lleva a cabo una comunicación inalámbrica.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{Imágenes/CLusterdentro.png}
-    \caption{Topología Física de la Interconexión con Clusters en Hospitales}
+    \includegraphics[width=0.9\textwidth]{Imágenes/CLusterdentro.png}
+    \caption{Topología física de la interconexión con Clusters en Hospitales}
     \label{fig:CLustersDentroHospitales}
 \end{figure}
 
 
-\subsection{Topología Lógica de la Red de Interconexión entre Hospitales (cambiar)}
+\subsection{Topología Lógica de la Red de Interconexión entre Hospitales}
 En este diseño, se ha definido una VLAN por cada departamento del hospital, además de las VLANs de interconexión entre switches y routers. Además, se han definido cuatro grandes subredes:
 \begin{itemize}
     \item \textbf{Subred Son Espases:} Esta subred alberga las VLANs de los departamentos y servicios internos del Hospital Son Espases, garantizando la comunicación entre ellos y el acceso a los recursos compartidos.
@@ -259,16 +329,18 @@ En este diseño, se ha definido una VLAN por cada departamento del hospital, ade
     \item \textbf{Subred Son Llàtzer:} Esta subred alberga las VLANs de los departamentos y servicios internos del Hospital Son Llàtzer, garantizando la comunicación entre ellos y el acceso a los recursos compartidos.
 \end{itemize}
 Cada hospital tiene su propia DMZ, donde alberga los servidores necesarios para dar los servicios al hospital y además cuenta con un servidor de archivos, que almacena información relevante del hospital, con el fin de que sea accesible por dispositivos autorizados de otros hospitales.
-
+\\ \\
+Cabe recalcar que este diseño está enfocado a la comunicación entre hospitales, y por tanto no se han implementado grandes medidas de seguridad, como por ejemplo la convivencia en la DMZ 
+entre el servidor web y el servidor DHCP o el servidor de archivos.
 \subsection{Descripción de Dispositivos Utilizados}
 
 En ambos diseños se han utilizado los siguientes dispositivos:
 \begin{itemize}
     \item \textbf{Routers:} Se ha utilizado el modelo \textit{Router-PT-Empty}, ya que permite añadir la cantidad de interfaces tanto GigabitEthernet como Serial necesarias para realizar 
     las conexiones.
-    \item \textbf{Switches L2:} Se ha utilizado el modelo \textit{2960 IOS15}, ya que es el modelo mas moderno que ofrece la herramienta Cisco Packet Tracer.
-    \item \textbf{Switches L3:} Se ha utilizado el modelo \textit{3650-24PS}, ya que es el modelo mas moderno que ofrece la herramienta Cisco Packet Tracer.
-    \item \textbf{Puntos de Acceso Inalámbrico:} Se ha utilizado el modelo \textit{AccessPoint-PT-N}, ya que es el modelo mas potente de los ofrecidos por la herramienta Cisco Packet Tracer.
+    \item \textbf{Switches L2:} Se ha utilizado el modelo \textit{2960 IOS15}, ya que es el modelo más moderno que ofrece la herramienta Cisco Packet Tracer.
+    \item \textbf{Switches L3:} Se ha utilizado el modelo \textit{3650-24PS}, ya que es el modelo más moderno que ofrece la herramienta Cisco Packet Tracer.
+    \item \textbf{Puntos de Acceso Inalámbrico:} Se ha utilizado el modelo \textit{AccessPoint-PT-N}, ya que es el modelo más potente de los ofrecidos por la herramienta Cisco Packet Tracer.
     \item \textbf{Dispositivos Finales:} 
     \begin{itemize}
         \item \textbf{Portátiles:} \textit{Laptop-PT}
@@ -279,8 +351,6 @@ En ambos diseños se han utilizado los siguientes dispositivos:
         \item \textbf{Servidores:} \textit{Server-PT}
     \end{itemize}
 \end{itemize}
-
-El cableado utilizado en toda la red es de tipo \textit{Cobre}, mientras que las conexiones entre los routers y los ISPs se realizan mediante cableado de tipo \textit{Serial}.
 
 \section{VLANs y Segmentación de Red}
 Uno de los elementos esenciales para garantizar la seguridad, la eficiencia y la organización de una infraestructura de red hospitalaria es la correcta segmentación del 
@@ -307,9 +377,7 @@ las siguientes VLANs:
     \item \textbf{VLAN 100:} Unidad de Cuidados Intensivos (UCI)
     \item \textbf{VLAN 110:} Atencion paciente 
     \item \textbf{VLAN 120:} Asesoría Jurídica
-    \item \textbf{VLAN 150:} DMZ Interno
-    \item \textbf{VLAN 160:} DMZ IoMT
-    \item \textbf{VLAN 170:} DMZ Invitados
+    \item \textbf{VLAN 150:} DMZ Interna
     \item \textbf{VLAN 180:} Red Invitados
     \item \textbf{VLAN 190:} Interconexión Router-Sw.Invitados
     \item \textbf{VLAN 200:} Interconexión Switches Distribución - Switches Core
@@ -538,8 +606,12 @@ se pueden apreciar el subnetting de las interconexiones anteriormente mencionada
         \hline
         Switch IoMT-P3 & 10.1.0.12 \\
         \hline
+        Switch DHCP Interno & 10.1.0.13 \\
+        \hline
+        Switch DHCP IoMT & 10.1.0.15 \\
+        \hline
     \end{tabular}
-    \caption{Subnetting Red Interconexión Switches Distribución - Switches Core}
+    \caption{Subnetting Red Interconexión Switches L3}
     \label{tab:InterconexionCoreSE}
 \end{table}
 
@@ -640,13 +712,16 @@ En la Tabla \ref{tab:InterconexionRouter-ISPSE} se puede apreciar que la red del
     \item 195.136.17.1 (ISP 1)
     \item 195.136.17.9 (ISP 1)
     \item 195.136.17.17 (ISP 1)
+\end{itemize}
+Y que las direcciones IP desde Internet hacia la red de Son Espases son las siguientes:
+\begin{itemize}
     \item 195.136.17.5 (ISP 2)
     \item 195.136.17.13 (ISP 2)
     \item 195.136.17.21 (ISP 2)
 \end{itemize}
 
 \subsubsection{Subnetting IoMT}
-En la Tabla \ref{tab:subnettingIoMT} se muestra en detalle el subnetting realizado en la red IoMT del Hospital Son Espases.
+En la Tabla \ref{tab:subnettingIoMT} se muestra en detalle el subnetting realizado en la subred IoMT del Hospital Son Espases.
 
 \renewcommand{\arraystretch}{1.3}
 \begin{table}[H]
@@ -668,15 +743,13 @@ En la Tabla \ref{tab:subnettingIoMT} se muestra en detalle el subnetting realiza
         \hline
         IoMT Tipo 3 & 172.16.128.0 & 255.255.192.0 & 172.16.128.1 - 172.128.191.254 & 172.16.191.255 \\
         \hline
-        DMZ & 172.16.192.0 & 255.255.240.0 & 172.16.192.1 - 172.16.192.6 & 172.16.192.7 \\
-        \hline
     \end{tabular}
-    \caption{Subnetting Red IoMT Son Espases}
+    \caption{Subnetting subred IoMT Son Espases}
     \label{tab:subnettingIoMT}
 \end{table}
 
 \subsubsection{Subnetting Invitados}
-En la Tabla \ref{tab:subnettingInvitados} se muestra en detalle el subnetting realizado en la red de invitados del Hospital Son Espases.
+En la Tabla \ref{tab:subnettingInvitados} se muestra en detalle el subnetting realizado en la subred de invitados del Hospital Son Espases.
 
 \renewcommand{\arraystretch}{1.3}
 \begin{table}[H]
@@ -688,14 +761,12 @@ En la Tabla \ref{tab:subnettingInvitados} se muestra en detalle el subnetting re
         \hline
         Invitados & 192.168.0.0 & 255.255.128.0 & 192.168.0.1 - 192.168.127.254 & 192.168.127.255 \\
         \hline
-        DMZ & 192.168.128.0 & 255.255.255.248 & 192.168.128.1 - 192.168.128.6 & 192.168.128.7 \\
-        \hline
     \end{tabular}
-    \caption{Subnetting Red Invitados Son Espases}
+    \caption{Subnetting subred invitados Son Espases}
     \label{tab:subnettingInvitados}
 \end{table}
 
-En la Tabla \ref{tab:subnettingIntInvitados} se muestra el subnetting realizado en la interconexión de los routers con el switch de acceso de la red de invitados.
+En la Tabla \ref{tab:subnettingIntInvitados} se muestra el subnetting realizado en la interconexión de los routers con el switch de acceso de la subred de invitados.
 \begin{table}[H]
     \centering
     \scriptsize
@@ -714,7 +785,7 @@ En la Tabla \ref{tab:subnettingIntInvitados} se muestra el subnetting realizado 
         Switch Invitados & 192.168.130.5 \\
         \hline
     \end{tabular}
-    \caption{Subnetting Red Invitados Son Espases}
+    \caption{Subnetting interconexión subred invitados Son Espases}
     \label{tab:subnettingIntInvitados}
 \end{table}
 
@@ -757,10 +828,6 @@ En el diseño de la red de Son Espases, cada VLAN, excepto las de interconexión
         \hline
         150 & 10.0.3.1 \\
         \hline
-        160 & 172.16.192.1 \\
-        \hline
-        170 & 192.168.128.1 \\
-        \hline
         180 & 192.168.0.1 \\
         \hline
         190 & 192.168.130.1 \\
@@ -782,7 +849,7 @@ En el diseño de la red de Son Espases, cada VLAN, excepto las de interconexión
         255 & 10.2.1.1 \\
         \hline
     \end{tabular}
-    \caption{Direcciones IP Estáticas de los Servidores de Son Espases}
+    \caption{Direcciones IP estáticas de las puertas de enlace de Son Espases}
     \label{tab:GatewaysSE}
 \end{table}
 
@@ -798,22 +865,18 @@ La Tabla \ref{tab:servidoresSE} muestra las direcciones IP de todos los servidor
         \hline
         \textbf{Dispositivo} & \textbf{Dirección IP} \\
         \hline
-        Servidor DHCP DMZ Interno & 10.0.3.6 \\
+        Servidor DHCP Interno & 10.1.0.14 \\
         \hline
-        Servidor DNS DMZ Interno & 10.0.3.7 \\
+        Servidor de Archivos Interno & 10.1.0.17 \\
         \hline
-        Servidor de Correo DMZ Interno & 10.0.3.8 \\
+        Servidor DHCP Invitados & 192.168.0.5 \\
         \hline
-        Servidor de Archivos DMZ Interno & 10.0.3.9 \\
+        Servidor Web & 10.0.3.7 \\
         \hline
-        Servidor DHCP DMZ Invitados & 192.168.128.5 \\
-        \hline
-        Servidor Web Invitados & 192.168.128.6 \\
-        \hline
-        Servidor DHCP DMZ IoMT & 172.16.192.5 \\
+        Servidor DHCP IoMT & 10.1.0.16 \\
         \hline
     \end{tabular}
-    \caption{Direcciones IP Estáticas de los Servidores de Son Espases}
+    \caption{Direcciones IP estáticas de los servidores de Son Espases}
     \label{tab:servidoresSE}
 \end{table}
 
@@ -976,28 +1039,12 @@ Esta configuración se ha implementado en todos los dispositivos de red (switche
 \subsection{Configuración DMZ}\label{subsec:dmz}
 Para que la DMZ sea una zona segura para los servidores, se han implementado una serie de mecanismos de seguridad:
 \begin{itemize}
-    \item \textbf{"switchport port-security maximum 1":} Limita el número máximo de direcciones \ac{MAC} permitidas en el puerto a 1.
-    \item \textbf{"switchport port-security mac-address sticky":} Activa el aprendizaje automático de direcciones MAC en modo "sticky", estas direcciones se almacenan en la configuración de ejecución, permitiendo que el puerto solo acepte dispositivos previamente conectados sin necesidad de configurar manualmente cada MAC.
-    \item \textbf{"switchport port-security violation shutdown":} Deshabilita el puerto automáticamente cuando se detecta una violación de seguridad (por ejemplo, la conexión de un dispositivo con una MAC diferente a la permitida).
+    \item \textbf{switchport port-security maximum 1.} Limita el número máximo de direcciones \ac{MAC} permitidas en el puerto a 1.
+    \item \textbf{switchport port-security mac-address sticky.} Activa el aprendizaje automático de direcciones MAC en modo \textit{sticky}, estas direcciones se almacenan en la configuración de ejecución, permitiendo que el puerto solo acepte dispositivos previamente conectados sin necesidad de configurar manualmente cada MAC.
+    \item \textbf{switchport port-security violation shutdown.} Deshabilita el puerto automáticamente cuando se detecta una violación de seguridad (por ejemplo, la conexión de un dispositivo con una MAC diferente a la permitida).
 \end{itemize}
 
 \section{Redes Completas}
 
 Para ver las redes completas de la red del Hospital Son Espases y la red de interconexión entre hospitales, ver el anexo \ref{anexo:redcompletasonespas} y \ref{anexo:redcompletahosp}, respectivamente.
 
-\subsection{Leyenda}
-Como se puede apreciar en la Figura \ref{fig:SonEspases}, todas las areas estan coloreadas, esto es así para poder 
-ubicarlas físicamente dentro del hospital, teniendo en cuenta lo mencionado en la sección \ref{subsubsec:disposicion}. 
-
-\begin{itemize}
-    \item \textbf{Rojo:} Área de Servicios Quirúrgicos.
-    \item \textbf{Verde:} Área de Servicios Médicos.
-    \item \textbf{Naranja:} Área de Servicios Centrales.
-    \item \textbf{Azul:} Área de Administración.
-    \item \textbf{Azul oscuro:} UCI.
-    \item \textbf{Amarillo:} Área de Hospitalización.
-    \item \textbf{Verde oscuro:} Área de Investigación.
-    \item \textbf{Marrón:} Área de Atención al Paciente.
-    \item \textbf{Rosa:} Área de Servidores y Dispositivos de Red.
-    \item \textbf{Morado:} Área de Docencia.
-\end{itemize}

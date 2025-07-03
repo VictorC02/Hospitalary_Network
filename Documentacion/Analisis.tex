@@ -36,36 +36,22 @@ dispositivos conectados.
     \item La red debe permitir la asignación dinámica de direcciones IP.
     \item Los dispositivos privilegiados (\ac{PC}s del departamento de IT) deben poder acceder a servidores de datos de otros hospitales.
     \item Deben implementarse servicios de NAT para acceso a Internet desde las subredes del hospital.
-    \item Tanto la red intrahospitalaria como la interhospitalaria debe estar configurada de tal forma que haya configuraciones dinámicas de enrutamiento utilizando OSPF.
+    \item Tanto la red intrahospitalaria como la interhospitalaria debe estar configurada de tal forma que haya configuraciones dinámicas de enrutamiento.
     \item Las comunicaciones desde el exterior de la red hacia el interior tienen que pasar por una interfaz diferente de las que van desde el interior hacia el exterior.
 \end{itemize}
-\subsection{Requisitos No Funcionales}
-Son aquellos que definen condiciones de calidad, operativas o de gestión que debe cumplir el sistema, sin especificar funciones concretas.
-\begin{itemize}
-    \item La infraestructura debe garantizar una alta disponibilidad, con redundancia en enlaces y puntos críticos.
-    \item La red debe estar diseñada de forma modular y escalable, permitiendo incorporar nuevos departamentos o dispositivos sin afectar al rendimiento.
-\end{itemize}
-\subsection{Requisitos de Disponibilidad y Redundancia}
-Establecen las condiciones que debe cumplir la red para garantizar su funcionamiento continuo y la disponibilidad de los servicios críticos. En términos generales se establecen los siguientes requisitos:
-\begin{itemize}
-    \item Los enlaces entre switches L2 y L3 deben contar con redundancia física para evitar puntos únicos de fallo.
-    \item Los routers principales deben estar configurados en alta disponibilidad para tolerar fallos de hardware o enlaces.
-    \item Los servidores DHCP, de la red IoMT, deben contar con un servidor de respaldo para garantizar la asignación continua de direcciones IP.
-    \item La infraestructura debe permitir la monitorización continua del estado de los dispositivos y enlaces para detectar fallos proactivamente.
-\end{itemize}
-
-\subsection{Requisitos de Conectividad}
+A su vez estos requisitos funcionales se desglosan en los siguientes requisitos más específicos: conectividad, seguridad, redundancia y disponibilidad.
+\subsubsection{Requisitos de Conectividad}
 Definen las condiciones relacionadas con la transmisión de datos y la comunicación entre dispositivos y servicios dentro de la red, en términos generales.
 \begin{itemize}
     \item Todos los dispositivos de la red deben tener conectividad con cualquier dispositivo de la red.
 \end{itemize}
 
-\subsection{Requisitos de Seguridad}
+\subsubsection{Requisitos de Seguridad}
 \label{subsec: TiposIoMT}
 Establecen las condiciones que debe cumplir la red para proteger su infraestructura, los datos transmitidos y los servicios prestados. En términos generales se establecen los siguientes requisitos:
 \begin{itemize}
     \item Se debe implementar una segmentación lógica mediante VLANs para aislar departamentos, subredes y servicios críticos.
-    \item Deben configurarse listas de control de acceso (ACLs) para:
+    \item Deben configurarse métodos de filtrado de tráfico para:
     \begin{itemize}
         \item Bloquear el tráfico desde la red de invitados hacia la red interna y la red de dispositivos IoMT.
         \item Restringir el acceso a la base de datos de cada hospital, permitiendo únicamente a un PC autorizado del departamento de IT de cada hospital acceder a ella.
@@ -76,8 +62,8 @@ Establecen las condiciones que debe cumplir la red para proteger su infraestruct
         \item Permitir el tráfico de la red interna hacia la DMZ.
     \end{itemize}
     \item La gestión de dispositivos de red debe realizarse mediante conexiones seguras.
-    \item Todos los dispositivos de red deben contar con una configuración de autenticación, con contraseñas seguras, para evitar accesos no autorizados.
-    \item La interconexión entre hospitales debe realizarse a través de enlaces seguros, utilizando VPNs o túneles cifrados para proteger la información transmitida.
+    \item Todos los dispositivos de red deben contar con una configuración de autenticación para evitar accesos no autorizados.
+    \item La interconexión entre hospitales debe realizarse a través de enlaces seguros y encriptados para proteger la información transmitida.
 \end{itemize}
 Para establecer los requisitos de seguridad específicos para los dispositivos IoMT, se deben considerar las siguientes clasificaciones de dispositivos:
 \begin{itemize}
@@ -98,3 +84,24 @@ A continuación se detallan los requisitos de seguridad específicos para los di
     \item Los dispositivos IoMT Tipo 2 deben tener conectividad únicamente con los dispositivos del departamento de la UCI.
     \item Los dispositivos IoMT Tipo 3 solo pueden tener conectividad con un único dispositivo autorizado del departamento de la UCI.
 \end{itemize}
+
+\subsubsection{Requisitos de Disponibilidad y Redundancia}
+Establecen las condiciones que debe cumplir la red para garantizar su funcionamiento continuo y la disponibilidad de los servicios críticos. En términos generales se establecen los siguientes requisitos:
+\begin{itemize}
+    \item Los enlaces entre switches L2 y L3 deben contar con redundancia física para evitar puntos únicos de fallo.
+    \item Los routers principales deben estar configurados en alta disponibilidad para tolerar fallos de hardware o enlaces.
+    \item Los servidores DHCP, de la red IoMT, deben contar con un servidor de respaldo para garantizar la asignación continua de direcciones IP.
+    \item La infraestructura debe permitir la monitorización continua del estado de los dispositivos y enlaces para detectar fallos proactivamente.
+\end{itemize}
+
+\subsection{Requisitos No Funcionales}
+Son aquellos que definen condiciones de calidad, operativas o de gestión que debe cumplir el sistema, sin especificar funciones concretas.
+\begin{itemize}
+    \item La infraestructura debe garantizar una alta disponibilidad, con redundancia en enlaces y puntos críticos.
+    \item La red debe estar diseñada de forma modular y escalable, permitiendo incorporar nuevos departamentos o dispositivos sin afectar al rendimiento.
+\end{itemize}
+
+
+
+
+
