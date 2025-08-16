@@ -1,9 +1,0 @@
-En la presentación, hacer en la demo las siguientes pruebas:
-- DHCP Snooping
-- HSRP en Routers y EtherChannel
-- Conectividad entre Internet-Servidor Web y NAT
-
-
-En la defensa, tener en cuenta:
-- En UE la legislacion de datos personales es RGPD y en EEUU es HIPPA
-- Como funciona DHCP Relay
